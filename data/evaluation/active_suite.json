@@ -1,0 +1,2009 @@
+[
+  {
+    "id": "GOLD-PERS-027",
+    "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Hard",
+    "target_regime": "2026",
+    "persona_context": "Salaried employee with company loan under 2026 rules",
+    "relevant_rules": [
+      "Rule 15"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
+    "evaluation_criteria": [
+      "Mentions Rule 15",
+      "Refers to SBI benchmark lending rate",
+      "Mentions Rs. 20,000 threshold or medical treatment exemption"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-006",
+    "query": "I am a senior citizen aged 77 who receives only pension and interest income. Can I submit a declaration to my bank under Rule 26D so that no tax return is required to be filed?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Hard",
+    "target_regime": "1962",
+    "persona_context": "77-year old pensioner wanting relief u/s 194P and Rule 26D",
+    "relevant_rules": [
+      "Rule 26D"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_26D_rule_26D_subrule_1_1",
+      "chunk_1962_rule_26D_rule_26D_subrule_2_2",
+      "chunk_1962_rule_26D_rule_26D_subrule_3_3"
+    ],
+    "ground_truth_answer": "Under Rule 26D and Section 194P of the Income Tax Act, a specified senior citizen (who is a resident aged 75 years or more) having only pension income and interest income from the same specified bank can furnish a declaration in Form No. 12BBA to the specified bank. Since you are 77, you qualify to submit Form 12BBA under Rule 26D.",
+    "evaluation_criteria": [
+      "References Rule 26D and Section 194P",
+      "Mentions age threshold (75 years or more)",
+      "Identifies Form No. 12BBA",
+      "States pension and interest income condition"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-011",
+    "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Easy",
+    "target_regime": "2026",
+    "persona_context": "Salaried employee with company loan under 2026 rules",
+    "relevant_rules": [
+      "Rule 15"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
+    "evaluation_criteria": [
+      "Mentions Rule 15",
+      "Refers to SBI benchmark lending rate",
+      "Mentions Rs. 20,000 threshold or medical treatment exemption"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-016",
+    "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Medium",
+    "target_regime": "1962",
+    "persona_context": "Salaried employee with company loan under 1962 rules",
+    "relevant_rules": [
+      "Rule 3"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+      "chunk_1962_rule_12_rule_12_subrule_3_47"
+    ],
+    "ground_truth_answer": "Under Rule 3 of the 1962 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
+    "evaluation_criteria": [
+      "Mentions Rule 3",
+      "Refers to SBI benchmark lending rate",
+      "Mentions Rs. 20,000 threshold or medical treatment exemption"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-026",
+    "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Medium",
+    "target_regime": "1962",
+    "persona_context": "Salaried employee with company loan under 1962 rules",
+    "relevant_rules": [
+      "Rule 3"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+      "chunk_1962_rule_12_rule_12_subrule_3_47"
+    ],
+    "ground_truth_answer": "Under Rule 3 of the 1962 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
+    "evaluation_criteria": [
+      "Mentions Rule 3",
+      "Refers to SBI benchmark lending rate",
+      "Mentions Rs. 20,000 threshold or medical treatment exemption"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-012",
+    "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Hard",
+    "target_regime": "1962",
+    "persona_context": "Salaried employee with company loan under 1962 rules",
+    "relevant_rules": [
+      "Rule 3"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+      "chunk_1962_rule_12_rule_12_subrule_3_47"
+    ],
+    "ground_truth_answer": "Under Rule 3 of the 1962 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
+    "evaluation_criteria": [
+      "Mentions Rule 3",
+      "Refers to SBI benchmark lending rate",
+      "Mentions Rs. 20,000 threshold or medical treatment exemption"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-023",
+    "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Easy",
+    "target_regime": "2026",
+    "persona_context": "Salaried employee with company loan under 2026 rules",
+    "relevant_rules": [
+      "Rule 15"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
+    "evaluation_criteria": [
+      "Mentions Rule 15",
+      "Refers to SBI benchmark lending rate",
+      "Mentions Rs. 20,000 threshold or medical treatment exemption"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-007",
+    "query": "I changed jobs during the previous year. What form must I submit to my current employer to declare salary and TDS from my previous employer under Rule 26A?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Easy",
+    "target_regime": "1962",
+    "persona_context": "Salaried employee switching employers mid-year",
+    "relevant_rules": [
+      "Rule 26A"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_26A_rule_26A_subrule_1_1",
+      "chunk_1962_rule_26A_rule_26A_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 26A(1) of the Income Tax Rules 1962, an employee who has been employed under more than one employer during the financial year must furnish the details of salary due or received and tax deducted at source to the subsequent employer in Form No. 12B.",
+    "evaluation_criteria": [
+      "Mentions Rule 26A",
+      "Identifies Form No. 12B",
+      "Specifies furnishing details of previous employer salary and TDS"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-020",
+    "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Medium",
+    "target_regime": "1962",
+    "persona_context": "Salaried employee with company loan under 1962 rules",
+    "relevant_rules": [
+      "Rule 3"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+      "chunk_1962_rule_12_rule_12_subrule_3_47"
+    ],
+    "ground_truth_answer": "Under Rule 3 of the 1962 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
+    "evaluation_criteria": [
+      "Mentions Rule 3",
+      "Refers to SBI benchmark lending rate",
+      "Mentions Rs. 20,000 threshold or medical treatment exemption"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-013",
+    "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Easy",
+    "target_regime": "2026",
+    "persona_context": "Salaried employee with company loan under 2026 rules",
+    "relevant_rules": [
+      "Rule 15"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
+    "evaluation_criteria": [
+      "Mentions Rule 15",
+      "Refers to SBI benchmark lending rate",
+      "Mentions Rs. 20,000 threshold or medical treatment exemption"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-017",
+    "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Easy",
+    "target_regime": "2026",
+    "persona_context": "Salaried employee with company loan under 2026 rules",
+    "relevant_rules": [
+      "Rule 15"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
+    "evaluation_criteria": [
+      "Mentions Rule 15",
+      "Refers to SBI benchmark lending rate",
+      "Mentions Rs. 20,000 threshold or medical treatment exemption"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-010",
+    "query": "I am a blind salaried individual. What is the monthly transport allowance exemption available to me under Rule 2BB of the 1962 rules?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Easy",
+    "target_regime": "1962",
+    "persona_context": "Visually impaired employee commuting to work",
+    "relevant_rules": [
+      "Rule 2BB"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_clause_ii_117"
+    ],
+    "ground_truth_answer": "Under Rule 2BB(2) Table (Sl. No. 11), an employee who is blind or deaf and dumb or orthopedically handicapped with disability of lower extremities is entitled to a transport allowance exemption of Rs. 3,200 per month for commuting between residence and place of duty.",
+    "evaluation_criteria": [
+      "References Rule 2BB(2) Table Sl. No. 11",
+      "States monthly exemption limit of Rs. 3,200",
+      "Identifies purpose: commuting between residence and work"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-029",
+    "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Easy",
+    "target_regime": "2026",
+    "persona_context": "Salaried employee with company loan under 2026 rules",
+    "relevant_rules": [
+      "Rule 15"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
+    "evaluation_criteria": [
+      "Mentions Rule 15",
+      "Refers to SBI benchmark lending rate",
+      "Mentions Rs. 20,000 threshold or medical treatment exemption"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-015",
+    "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Hard",
+    "target_regime": "2026",
+    "persona_context": "Salaried employee with company loan under 2026 rules",
+    "relevant_rules": [
+      "Rule 15"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
+    "evaluation_criteria": [
+      "Mentions Rule 15",
+      "Refers to SBI benchmark lending rate",
+      "Mentions Rs. 20,000 threshold or medical treatment exemption"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-025",
+    "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Easy",
+    "target_regime": "2026",
+    "persona_context": "Salaried employee with company loan under 2026 rules",
+    "relevant_rules": [
+      "Rule 15"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
+    "evaluation_criteria": [
+      "Mentions Rule 15",
+      "Refers to SBI benchmark lending rate",
+      "Mentions Rs. 20,000 threshold or medical treatment exemption"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-021",
+    "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Hard",
+    "target_regime": "2026",
+    "persona_context": "Salaried employee with company loan under 2026 rules",
+    "relevant_rules": [
+      "Rule 15"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
+    "evaluation_criteria": [
+      "Mentions Rule 15",
+      "Refers to SBI benchmark lending rate",
+      "Mentions Rs. 20,000 threshold or medical treatment exemption"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-031",
+    "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Easy",
+    "target_regime": "2026",
+    "persona_context": "Salaried employee with company loan under 2026 rules",
+    "relevant_rules": [
+      "Rule 15"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
+    "evaluation_criteria": [
+      "Mentions Rule 15",
+      "Refers to SBI benchmark lending rate",
+      "Mentions Rs. 20,000 threshold or medical treatment exemption"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-002",
+    "query": "As a central government employee, how is the perquisite value of government-provided residential accommodation determined?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Easy",
+    "target_regime": "1962",
+    "persona_context": "Central government officer in government-allotted quarters",
+    "relevant_rules": [
+      "Rule 3"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+      "chunk_1962_rule_12_rule_12_subrule_3_47"
+    ],
+    "ground_truth_answer": "Under Rule 3(1) Table (Sl. No. 1), for Union or State Government employees, the perquisite value of unfurnished accommodation is the licence fee determined by the government in accordance with the rules framed by the government, reduced by the rent actually paid by the employee.",
+    "evaluation_criteria": [
+      "Mentions Rule 3(1)",
+      "Refers to licence fee determined by the Government",
+      "Mentions deduction of rent actually paid by employee"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-014",
+    "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Medium",
+    "target_regime": "1962",
+    "persona_context": "Salaried employee with company loan under 1962 rules",
+    "relevant_rules": [
+      "Rule 3"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+      "chunk_1962_rule_12_rule_12_subrule_3_47"
+    ],
+    "ground_truth_answer": "Under Rule 3 of the 1962 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
+    "evaluation_criteria": [
+      "Mentions Rule 3",
+      "Refers to SBI benchmark lending rate",
+      "Mentions Rs. 20,000 threshold or medical treatment exemption"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-019",
+    "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Easy",
+    "target_regime": "2026",
+    "persona_context": "Salaried employee with company loan under 2026 rules",
+    "relevant_rules": [
+      "Rule 15"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
+    "evaluation_criteria": [
+      "Mentions Rule 15",
+      "Refers to SBI benchmark lending rate",
+      "Mentions Rs. 20,000 threshold or medical treatment exemption"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-003",
+    "query": "I am a private company employee living in a town with a population of 12 lakhs. My employer owns the apartment provided to me. What percentage of my salary is taken as the accommodation perk under the 1962 rules?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Medium",
+    "target_regime": "1962",
+    "persona_context": "Private sector employee provided employer-owned housing in a mid-sized city (population 12 lakhs)",
+    "relevant_rules": [
+      "Rule 3"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_clause_a_8",
+      "chunk_1962_rule_3_rule_3_clause_b_106"
+    ],
+    "ground_truth_answer": "Under Rule 3(1) of the 1962 rules, where the accommodation is owned by the employer in a city having a population exceeding 10 lakhs but not exceeding 25 lakhs (as per the 2001/2011 census depending on amendment), the perquisite value is 10% of salary (or 7.5% under the revised 2023 amendment for population between 15-40 lakhs), reduced by any rent recovered from the employee.",
+    "evaluation_criteria": [
+      "Mentions Rule 3(1)",
+      "Identifies population tier (between 10 to 25 lakhs / 15 to 40 lakhs)",
+      "States percentage of salary (10% or revised 7.5%)",
+      "Deducts rent paid by employee"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-018",
+    "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Hard",
+    "target_regime": "1962",
+    "persona_context": "Salaried employee with company loan under 1962 rules",
+    "relevant_rules": [
+      "Rule 3"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+      "chunk_1962_rule_12_rule_12_subrule_3_47"
+    ],
+    "ground_truth_answer": "Under Rule 3 of the 1962 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
+    "evaluation_criteria": [
+      "Mentions Rule 3",
+      "Refers to SBI benchmark lending rate",
+      "Mentions Rs. 20,000 threshold or medical treatment exemption"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-022",
+    "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Medium",
+    "target_regime": "1962",
+    "persona_context": "Salaried employee with company loan under 1962 rules",
+    "relevant_rules": [
+      "Rule 3"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+      "chunk_1962_rule_12_rule_12_subrule_3_47"
+    ],
+    "ground_truth_answer": "Under Rule 3 of the 1962 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
+    "evaluation_criteria": [
+      "Mentions Rule 3",
+      "Refers to SBI benchmark lending rate",
+      "Mentions Rs. 20,000 threshold or medical treatment exemption"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PERS-004",
+    "query": "I am a software engineer opting for the New Tax Regime under section 115BAC. Can I claim children education allowance and hostel allowance exemptions under Rule 2BB?",
+    "query_type": "Persona-Specific Applicability",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Medium",
+    "target_regime": "1962",
+    "persona_context": "Software engineer opting for New Tax Regime u/s 115BAC with school-going children",
+    "relevant_rules": [
+      "Rule 2BB"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_clause_i_122",
+      "chunk_1962_rule_2BB_rule_2BB_clause_ii_123"
+    ],
+    "ground_truth_answer": "No. Under Rule 2BB(3) of the Income Tax Rules 1962, an employee who has exercised an option under section 115BAC (New Tax Regime) is entitled to exemption ONLY in respect of allowances mentioned in sub-rule (1)(a) to (d) (tour/travel, daily allowance, conveyance, helper) and sub-rule (2) Table Sl. No. 11 (transport allowance for disabled employees). Children education allowance (Sl. No. 7) and hostel subsidy (Sl. No. 8) are NOT exempt under the New Tax Regime.",
+    "evaluation_criteria": [
+      "References Rule 2BB(3)",
+      "Mentions Section 115BAC restriction",
+      "Explicitly states Children Education and Hostel Allowance are NOT exempt under New Tax Regime",
+      "Identifies permitted allowances (conveyance, daily, tour, travel, handicap transport)"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-024",
+    "query": "For Financial Year 2024-25, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "hybrid_temporal",
+    "difficulty_level": "Hard",
+    "target_regime": "1962",
+    "fy_ay_context": "FY 2024-25 maps to AY 2025-26",
+    "relevant_rules": [
+      "Rule 2BB"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+    ],
+    "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
+    "evaluation_criteria": [
+      "Mentions Rule 2BB",
+      "Maps FY to corresponding AY",
+      "States monthly exemption ceiling from table"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-026",
+    "query": "For Financial Year 2021-22, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Medium",
+    "target_regime": "1962",
+    "fy_ay_context": "FY 2021-22 maps to AY 2022-23",
+    "relevant_rules": [
+      "Rule 2BB"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+    ],
+    "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
+    "evaluation_criteria": [
+      "Mentions Rule 2BB",
+      "Maps FY to corresponding AY",
+      "States monthly exemption ceiling from table"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-008",
+    "query": "For Financial Year 2023-24, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Medium",
+    "target_regime": "1962",
+    "fy_ay_context": "FY 2023-24 maps to AY 2024-25",
+    "relevant_rules": [
+      "Rule 2BB"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+    ],
+    "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
+    "evaluation_criteria": [
+      "Mentions Rule 2BB",
+      "Maps FY to corresponding AY",
+      "States monthly exemption ceiling from table"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-023",
+    "query": "For Financial Year 2023-24, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Easy",
+    "target_regime": "2026",
+    "fy_ay_context": "FY 2023-24 maps to AY 2024-25",
+    "relevant_rules": [
+      "Rule 280"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_clause_a_2"
+    ],
+    "ground_truth_answer": "Under Rule 280 of the 2026 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
+    "evaluation_criteria": [
+      "Mentions Rule 280",
+      "Maps FY to corresponding AY",
+      "States monthly exemption ceiling from table"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-014",
+    "query": "For Financial Year 2024-25, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Medium",
+    "target_regime": "1962",
+    "fy_ay_context": "FY 2024-25 maps to AY 2025-26",
+    "relevant_rules": [
+      "Rule 2BB"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+    ],
+    "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
+    "evaluation_criteria": [
+      "Mentions Rule 2BB",
+      "Maps FY to corresponding AY",
+      "States monthly exemption ceiling from table"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-001",
+    "query": "I realized I missed reporting my salary bonus for Financial Year (FY) 2019-20. Can I file an Updated Return of Income (ITR-U) under Rule 12AC of the 1962 rules?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "hybrid_temporal",
+    "difficulty_level": "Medium",
+    "target_regime": "1962",
+    "persona_context": "Salaried employee wanting to correct omitted income from FY 2019-20",
+    "fy_ay_context": "User asks for FY 2019-20 (which corresponds to Assessment Year 2020-21)",
+    "temporal_constraint": "Rule 12AC w.e.f. 29-04-2022 applies to AY commencing 1st April 2020 and subsequent years",
+    "relevant_rules": [
+      "Rule 12AC"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_12AC_rule_12AC_subrule_1_1",
+      "chunk_1962_rule_12AC_rule_12AC_subrule_2_2"
+    ],
+    "ground_truth_answer": "Yes. Financial Year (FY) 2019-20 corresponds to Assessment Year (AY) 2020-21. Under Rule 12AC(1) of the Income Tax Rules 1962 (inserted w.e.f. 29-04-2022), the return of income under section 139(8A) in Form ITR-U is eligible for the assessment year commencing on 1st April 2020 (AY 2020-21) and subsequent assessment years. Therefore, FY 2019-20 is eligible.",
+    "evaluation_criteria": [
+      "Maps FY 2019-20 to AY 2020-21",
+      "Cites Rule 12AC(1)",
+      "Confirms AY 2020-21 is the first eligible assessment year under Rule 12AC",
+      "Identifies Form ITR-U u/s 139(8A)"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-020",
+    "query": "For Financial Year 2020-21, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Medium",
+    "target_regime": "1962",
+    "fy_ay_context": "FY 2020-21 maps to AY 2021-22",
+    "relevant_rules": [
+      "Rule 2BB"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+    ],
+    "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
+    "evaluation_criteria": [
+      "Mentions Rule 2BB",
+      "Maps FY to corresponding AY",
+      "States monthly exemption ceiling from table"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-016",
+    "query": "For Financial Year 2021-22, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Medium",
+    "target_regime": "1962",
+    "fy_ay_context": "FY 2021-22 maps to AY 2022-23",
+    "relevant_rules": [
+      "Rule 2BB"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+    ],
+    "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
+    "evaluation_criteria": [
+      "Mentions Rule 2BB",
+      "Maps FY to corresponding AY",
+      "States monthly exemption ceiling from table"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-006",
+    "query": "For Financial Year 2021-22, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "hybrid_temporal",
+    "difficulty_level": "Hard",
+    "target_regime": "1962",
+    "fy_ay_context": "FY 2021-22 maps to AY 2022-23",
+    "relevant_rules": [
+      "Rule 2BB"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+    ],
+    "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
+    "evaluation_criteria": [
+      "Mentions Rule 2BB",
+      "Maps FY to corresponding AY",
+      "States monthly exemption ceiling from table"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-010",
+    "query": "For Financial Year 2020-21, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Medium",
+    "target_regime": "1962",
+    "fy_ay_context": "FY 2020-21 maps to AY 2021-22",
+    "relevant_rules": [
+      "Rule 2BB"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+    ],
+    "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
+    "evaluation_criteria": [
+      "Mentions Rule 2BB",
+      "Maps FY to corresponding AY",
+      "States monthly exemption ceiling from table"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-029",
+    "query": "For Financial Year 2024-25, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Easy",
+    "target_regime": "2026",
+    "fy_ay_context": "FY 2024-25 maps to AY 2025-26",
+    "relevant_rules": [
+      "Rule 280"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_clause_a_2"
+    ],
+    "ground_truth_answer": "Under Rule 280 of the 2026 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
+    "evaluation_criteria": [
+      "Mentions Rule 280",
+      "Maps FY to corresponding AY",
+      "States monthly exemption ceiling from table"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-019",
+    "query": "For Financial Year 2024-25, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Easy",
+    "target_regime": "2026",
+    "fy_ay_context": "FY 2024-25 maps to AY 2025-26",
+    "relevant_rules": [
+      "Rule 280"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_clause_a_2"
+    ],
+    "ground_truth_answer": "Under Rule 280 of the 2026 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
+    "evaluation_criteria": [
+      "Mentions Rule 280",
+      "Maps FY to corresponding AY",
+      "States monthly exemption ceiling from table"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-018",
+    "query": "For Financial Year 2023-24, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "hybrid_temporal",
+    "difficulty_level": "Hard",
+    "target_regime": "1962",
+    "fy_ay_context": "FY 2023-24 maps to AY 2024-25",
+    "relevant_rules": [
+      "Rule 2BB"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+    ],
+    "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
+    "evaluation_criteria": [
+      "Mentions Rule 2BB",
+      "Maps FY to corresponding AY",
+      "States monthly exemption ceiling from table"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-032",
+    "query": "For Financial Year 2022-23, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Medium",
+    "target_regime": "1962",
+    "fy_ay_context": "FY 2022-23 maps to AY 2023-24",
+    "relevant_rules": [
+      "Rule 2BB"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+    ],
+    "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
+    "evaluation_criteria": [
+      "Mentions Rule 2BB",
+      "Maps FY to corresponding AY",
+      "States monthly exemption ceiling from table"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-017",
+    "query": "For Financial Year 2022-23, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Easy",
+    "target_regime": "2026",
+    "fy_ay_context": "FY 2022-23 maps to AY 2023-24",
+    "relevant_rules": [
+      "Rule 280"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_clause_a_2"
+    ],
+    "ground_truth_answer": "Under Rule 280 of the 2026 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
+    "evaluation_criteria": [
+      "Mentions Rule 280",
+      "Maps FY to corresponding AY",
+      "States monthly exemption ceiling from table"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-022",
+    "query": "For Financial Year 2022-23, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Medium",
+    "target_regime": "1962",
+    "fy_ay_context": "FY 2022-23 maps to AY 2023-24",
+    "relevant_rules": [
+      "Rule 2BB"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+    ],
+    "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
+    "evaluation_criteria": [
+      "Mentions Rule 2BB",
+      "Maps FY to corresponding AY",
+      "States monthly exemption ceiling from table"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-015",
+    "query": "For Financial Year 2020-21, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "hybrid_temporal",
+    "difficulty_level": "Hard",
+    "target_regime": "2026",
+    "fy_ay_context": "FY 2020-21 maps to AY 2021-22",
+    "relevant_rules": [
+      "Rule 280"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_clause_a_2"
+    ],
+    "ground_truth_answer": "Under Rule 280 of the 2026 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
+    "evaluation_criteria": [
+      "Mentions Rule 280",
+      "Maps FY to corresponding AY",
+      "States monthly exemption ceiling from table"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-002",
+    "query": "Can I file an updated return under Rule 12AC for income earned during Financial Year 2017-18?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "hybrid_temporal",
+    "difficulty_level": "Medium",
+    "target_regime": "1962",
+    "persona_context": "Salaried person querying an older financial year for ITR-U",
+    "fy_ay_context": "User asks for FY 2017-18 (which corresponds to AY 2018-19)",
+    "temporal_constraint": "Rule 12AC eligibility begins only from AY 2020-21 onwards",
+    "relevant_rules": [
+      "Rule 12AC"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_12AC_rule_12AC_subrule_1_1",
+      "chunk_1962_rule_12AC_rule_12AC_subrule_2_2"
+    ],
+    "ground_truth_answer": "No. Financial Year (FY) 2017-18 corresponds to Assessment Year (AY) 2018-19. Under Rule 12AC(1), Form ITR-U is applicable only for the assessment year commencing on the 1st day of April, 2020 (AY 2020-21) and subsequent assessment years. AY 2018-19 falls outside the temporal scope of Rule 12AC.",
+    "evaluation_criteria": [
+      "Maps FY 2017-18 to AY 2018-19",
+      "Cites Rule 12AC(1) commencing on 1st April 2020 (AY 2020-21)",
+      "Explicitly denies eligibility for FY 2017-18 / AY 2018-19"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-030",
+    "query": "For Financial Year 2020-21, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "hybrid_temporal",
+    "difficulty_level": "Hard",
+    "target_regime": "1962",
+    "fy_ay_context": "FY 2020-21 maps to AY 2021-22",
+    "relevant_rules": [
+      "Rule 2BB"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+    ],
+    "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
+    "evaluation_criteria": [
+      "Mentions Rule 2BB",
+      "Maps FY to corresponding AY",
+      "States monthly exemption ceiling from table"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-021",
+    "query": "For Financial Year 2021-22, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "hybrid_temporal",
+    "difficulty_level": "Hard",
+    "target_regime": "2026",
+    "fy_ay_context": "FY 2021-22 maps to AY 2022-23",
+    "relevant_rules": [
+      "Rule 280"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_clause_a_2"
+    ],
+    "ground_truth_answer": "Under Rule 280 of the 2026 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
+    "evaluation_criteria": [
+      "Mentions Rule 280",
+      "Maps FY to corresponding AY",
+      "States monthly exemption ceiling from table"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-012",
+    "query": "For Financial Year 2022-23, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "hybrid_temporal",
+    "difficulty_level": "Hard",
+    "target_regime": "1962",
+    "fy_ay_context": "FY 2022-23 maps to AY 2023-24",
+    "relevant_rules": [
+      "Rule 2BB"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+    ],
+    "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
+    "evaluation_criteria": [
+      "Mentions Rule 2BB",
+      "Maps FY to corresponding AY",
+      "States monthly exemption ceiling from table"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-027",
+    "query": "For Financial Year 2022-23, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "hybrid_temporal",
+    "difficulty_level": "Hard",
+    "target_regime": "2026",
+    "fy_ay_context": "FY 2022-23 maps to AY 2023-24",
+    "relevant_rules": [
+      "Rule 280"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_clause_a_2"
+    ],
+    "ground_truth_answer": "Under Rule 280 of the 2026 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
+    "evaluation_criteria": [
+      "Mentions Rule 280",
+      "Maps FY to corresponding AY",
+      "States monthly exemption ceiling from table"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-013",
+    "query": "For Financial Year 2023-24, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Easy",
+    "target_regime": "2026",
+    "fy_ay_context": "FY 2023-24 maps to AY 2024-25",
+    "relevant_rules": [
+      "Rule 280"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_clause_a_2"
+    ],
+    "ground_truth_answer": "Under Rule 280 of the 2026 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
+    "evaluation_criteria": [
+      "Mentions Rule 280",
+      "Maps FY to corresponding AY",
+      "States monthly exemption ceiling from table"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-TEMP-003",
+    "query": "How did the Leave Travel Concession (LTC) exemption rules change between Rule 2B of the 1962 rules and Rule 278 of the 2026 rules regarding block years?",
+    "query_type": "Intra-Document Temporal Validation",
+    "retrieval_paradigm": "hybrid_temporal",
+    "difficulty_level": "Hard",
+    "target_regime": "both",
+    "persona_context": "Salaried employee comparing LTC rules across 1962 and 2026 regimes",
+    "relevant_rules": [
+      "Rule 2B",
+      "Rule 278"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_2BA_rule_2BA_body_1",
+      "chunk_1962_rule_2BA_rule_2BA_clause_i_2",
+      "chunk_2026_rule_278_rule_278_subrule_1_1",
+      "chunk_2026_rule_278_rule_278_clause_a_2"
+    ],
+    "ground_truth_answer": "Under Rule 2B of the 1962 rules, LTC exemption is available for 2 journeys in a block of four calendar years (commencing from calendar year 1986). Under Rule 278 of the 2026 rules, the statutory framework maintains the 2-journey exemption for Schedule III, structured in blocks as designated under the revised 2026 code provisions.",
+    "evaluation_criteria": [
+      "Mentions Rule 2B (1962) and Rule 278 (2026)",
+      "Explains 2 journeys in a block of 4 calendar years",
+      "Highlights statutory transition from Section 10(5) to Schedule III"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-029",
+    "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Easy",
+    "target_regime": "1962",
+    "relevant_rules": [
+      "Rule 12"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_12AB_rule_12AB_body_1",
+      "chunk_1962_rule_12AB_rule_12AB_body_2"
+    ],
+    "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
+    "evaluation_criteria": [
+      "Mentions Rule 12",
+      "Identifies Form SAHAJ (ITR-1)",
+      "Mentions resident status",
+      "Mentions total income threshold (up to 50 lakh rupees)",
+      "Mentions salary and one house property"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-022",
+    "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Medium",
+    "target_regime": "2026",
+    "relevant_rules": [
+      "Rule 164"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
+    "evaluation_criteria": [
+      "Mentions Rule 164",
+      "Identifies Form SAHAJ (ITR-1)",
+      "Mentions resident status",
+      "Mentions total income threshold (up to 50 lakh rupees)",
+      "Mentions salary and one house property"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-014",
+    "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Medium",
+    "target_regime": "2026",
+    "relevant_rules": [
+      "Rule 164"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
+    "evaluation_criteria": [
+      "Mentions Rule 164",
+      "Identifies Form SAHAJ (ITR-1)",
+      "Mentions resident status",
+      "Mentions total income threshold (up to 50 lakh rupees)",
+      "Mentions salary and one house property"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-010",
+    "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Medium",
+    "target_regime": "2026",
+    "relevant_rules": [
+      "Rule 164"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
+    "evaluation_criteria": [
+      "Mentions Rule 164",
+      "Identifies Form SAHAJ (ITR-1)",
+      "Mentions resident status",
+      "Mentions total income threshold (up to 50 lakh rupees)",
+      "Mentions salary and one house property"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-019",
+    "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Easy",
+    "target_regime": "1962",
+    "relevant_rules": [
+      "Rule 12"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_12AB_rule_12AB_body_1",
+      "chunk_1962_rule_12AB_rule_12AB_body_2"
+    ],
+    "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
+    "evaluation_criteria": [
+      "Mentions Rule 12",
+      "Identifies Form SAHAJ (ITR-1)",
+      "Mentions resident status",
+      "Mentions total income threshold (up to 50 lakh rupees)",
+      "Mentions salary and one house property"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-027",
+    "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Hard",
+    "target_regime": "1962",
+    "relevant_rules": [
+      "Rule 12"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_12AB_rule_12AB_body_1",
+      "chunk_1962_rule_12AB_rule_12AB_body_2"
+    ],
+    "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
+    "evaluation_criteria": [
+      "Mentions Rule 12",
+      "Identifies Form SAHAJ (ITR-1)",
+      "Mentions resident status",
+      "Mentions total income threshold (up to 50 lakh rupees)",
+      "Mentions salary and one house property"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-002",
+    "query": "What specific form must a salaried employee furnish to their employer under Rule 26C to claim tax deductions for House Rent Allowance (HRA), Leave Travel Concession (LTC), and home loan interest?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Easy",
+    "target_regime": "1962",
+    "persona_context": "Salaried employee providing proof of tax investments and rent receipts to payroll department",
+    "relevant_rules": [
+      "Rule 26C"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_26C_rule_26C_subrule_1_1",
+      "chunk_1962_rule_26C_rule_26C_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 26C(1) of the Income Tax Rules 1962, the evidence of claims for deductions or allowances (including HRA rent receipts, LTC travel tickets, interest on house property home loan, and Chapter VI-A deductions) must be furnished by the employee to the person responsible for making payment of salary in Form No. 12BB.",
+    "evaluation_criteria": [
+      "Mentions Rule 26C",
+      "Explicitly identifies Form No. 12BB",
+      "Lists evidence of claims (HRA, LTC, housing interest, Chapter VI-A)"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-001",
+    "query": "I am a salaried individual filing an Updated Return (ITR-U) under Rule 12AC. My accounts are not required to be audited, and I do NOT have a Digital Signature Certificate (DSC). How am I permitted to verify my return according to the table in Rule 12AC?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Medium",
+    "target_regime": "1962",
+    "persona_context": "Individual salaried taxpayer with no business audit and no digital signature certificate",
+    "relevant_rules": [
+      "Rule 12AC"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_12AC_rule_12AC_subrule_1_1",
+      "chunk_1962_rule_12AC_rule_12AC_subrule_2_2",
+      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+      "chunk_1962_rule_12AC_rule_12AC_table_1_7"
+    ],
+    "ground_truth_answer": "Under Rule 12AC Table (Sl. No. 1(2)), for an individual in whose case accounts are not required to be audited, the return in Form ITR-U may be verified either: (A) Electronically under digital signature, OR (B) Transmitting the data electronically in the return under electronic verification code (EVC). Since you do not have a DSC, you are permitted to verify it by transmitting data electronically under EVC.",
+    "evaluation_criteria": [
+      "Traverses Rule 12AC Table Sl. No. 1(2)",
+      "Identifies Sub-item (B) EVC verification",
+      "Confirms DSC is not mandatory for unaudited individual"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-016",
+    "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Medium",
+    "target_regime": "2026",
+    "relevant_rules": [
+      "Rule 164"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
+    "evaluation_criteria": [
+      "Mentions Rule 164",
+      "Identifies Form SAHAJ (ITR-1)",
+      "Mentions resident status",
+      "Mentions total income threshold (up to 50 lakh rupees)",
+      "Mentions salary and one house property"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-030",
+    "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Hard",
+    "target_regime": "2026",
+    "relevant_rules": [
+      "Rule 164"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
+    "evaluation_criteria": [
+      "Mentions Rule 164",
+      "Identifies Form SAHAJ (ITR-1)",
+      "Mentions resident status",
+      "Mentions total income threshold (up to 50 lakh rupees)",
+      "Mentions salary and one house property"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-020",
+    "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Medium",
+    "target_regime": "2026",
+    "relevant_rules": [
+      "Rule 164"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
+    "evaluation_criteria": [
+      "Mentions Rule 164",
+      "Identifies Form SAHAJ (ITR-1)",
+      "Mentions resident status",
+      "Mentions total income threshold (up to 50 lakh rupees)",
+      "Mentions salary and one house property"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-011",
+    "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Easy",
+    "target_regime": "1962",
+    "relevant_rules": [
+      "Rule 12"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_12AB_rule_12AB_body_1",
+      "chunk_1962_rule_12AB_rule_12AB_body_2"
+    ],
+    "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
+    "evaluation_criteria": [
+      "Mentions Rule 12",
+      "Identifies Form SAHAJ (ITR-1)",
+      "Mentions resident status",
+      "Mentions total income threshold (up to 50 lakh rupees)",
+      "Mentions salary and one house property"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-005",
+    "query": "Under Rule 31 of the 1962 rules, what certificate is required to be issued by an employer for tax deducted at source on salary, and what is the deadline?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Medium",
+    "target_regime": "1962",
+    "persona_context": "Salaried employee requesting annual TDS certificate from HR",
+    "relevant_rules": [
+      "Rule 31"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_31_rule_31_clause_a_2",
+      "chunk_1962_rule_31_rule_31_clause_b_3"
+    ],
+    "ground_truth_answer": "Under Rule 31(1)(a) and Rule 31(3) Table of the Income Tax Rules 1962, the certificate of tax deducted at source on salary income under section 192 must be issued in Form No. 16 by 15th June of the financial year immediately following the financial year in which tax was deducted.",
+    "evaluation_criteria": [
+      "Mentions Rule 31",
+      "Identifies Form No. 16 for salary TDS under Section 192",
+      "Specifies deadline as 15th June following the financial year"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-026",
+    "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Medium",
+    "target_regime": "2026",
+    "relevant_rules": [
+      "Rule 164"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
+    "evaluation_criteria": [
+      "Mentions Rule 164",
+      "Identifies Form SAHAJ (ITR-1)",
+      "Mentions resident status",
+      "Mentions total income threshold (up to 50 lakh rupees)",
+      "Mentions salary and one house property"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-017",
+    "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Easy",
+    "target_regime": "1962",
+    "relevant_rules": [
+      "Rule 12"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_12AB_rule_12AB_body_1",
+      "chunk_1962_rule_12AB_rule_12AB_body_2"
+    ],
+    "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
+    "evaluation_criteria": [
+      "Mentions Rule 12",
+      "Identifies Form SAHAJ (ITR-1)",
+      "Mentions resident status",
+      "Mentions total income threshold (up to 50 lakh rupees)",
+      "Mentions salary and one house property"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-018",
+    "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Hard",
+    "target_regime": "2026",
+    "relevant_rules": [
+      "Rule 164"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
+    "evaluation_criteria": [
+      "Mentions Rule 164",
+      "Identifies Form SAHAJ (ITR-1)",
+      "Mentions resident status",
+      "Mentions total income threshold (up to 50 lakh rupees)",
+      "Mentions salary and one house property"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-008",
+    "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Medium",
+    "target_regime": "2026",
+    "relevant_rules": [
+      "Rule 164"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
+    "evaluation_criteria": [
+      "Mentions Rule 164",
+      "Identifies Form SAHAJ (ITR-1)",
+      "Mentions resident status",
+      "Mentions total income threshold (up to 50 lakh rupees)",
+      "Mentions salary and one house property"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-024",
+    "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Hard",
+    "target_regime": "2026",
+    "relevant_rules": [
+      "Rule 164"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
+    "evaluation_criteria": [
+      "Mentions Rule 164",
+      "Identifies Form SAHAJ (ITR-1)",
+      "Mentions resident status",
+      "Mentions total income threshold (up to 50 lakh rupees)",
+      "Mentions salary and one house property"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-003",
+    "query": "Under the 2026 rules (Rule 205), what is the prescribed form for an employee to submit evidence of claims to the employer for TDS estimation?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Easy",
+    "target_regime": "2026",
+    "persona_context": "Employee in 2026 submitting investment declarations to employer",
+    "relevant_rules": [
+      "Rule 205"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_205_rule_205_subrule_1_1",
+      "chunk_2026_rule_205_rule_205_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 205 of the Income Tax Rules 2026, an employee must furnish evidence of claims and deductions to the employer for tax deduction at source in Form No. 124.",
+    "evaluation_criteria": [
+      "Mentions Rule 205 (2026)",
+      "Identifies Form No. 124"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-031",
+    "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Easy",
+    "target_regime": "1962",
+    "relevant_rules": [
+      "Rule 12"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_12AB_rule_12AB_body_1",
+      "chunk_1962_rule_12AB_rule_12AB_body_2"
+    ],
+    "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
+    "evaluation_criteria": [
+      "Mentions Rule 12",
+      "Identifies Form SAHAJ (ITR-1)",
+      "Mentions resident status",
+      "Mentions total income threshold (up to 50 lakh rupees)",
+      "Mentions salary and one house property"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-007",
+    "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Easy",
+    "target_regime": "1962",
+    "relevant_rules": [
+      "Rule 12"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_12AB_rule_12AB_body_1",
+      "chunk_1962_rule_12AB_rule_12AB_body_2"
+    ],
+    "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
+    "evaluation_criteria": [
+      "Mentions Rule 12",
+      "Identifies Form SAHAJ (ITR-1)",
+      "Mentions resident status",
+      "Mentions total income threshold (up to 50 lakh rupees)",
+      "Mentions salary and one house property"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-023",
+    "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Easy",
+    "target_regime": "1962",
+    "relevant_rules": [
+      "Rule 12"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_12AB_rule_12AB_body_1",
+      "chunk_1962_rule_12AB_rule_12AB_body_2"
+    ],
+    "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
+    "evaluation_criteria": [
+      "Mentions Rule 12",
+      "Identifies Form SAHAJ (ITR-1)",
+      "Mentions resident status",
+      "Mentions total income threshold (up to 50 lakh rupees)",
+      "Mentions salary and one house property"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-025",
+    "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "simple_semantic",
+    "difficulty_level": "Easy",
+    "target_regime": "1962",
+    "relevant_rules": [
+      "Rule 12"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_1962_rule_12AB_rule_12AB_body_1",
+      "chunk_1962_rule_12AB_rule_12AB_body_2"
+    ],
+    "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
+    "evaluation_criteria": [
+      "Mentions Rule 12",
+      "Identifies Form SAHAJ (ITR-1)",
+      "Mentions resident status",
+      "Mentions total income threshold (up to 50 lakh rupees)",
+      "Mentions salary and one house property"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-PROC-006",
+    "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+    "query_type": "Procedural / Condition Matching",
+    "retrieval_paradigm": "multi_hop",
+    "difficulty_level": "Hard",
+    "target_regime": "2026",
+    "relevant_rules": [
+      "Rule 164"
+    ],
+    "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2"
+    ],
+    "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
+    "evaluation_criteria": [
+      "Mentions Rule 164",
+      "Identifies Form SAHAJ (ITR-1)",
+      "Mentions resident status",
+      "Mentions total income threshold (up to 50 lakh rupees)",
+      "Mentions salary and one house property"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-NEG-010",
+    "query": "What are the statutory exemption rules for AY 2015-16 filed under Rule 12AC?",
+    "query_type": "Negative / Out-of-Scope",
+    "retrieval_paradigm": "negative_null",
+    "difficulty_level": "Hard",
+    "target_regime": "none",
+    "persona_context": "Out of scope evaluation case",
+    "relevant_rules": [],
+    "ground_truth_chunk_ids": [],
+    "ground_truth_answer": "This query is out of scope. Rule 12AC is temporally restricted to AY 2020-21 onwards and cannot apply to AY 2015-16.",
+    "evaluation_criteria": [
+      "Identifies query as Out-of-Scope / Temporally Invalid",
+      "Refuses hallucination with zero chunk retrieval expectation"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-NEG-008",
+    "query": "What are the statutory exemption rules for AY 2015-16 filed under Rule 12AC?",
+    "query_type": "Negative / Out-of-Scope",
+    "retrieval_paradigm": "negative_null",
+    "difficulty_level": "Hard",
+    "target_regime": "none",
+    "persona_context": "Out of scope evaluation case",
+    "relevant_rules": [],
+    "ground_truth_chunk_ids": [],
+    "ground_truth_answer": "This query is out of scope. Rule 12AC is temporally restricted to AY 2020-21 onwards and cannot apply to AY 2015-16.",
+    "evaluation_criteria": [
+      "Identifies query as Out-of-Scope / Temporally Invalid",
+      "Refuses hallucination with zero chunk retrieval expectation"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-NEG-001",
+    "query": "How is Minimum Alternate Tax (MAT) under section 115JB calculated for a private limited corporate taxpayer under these salary rules?",
+    "query_type": "Negative / Out-of-Scope",
+    "retrieval_paradigm": "negative_null",
+    "difficulty_level": "Easy",
+    "target_regime": "none",
+    "persona_context": "Out-of-scope query regarding corporate MAT provisions",
+    "relevant_rules": [],
+    "ground_truth_chunk_ids": [],
+    "ground_truth_answer": "This query is out of scope. The provided corpus contains Indian Income Tax Rules specifically applicable to salaried individuals and related procedures. Minimum Alternate Tax (MAT) under section 115JB applies to corporate companies and is not covered in this salaried individual rules corpus.",
+    "evaluation_criteria": [
+      "Identifies query as Out-of-Scope / Not Covered",
+      "States that MAT under section 115JB is a corporate tax provision",
+      "Refuses hallucination with null chunk expectation"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-NEG-014",
+    "query": "What are the statutory exemption rules for AY 2015-16 filed under Rule 12AC?",
+    "query_type": "Negative / Out-of-Scope",
+    "retrieval_paradigm": "negative_null",
+    "difficulty_level": "Hard",
+    "target_regime": "none",
+    "persona_context": "Out of scope evaluation case",
+    "relevant_rules": [],
+    "ground_truth_chunk_ids": [],
+    "ground_truth_answer": "This query is out of scope. Rule 12AC is temporally restricted to AY 2020-21 onwards and cannot apply to AY 2015-16.",
+    "evaluation_criteria": [
+      "Identifies query as Out-of-Scope / Temporally Invalid",
+      "Refuses hallucination with zero chunk retrieval expectation"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-NEG-006",
+    "query": "Can I submit Form ITR-U under Rule 12AC on 15th January 2021 for my salaried income?",
+    "query_type": "Negative / Out-of-Scope",
+    "retrieval_paradigm": "negative_null",
+    "difficulty_level": "Hard",
+    "target_regime": "none",
+    "persona_context": "Temporal boundary query testing date prior to rule notification",
+    "temporal_constraint": "Rule 12AC came into force only on 29-04-2022",
+    "relevant_rules": [
+      "Rule 12AC"
+    ],
+    "ground_truth_chunk_ids": [],
+    "ground_truth_answer": "This request is temporally invalid. Rule 12AC and Form ITR-U were inserted by the Income-tax (Eleventh Amendment) Rules, 2022 and came into force only on 29th April, 2022. On 15th January 2021, Rule 12AC and Form ITR-U did not legally exist.",
+    "evaluation_criteria": [
+      "Identifies temporal boundary violation",
+      "States Rule 12AC came into force on 29-04-2022",
+      "Confirms Rule 12AC did not exist on 15-01-2021"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-NEG-002",
+    "query": "What is the TDS rate and threshold for Virtual Digital Assets (cryptocurrency) transfers under section 194S for crypto traders under Rule 31?",
+    "query_type": "Negative / Out-of-Scope",
+    "retrieval_paradigm": "negative_null",
+    "difficulty_level": "Easy",
+    "target_regime": "none",
+    "persona_context": "Out-of-scope query regarding cryptocurrency trading TDS rules",
+    "relevant_rules": [],
+    "ground_truth_chunk_ids": [],
+    "ground_truth_answer": "This query is out of scope. Detailed provisions for cryptocurrency / Virtual Digital Asset (VDA) trading under section 194S are business/trading provisions not covered in the salaried rules corpus.",
+    "evaluation_criteria": [
+      "Identifies query as Out-of-Scope",
+      "Confirms crypto trading u/s 194S is outside salaried scope",
+      "Returns zero chunk expectation"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-NEG-018",
+    "query": "What are the statutory exemption rules for AY 2015-16 filed under Rule 12AC?",
+    "query_type": "Negative / Out-of-Scope",
+    "retrieval_paradigm": "negative_null",
+    "difficulty_level": "Hard",
+    "target_regime": "none",
+    "persona_context": "Out of scope evaluation case",
+    "relevant_rules": [],
+    "ground_truth_chunk_ids": [],
+    "ground_truth_answer": "This query is out of scope. Rule 12AC is temporally restricted to AY 2020-21 onwards and cannot apply to AY 2015-16.",
+    "evaluation_criteria": [
+      "Identifies query as Out-of-Scope / Temporally Invalid",
+      "Refuses hallucination with zero chunk retrieval expectation"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-NEG-022",
+    "query": "What are the statutory exemption rules for AY 2015-16 filed under Rule 12AC?",
+    "query_type": "Negative / Out-of-Scope",
+    "retrieval_paradigm": "negative_null",
+    "difficulty_level": "Hard",
+    "target_regime": "none",
+    "persona_context": "Out of scope evaluation case",
+    "relevant_rules": [],
+    "ground_truth_chunk_ids": [],
+    "ground_truth_answer": "This query is out of scope. Rule 12AC is temporally restricted to AY 2020-21 onwards and cannot apply to AY 2015-16.",
+    "evaluation_criteria": [
+      "Identifies query as Out-of-Scope / Temporally Invalid",
+      "Refuses hallucination with zero chunk retrieval expectation"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-NEG-021",
+    "query": "What are the statutory exemption rules for commercial business depreciation on factory boilers under section 32?",
+    "query_type": "Negative / Out-of-Scope",
+    "retrieval_paradigm": "negative_null",
+    "difficulty_level": "Medium",
+    "target_regime": "none",
+    "persona_context": "Out of scope evaluation case",
+    "relevant_rules": [],
+    "ground_truth_chunk_ids": [],
+    "ground_truth_answer": "This query is out of scope. Business boiler depreciation under section 32 is a commercial enterprise provision not covered under the salaried individual rules corpus.",
+    "evaluation_criteria": [
+      "Identifies query as Out-of-Scope / Temporally Invalid",
+      "Refuses hallucination with zero chunk retrieval expectation"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-NEG-017",
+    "query": "What are the statutory exemption rules for commercial business depreciation on factory boilers under section 32?",
+    "query_type": "Negative / Out-of-Scope",
+    "retrieval_paradigm": "negative_null",
+    "difficulty_level": "Medium",
+    "target_regime": "none",
+    "persona_context": "Out of scope evaluation case",
+    "relevant_rules": [],
+    "ground_truth_chunk_ids": [],
+    "ground_truth_answer": "This query is out of scope. Business boiler depreciation under section 32 is a commercial enterprise provision not covered under the salaried individual rules corpus.",
+    "evaluation_criteria": [
+      "Identifies query as Out-of-Scope / Temporally Invalid",
+      "Refuses hallucination with zero chunk retrieval expectation"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-NEG-023",
+    "query": "What are the statutory exemption rules for commercial business depreciation on factory boilers under section 32?",
+    "query_type": "Negative / Out-of-Scope",
+    "retrieval_paradigm": "negative_null",
+    "difficulty_level": "Medium",
+    "target_regime": "none",
+    "persona_context": "Out of scope evaluation case",
+    "relevant_rules": [],
+    "ground_truth_chunk_ids": [],
+    "ground_truth_answer": "This query is out of scope. Business boiler depreciation under section 32 is a commercial enterprise provision not covered under the salaried individual rules corpus.",
+    "evaluation_criteria": [
+      "Identifies query as Out-of-Scope / Temporally Invalid",
+      "Refuses hallucination with zero chunk retrieval expectation"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-NEG-020",
+    "query": "What are the statutory exemption rules for AY 2015-16 filed under Rule 12AC?",
+    "query_type": "Negative / Out-of-Scope",
+    "retrieval_paradigm": "negative_null",
+    "difficulty_level": "Hard",
+    "target_regime": "none",
+    "persona_context": "Out of scope evaluation case",
+    "relevant_rules": [],
+    "ground_truth_chunk_ids": [],
+    "ground_truth_answer": "This query is out of scope. Rule 12AC is temporally restricted to AY 2020-21 onwards and cannot apply to AY 2015-16.",
+    "evaluation_criteria": [
+      "Identifies query as Out-of-Scope / Temporally Invalid",
+      "Refuses hallucination with zero chunk retrieval expectation"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-NEG-012",
+    "query": "What are the statutory exemption rules for AY 2015-16 filed under Rule 12AC?",
+    "query_type": "Negative / Out-of-Scope",
+    "retrieval_paradigm": "negative_null",
+    "difficulty_level": "Hard",
+    "target_regime": "none",
+    "persona_context": "Out of scope evaluation case",
+    "relevant_rules": [],
+    "ground_truth_chunk_ids": [],
+    "ground_truth_answer": "This query is out of scope. Rule 12AC is temporally restricted to AY 2020-21 onwards and cannot apply to AY 2015-16.",
+    "evaluation_criteria": [
+      "Identifies query as Out-of-Scope / Temporally Invalid",
+      "Refuses hallucination with zero chunk retrieval expectation"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-NEG-004",
+    "query": "What are the transfer pricing documentation requirements under Rule 10D for international transactions between associated enterprises?",
+    "query_type": "Negative / Out-of-Scope",
+    "retrieval_paradigm": "negative_null",
+    "difficulty_level": "Easy",
+    "target_regime": "none",
+    "persona_context": "Out-of-scope query regarding corporate Transfer Pricing rules",
+    "relevant_rules": [],
+    "ground_truth_chunk_ids": [],
+    "ground_truth_answer": "This query is out of scope. Transfer pricing documentation under Rule 10D applies to multinational corporate enterprises engaged in cross-border international transactions and is not part of the salaried rules corpus.",
+    "evaluation_criteria": [
+      "Identifies query as Out-of-Scope",
+      "Specifies Transfer Pricing is for corporate enterprises",
+      "Returns null retrieval"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-NEG-003",
+    "query": "Can a salaried individual claim Input Tax Credit (ITC) under Goods and Services Tax (GST) for office suits purchased from salary?",
+    "query_type": "Negative / Out-of-Scope",
+    "retrieval_paradigm": "negative_null",
+    "difficulty_level": "Easy",
+    "target_regime": "none",
+    "persona_context": "Out-of-scope query confusing Income Tax with GST Input Tax Credit",
+    "relevant_rules": [],
+    "ground_truth_chunk_ids": [],
+    "ground_truth_answer": "This query is out of scope. Goods and Services Tax (GST) Input Tax Credit (ITC) is governed by GST legislation for registered businesses, not under the Income Tax Rules for salaried individuals.",
+    "evaluation_criteria": [
+      "Identifies query as Out-of-Scope",
+      "Differentiates GST Input Tax Credit from Income Tax Rules",
+      "Returns null retrieval"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-NEG-009",
+    "query": "What are the statutory exemption rules for commercial business depreciation on factory boilers under section 32?",
+    "query_type": "Negative / Out-of-Scope",
+    "retrieval_paradigm": "negative_null",
+    "difficulty_level": "Medium",
+    "target_regime": "none",
+    "persona_context": "Out of scope evaluation case",
+    "relevant_rules": [],
+    "ground_truth_chunk_ids": [],
+    "ground_truth_answer": "This query is out of scope. Business boiler depreciation under section 32 is a commercial enterprise provision not covered under the salaried individual rules corpus.",
+    "evaluation_criteria": [
+      "Identifies query as Out-of-Scope / Temporally Invalid",
+      "Refuses hallucination with zero chunk retrieval expectation"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-NEG-005",
+    "query": "I want to file an Updated Return in Form ITR-U under Rule 12AC for Assessment Year 2017-18. What are the applicable verification procedures?",
+    "query_type": "Negative / Out-of-Scope",
+    "retrieval_paradigm": "negative_null",
+    "difficulty_level": "Medium",
+    "target_regime": "none",
+    "persona_context": "Temporal boundary query asking for ITR-U for an excluded historical assessment year",
+    "temporal_constraint": "Rule 12AC only applies from AY 2020-21 onwards",
+    "relevant_rules": [
+      "Rule 12AC"
+    ],
+    "ground_truth_chunk_ids": [],
+    "ground_truth_answer": "This request is invalid and outside the temporal scope of the rule. Under Rule 12AC(1), the updated return in Form ITR-U is applicable only for Assessment Year commencing 1st April 2020 (AY 2020-21) and subsequent years. An updated return cannot be filed for AY 2017-18 as it is outside the temporal jurisdiction of Rule 12AC.",
+    "evaluation_criteria": [
+      "Identifies temporal violation",
+      "States Rule 12AC only applies from AY 2020-21 onwards",
+      "Confirms AY 2017-18 cannot be filed under Rule 12AC"
+    ],
+    "split": "active"
+  },
+  {
+    "id": "GOLD-NEG-015",
+    "query": "What are the statutory exemption rules for commercial business depreciation on factory boilers under section 32?",
+    "query_type": "Negative / Out-of-Scope",
+    "retrieval_paradigm": "negative_null",
+    "difficulty_level": "Medium",
+    "target_regime": "none",
+    "persona_context": "Out of scope evaluation case",
+    "relevant_rules": [],
+    "ground_truth_chunk_ids": [],
+    "ground_truth_answer": "This query is out of scope. Business boiler depreciation under section 32 is a commercial enterprise provision not covered under the salaried individual rules corpus.",
+    "evaluation_criteria": [
+      "Identifies query as Out-of-Scope / Temporally Invalid",
+      "Refuses hallucination with zero chunk retrieval expectation"
+    ],
+    "split": "active"
+  }
+]
