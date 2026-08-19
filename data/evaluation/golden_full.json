@@ -11,9 +11,7 @@
       "Rule 2A"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_2A_rule_2A_body_1",
-      "chunk_1962_rule_2A_rule_2A_body_2",
-      "chunk_1962_rule_2A_rule_2A_clause_a_3"
+      "chunk_1962_rule_2A_full"
     ],
     "ground_truth_answer": "Under Rule 2A of the Income Tax Rules 1962, the HRA exemption for a salaried employee in Delhi (a metro city) is the least of: (a) actual HRA received, (b) rent paid in excess of 10% of salary, or (c) 50% of salary (since Delhi is a metro city; non-metros are 40%).",
     "evaluation_criteria": [
@@ -37,8 +35,31 @@
       "Rule 3"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
-      "chunk_1962_rule_12_rule_12_subrule_3_47"
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_12",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_answer": "Under Rule 3(1) Table (Sl. No. 1), for Union or State Government employees, the perquisite value of unfurnished accommodation is the licence fee determined by the government in accordance with the rules framed by the government, reduced by the rent actually paid by the employee.",
     "evaluation_criteria": [
@@ -60,9 +81,31 @@
       "Rule 3"
     ],
     "ground_truth_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_12",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
       "chunk_1962_rule_3_rule_3_subrule_2_7",
-      "chunk_1962_rule_3_rule_3_clause_a_8",
-      "chunk_1962_rule_3_rule_3_clause_b_106"
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_answer": "Under Rule 3(1) of the 1962 rules, where the accommodation is owned by the employer in a city having a population exceeding 10 lakhs but not exceeding 25 lakhs (as per the 2001/2011 census depending on amendment), the perquisite value is 10% of salary (or 7.5% under the revised 2023 amendment for population between 15-40 lakhs), reduced by any rent recovered from the employee.",
     "evaluation_criteria": [
@@ -85,8 +128,11 @@
       "Rule 2BB"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_2BB_rule_2BB_clause_i_122",
-      "chunk_1962_rule_2BB_rule_2BB_clause_ii_123"
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_answer": "No. Under Rule 2BB(3) of the Income Tax Rules 1962, an employee who has exercised an option under section 115BAC (New Tax Regime) is entitled to exemption ONLY in respect of allowances mentioned in sub-rule (1)(a) to (d) (tour/travel, daily allowance, conveyance, helper) and sub-rule (2) Table Sl. No. 11 (transport allowance for disabled employees). Children education allowance (Sl. No. 7) and hostel subsidy (Sl. No. 8) are NOT exempt under the New Tax Regime.",
     "evaluation_criteria": [
@@ -109,8 +155,13 @@
       "Rule 2B"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_2BA_rule_2BA_body_1",
-      "chunk_1962_rule_2BA_rule_2BA_clause_i_2"
+      "chunk_1962_rule_2B_rule_2B_subrule_1A_9",
+      "chunk_1962_rule_2B_rule_2B_subrule_1B_23",
+      "chunk_1962_rule_2B_rule_2B_subrule_1_1",
+      "chunk_1962_rule_2B_rule_2B_subrule_2_24",
+      "chunk_1962_rule_2B_rule_2B_subrule_3_26",
+      "chunk_1962_rule_2B_rule_2B_subrule_4_28",
+      "chunk_1962_rule_2B_rule_2B_subrule_5_11"
     ],
     "ground_truth_answer": "No. Under Rule 2B of the Income Tax Rules 1962, Leave Travel Concession (LTC) exemption under section 10(5) is strictly limited to travel to any place within India. Foreign/international travel expenses are not exempt.",
     "evaluation_criteria": [
@@ -132,9 +183,7 @@
       "Rule 26D"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_26D_rule_26D_subrule_1_1",
-      "chunk_1962_rule_26D_rule_26D_subrule_2_2",
-      "chunk_1962_rule_26D_rule_26D_subrule_3_3"
+      "chunk_1962_rule_26D_full"
     ],
     "ground_truth_answer": "Under Rule 26D and Section 194P of the Income Tax Act, a specified senior citizen (who is a resident aged 75 years or more) having only pension income and interest income from the same specified bank can furnish a declaration in Form No. 12BBA to the specified bank. Since you are 77, you qualify to submit Form 12BBA under Rule 26D.",
     "evaluation_criteria": [
@@ -157,8 +206,7 @@
       "Rule 26A"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_26A_rule_26A_subrule_1_1",
-      "chunk_1962_rule_26A_rule_26A_subrule_2_2"
+      "chunk_1962_rule_26A_full"
     ],
     "ground_truth_answer": "Under Rule 26A(1) of the Income Tax Rules 1962, an employee who has been employed under more than one employer during the financial year must furnish the details of salary due or received and tax deducted at source to the subsequent employer in Form No. 12B.",
     "evaluation_criteria": [
@@ -180,9 +228,31 @@
       "Rule 3"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
       "chunk_1962_rule_3_rule_3_subrule_1_26",
-      "chunk_1962_rule_3_rule_3_clause_b_28"
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_12",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_answer": "Under Rule 3(2) Table (Sl. No. 1(1)(c)(ii)), where a motor car exceeding 1.6 litres cubic capacity is owned or hired by the employer, running and maintenance expenses are met by the employer, and it is used partly for official and partly for personal purposes, the perquisite value is Rs. 2,400 per month (plus Rs. 900 per month if a chauffeur/driver is provided).",
     "evaluation_criteria": [
@@ -205,7 +275,19 @@
       "Rule 280"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_2026_rule_280_rule_280_subrule_3_112"
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_7_119",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_answer": "Under Rule 280(3) of the Income Tax Rules 2026, an employee who has exercised an option under section 202(4) is entitled to exemption ONLY in respect of allowances mentioned in sub-rule (1)(a) to (d) (travel/transfer allowance, tour daily allowance, conveyance allowance, helper allowance) and in sub-rule (2) [Table: Sl. No. 10] (transport allowance for visually impaired or orthopedically disabled employees).",
     "evaluation_criteria": [
@@ -228,7 +310,11 @@
       "Rule 2BB"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_2BB_rule_2BB_clause_ii_117"
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_answer": "Under Rule 2BB(2) Table (Sl. No. 11), an employee who is blind or deaf and dumb or orthopedically handicapped with disability of lower extremities is entitled to a transport allowance exemption of Rs. 3,200 per month for commuting between residence and place of duty.",
     "evaluation_criteria": [
@@ -251,7 +337,26 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
-      "chunk_2026_rule_15_rule_15_subrule_2_2"
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_5_48",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -273,8 +378,31 @@
       "Rule 3"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
-      "chunk_1962_rule_12_rule_12_subrule_3_47"
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_12",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_answer": "Under Rule 3 of the 1962 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -297,7 +425,26 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
-      "chunk_2026_rule_15_rule_15_subrule_2_2"
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_5_48",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -319,8 +466,31 @@
       "Rule 3"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
-      "chunk_1962_rule_12_rule_12_subrule_3_47"
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_12",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_answer": "Under Rule 3 of the 1962 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -343,7 +513,26 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
-      "chunk_2026_rule_15_rule_15_subrule_2_2"
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_5_48",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -365,8 +554,31 @@
       "Rule 3"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
-      "chunk_1962_rule_12_rule_12_subrule_3_47"
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_12",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_answer": "Under Rule 3 of the 1962 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -389,7 +601,26 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
-      "chunk_2026_rule_15_rule_15_subrule_2_2"
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_5_48",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -411,8 +642,31 @@
       "Rule 3"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
-      "chunk_1962_rule_12_rule_12_subrule_3_47"
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_12",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_answer": "Under Rule 3 of the 1962 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -435,7 +689,26 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
-      "chunk_2026_rule_15_rule_15_subrule_2_2"
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_5_48",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -457,8 +730,31 @@
       "Rule 3"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
-      "chunk_1962_rule_12_rule_12_subrule_3_47"
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_12",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_answer": "Under Rule 3 of the 1962 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -481,7 +777,26 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
-      "chunk_2026_rule_15_rule_15_subrule_2_2"
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_5_48",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -503,8 +818,31 @@
       "Rule 3"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
-      "chunk_1962_rule_12_rule_12_subrule_3_47"
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_12",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_answer": "Under Rule 3 of the 1962 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -527,7 +865,26 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
-      "chunk_2026_rule_15_rule_15_subrule_2_2"
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_5_48",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -549,8 +906,31 @@
       "Rule 3"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
-      "chunk_1962_rule_12_rule_12_subrule_3_47"
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_12",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_answer": "Under Rule 3 of the 1962 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -573,7 +953,26 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
-      "chunk_2026_rule_15_rule_15_subrule_2_2"
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_5_48",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -595,8 +994,31 @@
       "Rule 3"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
-      "chunk_1962_rule_12_rule_12_subrule_3_47"
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_12",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_answer": "Under Rule 3 of the 1962 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -619,7 +1041,26 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
-      "chunk_2026_rule_15_rule_15_subrule_2_2"
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_5_48",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -641,8 +1082,31 @@
       "Rule 3"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
-      "chunk_1962_rule_12_rule_12_subrule_3_47"
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_12",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_answer": "Under Rule 3 of the 1962 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -665,7 +1129,26 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
-      "chunk_2026_rule_15_rule_15_subrule_2_2"
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_5_48",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -687,8 +1170,31 @@
       "Rule 3"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
-      "chunk_1962_rule_12_rule_12_subrule_3_47"
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_12",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_answer": "Under Rule 3 of the 1962 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -711,7 +1217,26 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
-      "chunk_2026_rule_15_rule_15_subrule_2_2"
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_5_48",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_answer": "Under Rule 15 of the 2026 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -733,8 +1258,31 @@
       "Rule 3"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
-      "chunk_1962_rule_12_rule_12_subrule_3_47"
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_12",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_answer": "Under Rule 3 of the 1962 rules, the value of an interest-free or concessional loan is determined on the basis of the maximum monthly balance at the rate charged by State Bank of India. However, loans for medical treatment of specified diseases or petty loans not exceeding Rs. 20,000 are completely exempt from perquisite valuation.",
     "evaluation_criteria": [
@@ -758,8 +1306,7 @@
       "Rule 12AC"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AC_rule_12AC_subrule_1_1",
-      "chunk_1962_rule_12AC_rule_12AC_subrule_2_2"
+      "chunk_1962_rule_12AC_full"
     ],
     "ground_truth_answer": "Yes. Financial Year (FY) 2019-20 corresponds to Assessment Year (AY) 2020-21. Under Rule 12AC(1) of the Income Tax Rules 1962 (inserted w.e.f. 29-04-2022), the return of income under section 139(8A) in Form ITR-U is eligible for the assessment year commencing on 1st April 2020 (AY 2020-21) and subsequent assessment years. Therefore, FY 2019-20 is eligible.",
     "evaluation_criteria": [
@@ -784,8 +1331,7 @@
       "Rule 12AC"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AC_rule_12AC_subrule_1_1",
-      "chunk_1962_rule_12AC_rule_12AC_subrule_2_2"
+      "chunk_1962_rule_12AC_full"
     ],
     "ground_truth_answer": "No. Financial Year (FY) 2017-18 corresponds to Assessment Year (AY) 2018-19. Under Rule 12AC(1), Form ITR-U is applicable only for the assessment year commencing on the 1st day of April, 2020 (AY 2020-21) and subsequent assessment years. AY 2018-19 falls outside the temporal scope of Rule 12AC.",
     "evaluation_criteria": [
@@ -808,10 +1354,14 @@
       "Rule 278"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_2BA_rule_2BA_body_1",
-      "chunk_1962_rule_2BA_rule_2BA_clause_i_2",
-      "chunk_2026_rule_278_rule_278_subrule_1_1",
-      "chunk_2026_rule_278_rule_278_clause_a_2"
+      "chunk_1962_rule_2B_rule_2B_subrule_1A_9",
+      "chunk_1962_rule_2B_rule_2B_subrule_1B_23",
+      "chunk_1962_rule_2B_rule_2B_subrule_1_1",
+      "chunk_1962_rule_2B_rule_2B_subrule_2_24",
+      "chunk_1962_rule_2B_rule_2B_subrule_3_26",
+      "chunk_1962_rule_2B_rule_2B_subrule_4_28",
+      "chunk_1962_rule_2B_rule_2B_subrule_5_11",
+      "chunk_2026_rule_278_full"
     ],
     "ground_truth_answer": "Under Rule 2B of the 1962 rules, LTC exemption is available for 2 journeys in a block of four calendar years (commencing from calendar year 1986). Under Rule 278 of the 2026 rules, the statutory framework maintains the 2-journey exemption for Schedule III, structured in blocks as designated under the revised 2026 code provisions.",
     "evaluation_criteria": [
@@ -833,8 +1383,7 @@
       "Rule 12AC"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AC_rule_12AC_subrule_1_1",
-      "chunk_1962_rule_12AC_rule_12AC_subrule_2_2"
+      "chunk_1962_rule_12AC_full"
     ],
     "ground_truth_answer": "Rule 12AC was inserted into the Income Tax Rules 1962 by the Income-tax (Eleventh Amendment) Rules, 2022, with effective date (w.e.f.) from 29th April, 2022.",
     "evaluation_criteria": [
@@ -856,10 +1405,52 @@
       "Rule 15"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
-      "chunk_1962_rule_12_rule_12_subrule_3_47",
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_12",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117",
       "chunk_2026_rule_15_rule_15_subrule_1_1",
-      "chunk_2026_rule_15_rule_15_subrule_2_2"
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_5_48",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_answer": "Under Rule 3 of the 1962 rules (post-2023 amendment), the perquisite value of employer-owned accommodation in cities having population > 40 lakhs as per the 2011 census is 10% of salary. Under Rule 15 of the 2026 rules, the valuation follows the modernized schedule under Section 15 with aligned population tiers and salary definitions.",
     "evaluation_criteria": [
@@ -881,8 +1472,11 @@
       "Rule 2BB"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
-      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -905,7 +1499,18 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
-      "chunk_2026_rule_280_rule_280_clause_a_2"
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_7_119",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_answer": "Under Rule 280 of the 2026 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -927,8 +1532,11 @@
       "Rule 2BB"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
-      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -951,7 +1559,18 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
-      "chunk_2026_rule_280_rule_280_clause_a_2"
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_7_119",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_answer": "Under Rule 280 of the 2026 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -973,8 +1592,11 @@
       "Rule 2BB"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
-      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -997,7 +1619,18 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
-      "chunk_2026_rule_280_rule_280_clause_a_2"
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_7_119",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_answer": "Under Rule 280 of the 2026 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1019,8 +1652,11 @@
       "Rule 2BB"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
-      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1043,7 +1679,18 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
-      "chunk_2026_rule_280_rule_280_clause_a_2"
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_7_119",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_answer": "Under Rule 280 of the 2026 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1065,8 +1712,11 @@
       "Rule 2BB"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
-      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1089,7 +1739,18 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
-      "chunk_2026_rule_280_rule_280_clause_a_2"
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_7_119",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_answer": "Under Rule 280 of the 2026 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1111,8 +1772,11 @@
       "Rule 2BB"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
-      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1135,7 +1799,18 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
-      "chunk_2026_rule_280_rule_280_clause_a_2"
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_7_119",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_answer": "Under Rule 280 of the 2026 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1157,8 +1832,11 @@
       "Rule 2BB"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
-      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1181,7 +1859,18 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
-      "chunk_2026_rule_280_rule_280_clause_a_2"
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_7_119",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_answer": "Under Rule 280 of the 2026 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1203,8 +1892,11 @@
       "Rule 2BB"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
-      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1227,7 +1919,18 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
-      "chunk_2026_rule_280_rule_280_clause_a_2"
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_7_119",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_answer": "Under Rule 280 of the 2026 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1249,8 +1952,11 @@
       "Rule 2BB"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
-      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1273,7 +1979,18 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
-      "chunk_2026_rule_280_rule_280_clause_a_2"
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_7_119",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_answer": "Under Rule 280 of the 2026 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1295,8 +2012,11 @@
       "Rule 2BB"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
-      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1319,7 +2039,18 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
-      "chunk_2026_rule_280_rule_280_clause_a_2"
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_7_119",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_answer": "Under Rule 280 of the 2026 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1341,8 +2072,11 @@
       "Rule 2BB"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
-      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1365,7 +2099,18 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
-      "chunk_2026_rule_280_rule_280_clause_a_2"
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_7_119",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_answer": "Under Rule 280 of the 2026 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1387,8 +2132,11 @@
       "Rule 2BB"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
-      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1411,7 +2159,18 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
-      "chunk_2026_rule_280_rule_280_clause_a_2"
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_7_119",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_answer": "Under Rule 280 of the 2026 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1433,8 +2192,11 @@
       "Rule 2BB"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
-      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1457,7 +2219,18 @@
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
-      "chunk_2026_rule_280_rule_280_clause_a_2"
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_7_119",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_answer": "Under Rule 280 of the 2026 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1479,8 +2252,11 @@
       "Rule 2BB"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
-      "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_answer": "Under Rule 2BB of the 1962 rules, Special Compensatory Border Area / Remote Locality Allowance is exempt subject to the monthly limits specified in the table (ranging from Rs. 200 to Rs. 1,300 per month in 1962, or modernized schedule amounts in 2026) for places specified in the schedule, provided the employee does not opt for the new regime restrictions.",
     "evaluation_criteria": [
@@ -1502,10 +2278,7 @@
       "Rule 12AC"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AC_rule_12AC_subrule_1_1",
-      "chunk_1962_rule_12AC_rule_12AC_subrule_2_2",
-      "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
-      "chunk_1962_rule_12AC_rule_12AC_table_1_7"
+      "chunk_1962_rule_12AC_full"
     ],
     "ground_truth_answer": "Under Rule 12AC Table (Sl. No. 1(2)), for an individual in whose case accounts are not required to be audited, the return in Form ITR-U may be verified either: (A) Electronically under digital signature, OR (B) Transmitting the data electronically in the return under electronic verification code (EVC). Since you do not have a DSC, you are permitted to verify it by transmitting data electronically under EVC.",
     "evaluation_criteria": [
@@ -1527,8 +2300,7 @@
       "Rule 26C"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_26C_rule_26C_subrule_1_1",
-      "chunk_1962_rule_26C_rule_26C_subrule_2_2"
+      "chunk_1962_rule_26C_full"
     ],
     "ground_truth_answer": "Under Rule 26C(1) of the Income Tax Rules 1962, the evidence of claims for deductions or allowances (including HRA rent receipts, LTC travel tickets, interest on house property home loan, and Chapter VI-A deductions) must be furnished by the employee to the person responsible for making payment of salary in Form No. 12BB.",
     "evaluation_criteria": [
@@ -1550,8 +2322,7 @@
       "Rule 205"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_2026_rule_205_rule_205_subrule_1_1",
-      "chunk_2026_rule_205_rule_205_subrule_2_2"
+      "chunk_2026_rule_205_full"
     ],
     "ground_truth_answer": "Under Rule 205 of the Income Tax Rules 2026, an employee must furnish evidence of claims and deductions to the employer for tax deduction at source in Form No. 124.",
     "evaluation_criteria": [
@@ -1573,10 +2344,13 @@
       "Rule 21AA"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_21AAA_rule_21AAA_subrule_1_1",
-      "chunk_1962_rule_21AAA_rule_21AAA_subrule_2_2",
-      "chunk_1962_rule_21AAA_rule_21AAA_clause_a_3",
-      "chunk_1962_rule_21AAA_rule_21AAA_subrule_1_1"
+      "chunk_1962_rule_21AA_full",
+      "chunk_1962_rule_21A_rule_21A_subrule_1_1",
+      "chunk_1962_rule_21A_rule_21A_subrule_2_7",
+      "chunk_1962_rule_21A_rule_21A_subrule_3_13",
+      "chunk_1962_rule_21A_rule_21A_subrule_4_21",
+      "chunk_1962_rule_21A_rule_21A_subrule_5_23",
+      "chunk_1962_rule_21A_rule_21A_subrule_6_26"
     ],
     "ground_truth_answer": "Under Rule 21A(1) and (2) of the Income Tax Rules 1962: (1) Calculate tax on total income including arrears in the year of receipt, (2) Calculate tax on total income excluding arrears in the year of receipt, to find the tax difference [A], (3) For each year to which arrears relate, calculate tax including and excluding additional salary to find tax difference [B], (4) Relief equals [A] minus [B] (if positive). The employee must furnish particulars in Form No. 10E under Rule 21AA.",
     "evaluation_criteria": [
@@ -1599,8 +2373,20 @@
       "Rule 31"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_31_rule_31_clause_a_2",
-      "chunk_1962_rule_31_rule_31_clause_b_3"
+      "chunk_1962_rule_31_rule_31_subrule_1_1",
+      "chunk_1962_rule_31_rule_31_subrule_1_12",
+      "chunk_1962_rule_31_rule_31_subrule_2_4",
+      "chunk_1962_rule_31_rule_31_subrule_3A_13",
+      "chunk_1962_rule_31_rule_31_subrule_3B_14",
+      "chunk_1962_rule_31_rule_31_subrule_3C_15",
+      "chunk_1962_rule_31_rule_31_subrule_3D_16",
+      "chunk_1962_rule_31_rule_31_subrule_3_11",
+      "chunk_1962_rule_31_rule_31_subrule_4_17",
+      "chunk_1962_rule_31_rule_31_subrule_5_18",
+      "chunk_1962_rule_31_rule_31_subrule_6A_24",
+      "chunk_1962_rule_31_rule_31_subrule_6_19",
+      "chunk_1962_rule_31_rule_31_subrule_7_25",
+      "chunk_1962_rule_31_rule_31_table_1_27"
     ],
     "ground_truth_answer": "Under Rule 31(1)(a) and Rule 31(3) Table of the Income Tax Rules 1962, the certificate of tax deducted at source on salary income under section 192 must be issued in Form No. 16 by 15th June of the financial year immediately following the financial year in which tax was deducted.",
     "evaluation_criteria": [
@@ -1621,8 +2407,22 @@
       "Rule 164"
     ],
     "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
       "chunk_2026_rule_164_rule_164_subrule_1_1",
-      "chunk_2026_rule_164_rule_164_subrule_2_2"
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_6_26",
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -1645,8 +2445,16 @@
       "Rule 12"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AB_rule_12AB_body_1",
-      "chunk_1962_rule_12AB_rule_12AB_body_2"
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_3_47",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -1669,8 +2477,22 @@
       "Rule 164"
     ],
     "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
       "chunk_2026_rule_164_rule_164_subrule_1_1",
-      "chunk_2026_rule_164_rule_164_subrule_2_2"
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_6_26",
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -1693,8 +2515,16 @@
       "Rule 12"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AB_rule_12AB_body_1",
-      "chunk_1962_rule_12AB_rule_12AB_body_2"
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_3_47",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -1717,8 +2547,22 @@
       "Rule 164"
     ],
     "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
       "chunk_2026_rule_164_rule_164_subrule_1_1",
-      "chunk_2026_rule_164_rule_164_subrule_2_2"
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_6_26",
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -1741,8 +2585,16 @@
       "Rule 12"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AB_rule_12AB_body_1",
-      "chunk_1962_rule_12AB_rule_12AB_body_2"
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_3_47",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -1765,8 +2617,22 @@
       "Rule 164"
     ],
     "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
       "chunk_2026_rule_164_rule_164_subrule_1_1",
-      "chunk_2026_rule_164_rule_164_subrule_2_2"
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_6_26",
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -1789,8 +2655,16 @@
       "Rule 12"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AB_rule_12AB_body_1",
-      "chunk_1962_rule_12AB_rule_12AB_body_2"
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_3_47",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -1813,8 +2687,22 @@
       "Rule 164"
     ],
     "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
       "chunk_2026_rule_164_rule_164_subrule_1_1",
-      "chunk_2026_rule_164_rule_164_subrule_2_2"
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_6_26",
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -1837,8 +2725,16 @@
       "Rule 12"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AB_rule_12AB_body_1",
-      "chunk_1962_rule_12AB_rule_12AB_body_2"
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_3_47",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -1861,8 +2757,22 @@
       "Rule 164"
     ],
     "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
       "chunk_2026_rule_164_rule_164_subrule_1_1",
-      "chunk_2026_rule_164_rule_164_subrule_2_2"
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_6_26",
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -1885,8 +2795,16 @@
       "Rule 12"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AB_rule_12AB_body_1",
-      "chunk_1962_rule_12AB_rule_12AB_body_2"
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_3_47",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -1909,8 +2827,22 @@
       "Rule 164"
     ],
     "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
       "chunk_2026_rule_164_rule_164_subrule_1_1",
-      "chunk_2026_rule_164_rule_164_subrule_2_2"
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_6_26",
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -1933,8 +2865,16 @@
       "Rule 12"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AB_rule_12AB_body_1",
-      "chunk_1962_rule_12AB_rule_12AB_body_2"
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_3_47",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -1957,8 +2897,22 @@
       "Rule 164"
     ],
     "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
       "chunk_2026_rule_164_rule_164_subrule_1_1",
-      "chunk_2026_rule_164_rule_164_subrule_2_2"
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_6_26",
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -1981,8 +2935,16 @@
       "Rule 12"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AB_rule_12AB_body_1",
-      "chunk_1962_rule_12AB_rule_12AB_body_2"
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_3_47",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -2005,8 +2967,22 @@
       "Rule 164"
     ],
     "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
       "chunk_2026_rule_164_rule_164_subrule_1_1",
-      "chunk_2026_rule_164_rule_164_subrule_2_2"
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_6_26",
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -2029,8 +3005,16 @@
       "Rule 12"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AB_rule_12AB_body_1",
-      "chunk_1962_rule_12AB_rule_12AB_body_2"
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_3_47",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -2053,8 +3037,22 @@
       "Rule 164"
     ],
     "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
       "chunk_2026_rule_164_rule_164_subrule_1_1",
-      "chunk_2026_rule_164_rule_164_subrule_2_2"
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_6_26",
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -2077,8 +3075,16 @@
       "Rule 12"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AB_rule_12AB_body_1",
-      "chunk_1962_rule_12AB_rule_12AB_body_2"
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_3_47",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -2101,8 +3107,22 @@
       "Rule 164"
     ],
     "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
       "chunk_2026_rule_164_rule_164_subrule_1_1",
-      "chunk_2026_rule_164_rule_164_subrule_2_2"
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_6_26",
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -2125,8 +3145,16 @@
       "Rule 12"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AB_rule_12AB_body_1",
-      "chunk_1962_rule_12AB_rule_12AB_body_2"
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_3_47",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -2149,8 +3177,22 @@
       "Rule 164"
     ],
     "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
       "chunk_2026_rule_164_rule_164_subrule_1_1",
-      "chunk_2026_rule_164_rule_164_subrule_2_2"
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_6_26",
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -2173,8 +3215,16 @@
       "Rule 12"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AB_rule_12AB_body_1",
-      "chunk_1962_rule_12AB_rule_12AB_body_2"
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_3_47",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -2197,8 +3247,22 @@
       "Rule 164"
     ],
     "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
       "chunk_2026_rule_164_rule_164_subrule_1_1",
-      "chunk_2026_rule_164_rule_164_subrule_2_2"
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_6_26",
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -2221,8 +3285,16 @@
       "Rule 12"
     ],
     "ground_truth_chunk_ids": [
-      "chunk_1962_rule_12AB_rule_12AB_body_1",
-      "chunk_1962_rule_12AB_rule_12AB_body_2"
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_3_47",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_answer": "Under Rule 12 of the 1962 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [
@@ -2245,8 +3317,22 @@
       "Rule 164"
     ],
     "ground_truth_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
       "chunk_2026_rule_164_rule_164_subrule_1_1",
-      "chunk_2026_rule_164_rule_164_subrule_2_2"
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_6_26",
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_answer": "Under Rule 164 of the 2026 rules, an individual being a resident other than not ordinarily resident having total income up to fifty lakh rupees, comprising income from salary, one house property, and income from other sources (such as interest), is eligible to file return of income in Form No. SAHAJ (ITR-1).",
     "evaluation_criteria": [

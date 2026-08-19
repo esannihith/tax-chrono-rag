@@ -1,0 +1,859 @@
+{
+  "suite_file": "data\\evaluation\\hidden_suite.json",
+  "total_cases": 30,
+  "grounded_cases": 24,
+  "null_cases": 6,
+  "mean_metrics": {
+    "mrr": 0.18591616716616718,
+    "recall@5": 0.15972222222222224,
+    "precision@5": 0.05833333333333334,
+    "ndcg@5": 0.13138245665612802,
+    "recall@10": 0.17361111111111113,
+    "precision@10": 0.03333333333333333,
+    "ndcg@10": 0.1379002167397774,
+    "recall@20": 0.4548611111111111,
+    "precision@20": 0.04583333333333334,
+    "ndcg@20": 0.2288968438150756
+  },
+  "breakdown_by_query_type": {
+    "Persona-Specific Applicability": {
+      "count": 8,
+      "mrr": 0.0875,
+      "recall@5": 0.16666666666666666,
+      "recall@10": 0.20833333333333331,
+      "recall@20": 0.20833333333333331,
+      "ndcg@10": 0.12111222351454945
+    },
+    "Intra-Document Temporal Validation": {
+      "count": 8,
+      "mrr": 0.0952485014985015,
+      "recall@5": 0.125,
+      "recall@10": 0.125,
+      "recall@20": 0.78125,
+      "ndcg@10": 0.06265822941773588
+    },
+    "Procedural / Condition Matching": {
+      "count": 8,
+      "mrr": 0.375,
+      "recall@5": 0.1875,
+      "recall@10": 0.1875,
+      "recall@20": 0.375,
+      "ndcg@10": 0.2299301972870469
+    }
+  },
+  "breakdown_by_difficulty": {
+    "Hard": {
+      "count": 10,
+      "mrr": 0.16623376623376623,
+      "recall@5": 0.15,
+      "recall@10": 0.15,
+      "recall@20": 0.325,
+      "ndcg@10": 0.12440769463369158
+    },
+    "Easy": {
+      "count": 8,
+      "mrr": 0.07495629370629371,
+      "recall@5": 0.125,
+      "recall@10": 0.125,
+      "recall@20": 0.625,
+      "ndcg@10": 0.06265822941773588
+    },
+    "Medium": {
+      "count": 6,
+      "mrr": 0.3666666666666667,
+      "recall@5": 0.2222222222222222,
+      "recall@10": 0.27777777777777773,
+      "recall@20": 0.4444444444444444,
+      "ndcg@10": 0.2607104033459758
+    }
+  },
+  "breakdown_by_paradigm": {
+    "multi_hop": {
+      "count": 14,
+      "mrr": 0.1464035964035964,
+      "recall@5": 0.13095238095238096,
+      "recall@10": 0.15476190476190474,
+      "recall@20": 0.4761904761904762,
+      "ndcg@10": 0.11300321292013242
+    },
+    "simple_semantic": {
+      "count": 8,
+      "mrr": 0.28125,
+      "recall@5": 0.25,
+      "recall@10": 0.25,
+      "recall@20": 0.375,
+      "ndcg@10": 0.21594502760910048
+    },
+    "hybrid_temporal": {
+      "count": 2,
+      "mrr": 0.08116883116883117,
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@20": 0.625,
+      "ndcg@10": 0.0
+    }
+  },
+  "per_query_results": [
+    {
+      "id": "GOLD-PERS-030",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Hard",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 3"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+        "chunk_1962_rule_12_rule_12_subrule_3_47"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PERS-005",
+      "query": "I am an employee claiming Leave Travel Concession (LTC) for a vacation in Singapore. Is my international flight exempt under Rule 2B?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 2B"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_2BA_rule_2BA_body_1",
+        "chunk_1962_rule_2BA_rule_2BA_clause_i_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PERS-028",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 3"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+        "chunk_1962_rule_12_rule_12_subrule_3_47"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PERS-032",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 3"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+        "chunk_1962_rule_12_rule_12_subrule_3_47"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PERS-009",
+      "query": "Under the 2026 rules (Rule 280), if an employee opts for the new tax regime under section 202(4), which specific allowances remain exempt?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Hard",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 280"
+      ],
+      "num_gold_chunks": 1,
+      "gold_chunks": [
+        "chunk_2026_rule_280_rule_280_subrule_3_112"
+      ],
+      "retrieved_ranks": [
+        2
+      ],
+      "first_hit_rank": 2,
+      "metrics": {
+        "mrr": 0.5,
+        "precision@5": 0.2,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6309297535714575,
+        "precision@10": 0.1,
+        "recall@10": 1.0,
+        "ndcg@10": 0.6309297535714575,
+        "precision@20": 0.05,
+        "recall@20": 1.0,
+        "ndcg@20": 0.6309297535714575
+      }
+    },
+    {
+      "id": "GOLD-PERS-024",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Hard",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 3"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+        "chunk_1962_rule_12_rule_12_subrule_3_47"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PERS-001",
+      "query": "I am a private sector salaried employee working in Delhi. How is my House Rent Allowance (HRA) exemption limit calculated under the 1962 rules?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 2A"
+      ],
+      "num_gold_chunks": 3,
+      "gold_chunks": [
+        "chunk_1962_rule_2A_rule_2A_body_1",
+        "chunk_1962_rule_2A_rule_2A_body_2",
+        "chunk_1962_rule_2A_rule_2A_clause_a_3"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PERS-008",
+      "query": "I work for a private company that provided me with a 1.8-litre engine car for both official and personal use, and the company pays all running and maintenance expenses. What is the monthly perquisite value added to my salary under Rule 3?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 3"
+      ],
+      "num_gold_chunks": 3,
+      "gold_chunks": [
+        "chunk_1962_rule_3_rule_3_subrule_2_24",
+        "chunk_1962_rule_3_rule_3_subrule_1_26",
+        "chunk_1962_rule_3_rule_3_clause_b_28"
+      ],
+      "retrieved_ranks": [
+        5,
+        7
+      ],
+      "first_hit_rank": 5,
+      "metrics": {
+        "mrr": 0.2,
+        "precision@5": 0.2,
+        "recall@5": 0.3333333333333333,
+        "ndcg@5": 0.18154179253735267,
+        "precision@10": 0.2,
+        "recall@10": 0.6666666666666666,
+        "ndcg@10": 0.3379680345449381,
+        "precision@20": 0.1,
+        "recall@20": 0.6666666666666666,
+        "ndcg@20": 0.3379680345449381
+      }
+    },
+    {
+      "id": "GOLD-TEMP-004",
+      "query": "When did Rule 12AC come into force and by which amendment rules was it inserted into the 1962 Income Tax Rules?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 12AC"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AC_rule_12AC_subrule_1_1",
+        "chunk_1962_rule_12AC_rule_12AC_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        4,
+        5
+      ],
+      "first_hit_rank": 4,
+      "metrics": {
+        "mrr": 0.25,
+        "precision@5": 0.4,
+        "recall@5": 1.0,
+        "ndcg@5": 0.5012658353418871,
+        "precision@10": 0.2,
+        "recall@10": 1.0,
+        "ndcg@10": 0.5012658353418871,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.5012658353418871
+      }
+    },
+    {
+      "id": "GOLD-TEMP-031",
+      "query": "For Financial Year 2021-22, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 280"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_280_rule_280_subrule_1_1",
+        "chunk_2026_rule_280_rule_280_clause_a_2"
+      ],
+      "retrieved_ranks": [
+        11,
+        14
+      ],
+      "first_hit_rank": 11,
+      "metrics": {
+        "mrr": 0.09090909090909091,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.327973028445648
+      }
+    },
+    {
+      "id": "GOLD-TEMP-025",
+      "query": "For Financial Year 2020-21, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 280"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_280_rule_280_subrule_1_1",
+        "chunk_2026_rule_280_rule_280_clause_a_2"
+      ],
+      "retrieved_ranks": [
+        13,
+        14
+      ],
+      "first_hit_rank": 13,
+      "metrics": {
+        "mrr": 0.07692307692307693,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.31798276946713805
+      }
+    },
+    {
+      "id": "GOLD-TEMP-007",
+      "query": "For Financial Year 2022-23, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 280"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_280_rule_280_subrule_1_1",
+        "chunk_2026_rule_280_rule_280_clause_a_2"
+      ],
+      "retrieved_ranks": [
+        11,
+        14
+      ],
+      "first_hit_rank": 11,
+      "metrics": {
+        "mrr": 0.09090909090909091,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.327973028445648
+      }
+    },
+    {
+      "id": "GOLD-TEMP-005",
+      "query": "Compare the valuation of company accommodation perks between 1962 Rule 3 and 2026 Rule 15 for a private sector employee in a major metro with population > 40 lakhs.",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "hybrid_temporal",
+      "difficulty_level": "Hard",
+      "target_regime": "both",
+      "relevant_rules": [
+        "Rule 3",
+        "Rule 15"
+      ],
+      "num_gold_chunks": 4,
+      "gold_chunks": [
+        "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+        "chunk_1962_rule_12_rule_12_subrule_3_47",
+        "chunk_2026_rule_15_rule_15_subrule_1_1",
+        "chunk_2026_rule_15_rule_15_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        14
+      ],
+      "first_hit_rank": 14,
+      "metrics": {
+        "mrr": 0.07142857142857142,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.05,
+        "recall@20": 0.25,
+        "ndcg@20": 0.09992090652113537
+      }
+    },
+    {
+      "id": "GOLD-TEMP-009",
+      "query": "For Financial Year 2024-25, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "hybrid_temporal",
+      "difficulty_level": "Hard",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 280"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_280_rule_280_subrule_1_1",
+        "chunk_2026_rule_280_rule_280_clause_a_2"
+      ],
+      "retrieved_ranks": [
+        11,
+        13
+      ],
+      "first_hit_rank": 11,
+      "metrics": {
+        "mrr": 0.09090909090909091,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.33207590915692625
+      }
+    },
+    {
+      "id": "GOLD-TEMP-011",
+      "query": "For Financial Year 2021-22, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 280"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_280_rule_280_subrule_1_1",
+        "chunk_2026_rule_280_rule_280_clause_a_2"
+      ],
+      "retrieved_ranks": [
+        11,
+        14
+      ],
+      "first_hit_rank": 11,
+      "metrics": {
+        "mrr": 0.09090909090909091,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.327973028445648
+      }
+    },
+    {
+      "id": "GOLD-TEMP-028",
+      "query": "For Financial Year 2023-24, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 2BB"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+        "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PROC-012",
+      "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Hard",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 164"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_164_rule_164_subrule_1_1",
+        "chunk_2026_rule_164_rule_164_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        1,
+        16
+      ],
+      "first_hit_rank": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "precision@5": 0.2,
+        "recall@5": 0.5,
+        "ndcg@5": 0.6131471927654584,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.6131471927654584,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.7631539858737962
+      }
+    },
+    {
+      "id": "GOLD-PROC-021",
+      "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Hard",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 12"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AB_rule_12AB_body_1",
+        "chunk_1962_rule_12AB_rule_12AB_body_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PROC-032",
+      "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Medium",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 164"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_164_rule_164_subrule_1_1",
+        "chunk_2026_rule_164_rule_164_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        1,
+        16
+      ],
+      "first_hit_rank": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "precision@5": 0.2,
+        "recall@5": 0.5,
+        "ndcg@5": 0.6131471927654584,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.6131471927654584,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.7631539858737962
+      }
+    },
+    {
+      "id": "GOLD-PROC-009",
+      "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Hard",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 12"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AB_rule_12AB_body_1",
+        "chunk_1962_rule_12AB_rule_12AB_body_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PROC-013",
+      "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 12"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AB_rule_12AB_body_1",
+        "chunk_1962_rule_12AB_rule_12AB_body_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PROC-004",
+      "query": "What are the procedural steps to calculate tax relief under Rule 21A for salary received in arrears under section 89?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Hard",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 21A",
+        "Rule 21AA"
+      ],
+      "num_gold_chunks": 4,
+      "gold_chunks": [
+        "chunk_1962_rule_21AAA_rule_21AAA_subrule_1_1",
+        "chunk_1962_rule_21AAA_rule_21AAA_subrule_2_2",
+        "chunk_1962_rule_21AAA_rule_21AAA_clause_a_3",
+        "chunk_1962_rule_21AAA_rule_21AAA_subrule_1_1"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PROC-028",
+      "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Medium",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 164"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_164_rule_164_subrule_1_1",
+        "chunk_2026_rule_164_rule_164_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        1,
+        16
+      ],
+      "first_hit_rank": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "precision@5": 0.2,
+        "recall@5": 0.5,
+        "ndcg@5": 0.6131471927654584,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.6131471927654584,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.7631539858737962
+      }
+    },
+    {
+      "id": "GOLD-PROC-015",
+      "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Hard",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 12"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AB_rule_12AB_body_1",
+        "chunk_1962_rule_12AB_rule_12AB_body_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    }
+  ]
+}

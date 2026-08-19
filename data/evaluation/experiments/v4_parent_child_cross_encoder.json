@@ -1,0 +1,1762 @@
+{
+  "active_suite": {
+    "mean_metrics": {
+      "mrr": 0.6842276936026936,
+      "recall@5": 0.26489201770451776,
+      "recall@10": 0.43673331298331297,
+      "recall@20": 0.7175030525030526,
+      "precision@5": 0.4861111111111111,
+      "precision@10": 0.5111111111111111,
+      "precision@20": 0.45972222222222225,
+      "ndcg@5": 0.5582889953399945,
+      "ndcg@10": 0.5876559233018473,
+      "ndcg@20": 0.6552979287417036
+    },
+    "per_query_results": [
+      {
+        "id": "GOLD-PERS-027",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 0.14285714285714285,
+          "ndcg@5": 0.6843515475204855,
+          "precision@10": 0.7,
+          "recall@10": 0.3333333333333333,
+          "ndcg@10": 0.7167674835027339,
+          "precision@20": 0.75,
+          "recall@20": 0.7142857142857143,
+          "ndcg@20": 0.7415195932986948
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PERS-006",
+        "query": "I am a senior citizen aged 77 who receives only pension and interest income. Can I submit a declaration to my bank under Rule 26D so that no tax return is required to be filed?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.2,
+          "recall@5": 1.0,
+          "ndcg@5": 1.0,
+          "precision@10": 0.1,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "precision@20": 0.05,
+          "recall@20": 1.0,
+          "ndcg@20": 1.0
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PERS-011",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 0.14285714285714285,
+          "ndcg@5": 0.6843515475204855,
+          "precision@10": 0.7,
+          "recall@10": 0.3333333333333333,
+          "ndcg@10": 0.7167674835027339,
+          "precision@20": 0.75,
+          "recall@20": 0.7142857142857143,
+          "ndcg@20": 0.7415195932986948
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PERS-016",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 0.5,
+          "precision@5": 0.4,
+          "recall@5": 0.08,
+          "ndcg@5": 0.38356636737133565,
+          "precision@10": 0.6,
+          "recall@10": 0.24,
+          "ndcg@10": 0.5266128295913879,
+          "precision@20": 0.7,
+          "recall@20": 0.56,
+          "ndcg@20": 0.6213565661741877
+        },
+        "first_hit_rank": 2
+      },
+      {
+        "id": "GOLD-PERS-026",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 0.5,
+          "precision@5": 0.4,
+          "recall@5": 0.08,
+          "ndcg@5": 0.38356636737133565,
+          "precision@10": 0.6,
+          "recall@10": 0.24,
+          "ndcg@10": 0.5266128295913879,
+          "precision@20": 0.7,
+          "recall@20": 0.56,
+          "ndcg@20": 0.6213565661741877
+        },
+        "first_hit_rank": 2
+      },
+      {
+        "id": "GOLD-PERS-012",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 0.5,
+          "precision@5": 0.4,
+          "recall@5": 0.08,
+          "ndcg@5": 0.38356636737133565,
+          "precision@10": 0.6,
+          "recall@10": 0.24,
+          "ndcg@10": 0.5266128295913879,
+          "precision@20": 0.7,
+          "recall@20": 0.56,
+          "ndcg@20": 0.6213565661741877
+        },
+        "first_hit_rank": 2
+      },
+      {
+        "id": "GOLD-PERS-023",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 0.14285714285714285,
+          "ndcg@5": 0.6843515475204855,
+          "precision@10": 0.7,
+          "recall@10": 0.3333333333333333,
+          "ndcg@10": 0.7167674835027339,
+          "precision@20": 0.75,
+          "recall@20": 0.7142857142857143,
+          "ndcg@20": 0.7415195932986948
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PERS-007",
+        "query": "I changed jobs during the previous year. What form must I submit to my current employer to declare salary and TDS from my previous employer under Rule 26A?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 0.2,
+          "precision@5": 0.2,
+          "recall@5": 1.0,
+          "ndcg@5": 0.38685280723454163,
+          "precision@10": 0.1,
+          "recall@10": 1.0,
+          "ndcg@10": 0.38685280723454163,
+          "precision@20": 0.05,
+          "recall@20": 1.0,
+          "ndcg@20": 0.38685280723454163
+        },
+        "first_hit_rank": 5
+      },
+      {
+        "id": "GOLD-PERS-020",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 0.5,
+          "precision@5": 0.4,
+          "recall@5": 0.08,
+          "ndcg@5": 0.38356636737133565,
+          "precision@10": 0.6,
+          "recall@10": 0.24,
+          "ndcg@10": 0.5266128295913879,
+          "precision@20": 0.7,
+          "recall@20": 0.56,
+          "ndcg@20": 0.6213565661741877
+        },
+        "first_hit_rank": 2
+      },
+      {
+        "id": "GOLD-PERS-013",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 0.14285714285714285,
+          "ndcg@5": 0.6843515475204855,
+          "precision@10": 0.7,
+          "recall@10": 0.3333333333333333,
+          "ndcg@10": 0.7167674835027339,
+          "precision@20": 0.75,
+          "recall@20": 0.7142857142857143,
+          "ndcg@20": 0.7415195932986948
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PERS-017",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 0.14285714285714285,
+          "ndcg@5": 0.6843515475204855,
+          "precision@10": 0.7,
+          "recall@10": 0.3333333333333333,
+          "ndcg@10": 0.7167674835027339,
+          "precision@20": 0.75,
+          "recall@20": 0.7142857142857143,
+          "ndcg@20": 0.7415195932986948
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PERS-010",
+        "query": "I am a blind salaried individual. What is the monthly transport allowance exemption available to me under Rule 2BB of the 1962 rules?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 0.25,
+          "precision@5": 0.2,
+          "recall@5": 0.2,
+          "ndcg@5": 0.14606834984270645,
+          "precision@10": 0.4,
+          "recall@10": 0.8,
+          "ndcg@10": 0.4869261866673364,
+          "precision@20": 0.25,
+          "recall@20": 1.0,
+          "ndcg@20": 0.5737369629032627
+        },
+        "first_hit_rank": 4
+      },
+      {
+        "id": "GOLD-PERS-029",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 0.14285714285714285,
+          "ndcg@5": 0.6843515475204855,
+          "precision@10": 0.7,
+          "recall@10": 0.3333333333333333,
+          "ndcg@10": 0.7167674835027339,
+          "precision@20": 0.75,
+          "recall@20": 0.7142857142857143,
+          "ndcg@20": 0.7415195932986948
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PERS-015",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 0.14285714285714285,
+          "ndcg@5": 0.6843515475204855,
+          "precision@10": 0.7,
+          "recall@10": 0.3333333333333333,
+          "ndcg@10": 0.7167674835027339,
+          "precision@20": 0.75,
+          "recall@20": 0.7142857142857143,
+          "ndcg@20": 0.7415195932986948
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PERS-025",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 0.14285714285714285,
+          "ndcg@5": 0.6843515475204855,
+          "precision@10": 0.7,
+          "recall@10": 0.3333333333333333,
+          "ndcg@10": 0.7167674835027339,
+          "precision@20": 0.75,
+          "recall@20": 0.7142857142857143,
+          "ndcg@20": 0.7415195932986948
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PERS-021",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 0.14285714285714285,
+          "ndcg@5": 0.6843515475204855,
+          "precision@10": 0.7,
+          "recall@10": 0.3333333333333333,
+          "ndcg@10": 0.7167674835027339,
+          "precision@20": 0.75,
+          "recall@20": 0.7142857142857143,
+          "ndcg@20": 0.7415195932986948
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PERS-031",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 0.14285714285714285,
+          "ndcg@5": 0.6843515475204855,
+          "precision@10": 0.7,
+          "recall@10": 0.3333333333333333,
+          "ndcg@10": 0.7167674835027339,
+          "precision@20": 0.75,
+          "recall@20": 0.7142857142857143,
+          "ndcg@20": 0.7415195932986948
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PERS-002",
+        "query": "As a central government employee, how is the perquisite value of government-provided residential accommodation determined?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 0.5,
+          "precision@5": 0.4,
+          "recall@5": 0.08,
+          "ndcg@5": 0.38356636737133565,
+          "precision@10": 0.6,
+          "recall@10": 0.24,
+          "ndcg@10": 0.5305455297539706,
+          "precision@20": 0.55,
+          "recall@20": 0.44,
+          "ndcg@20": 0.519575640660491
+        },
+        "first_hit_rank": 2
+      },
+      {
+        "id": "GOLD-PERS-014",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 0.5,
+          "precision@5": 0.4,
+          "recall@5": 0.08,
+          "ndcg@5": 0.38356636737133565,
+          "precision@10": 0.6,
+          "recall@10": 0.24,
+          "ndcg@10": 0.5266128295913879,
+          "precision@20": 0.7,
+          "recall@20": 0.56,
+          "ndcg@20": 0.6213565661741877
+        },
+        "first_hit_rank": 2
+      },
+      {
+        "id": "GOLD-PERS-019",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 0.14285714285714285,
+          "ndcg@5": 0.6843515475204855,
+          "precision@10": 0.7,
+          "recall@10": 0.3333333333333333,
+          "ndcg@10": 0.7167674835027339,
+          "precision@20": 0.75,
+          "recall@20": 0.7142857142857143,
+          "ndcg@20": 0.7415195932986948
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PERS-003",
+        "query": "I am a private company employee living in a town with a population of 12 lakhs. My employer owns the apartment provided to me. What percentage of my salary is taken as the accommodation perk under the 1962 rules?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 0.5,
+          "precision@5": 0.6,
+          "recall@5": 0.12,
+          "ndcg@5": 0.4912596920895758,
+          "precision@10": 0.6,
+          "recall@10": 0.24,
+          "ndcg@10": 0.5302442049991305,
+          "precision@20": 0.65,
+          "recall@20": 0.52,
+          "ndcg@20": 0.5969961933675808
+        },
+        "first_hit_rank": 2
+      },
+      {
+        "id": "GOLD-PERS-018",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 0.5,
+          "precision@5": 0.4,
+          "recall@5": 0.08,
+          "ndcg@5": 0.38356636737133565,
+          "precision@10": 0.6,
+          "recall@10": 0.24,
+          "ndcg@10": 0.5266128295913879,
+          "precision@20": 0.7,
+          "recall@20": 0.56,
+          "ndcg@20": 0.6213565661741877
+        },
+        "first_hit_rank": 2
+      },
+      {
+        "id": "GOLD-PERS-022",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 0.5,
+          "precision@5": 0.4,
+          "recall@5": 0.08,
+          "ndcg@5": 0.38356636737133565,
+          "precision@10": 0.6,
+          "recall@10": 0.24,
+          "ndcg@10": 0.5266128295913879,
+          "precision@20": 0.7,
+          "recall@20": 0.56,
+          "ndcg@20": 0.6213565661741877
+        },
+        "first_hit_rank": 2
+      },
+      {
+        "id": "GOLD-PERS-004",
+        "query": "I am a software engineer opting for the New Tax Regime under section 115BAC. Can I claim children education allowance and hostel allowance exemptions under Rule 2BB?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 0.3333333333333333,
+          "precision@5": 0.2,
+          "recall@5": 0.2,
+          "ndcg@5": 0.16958010263680806,
+          "precision@10": 0.1,
+          "recall@10": 0.2,
+          "ndcg@10": 0.16958010263680806,
+          "precision@20": 0.05,
+          "recall@20": 0.2,
+          "ndcg@20": 0.16958010263680806
+        },
+        "first_hit_rank": 3
+      },
+      {
+        "id": "GOLD-TEMP-024",
+        "query": "For Financial Year 2024-25, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.0625,
+          "precision@5": 0.0,
+          "recall@5": 0.0,
+          "ndcg@5": 0.0,
+          "precision@10": 0.0,
+          "recall@10": 0.0,
+          "ndcg@10": 0.0,
+          "precision@20": 0.05,
+          "recall@20": 0.2,
+          "ndcg@20": 0.08297572808511901
+        },
+        "first_hit_rank": 16
+      },
+      {
+        "id": "GOLD-TEMP-026",
+        "query": "For Financial Year 2021-22, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.09090909090909091,
+          "precision@5": 0.0,
+          "recall@5": 0.0,
+          "ndcg@5": 0.0,
+          "precision@10": 0.0,
+          "recall@10": 0.0,
+          "ndcg@10": 0.0,
+          "precision@20": 0.15,
+          "recall@20": 0.6,
+          "ndcg@20": 0.25479876307453714
+        },
+        "first_hit_rank": 11
+      },
+      {
+        "id": "GOLD-TEMP-008",
+        "query": "For Financial Year 2023-24, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.06666666666666667,
+          "precision@5": 0.0,
+          "recall@5": 0.0,
+          "ndcg@5": 0.0,
+          "precision@10": 0.0,
+          "recall@10": 0.0,
+          "ndcg@10": 0.0,
+          "precision@20": 0.05,
+          "recall@20": 0.2,
+          "ndcg@20": 0.08479005131840403
+        },
+        "first_hit_rank": 15
+      },
+      {
+        "id": "GOLD-TEMP-023",
+        "query": "For Financial Year 2023-24, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.5,
+          "precision@5": 0.2,
+          "recall@5": 0.07692307692307693,
+          "ndcg@5": 0.21398626473452756,
+          "precision@10": 0.5,
+          "recall@10": 0.38461538461538464,
+          "ndcg@10": 0.42367664508731884,
+          "precision@20": 0.4,
+          "recall@20": 0.6153846153846154,
+          "ndcg@20": 0.4972039123447433
+        },
+        "first_hit_rank": 2
+      },
+      {
+        "id": "GOLD-TEMP-014",
+        "query": "For Financial Year 2024-25, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.0625,
+          "precision@5": 0.0,
+          "recall@5": 0.0,
+          "ndcg@5": 0.0,
+          "precision@10": 0.0,
+          "recall@10": 0.0,
+          "ndcg@10": 0.0,
+          "precision@20": 0.05,
+          "recall@20": 0.2,
+          "ndcg@20": 0.08297572808511901
+        },
+        "first_hit_rank": 16
+      },
+      {
+        "id": "GOLD-TEMP-001",
+        "query": "I realized I missed reporting my salary bonus for Financial Year (FY) 2019-20. Can I file an Updated Return of Income (ITR-U) under Rule 12AC of the 1962 rules?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.2,
+          "recall@5": 1.0,
+          "ndcg@5": 1.0,
+          "precision@10": 0.1,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "precision@20": 0.05,
+          "recall@20": 1.0,
+          "ndcg@20": 1.0
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-TEMP-020",
+        "query": "For Financial Year 2020-21, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.3333333333333333,
+          "precision@5": 0.2,
+          "recall@5": 0.2,
+          "ndcg@5": 0.16958010263680806,
+          "precision@10": 0.1,
+          "recall@10": 0.2,
+          "ndcg@10": 0.16958010263680806,
+          "precision@20": 0.2,
+          "recall@20": 0.8,
+          "ndcg@20": 0.4207014523462731
+        },
+        "first_hit_rank": 3
+      },
+      {
+        "id": "GOLD-TEMP-016",
+        "query": "For Financial Year 2021-22, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.09090909090909091,
+          "precision@5": 0.0,
+          "recall@5": 0.0,
+          "ndcg@5": 0.0,
+          "precision@10": 0.0,
+          "recall@10": 0.0,
+          "ndcg@10": 0.0,
+          "precision@20": 0.15,
+          "recall@20": 0.6,
+          "ndcg@20": 0.25479876307453714
+        },
+        "first_hit_rank": 11
+      },
+      {
+        "id": "GOLD-TEMP-006",
+        "query": "For Financial Year 2021-22, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.09090909090909091,
+          "precision@5": 0.0,
+          "recall@5": 0.0,
+          "ndcg@5": 0.0,
+          "precision@10": 0.0,
+          "recall@10": 0.0,
+          "ndcg@10": 0.0,
+          "precision@20": 0.15,
+          "recall@20": 0.6,
+          "ndcg@20": 0.25479876307453714
+        },
+        "first_hit_rank": 11
+      },
+      {
+        "id": "GOLD-TEMP-010",
+        "query": "For Financial Year 2020-21, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.3333333333333333,
+          "precision@5": 0.2,
+          "recall@5": 0.2,
+          "ndcg@5": 0.16958010263680806,
+          "precision@10": 0.1,
+          "recall@10": 0.2,
+          "ndcg@10": 0.16958010263680806,
+          "precision@20": 0.2,
+          "recall@20": 0.8,
+          "ndcg@20": 0.4207014523462731
+        },
+        "first_hit_rank": 3
+      },
+      {
+        "id": "GOLD-TEMP-029",
+        "query": "For Financial Year 2024-25, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.5,
+          "precision@5": 0.2,
+          "recall@5": 0.07692307692307693,
+          "ndcg@5": 0.21398626473452756,
+          "precision@10": 0.5,
+          "recall@10": 0.38461538461538464,
+          "ndcg@10": 0.42367664508731884,
+          "precision@20": 0.4,
+          "recall@20": 0.6153846153846154,
+          "ndcg@20": 0.5039023261402732
+        },
+        "first_hit_rank": 2
+      },
+      {
+        "id": "GOLD-TEMP-019",
+        "query": "For Financial Year 2024-25, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.5,
+          "precision@5": 0.2,
+          "recall@5": 0.07692307692307693,
+          "ndcg@5": 0.21398626473452756,
+          "precision@10": 0.5,
+          "recall@10": 0.38461538461538464,
+          "ndcg@10": 0.42367664508731884,
+          "precision@20": 0.4,
+          "recall@20": 0.6153846153846154,
+          "ndcg@20": 0.5039023261402732
+        },
+        "first_hit_rank": 2
+      },
+      {
+        "id": "GOLD-TEMP-018",
+        "query": "For Financial Year 2023-24, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.06666666666666667,
+          "precision@5": 0.0,
+          "recall@5": 0.0,
+          "ndcg@5": 0.0,
+          "precision@10": 0.0,
+          "recall@10": 0.0,
+          "ndcg@10": 0.0,
+          "precision@20": 0.05,
+          "recall@20": 0.2,
+          "ndcg@20": 0.08479005131840403
+        },
+        "first_hit_rank": 15
+      },
+      {
+        "id": "GOLD-TEMP-032",
+        "query": "For Financial Year 2022-23, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.06666666666666667,
+          "precision@5": 0.0,
+          "recall@5": 0.0,
+          "ndcg@5": 0.0,
+          "precision@10": 0.0,
+          "recall@10": 0.0,
+          "ndcg@10": 0.0,
+          "precision@20": 0.05,
+          "recall@20": 0.2,
+          "ndcg@20": 0.08479005131840403
+        },
+        "first_hit_rank": 15
+      },
+      {
+        "id": "GOLD-TEMP-017",
+        "query": "For Financial Year 2022-23, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.25,
+          "precision@5": 0.2,
+          "recall@5": 0.07692307692307693,
+          "ndcg@5": 0.14606834984270645,
+          "precision@10": 0.5,
+          "recall@10": 0.38461538461538464,
+          "ndcg@10": 0.37960256558331507,
+          "precision@20": 0.4,
+          "recall@20": 0.6153846153846154,
+          "ndcg@20": 0.457571809145599
+        },
+        "first_hit_rank": 4
+      },
+      {
+        "id": "GOLD-TEMP-022",
+        "query": "For Financial Year 2022-23, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.06666666666666667,
+          "precision@5": 0.0,
+          "recall@5": 0.0,
+          "ndcg@5": 0.0,
+          "precision@10": 0.0,
+          "recall@10": 0.0,
+          "ndcg@10": 0.0,
+          "precision@20": 0.05,
+          "recall@20": 0.2,
+          "ndcg@20": 0.08479005131840403
+        },
+        "first_hit_rank": 15
+      },
+      {
+        "id": "GOLD-TEMP-015",
+        "query": "For Financial Year 2020-21, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.5,
+          "precision@5": 0.8,
+          "recall@5": 0.3076923076923077,
+          "ndcg@5": 0.6608397947263839,
+          "precision@10": 0.6,
+          "recall@10": 0.46153846153846156,
+          "ndcg@10": 0.5684579545875155,
+          "precision@20": 0.45,
+          "recall@20": 0.6923076923076923,
+          "ndcg@20": 0.6216354500938344
+        },
+        "first_hit_rank": 2
+      },
+      {
+        "id": "GOLD-TEMP-002",
+        "query": "Can I file an updated return under Rule 12AC for income earned during Financial Year 2017-18?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.2,
+          "recall@5": 1.0,
+          "ndcg@5": 1.0,
+          "precision@10": 0.1,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "precision@20": 0.05,
+          "recall@20": 1.0,
+          "ndcg@20": 1.0
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-TEMP-030",
+        "query": "For Financial Year 2020-21, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.3333333333333333,
+          "precision@5": 0.2,
+          "recall@5": 0.2,
+          "ndcg@5": 0.16958010263680806,
+          "precision@10": 0.1,
+          "recall@10": 0.2,
+          "ndcg@10": 0.16958010263680806,
+          "precision@20": 0.2,
+          "recall@20": 0.8,
+          "ndcg@20": 0.4207014523462731
+        },
+        "first_hit_rank": 3
+      },
+      {
+        "id": "GOLD-TEMP-021",
+        "query": "For Financial Year 2021-22, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.25,
+          "precision@5": 0.2,
+          "recall@5": 0.07692307692307693,
+          "ndcg@5": 0.14606834984270645,
+          "precision@10": 0.5,
+          "recall@10": 0.38461538461538464,
+          "ndcg@10": 0.37960256558331507,
+          "precision@20": 0.35,
+          "recall@20": 0.5384615384615384,
+          "ndcg@20": 0.4150314348467291
+        },
+        "first_hit_rank": 4
+      },
+      {
+        "id": "GOLD-TEMP-012",
+        "query": "For Financial Year 2022-23, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.06666666666666667,
+          "precision@5": 0.0,
+          "recall@5": 0.0,
+          "ndcg@5": 0.0,
+          "precision@10": 0.0,
+          "recall@10": 0.0,
+          "ndcg@10": 0.0,
+          "precision@20": 0.05,
+          "recall@20": 0.2,
+          "ndcg@20": 0.08479005131840403
+        },
+        "first_hit_rank": 15
+      },
+      {
+        "id": "GOLD-TEMP-027",
+        "query": "For Financial Year 2022-23, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.25,
+          "precision@5": 0.2,
+          "recall@5": 0.07692307692307693,
+          "ndcg@5": 0.14606834984270645,
+          "precision@10": 0.5,
+          "recall@10": 0.38461538461538464,
+          "ndcg@10": 0.37960256558331507,
+          "precision@20": 0.4,
+          "recall@20": 0.6153846153846154,
+          "ndcg@20": 0.457571809145599
+        },
+        "first_hit_rank": 4
+      },
+      {
+        "id": "GOLD-TEMP-013",
+        "query": "For Financial Year 2023-24, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.5,
+          "precision@5": 0.2,
+          "recall@5": 0.07692307692307693,
+          "ndcg@5": 0.21398626473452756,
+          "precision@10": 0.5,
+          "recall@10": 0.38461538461538464,
+          "ndcg@10": 0.42367664508731884,
+          "precision@20": 0.4,
+          "recall@20": 0.6153846153846154,
+          "ndcg@20": 0.4972039123447433
+        },
+        "first_hit_rank": 2
+      },
+      {
+        "id": "GOLD-TEMP-003",
+        "query": "How did the Leave Travel Concession (LTC) exemption rules change between Rule 2B of the 1962 rules and Rule 278 of the 2026 rules regarding block years?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.8,
+          "recall@5": 0.5,
+          "ndcg@5": 0.8687949224876582,
+          "precision@10": 0.7,
+          "recall@10": 0.875,
+          "ndcg@10": 0.9021484053648396,
+          "precision@20": 0.4,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9705031745366295
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-029",
+        "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.8,
+          "recall@5": 0.4,
+          "ndcg@5": 0.7860137352654724,
+          "precision@10": 0.6,
+          "recall@10": 0.6,
+          "ndcg@10": 0.6470538417566039,
+          "precision@20": 0.4,
+          "recall@20": 0.8,
+          "ndcg@20": 0.7662538874450557
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-022",
+        "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 1.0,
+          "recall@5": 0.3125,
+          "ndcg@5": 1.0,
+          "precision@10": 1.0,
+          "recall@10": 0.625,
+          "ndcg@10": 1.0,
+          "precision@20": 0.8,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9992076520296728
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-014",
+        "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 1.0,
+          "recall@5": 0.3125,
+          "ndcg@5": 1.0,
+          "precision@10": 1.0,
+          "recall@10": 0.625,
+          "ndcg@10": 1.0,
+          "precision@20": 0.8,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9992076520296728
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-010",
+        "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 1.0,
+          "recall@5": 0.3125,
+          "ndcg@5": 1.0,
+          "precision@10": 1.0,
+          "recall@10": 0.625,
+          "ndcg@10": 1.0,
+          "precision@20": 0.8,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9992076520296728
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-019",
+        "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.8,
+          "recall@5": 0.4,
+          "ndcg@5": 0.7860137352654724,
+          "precision@10": 0.6,
+          "recall@10": 0.6,
+          "ndcg@10": 0.6470538417566039,
+          "precision@20": 0.4,
+          "recall@20": 0.8,
+          "ndcg@20": 0.7662538874450557
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-027",
+        "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.8,
+          "recall@5": 0.4,
+          "ndcg@5": 0.7860137352654724,
+          "precision@10": 0.6,
+          "recall@10": 0.6,
+          "ndcg@10": 0.6470538417566039,
+          "precision@20": 0.4,
+          "recall@20": 0.8,
+          "ndcg@20": 0.7662538874450557
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-002",
+        "query": "What specific form must a salaried employee furnish to their employer under Rule 26C to claim tax deductions for House Rent Allowance (HRA), Leave Travel Concession (LTC), and home loan interest?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.2,
+          "recall@5": 1.0,
+          "ndcg@5": 1.0,
+          "precision@10": 0.1,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "precision@20": 0.05,
+          "recall@20": 1.0,
+          "ndcg@20": 1.0
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-001",
+        "query": "I am a salaried individual filing an Updated Return (ITR-U) under Rule 12AC. My accounts are not required to be audited, and I do NOT have a Digital Signature Certificate (DSC). How am I permitted to verify my return according to the table in Rule 12AC?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.2,
+          "recall@5": 1.0,
+          "ndcg@5": 1.0,
+          "precision@10": 0.1,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "precision@20": 0.05,
+          "recall@20": 1.0,
+          "ndcg@20": 1.0
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-016",
+        "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 1.0,
+          "recall@5": 0.3125,
+          "ndcg@5": 1.0,
+          "precision@10": 1.0,
+          "recall@10": 0.625,
+          "ndcg@10": 1.0,
+          "precision@20": 0.8,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9992076520296728
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-030",
+        "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 1.0,
+          "recall@5": 0.3125,
+          "ndcg@5": 1.0,
+          "precision@10": 1.0,
+          "recall@10": 0.625,
+          "ndcg@10": 1.0,
+          "precision@20": 0.8,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9992076520296728
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-020",
+        "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 1.0,
+          "recall@5": 0.3125,
+          "ndcg@5": 1.0,
+          "precision@10": 1.0,
+          "recall@10": 0.625,
+          "ndcg@10": 1.0,
+          "precision@20": 0.8,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9992076520296728
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-011",
+        "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.8,
+          "recall@5": 0.4,
+          "ndcg@5": 0.7860137352654724,
+          "precision@10": 0.6,
+          "recall@10": 0.6,
+          "ndcg@10": 0.6470538417566039,
+          "precision@20": 0.4,
+          "recall@20": 0.8,
+          "ndcg@20": 0.7662538874450557
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-005",
+        "query": "Under Rule 31 of the 1962 rules, what certificate is required to be issued by an employer for tax deducted at source on salary, and what is the deadline?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 1.0,
+          "recall@5": 0.35714285714285715,
+          "ndcg@5": 1.0,
+          "precision@10": 1.0,
+          "recall@10": 0.7142857142857143,
+          "ndcg@10": 1.0,
+          "precision@20": 0.7,
+          "recall@20": 1.0,
+          "ndcg@20": 1.0
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-026",
+        "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 1.0,
+          "recall@5": 0.3125,
+          "ndcg@5": 1.0,
+          "precision@10": 1.0,
+          "recall@10": 0.625,
+          "ndcg@10": 1.0,
+          "precision@20": 0.8,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9992076520296728
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-017",
+        "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.8,
+          "recall@5": 0.4,
+          "ndcg@5": 0.7860137352654724,
+          "precision@10": 0.6,
+          "recall@10": 0.6,
+          "ndcg@10": 0.6470538417566039,
+          "precision@20": 0.4,
+          "recall@20": 0.8,
+          "ndcg@20": 0.7662538874450557
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-018",
+        "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 1.0,
+          "recall@5": 0.3125,
+          "ndcg@5": 1.0,
+          "precision@10": 1.0,
+          "recall@10": 0.625,
+          "ndcg@10": 1.0,
+          "precision@20": 0.8,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9992076520296728
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-008",
+        "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 1.0,
+          "recall@5": 0.3125,
+          "ndcg@5": 1.0,
+          "precision@10": 1.0,
+          "recall@10": 0.625,
+          "ndcg@10": 1.0,
+          "precision@20": 0.8,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9992076520296728
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-024",
+        "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 1.0,
+          "recall@5": 0.3125,
+          "ndcg@5": 1.0,
+          "precision@10": 1.0,
+          "recall@10": 0.625,
+          "ndcg@10": 1.0,
+          "precision@20": 0.8,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9992076520296728
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-003",
+        "query": "Under the 2026 rules (Rule 205), what is the prescribed form for an employee to submit evidence of claims to the employer for TDS estimation?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.2,
+          "recall@5": 1.0,
+          "ndcg@5": 1.0,
+          "precision@10": 0.1,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "precision@20": 0.05,
+          "recall@20": 1.0,
+          "ndcg@20": 1.0
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-031",
+        "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.8,
+          "recall@5": 0.4,
+          "ndcg@5": 0.7860137352654724,
+          "precision@10": 0.6,
+          "recall@10": 0.6,
+          "ndcg@10": 0.6470538417566039,
+          "precision@20": 0.4,
+          "recall@20": 0.8,
+          "ndcg@20": 0.7662538874450557
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-007",
+        "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.8,
+          "recall@5": 0.4,
+          "ndcg@5": 0.7860137352654724,
+          "precision@10": 0.6,
+          "recall@10": 0.6,
+          "ndcg@10": 0.6470538417566039,
+          "precision@20": 0.4,
+          "recall@20": 0.8,
+          "ndcg@20": 0.7662538874450557
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-023",
+        "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.8,
+          "recall@5": 0.4,
+          "ndcg@5": 0.7860137352654724,
+          "precision@10": 0.6,
+          "recall@10": 0.6,
+          "ndcg@10": 0.6470538417566039,
+          "precision@20": 0.4,
+          "recall@20": 0.8,
+          "ndcg@20": 0.7662538874450557
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-025",
+        "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.8,
+          "recall@5": 0.4,
+          "ndcg@5": 0.7860137352654724,
+          "precision@10": 0.6,
+          "recall@10": 0.6,
+          "ndcg@10": 0.6470538417566039,
+          "precision@20": 0.4,
+          "recall@20": 0.8,
+          "ndcg@20": 0.7662538874450557
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-006",
+        "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 1.0,
+          "recall@5": 0.3125,
+          "ndcg@5": 1.0,
+          "precision@10": 1.0,
+          "recall@10": 0.625,
+          "ndcg@10": 1.0,
+          "precision@20": 0.8,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9992076520296728
+        },
+        "first_hit_rank": 1
+      }
+    ]
+  },
+  "hidden_suite": {
+    "mean_metrics": {
+      "mrr": 0.6881944444444444,
+      "recall@5": 0.2828955148112757,
+      "recall@10": 0.4890144728459946,
+      "recall@20": 0.7245445134575569,
+      "precision@5": 0.55,
+      "precision@10": 0.5833333333333334,
+      "precision@20": 0.49583333333333335,
+      "ndcg@5": 0.5751734769774601,
+      "ndcg@10": 0.6205576945735888,
+      "ndcg@20": 0.6866717419893927
+    },
+    "per_query_results": [
+      {
+        "id": "GOLD-PERS-030",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 0.5,
+          "precision@5": 0.4,
+          "recall@5": 0.08,
+          "ndcg@5": 0.38356636737133565,
+          "precision@10": 0.6,
+          "recall@10": 0.24,
+          "ndcg@10": 0.5266128295913879,
+          "precision@20": 0.7,
+          "recall@20": 0.56,
+          "ndcg@20": 0.6213565661741877
+        },
+        "first_hit_rank": 2
+      },
+      {
+        "id": "GOLD-PERS-005",
+        "query": "I am an employee claiming Leave Travel Concession (LTC) for a vacation in Singapore. Is my international flight exempt under Rule 2B?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 0.5,
+          "precision@5": 0.6,
+          "recall@5": 0.42857142857142855,
+          "ndcg@5": 0.5296347172140421,
+          "precision@10": 0.3,
+          "recall@10": 0.42857142857142855,
+          "ndcg@10": 0.42924861640074785,
+          "precision@20": 0.25,
+          "recall@20": 0.7142857142857143,
+          "ndcg@20": 0.5762802336333479
+        },
+        "first_hit_rank": 2
+      },
+      {
+        "id": "GOLD-PERS-028",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 0.5,
+          "precision@5": 0.4,
+          "recall@5": 0.08,
+          "ndcg@5": 0.38356636737133565,
+          "precision@10": 0.6,
+          "recall@10": 0.24,
+          "ndcg@10": 0.5266128295913879,
+          "precision@20": 0.7,
+          "recall@20": 0.56,
+          "ndcg@20": 0.6213565661741877
+        },
+        "first_hit_rank": 2
+      },
+      {
+        "id": "GOLD-PERS-032",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 0.5,
+          "precision@5": 0.4,
+          "recall@5": 0.08,
+          "ndcg@5": 0.38356636737133565,
+          "precision@10": 0.6,
+          "recall@10": 0.24,
+          "ndcg@10": 0.5266128295913879,
+          "precision@20": 0.7,
+          "recall@20": 0.56,
+          "ndcg@20": 0.6213565661741877
+        },
+        "first_hit_rank": 2
+      },
+      {
+        "id": "GOLD-PERS-009",
+        "query": "Under the 2026 rules (Rule 280), if an employee opts for the new tax regime under section 202(4), which specific allowances remain exempt?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 0.23076923076923078,
+          "ndcg@5": 0.639945385422766,
+          "precision@10": 0.8,
+          "recall@10": 0.6153846153846154,
+          "ndcg@10": 0.7663491917568946,
+          "precision@20": 0.65,
+          "recall@20": 1.0,
+          "ndcg@20": 0.8928841255960291
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PERS-024",
+        "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 0.5,
+          "precision@5": 0.4,
+          "recall@5": 0.08,
+          "ndcg@5": 0.38356636737133565,
+          "precision@10": 0.6,
+          "recall@10": 0.24,
+          "ndcg@10": 0.5266128295913879,
+          "precision@20": 0.7,
+          "recall@20": 0.56,
+          "ndcg@20": 0.6213565661741877
+        },
+        "first_hit_rank": 2
+      },
+      {
+        "id": "GOLD-PERS-001",
+        "query": "I am a private sector salaried employee working in Delhi. How is my House Rent Allowance (HRA) exemption limit calculated under the 1962 rules?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.2,
+          "recall@5": 1.0,
+          "ndcg@5": 1.0,
+          "precision@10": 0.1,
+          "recall@10": 1.0,
+          "ndcg@10": 1.0,
+          "precision@20": 0.05,
+          "recall@20": 1.0,
+          "ndcg@20": 1.0
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PERS-008",
+        "query": "I work for a private company that provided me with a 1.8-litre engine car for both official and personal use, and the company pays all running and maintenance expenses. What is the monthly perquisite value added to my salary under Rule 3?",
+        "query_type": "Persona-Specific Applicability",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 0.12,
+          "ndcg@5": 0.639945385422766,
+          "precision@10": 0.6,
+          "recall@10": 0.24,
+          "ndcg@10": 0.6267310462031457,
+          "precision@20": 0.75,
+          "recall@20": 0.6,
+          "ndcg@20": 0.7194833379698918
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-TEMP-004",
+        "query": "When did Rule 12AC come into force and by which amendment rules was it inserted into the 1962 Income Tax Rules?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.2,
+          "precision@5": 0.2,
+          "recall@5": 1.0,
+          "ndcg@5": 0.38685280723454163,
+          "precision@10": 0.1,
+          "recall@10": 1.0,
+          "ndcg@10": 0.38685280723454163,
+          "precision@20": 0.05,
+          "recall@20": 1.0,
+          "ndcg@20": 0.38685280723454163
+        },
+        "first_hit_rank": 5
+      },
+      {
+        "id": "GOLD-TEMP-031",
+        "query": "For Financial Year 2021-22, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.25,
+          "precision@5": 0.2,
+          "recall@5": 0.07692307692307693,
+          "ndcg@5": 0.14606834984270645,
+          "precision@10": 0.5,
+          "recall@10": 0.38461538461538464,
+          "ndcg@10": 0.37960256558331507,
+          "precision@20": 0.35,
+          "recall@20": 0.5384615384615384,
+          "ndcg@20": 0.4150314348467291
+        },
+        "first_hit_rank": 4
+      },
+      {
+        "id": "GOLD-TEMP-025",
+        "query": "For Financial Year 2020-21, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.5,
+          "precision@5": 0.8,
+          "recall@5": 0.3076923076923077,
+          "ndcg@5": 0.6608397947263839,
+          "precision@10": 0.6,
+          "recall@10": 0.46153846153846156,
+          "ndcg@10": 0.5684579545875155,
+          "precision@20": 0.45,
+          "recall@20": 0.6923076923076923,
+          "ndcg@20": 0.6216354500938344
+        },
+        "first_hit_rank": 2
+      },
+      {
+        "id": "GOLD-TEMP-007",
+        "query": "For Financial Year 2022-23, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.25,
+          "precision@5": 0.2,
+          "recall@5": 0.07692307692307693,
+          "ndcg@5": 0.14606834984270645,
+          "precision@10": 0.5,
+          "recall@10": 0.38461538461538464,
+          "ndcg@10": 0.37960256558331507,
+          "precision@20": 0.4,
+          "recall@20": 0.6153846153846154,
+          "ndcg@20": 0.457571809145599
+        },
+        "first_hit_rank": 4
+      },
+      {
+        "id": "GOLD-TEMP-005",
+        "query": "Compare the valuation of company accommodation perks between 1962 Rule 3 and 2026 Rule 15 for a private sector employee in a major metro with population > 40 lakhs.",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 1.0,
+          "recall@5": 0.10869565217391304,
+          "ndcg@5": 1.0,
+          "precision@10": 1.0,
+          "recall@10": 0.21739130434782608,
+          "ndcg@10": 1.0,
+          "precision@20": 1.0,
+          "recall@20": 0.43478260869565216,
+          "ndcg@20": 0.9999999999999999
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-TEMP-009",
+        "query": "For Financial Year 2024-25, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.5,
+          "precision@5": 0.2,
+          "recall@5": 0.07692307692307693,
+          "ndcg@5": 0.21398626473452756,
+          "precision@10": 0.5,
+          "recall@10": 0.38461538461538464,
+          "ndcg@10": 0.42367664508731884,
+          "precision@20": 0.4,
+          "recall@20": 0.6153846153846154,
+          "ndcg@20": 0.5039023261402732
+        },
+        "first_hit_rank": 2
+      },
+      {
+        "id": "GOLD-TEMP-011",
+        "query": "For Financial Year 2021-22, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.25,
+          "precision@5": 0.2,
+          "recall@5": 0.07692307692307693,
+          "ndcg@5": 0.14606834984270645,
+          "precision@10": 0.5,
+          "recall@10": 0.38461538461538464,
+          "ndcg@10": 0.37960256558331507,
+          "precision@20": 0.35,
+          "recall@20": 0.5384615384615384,
+          "ndcg@20": 0.4150314348467291
+        },
+        "first_hit_rank": 4
+      },
+      {
+        "id": "GOLD-TEMP-028",
+        "query": "For Financial Year 2023-24, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+        "query_type": "Intra-Document Temporal Validation",
+        "metrics": {
+          "mrr": 0.06666666666666667,
+          "precision@5": 0.0,
+          "recall@5": 0.0,
+          "ndcg@5": 0.0,
+          "precision@10": 0.0,
+          "recall@10": 0.0,
+          "ndcg@10": 0.0,
+          "precision@20": 0.05,
+          "recall@20": 0.2,
+          "ndcg@20": 0.08479005131840403
+        },
+        "first_hit_rank": 15
+      },
+      {
+        "id": "GOLD-PROC-012",
+        "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 1.0,
+          "recall@5": 0.3125,
+          "ndcg@5": 1.0,
+          "precision@10": 1.0,
+          "recall@10": 0.625,
+          "ndcg@10": 1.0,
+          "precision@20": 0.8,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9992076520296728
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-021",
+        "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.8,
+          "recall@5": 0.4,
+          "ndcg@5": 0.7860137352654724,
+          "precision@10": 0.6,
+          "recall@10": 0.6,
+          "ndcg@10": 0.6470538417566039,
+          "precision@20": 0.4,
+          "recall@20": 0.8,
+          "ndcg@20": 0.7662538874450557
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-032",
+        "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 1.0,
+          "recall@5": 0.3125,
+          "ndcg@5": 1.0,
+          "precision@10": 1.0,
+          "recall@10": 0.625,
+          "ndcg@10": 1.0,
+          "precision@20": 0.8,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9992076520296728
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-009",
+        "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.8,
+          "recall@5": 0.4,
+          "ndcg@5": 0.7860137352654724,
+          "precision@10": 0.6,
+          "recall@10": 0.6,
+          "ndcg@10": 0.6470538417566039,
+          "precision@20": 0.4,
+          "recall@20": 0.8,
+          "ndcg@20": 0.7662538874450557
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-013",
+        "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.8,
+          "recall@5": 0.4,
+          "ndcg@5": 0.7860137352654724,
+          "precision@10": 0.6,
+          "recall@10": 0.6,
+          "ndcg@10": 0.6470538417566039,
+          "precision@20": 0.4,
+          "recall@20": 0.8,
+          "ndcg@20": 0.7662538874450557
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-004",
+        "query": "What are the procedural steps to calculate tax relief under Rule 21A for salary received in arrears under section 89?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.6,
+          "recall@5": 0.42857142857142855,
+          "ndcg@5": 0.6164336326286644,
+          "precision@10": 0.7,
+          "recall@10": 1.0,
+          "ndcg@10": 0.858594026354055,
+          "precision@20": 0.35,
+          "recall@20": 1.0,
+          "ndcg@20": 0.858594026354055
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-028",
+        "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 1.0,
+          "recall@5": 0.3125,
+          "ndcg@5": 1.0,
+          "precision@10": 1.0,
+          "recall@10": 0.625,
+          "ndcg@10": 1.0,
+          "precision@20": 0.8,
+          "recall@20": 1.0,
+          "ndcg@20": 0.9992076520296728
+        },
+        "first_hit_rank": 1
+      },
+      {
+        "id": "GOLD-PROC-015",
+        "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+        "query_type": "Procedural / Condition Matching",
+        "metrics": {
+          "mrr": 1.0,
+          "precision@5": 0.8,
+          "recall@5": 0.4,
+          "ndcg@5": 0.7860137352654724,
+          "precision@10": 0.6,
+          "recall@10": 0.6,
+          "ndcg@10": 0.6470538417566039,
+          "precision@20": 0.4,
+          "recall@20": 0.8,
+          "ndcg@20": 0.7662538874450557
+        },
+        "first_hit_rank": 1
+      }
+    ]
+  }
+}

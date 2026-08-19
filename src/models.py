@@ -22,7 +22,7 @@ class NodeType(str, Enum):
 class Footnote(BaseModel):
     id: int
     text: str
-    amendment_type: Optional[str] = None  # Inserted, Substituted, Omitted, etc.
+    amendment_type: Optional[str] = None
     rules_referenced: Optional[str] = None
     effective_date: Optional[str] = None
 
@@ -37,7 +37,7 @@ class TableData(BaseModel):
 class StatutoryNode(BaseModel):
     node_id: str
     node_type: NodeType
-    label: str = ""  # e.g., "(1)", "(a)", "(i)", "(A)", "Provided that", "Explanation 1"
+    label: str = ""
     title: Optional[str] = None
     content: str = ""
     table: Optional[TableData] = None
@@ -60,13 +60,13 @@ class RuleDocument(BaseModel):
 
 class ChunkMetadata(BaseModel):
     chunk_id: str
+    parent_id: Optional[str] = None
     corpus_year: int
     rule_id: str
     rule_title: str
     statutory_path: str
     node_type: NodeType
     source_file: str
-    page_numbers: List[int] = Field(default_factory=list)
     sections_referenced: List[str] = Field(default_factory=list)
     forms_referenced: List[str] = Field(default_factory=list)
     effective_date: Optional[str] = None
@@ -76,6 +76,6 @@ class ChunkMetadata(BaseModel):
 class Chunk(BaseModel):
     chunk_id: str
     breadcrumb: str
-    text: str  # Context-enriched text (breadcrumb + content)
-    content: str  # Raw content without breadcrumb
+    text: str
+    content: str
     metadata: ChunkMetadata

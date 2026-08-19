@@ -1,0 +1,2381 @@
+{
+  "suite_file": "data\\evaluation\\active_suite.json",
+  "total_cases": 90,
+  "grounded_cases": 72,
+  "null_cases": 18,
+  "mean_metrics": {
+    "mrr": 0.28478049728049726,
+    "recall@5": 0.1886574074074074,
+    "precision@5": 0.08333333333333333,
+    "ndcg@5": 0.1883418493573215,
+    "recall@10": 0.2939814814814815,
+    "precision@10": 0.0625,
+    "ndcg@10": 0.22708206134334338,
+    "recall@20": 0.49537037037037035,
+    "precision@20": 0.052083333333333336,
+    "ndcg@20": 0.2915566540085811
+  },
+  "breakdown_by_query_type": {
+    "Persona-Specific Applicability": {
+      "count": 24,
+      "mrr": 0.1986111111111111,
+      "recall@5": 0.1388888888888889,
+      "recall@10": 0.4236111111111111,
+      "recall@20": 0.4236111111111111,
+      "ndcg@10": 0.22466980280867557
+    },
+    "Intra-Document Temporal Validation": {
+      "count": 24,
+      "mrr": 0.11684149184149184,
+      "recall@5": 0.08333333333333333,
+      "recall@10": 0.08333333333333333,
+      "recall@20": 0.4375,
+      "ndcg@10": 0.07487233768692654
+    },
+    "Procedural / Condition Matching": {
+      "count": 24,
+      "mrr": 0.5388888888888889,
+      "recall@5": 0.34375,
+      "recall@10": 0.375,
+      "recall@20": 0.625,
+      "ndcg@10": 0.38170404353442794
+    }
+  },
+  "breakdown_by_difficulty": {
+    "Hard": {
+      "count": 20,
+      "mrr": 0.2824825174825175,
+      "recall@5": 0.15,
+      "recall@10": 0.225,
+      "recall@20": 0.5,
+      "ndcg@10": 0.19451660334743295
+    },
+    "Easy": {
+      "count": 26,
+      "mrr": 0.1444055944055944,
+      "recall@5": 0.11538461538461539,
+      "recall@10": 0.3076923076923077,
+      "recall@20": 0.5,
+      "ndcg@10": 0.15826264980841026
+    },
+    "Medium": {
+      "count": 26,
+      "mrr": 0.4269230769230769,
+      "recall@5": 0.29166666666666663,
+      "recall@10": 0.3333333333333333,
+      "recall@20": 0.48717948717948717,
+      "ndcg@10": 0.3209518251828229
+    }
+  },
+  "breakdown_by_paradigm": {
+    "multi_hop": {
+      "count": 27,
+      "mrr": 0.28720538720538724,
+      "recall@5": 0.18827160493827158,
+      "recall@10": 0.2654320987654321,
+      "recall@20": 0.5246913580246914,
+      "ndcg@10": 0.22106939929902084
+    },
+    "simple_semantic": {
+      "count": 34,
+      "mrr": 0.3058823529411765,
+      "recall@5": 0.19117647058823528,
+      "recall@10": 0.35294117647058826,
+      "recall@20": 0.47058823529411764,
+      "ndcg@10": 0.2524734862106154
+    },
+    "hybrid_temporal": {
+      "count": 11,
+      "mrr": 0.21360457724094087,
+      "recall@5": 0.18181818181818182,
+      "recall@10": 0.18181818181818182,
+      "recall@20": 0.5,
+      "ndcg@10": 0.16335782768056697
+    }
+  },
+  "per_query_results": [
+    {
+      "id": "GOLD-PERS-027",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Hard",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 15"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_15_rule_15_subrule_1_1",
+        "chunk_2026_rule_15_rule_15_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        10
+      ],
+      "first_hit_rank": 10,
+      "metrics": {
+        "mrr": 0.1,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.17723928678404774,
+        "precision@20": 0.05,
+        "recall@20": 0.5,
+        "ndcg@20": 0.17723928678404774
+      }
+    },
+    {
+      "id": "GOLD-PERS-006",
+      "query": "I am a senior citizen aged 77 who receives only pension and interest income. Can I submit a declaration to my bank under Rule 26D so that no tax return is required to be filed?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Hard",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 26D"
+      ],
+      "num_gold_chunks": 3,
+      "gold_chunks": [
+        "chunk_1962_rule_26D_rule_26D_subrule_1_1",
+        "chunk_1962_rule_26D_rule_26D_subrule_2_2",
+        "chunk_1962_rule_26D_rule_26D_subrule_3_3"
+      ],
+      "retrieved_ranks": [
+        1,
+        3,
+        4
+      ],
+      "first_hit_rank": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "precision@5": 0.6,
+        "recall@5": 1.0,
+        "ndcg@5": 0.9060254355346823,
+        "precision@10": 0.3,
+        "recall@10": 1.0,
+        "ndcg@10": 0.9060254355346823,
+        "precision@20": 0.15,
+        "recall@20": 1.0,
+        "ndcg@20": 0.9060254355346823
+      }
+    },
+    {
+      "id": "GOLD-PERS-011",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 15"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_15_rule_15_subrule_1_1",
+        "chunk_2026_rule_15_rule_15_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        10
+      ],
+      "first_hit_rank": 10,
+      "metrics": {
+        "mrr": 0.1,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.17723928678404774,
+        "precision@20": 0.05,
+        "recall@20": 0.5,
+        "ndcg@20": 0.17723928678404774
+      }
+    },
+    {
+      "id": "GOLD-PERS-016",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 3"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+        "chunk_1962_rule_12_rule_12_subrule_3_47"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PERS-026",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 3"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+        "chunk_1962_rule_12_rule_12_subrule_3_47"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PERS-012",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Hard",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 3"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+        "chunk_1962_rule_12_rule_12_subrule_3_47"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PERS-023",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 15"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_15_rule_15_subrule_1_1",
+        "chunk_2026_rule_15_rule_15_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        10
+      ],
+      "first_hit_rank": 10,
+      "metrics": {
+        "mrr": 0.1,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.17723928678404774,
+        "precision@20": 0.05,
+        "recall@20": 0.5,
+        "ndcg@20": 0.17723928678404774
+      }
+    },
+    {
+      "id": "GOLD-PERS-007",
+      "query": "I changed jobs during the previous year. What form must I submit to my current employer to declare salary and TDS from my previous employer under Rule 26A?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 26A"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_26A_rule_26A_subrule_1_1",
+        "chunk_1962_rule_26A_rule_26A_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        1,
+        5
+      ],
+      "first_hit_rank": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "precision@5": 0.4,
+        "recall@5": 1.0,
+        "ndcg@5": 0.8503449055347546,
+        "precision@10": 0.2,
+        "recall@10": 1.0,
+        "ndcg@10": 0.8503449055347546,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.8503449055347546
+      }
+    },
+    {
+      "id": "GOLD-PERS-020",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 3"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+        "chunk_1962_rule_12_rule_12_subrule_3_47"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PERS-013",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 15"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_15_rule_15_subrule_1_1",
+        "chunk_2026_rule_15_rule_15_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        10
+      ],
+      "first_hit_rank": 10,
+      "metrics": {
+        "mrr": 0.1,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.17723928678404774,
+        "precision@20": 0.05,
+        "recall@20": 0.5,
+        "ndcg@20": 0.17723928678404774
+      }
+    },
+    {
+      "id": "GOLD-PERS-017",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 15"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_15_rule_15_subrule_1_1",
+        "chunk_2026_rule_15_rule_15_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        10
+      ],
+      "first_hit_rank": 10,
+      "metrics": {
+        "mrr": 0.1,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.17723928678404774,
+        "precision@20": 0.05,
+        "recall@20": 0.5,
+        "ndcg@20": 0.17723928678404774
+      }
+    },
+    {
+      "id": "GOLD-PERS-010",
+      "query": "I am a blind salaried individual. What is the monthly transport allowance exemption available to me under Rule 2BB of the 1962 rules?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 2BB"
+      ],
+      "num_gold_chunks": 1,
+      "gold_chunks": [
+        "chunk_1962_rule_2BB_rule_2BB_clause_ii_117"
+      ],
+      "retrieved_ranks": [
+        6
+      ],
+      "first_hit_rank": 6,
+      "metrics": {
+        "mrr": 0.16666666666666666,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.1,
+        "recall@10": 1.0,
+        "ndcg@10": 0.3562071871080222,
+        "precision@20": 0.05,
+        "recall@20": 1.0,
+        "ndcg@20": 0.3562071871080222
+      }
+    },
+    {
+      "id": "GOLD-PERS-029",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 15"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_15_rule_15_subrule_1_1",
+        "chunk_2026_rule_15_rule_15_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        10
+      ],
+      "first_hit_rank": 10,
+      "metrics": {
+        "mrr": 0.1,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.17723928678404774,
+        "precision@20": 0.05,
+        "recall@20": 0.5,
+        "ndcg@20": 0.17723928678404774
+      }
+    },
+    {
+      "id": "GOLD-PERS-015",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Hard",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 15"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_15_rule_15_subrule_1_1",
+        "chunk_2026_rule_15_rule_15_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        10
+      ],
+      "first_hit_rank": 10,
+      "metrics": {
+        "mrr": 0.1,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.17723928678404774,
+        "precision@20": 0.05,
+        "recall@20": 0.5,
+        "ndcg@20": 0.17723928678404774
+      }
+    },
+    {
+      "id": "GOLD-PERS-025",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 15"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_15_rule_15_subrule_1_1",
+        "chunk_2026_rule_15_rule_15_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        10
+      ],
+      "first_hit_rank": 10,
+      "metrics": {
+        "mrr": 0.1,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.17723928678404774,
+        "precision@20": 0.05,
+        "recall@20": 0.5,
+        "ndcg@20": 0.17723928678404774
+      }
+    },
+    {
+      "id": "GOLD-PERS-021",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Hard",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 15"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_15_rule_15_subrule_1_1",
+        "chunk_2026_rule_15_rule_15_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        10
+      ],
+      "first_hit_rank": 10,
+      "metrics": {
+        "mrr": 0.1,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.17723928678404774,
+        "precision@20": 0.05,
+        "recall@20": 0.5,
+        "ndcg@20": 0.17723928678404774
+      }
+    },
+    {
+      "id": "GOLD-PERS-031",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 15"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_15_rule_15_subrule_1_1",
+        "chunk_2026_rule_15_rule_15_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        10
+      ],
+      "first_hit_rank": 10,
+      "metrics": {
+        "mrr": 0.1,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.17723928678404774,
+        "precision@20": 0.05,
+        "recall@20": 0.5,
+        "ndcg@20": 0.17723928678404774
+      }
+    },
+    {
+      "id": "GOLD-PERS-002",
+      "query": "As a central government employee, how is the perquisite value of government-provided residential accommodation determined?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 3"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+        "chunk_1962_rule_12_rule_12_subrule_3_47"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PERS-014",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 3"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+        "chunk_1962_rule_12_rule_12_subrule_3_47"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PERS-019",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 15"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_15_rule_15_subrule_1_1",
+        "chunk_2026_rule_15_rule_15_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        10
+      ],
+      "first_hit_rank": 10,
+      "metrics": {
+        "mrr": 0.1,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.17723928678404774,
+        "precision@20": 0.05,
+        "recall@20": 0.5,
+        "ndcg@20": 0.17723928678404774
+      }
+    },
+    {
+      "id": "GOLD-PERS-003",
+      "query": "I am a private company employee living in a town with a population of 12 lakhs. My employer owns the apartment provided to me. What percentage of my salary is taken as the accommodation perk under the 1962 rules?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 3"
+      ],
+      "num_gold_chunks": 3,
+      "gold_chunks": [
+        "chunk_1962_rule_3_rule_3_subrule_2_7",
+        "chunk_1962_rule_3_rule_3_clause_a_8",
+        "chunk_1962_rule_3_rule_3_clause_b_106"
+      ],
+      "retrieved_ranks": [
+        1,
+        6
+      ],
+      "first_hit_rank": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "precision@5": 0.2,
+        "recall@5": 0.3333333333333333,
+        "ndcg@5": 0.46927872602275644,
+        "precision@10": 0.2,
+        "recall@10": 0.6666666666666666,
+        "ndcg@10": 0.6364391809889587,
+        "precision@20": 0.1,
+        "recall@20": 0.6666666666666666,
+        "ndcg@20": 0.6364391809889587
+      }
+    },
+    {
+      "id": "GOLD-PERS-018",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Hard",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 3"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+        "chunk_1962_rule_12_rule_12_subrule_3_47"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PERS-022",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 3"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+        "chunk_1962_rule_12_rule_12_subrule_3_47"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PERS-004",
+      "query": "I am a software engineer opting for the New Tax Regime under section 115BAC. Can I claim children education allowance and hostel allowance exemptions under Rule 2BB?",
+      "query_type": "Persona-Specific Applicability",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 2BB"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_2BB_rule_2BB_clause_i_122",
+        "chunk_1962_rule_2BB_rule_2BB_clause_ii_123"
+      ],
+      "retrieved_ranks": [
+        2,
+        3
+      ],
+      "first_hit_rank": 2,
+      "metrics": {
+        "mrr": 0.5,
+        "precision@5": 0.4,
+        "recall@5": 1.0,
+        "ndcg@5": 0.6934264036172708,
+        "precision@10": 0.2,
+        "recall@10": 1.0,
+        "ndcg@10": 0.6934264036172708,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.6934264036172708
+      }
+    },
+    {
+      "id": "GOLD-TEMP-024",
+      "query": "For Financial Year 2024-25, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "hybrid_temporal",
+      "difficulty_level": "Hard",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 2BB"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+        "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-TEMP-026",
+      "query": "For Financial Year 2021-22, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 2BB"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+        "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-TEMP-008",
+      "query": "For Financial Year 2023-24, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 2BB"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+        "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-TEMP-023",
+      "query": "For Financial Year 2023-24, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 280"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_280_rule_280_subrule_1_1",
+        "chunk_2026_rule_280_rule_280_clause_a_2"
+      ],
+      "retrieved_ranks": [
+        11,
+        14
+      ],
+      "first_hit_rank": 11,
+      "metrics": {
+        "mrr": 0.09090909090909091,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.327973028445648
+      }
+    },
+    {
+      "id": "GOLD-TEMP-014",
+      "query": "For Financial Year 2024-25, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 2BB"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+        "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-TEMP-001",
+      "query": "I realized I missed reporting my salary bonus for Financial Year (FY) 2019-20. Can I file an Updated Return of Income (ITR-U) under Rule 12AC of the 1962 rules?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "hybrid_temporal",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 12AC"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AC_rule_12AC_subrule_1_1",
+        "chunk_1962_rule_12AC_rule_12AC_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        1,
+        3
+      ],
+      "first_hit_rank": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "precision@5": 0.4,
+        "recall@5": 1.0,
+        "ndcg@5": 0.9197207891481876,
+        "precision@10": 0.2,
+        "recall@10": 1.0,
+        "ndcg@10": 0.9197207891481876,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.9197207891481876
+      }
+    },
+    {
+      "id": "GOLD-TEMP-020",
+      "query": "For Financial Year 2020-21, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 2BB"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+        "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-TEMP-016",
+      "query": "For Financial Year 2021-22, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 2BB"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+        "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-TEMP-006",
+      "query": "For Financial Year 2021-22, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "hybrid_temporal",
+      "difficulty_level": "Hard",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 2BB"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+        "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-TEMP-010",
+      "query": "For Financial Year 2020-21, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 2BB"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+        "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-TEMP-029",
+      "query": "For Financial Year 2024-25, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 280"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_280_rule_280_subrule_1_1",
+        "chunk_2026_rule_280_rule_280_clause_a_2"
+      ],
+      "retrieved_ranks": [
+        11,
+        13
+      ],
+      "first_hit_rank": 11,
+      "metrics": {
+        "mrr": 0.09090909090909091,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.33207590915692625
+      }
+    },
+    {
+      "id": "GOLD-TEMP-019",
+      "query": "For Financial Year 2024-25, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 280"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_280_rule_280_subrule_1_1",
+        "chunk_2026_rule_280_rule_280_clause_a_2"
+      ],
+      "retrieved_ranks": [
+        11,
+        13
+      ],
+      "first_hit_rank": 11,
+      "metrics": {
+        "mrr": 0.09090909090909091,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.33207590915692625
+      }
+    },
+    {
+      "id": "GOLD-TEMP-018",
+      "query": "For Financial Year 2023-24, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "hybrid_temporal",
+      "difficulty_level": "Hard",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 2BB"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+        "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-TEMP-032",
+      "query": "For Financial Year 2022-23, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 2BB"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+        "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-TEMP-017",
+      "query": "For Financial Year 2022-23, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 280"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_280_rule_280_subrule_1_1",
+        "chunk_2026_rule_280_rule_280_clause_a_2"
+      ],
+      "retrieved_ranks": [
+        11,
+        14
+      ],
+      "first_hit_rank": 11,
+      "metrics": {
+        "mrr": 0.09090909090909091,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.327973028445648
+      }
+    },
+    {
+      "id": "GOLD-TEMP-022",
+      "query": "For Financial Year 2022-23, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 2BB"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+        "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-TEMP-015",
+      "query": "For Financial Year 2020-21, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "hybrid_temporal",
+      "difficulty_level": "Hard",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 280"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_280_rule_280_subrule_1_1",
+        "chunk_2026_rule_280_rule_280_clause_a_2"
+      ],
+      "retrieved_ranks": [
+        13,
+        14
+      ],
+      "first_hit_rank": 13,
+      "metrics": {
+        "mrr": 0.07692307692307693,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.31798276946713805
+      }
+    },
+    {
+      "id": "GOLD-TEMP-002",
+      "query": "Can I file an updated return under Rule 12AC for income earned during Financial Year 2017-18?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "hybrid_temporal",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 12AC"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AC_rule_12AC_subrule_1_1",
+        "chunk_1962_rule_12AC_rule_12AC_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        1,
+        4
+      ],
+      "first_hit_rank": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "precision@5": 0.4,
+        "recall@5": 1.0,
+        "ndcg@5": 0.8772153153380493,
+        "precision@10": 0.2,
+        "recall@10": 1.0,
+        "ndcg@10": 0.8772153153380493,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.8772153153380493
+      }
+    },
+    {
+      "id": "GOLD-TEMP-030",
+      "query": "For Financial Year 2020-21, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "hybrid_temporal",
+      "difficulty_level": "Hard",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 2BB"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+        "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-TEMP-021",
+      "query": "For Financial Year 2021-22, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "hybrid_temporal",
+      "difficulty_level": "Hard",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 280"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_280_rule_280_subrule_1_1",
+        "chunk_2026_rule_280_rule_280_clause_a_2"
+      ],
+      "retrieved_ranks": [
+        11,
+        14
+      ],
+      "first_hit_rank": 11,
+      "metrics": {
+        "mrr": 0.09090909090909091,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.327973028445648
+      }
+    },
+    {
+      "id": "GOLD-TEMP-012",
+      "query": "For Financial Year 2022-23, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "hybrid_temporal",
+      "difficulty_level": "Hard",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 2BB"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_2BBA_rule_2BBA_subrule_1_1",
+        "chunk_1962_rule_2BBA_rule_2BBA_clause_i_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-TEMP-027",
+      "query": "For Financial Year 2022-23, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "hybrid_temporal",
+      "difficulty_level": "Hard",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 280"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_280_rule_280_subrule_1_1",
+        "chunk_2026_rule_280_rule_280_clause_a_2"
+      ],
+      "retrieved_ranks": [
+        11,
+        14
+      ],
+      "first_hit_rank": 11,
+      "metrics": {
+        "mrr": 0.09090909090909091,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.327973028445648
+      }
+    },
+    {
+      "id": "GOLD-TEMP-013",
+      "query": "For Financial Year 2023-24, how does the temporal allowance schedule under Rule 280 apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 280"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_280_rule_280_subrule_1_1",
+        "chunk_2026_rule_280_rule_280_clause_a_2"
+      ],
+      "retrieved_ranks": [
+        11,
+        14
+      ],
+      "first_hit_rank": 11,
+      "metrics": {
+        "mrr": 0.09090909090909091,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.327973028445648
+      }
+    },
+    {
+      "id": "GOLD-TEMP-003",
+      "query": "How did the Leave Travel Concession (LTC) exemption rules change between Rule 2B of the 1962 rules and Rule 278 of the 2026 rules regarding block years?",
+      "query_type": "Intra-Document Temporal Validation",
+      "retrieval_paradigm": "hybrid_temporal",
+      "difficulty_level": "Hard",
+      "target_regime": "both",
+      "relevant_rules": [
+        "Rule 2B",
+        "Rule 278"
+      ],
+      "num_gold_chunks": 4,
+      "gold_chunks": [
+        "chunk_1962_rule_2BA_rule_2BA_body_1",
+        "chunk_1962_rule_2BA_rule_2BA_clause_i_2",
+        "chunk_2026_rule_278_rule_278_subrule_1_1",
+        "chunk_2026_rule_278_rule_278_clause_a_2"
+      ],
+      "retrieved_ranks": [
+        11,
+        16
+      ],
+      "first_hit_rank": 11,
+      "metrics": {
+        "mrr": 0.09090909090909091,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.1,
+        "recall@20": 0.5,
+        "ndcg@20": 0.20440045193094003
+      }
+    },
+    {
+      "id": "GOLD-PROC-029",
+      "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 12"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AB_rule_12AB_body_1",
+        "chunk_1962_rule_12AB_rule_12AB_body_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PROC-022",
+      "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Medium",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 164"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_164_rule_164_subrule_1_1",
+        "chunk_2026_rule_164_rule_164_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        1,
+        16
+      ],
+      "first_hit_rank": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "precision@5": 0.2,
+        "recall@5": 0.5,
+        "ndcg@5": 0.6131471927654584,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.6131471927654584,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.7631539858737962
+      }
+    },
+    {
+      "id": "GOLD-PROC-014",
+      "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Medium",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 164"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_164_rule_164_subrule_1_1",
+        "chunk_2026_rule_164_rule_164_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        1,
+        16
+      ],
+      "first_hit_rank": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "precision@5": 0.2,
+        "recall@5": 0.5,
+        "ndcg@5": 0.6131471927654584,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.6131471927654584,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.7631539858737962
+      }
+    },
+    {
+      "id": "GOLD-PROC-010",
+      "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Medium",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 164"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_164_rule_164_subrule_1_1",
+        "chunk_2026_rule_164_rule_164_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        1,
+        16
+      ],
+      "first_hit_rank": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "precision@5": 0.2,
+        "recall@5": 0.5,
+        "ndcg@5": 0.6131471927654584,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.6131471927654584,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.7631539858737962
+      }
+    },
+    {
+      "id": "GOLD-PROC-019",
+      "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 12"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AB_rule_12AB_body_1",
+        "chunk_1962_rule_12AB_rule_12AB_body_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PROC-027",
+      "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Hard",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 12"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AB_rule_12AB_body_1",
+        "chunk_1962_rule_12AB_rule_12AB_body_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PROC-002",
+      "query": "What specific form must a salaried employee furnish to their employer under Rule 26C to claim tax deductions for House Rent Allowance (HRA), Leave Travel Concession (LTC), and home loan interest?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 26C"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_26C_rule_26C_subrule_1_1",
+        "chunk_1962_rule_26C_rule_26C_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        3,
+        4
+      ],
+      "first_hit_rank": 3,
+      "metrics": {
+        "mrr": 0.3333333333333333,
+        "precision@5": 0.4,
+        "recall@5": 1.0,
+        "ndcg@5": 0.5706417189553201,
+        "precision@10": 0.2,
+        "recall@10": 1.0,
+        "ndcg@10": 0.5706417189553201,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.5706417189553201
+      }
+    },
+    {
+      "id": "GOLD-PROC-001",
+      "query": "I am a salaried individual filing an Updated Return (ITR-U) under Rule 12AC. My accounts are not required to be audited, and I do NOT have a Digital Signature Certificate (DSC). How am I permitted to verify my return according to the table in Rule 12AC?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 12AC"
+      ],
+      "num_gold_chunks": 4,
+      "gold_chunks": [
+        "chunk_1962_rule_12AC_rule_12AC_subrule_1_1",
+        "chunk_1962_rule_12AC_rule_12AC_subrule_2_2",
+        "chunk_1962_rule_12AC_rule_12AC_subrule_3_6",
+        "chunk_1962_rule_12AC_rule_12AC_table_1_7"
+      ],
+      "retrieved_ranks": [
+        2,
+        3,
+        4,
+        6
+      ],
+      "first_hit_rank": 2,
+      "metrics": {
+        "mrr": 0.5,
+        "precision@5": 0.6,
+        "recall@5": 0.75,
+        "ndcg@5": 0.6096199500078984,
+        "precision@10": 0.4,
+        "recall@10": 1.0,
+        "ndcg@10": 0.7486761295186739,
+        "precision@20": 0.2,
+        "recall@20": 1.0,
+        "ndcg@20": 0.7486761295186739
+      }
+    },
+    {
+      "id": "GOLD-PROC-016",
+      "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Medium",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 164"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_164_rule_164_subrule_1_1",
+        "chunk_2026_rule_164_rule_164_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        1,
+        16
+      ],
+      "first_hit_rank": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "precision@5": 0.2,
+        "recall@5": 0.5,
+        "ndcg@5": 0.6131471927654584,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.6131471927654584,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.7631539858737962
+      }
+    },
+    {
+      "id": "GOLD-PROC-030",
+      "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Hard",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 164"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_164_rule_164_subrule_1_1",
+        "chunk_2026_rule_164_rule_164_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        1,
+        16
+      ],
+      "first_hit_rank": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "precision@5": 0.2,
+        "recall@5": 0.5,
+        "ndcg@5": 0.6131471927654584,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.6131471927654584,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.7631539858737962
+      }
+    },
+    {
+      "id": "GOLD-PROC-020",
+      "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Medium",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 164"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_164_rule_164_subrule_1_1",
+        "chunk_2026_rule_164_rule_164_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        1,
+        16
+      ],
+      "first_hit_rank": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "precision@5": 0.2,
+        "recall@5": 0.5,
+        "ndcg@5": 0.6131471927654584,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.6131471927654584,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.7631539858737962
+      }
+    },
+    {
+      "id": "GOLD-PROC-011",
+      "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 12"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AB_rule_12AB_body_1",
+        "chunk_1962_rule_12AB_rule_12AB_body_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PROC-005",
+      "query": "Under Rule 31 of the 1962 rules, what certificate is required to be issued by an employer for tax deducted at source on salary, and what is the deadline?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 31"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_31_rule_31_clause_a_2",
+        "chunk_1962_rule_31_rule_31_clause_b_3"
+      ],
+      "retrieved_ranks": [
+        10,
+        12
+      ],
+      "first_hit_rank": 10,
+      "metrics": {
+        "mrr": 0.1,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.17723928678404774,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.3429350525492773
+      }
+    },
+    {
+      "id": "GOLD-PROC-026",
+      "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Medium",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 164"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_164_rule_164_subrule_1_1",
+        "chunk_2026_rule_164_rule_164_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        1,
+        16
+      ],
+      "first_hit_rank": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "precision@5": 0.2,
+        "recall@5": 0.5,
+        "ndcg@5": 0.6131471927654584,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.6131471927654584,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.7631539858737962
+      }
+    },
+    {
+      "id": "GOLD-PROC-017",
+      "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 12"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AB_rule_12AB_body_1",
+        "chunk_1962_rule_12AB_rule_12AB_body_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PROC-018",
+      "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Hard",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 164"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_164_rule_164_subrule_1_1",
+        "chunk_2026_rule_164_rule_164_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        1,
+        16
+      ],
+      "first_hit_rank": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "precision@5": 0.2,
+        "recall@5": 0.5,
+        "ndcg@5": 0.6131471927654584,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.6131471927654584,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.7631539858737962
+      }
+    },
+    {
+      "id": "GOLD-PROC-008",
+      "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Medium",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 164"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_164_rule_164_subrule_1_1",
+        "chunk_2026_rule_164_rule_164_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        1,
+        16
+      ],
+      "first_hit_rank": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "precision@5": 0.2,
+        "recall@5": 0.5,
+        "ndcg@5": 0.6131471927654584,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.6131471927654584,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.7631539858737962
+      }
+    },
+    {
+      "id": "GOLD-PROC-024",
+      "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Hard",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 164"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_164_rule_164_subrule_1_1",
+        "chunk_2026_rule_164_rule_164_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        1,
+        16
+      ],
+      "first_hit_rank": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "precision@5": 0.2,
+        "recall@5": 0.5,
+        "ndcg@5": 0.6131471927654584,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.6131471927654584,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.7631539858737962
+      }
+    },
+    {
+      "id": "GOLD-PROC-003",
+      "query": "Under the 2026 rules (Rule 205), what is the prescribed form for an employee to submit evidence of claims to the employer for TDS estimation?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 205"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_205_rule_205_subrule_1_1",
+        "chunk_2026_rule_205_rule_205_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        1,
+        3
+      ],
+      "first_hit_rank": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "precision@5": 0.4,
+        "recall@5": 1.0,
+        "ndcg@5": 0.9197207891481876,
+        "precision@10": 0.2,
+        "recall@10": 1.0,
+        "ndcg@10": 0.9197207891481876,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.9197207891481876
+      }
+    },
+    {
+      "id": "GOLD-PROC-031",
+      "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 12"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AB_rule_12AB_body_1",
+        "chunk_1962_rule_12AB_rule_12AB_body_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PROC-007",
+      "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 12"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AB_rule_12AB_body_1",
+        "chunk_1962_rule_12AB_rule_12AB_body_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PROC-023",
+      "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 12"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AB_rule_12AB_body_1",
+        "chunk_1962_rule_12AB_rule_12AB_body_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PROC-025",
+      "query": "Under Rule 12 (1962 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "simple_semantic",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "relevant_rules": [
+        "Rule 12"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_1962_rule_12AB_rule_12AB_body_1",
+        "chunk_1962_rule_12AB_rule_12AB_body_2"
+      ],
+      "retrieved_ranks": [],
+      "first_hit_rank": null,
+      "metrics": {
+        "mrr": 0.0,
+        "precision@5": 0.0,
+        "recall@5": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "recall@10": 0.0,
+        "ndcg@10": 0.0,
+        "precision@20": 0.0,
+        "recall@20": 0.0,
+        "ndcg@20": 0.0
+      }
+    },
+    {
+      "id": "GOLD-PROC-006",
+      "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "retrieval_paradigm": "multi_hop",
+      "difficulty_level": "Hard",
+      "target_regime": "2026",
+      "relevant_rules": [
+        "Rule 164"
+      ],
+      "num_gold_chunks": 2,
+      "gold_chunks": [
+        "chunk_2026_rule_164_rule_164_subrule_1_1",
+        "chunk_2026_rule_164_rule_164_subrule_2_2"
+      ],
+      "retrieved_ranks": [
+        1,
+        16
+      ],
+      "first_hit_rank": 1,
+      "metrics": {
+        "mrr": 1.0,
+        "precision@5": 0.2,
+        "recall@5": 0.5,
+        "ndcg@5": 0.6131471927654584,
+        "precision@10": 0.1,
+        "recall@10": 0.5,
+        "ndcg@10": 0.6131471927654584,
+        "precision@20": 0.1,
+        "recall@20": 1.0,
+        "ndcg@20": 0.7631539858737962
+      }
+    }
+  ]
+}
