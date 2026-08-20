@@ -1,4 +1,4 @@
-﻿import pytest
+import pytest
 from src.mcp.calculators import PerquisiteCalculator
 
 
@@ -113,3 +113,34 @@ def test_free_food_exemption():
     assert res["taxable_per_meal"] == 30.0
     assert res["taxable_perquisite_value"] == 6000.0
     assert res["source_chunk_id"] == "chunk_1962_rule_3_rule_3_subrule_7_49"
+
+
+def test_cited_chunks_contain_statutory_rates():
+    """Verify that cited chunk IDs exist and their actual text content contains the exact statutory rates claimed."""
+    import json
+    from pathlib import Path
+    
+    chunks_file = Path("data/processed/chunks_1962.json")
+    assert chunks_file.exists()
+    
+    with open(chunks_file, "r", encoding="utf-8") as f:
+        chunks = json.load(f)
+    
+    chunk_map = {c["chunk_id"]: c for c in chunks}
+    
+    # 1. Accommodation Table Chunk
+    acc_chunk_id = "chunk_1962_rule_3_rule_3_table_1_115"
+    assert acc_chunk_id in chunk_map
+    acc_text = chunk_map[acc_chunk_id]["content"]
+    assert "10% of salary" in acc_text
+    assert "7.5%" in acc_text
+    assert "5%" in acc_text
+    assert "40 lakh" in acc_text
+
+    # 2. Food Perquisite Chunk
+    food_chunk_id = "chunk_1962_rule_3_rule_3_subrule_7_49"
+    assert food_chunk_id in chunk_map
+    food_text = chunk_map[food_chunk_id]["content"]
+    assert "fifty rupees" in food_text.lower() or "50" in food_text
+
+

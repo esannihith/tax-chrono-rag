@@ -1,60 +1,63 @@
 {
   "provenance": {
-    "git_commit_sha": "da2509c2613797f0f04d61468872e0d317eb1a1f",
-    "timestamp_utc": "2026-08-20T14:48:55.223628+00:00",
+    "git_commit_sha": "02af94f-dirty",
+    "timestamp_utc": "2026-08-20T15:46:35.954289+00:00",
     "suite_file": "data/evaluation/active_suite.json",
-    "suite_sha256": "7214d5d12486617d9c50fa65f1578c8e0872acbaa8c246755c3dfcd1d1b0b690",
+    "suite_sha256": "355463ee689750851a64607cec883d06280a38da82b38c0520a9ccc61c988af6",
     "top_k": 4
   },
   "suite": "active_suite.json",
   "total_cases_evaluated": 20,
+  "labelled_temporal_cases_count": 20,
+  "unlabelled_temporal_cases_count": 0,
   "negative_cases_count": 5,
-  "elapsed_seconds": 562.63,
-  "mean_composite_score": 0.772,
-  "mean_criteria_match_rate": 0.7175,
-  "mean_citation_precision": 0.6917,
-  "mean_citation_recall": 0.8,
-  "mean_citation_f1": 0.725,
-  "mean_temporal_validity_score": 0.95,
+  "elapsed_seconds": 309.71,
+  "mean_composite_score": 0.5399,
+  "mean_criteria_keyword_coverage": 0.6783,
+  "mean_citation_precision": 0.5,
+  "mean_citation_recall": 0.55,
+  "mean_citation_f1": 0.5167,
+  "mean_temporal_validity_score": 0.25,
+  "strict_temporal_accuracy": 0.25,
   "negative_abstention_accuracy": 1.0,
   "query_type_breakdown": {
     "Persona-Specific Applicability": {
       "count": 5,
-      "mean_composite_score": 0.9075,
-      "mean_criteria_match": 0.85
+      "mean_composite_score": 0.4667,
+      "mean_criteria_keyword_coverage": 0.7333
     },
     "Intra-Document Temporal Validation": {
       "count": 5,
-      "mean_composite_score": 0.875,
-      "mean_criteria_match": 0.7
+      "mean_composite_score": 0.6417,
+      "mean_criteria_keyword_coverage": 0.6333
     },
     "Procedural / Condition Matching": {
       "count": 5,
-      "mean_composite_score": 0.8253,
-      "mean_criteria_match": 0.7867
+      "mean_composite_score": 0.618,
+      "mean_criteria_keyword_coverage": 0.68
     },
     "Negative / Out-of-Scope": {
       "count": 5,
-      "mean_composite_score": 0.48,
-      "mean_criteria_match": 0.5333
+      "mean_composite_score": 0.4333,
+      "mean_criteria_keyword_coverage": 0.6667
     }
   },
   "regime_breakdown": {
     "1962": {
       "count": 12,
-      "mean_composite_score": 0.8996
+      "mean_composite_score": 0.566
     },
     "both": {
       "count": 1,
-      "mean_composite_score": 0.8833
+      "mean_composite_score": 0.35
     },
     "2026": {
       "count": 2,
-      "mean_composite_score": 0.68
+      "mean_composite_score": 0.745
     },
     "none": {
       "count": 5,
-      "mean_composite_score": 0.48
+      "mean_composite_score": 0.4333
     }
   },
   "per_case_results": [
@@ -64,40 +67,30 @@
       "query_type": "Persona-Specific Applicability",
       "difficulty_level": "Easy",
       "target_regime": "1962",
-      "expected_ay": null,
-      "expected_fy": null,
+      "expected_ay": "AY 2024-25",
+      "expected_fy": "FY 2023-24",
       "is_negative": false,
-      "direct_answer": "For a Central Government employee, the perquisite value of unfurnished government-provided residential accommodation is determined as the License Fee fixed by the Central Government under its rules, minus any rent actually paid by the employee. If the accommodation is furnished, the value is increased by 10% per annum of the original cost of furniture/appliances owned by the government (or actual hire charges if rented), reduced by any furniture charges paid by the employee.",
-      "temporal_applicability": "Applies as per Rule 3 amendments effective from September 1, 2023 (relevant for Financial Year 2023-24 / Assessment Year 2024-25 onwards).",
-      "citations": [
-        {
-          "rule_id": "Rule 3",
-          "sub_rule": "(1)",
-          "statutory_path": "Rule 3 > (1) & Table 1",
-          "corpus_year": 1962,
-          "sections_referenced": [
-            "section 17(2)(i)",
-            "section 17(2)(ii)"
-          ],
-          "forms_referenced": [],
-          "effective_date": "01-09-2023",
-          "citation_text": "Where the accommodation is provided by the Central Government or any State Government... License fee determined by the Central Government or any State Government in respect of accommodation in accordance with the rules framed by such Government as reduced by the rent actually paid by the employee."
-        }
-      ],
-      "citation_precision": 1.0,
-      "citation_recall": 1.0,
-      "citation_f1": 1.0,
-      "criteria_match_rate": 1.0,
+      "direct_answer": "Under the Income-tax Rules, 1962 (Rule 3 > (1)), the perquisite value for government-provided residential accommodation is determined by taking the base value from Table I (based on city population and whether accommodation is furnished or unfurnished) and adding 10% per annum of the cost of furniture (or actual hire charges if rented from a third party), minus any rent already paid by the employee.",
+      "temporal_applicability": "These provisions (Rule 3 > (1) and Table I) were effective from 1-9-2023. They apply to Assessment Years (AY) starting from AY 2023-24 onwards. For financial years before this effective date (e.g., FY 2022-23), the older valuation methodology under the 1962 rules would apply.",
+      "citations": [],
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_keyword_coverage_rate": 0.6667,
+      "criteria_match_rate": 0.6667,
       "matched_criteria": [
-        "Mentions Rule 3(1)",
         "Refers to licence fee determined by the Government",
         "Mentions deduction of rent actually paid by employee"
       ],
-      "missed_criteria": [],
-      "temporal_validity_score": 1.0,
+      "missed_criteria": [
+        "Mentions Rule 3(1)"
+      ],
+      "temporal_validity_score": 0.0,
+      "is_labelled_temporal_case": true,
+      "verified_correct_year": false,
       "negative_handling_correct": true,
       "is_out_of_scope": false,
-      "composite_score": 1.0
+      "composite_score": 0.2333
     },
     {
       "case_id": "GOLD-PERS-003",
@@ -105,41 +98,46 @@
       "query_type": "Persona-Specific Applicability",
       "difficulty_level": "Medium",
       "target_regime": "1962",
-      "expected_ay": null,
-      "expected_fy": null,
+      "expected_ay": "AY 2024-25",
+      "expected_fy": "FY 2023-24",
       "is_negative": false,
-      "direct_answer": "Under the Income-tax Rules, 1962 (effective 1-9-2023), if your employer owns the unfurnished apartment provided to you in a city with a population of 12 lakhs, the accommodation perquisite value is 5% of your salary (reduced by any rent actually paid by you).",
-      "temporal_applicability": "Applies to Financial Year 2023-24 (Assessment Year 2024-25) onwards, following the amendment to Rule 3 effective from 1st September 2023.",
+      "direct_answer": "7.5% of salary",
+      "temporal_applicability": "The Income-tax Rules, 1962 (Table 1, Column 1) are effective from 1-9-2023. Therefore, they apply to the current financial year (FY 2024-25) and assessment year (AY 2025-26) and beyond. For the 2023-24 financial year, the old effective date would have been earlier, but the current amendment makes these 1962 rules operative from 1-9-2023.",
       "citations": [
         {
-          "rule_id": "3",
-          "sub_rule": "Table 1",
-          "statutory_path": "Rule 3 > Table 1 > Sl. No. 2(a)(iii)",
+          "rule_id": "Income-tax Rules, 1962",
+          "sub_rule": "(2)",
+          "statutory_path": "Rule 3 > Table 1 (Valuation of perquisites)",
           "corpus_year": 1962,
           "sections_referenced": [
-            "section 17(2)"
+            "Section 139 (Valuation of Perquisites)"
           ],
-          "forms_referenced": [],
-          "effective_date": "01-09-2023",
-          "citation_text": "Where the accommodation is owned by the employer: 5% of salary in other areas, in respect of the period during which the said accommodation was occupied by the employee during the previous year as reduced by the rent, if any, actually paid by the employee."
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "1-9-2023",
+          "citation_text": "Where the accommodation is provided by the employer and the city has population exceeding 15 lakhs but not exceeding 40 lakhs (as per 2011 census), the perquisite value is 7.5% of salary."
         }
       ],
-      "citation_precision": 0.5,
-      "citation_recall": 1.0,
-      "citation_f1": 0.6667,
-      "criteria_match_rate": 0.75,
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_keyword_coverage_rate": 0.5,
+      "criteria_match_rate": 0.5,
       "matched_criteria": [
         "Identifies population tier (between 10 to 25 lakhs / 15 to 40 lakhs)",
-        "States percentage of salary (10% or revised 7.5%)",
-        "Deducts rent paid by employee"
+        "States percentage of salary (10% or revised 7.5%)"
       ],
       "missed_criteria": [
-        "Mentions Rule 3(1)"
+        "Mentions Rule 3(1)",
+        "Deducts rent paid by employee"
       ],
       "temporal_validity_score": 1.0,
+      "is_labelled_temporal_case": true,
+      "verified_correct_year": true,
       "negative_handling_correct": true,
       "is_out_of_scope": false,
-      "composite_score": 0.8125
+      "composite_score": 0.325
     },
     {
       "case_id": "GOLD-PERS-004",
@@ -147,73 +145,60 @@
       "query_type": "Persona-Specific Applicability",
       "difficulty_level": "Medium",
       "target_regime": "1962",
-      "expected_ay": null,
-      "expected_fy": null,
+      "expected_ay": "AY 2024-25",
+      "expected_fy": "FY 2023-24",
       "is_negative": false,
-      "direct_answer": "No, under the Income-tax Rules, 1962 (Rule 2BB), children education allowance and hostel allowance are not automatically exemptible when opting for the New Tax Regime (Section 115BAC). Exemptions are strictly limited to the prescribed allowances enumerated in Table 1 (Rule 2BB > (2)) and sub-clauses (a)-(c) of sub-rule (1) (Rule 2BB > (3)). These specific allowances are not explicitly listed in the statutory table provided, and therefore cannot be claimed as exemptions under the new tax regime.",
-      "temporal_applicability": "These rules were effective from 23-9-2015 (as per Statutory Context 2 and 3). They apply to Assessment Years (AY) 2015-16 and onwards under the old tax regime (pre-115BAC). For AY 2026-27 and later, the new tax regime (Section 115BAC) applies, but the same restrictive provisions under Rule 2BB continue to govern the allowable exemptions.",
+      "direct_answer": "No, children education allowance and hostel allowance cannot be claimed as exemptions under the New Tax Regime (Section 115BAC) as per Rule 2BB of the Income-tax Rules, 1962. These allowances are not included in the prescribed allowances enumerated under Rule 2BB (Table 1) for the purposes of Section 10(14) of the Income Tax Act.",
+      "temporal_applicability": "The Income-tax Rules, 1962 (including Rule 2BB) are applicable to the relevant financial year(s) under the New Tax Regime (Section 115BAC). The rules were enacted in 1962 and continue to govern assessments made under Section 115BAC until replaced by subsequent legislation.",
       "citations": [
         {
           "rule_id": "2BB",
           "sub_rule": "(2)",
-          "statutory_path": "Rule 2BB > (2)",
+          "statutory_path": "Rule 2BB > (2) (Prescribed allowances for the purposes of clause (14) of section 10)",
           "corpus_year": 1962,
           "sections_referenced": [
-            "section 10(14)",
-            "section 115BAC"
+            "section 10(14)(ii)"
           ],
           "forms_referenced": [
             "Form ITR-U"
           ],
-          "effective_date": "23-09-2015",
-          "citation_text": "Prescribed allowances for the purposes of clause (14) of section 10, including travel, conveyance, helpers, educational pursuits, and uniform."
-        },
-        {
-          "rule_id": "2BB",
-          "sub_rule": "(3)",
-          "statutory_path": "Rule 2BB > (3)",
-          "corpus_year": 1962,
-          "sections_referenced": [
-            "section 10(14)"
-          ],
-          "forms_referenced": [
-            "Form ITR-U"
-          ],
-          "effective_date": "23-09-2015",
-          "citation_text": "Exemptions apply only to allowances in sub-clauses (a)-(c) of sub-rule (1) and at serial No. 11 of Table 1."
+          "effective_date": "23-9-2015",
+          "citation_text": "Lists prescribed allowances including travel, daily charges, conveyance, helper expenses, educational/research pursuits, and uniform expenses."
         },
         {
           "rule_id": "2BB",
           "sub_rule": "(1)",
-          "statutory_path": "Rule 2BB > (1)",
+          "statutory_path": "Rule 2BB > (1) (Prescribed allowances for the purposes of clause (14) of section 10)",
           "corpus_year": 1962,
           "sections_referenced": [
-            "section 10(14)",
-            "section 115BAC"
+            "section 10(14)(i)"
           ],
           "forms_referenced": [
             "Form ITR-U"
           ],
-          "effective_date": "23-09-2015",
-          "citation_text": "Prescribed allowances for the purposes of clause (14) of section 10, covering travel, conveyance, helpers, educational pursuits, and uniform."
+          "effective_date": "23-9-2015",
+          "citation_text": "Enables exemptions for specific allowances under Section 10(14)(i) of the Income Tax Act."
         }
       ],
       "citation_precision": 1.0,
       "citation_recall": 1.0,
       "citation_f1": 1.0,
-      "criteria_match_rate": 0.5,
+      "criteria_keyword_coverage_rate": 0.75,
+      "criteria_match_rate": 0.75,
       "matched_criteria": [
         "Mentions Section 115BAC restriction",
-        "Explicitly states Children Education and Hostel Allowance are NOT exempt under New Tax Regime"
-      ],
-      "missed_criteria": [
-        "References Rule 2BB(3)",
+        "Explicitly states Children Education and Hostel Allowance are NOT exempt under New Tax Regime",
         "Identifies permitted allowances (conveyance, daily, tour, travel, handicap transport)"
       ],
-      "temporal_validity_score": 1.0,
+      "missed_criteria": [
+        "References Rule 2BB(3)"
+      ],
+      "temporal_validity_score": 0.0,
+      "is_labelled_temporal_case": true,
+      "verified_correct_year": false,
       "negative_handling_correct": true,
       "is_out_of_scope": false,
-      "composite_score": 0.825
+      "composite_score": 0.7625
     },
     {
       "case_id": "GOLD-PERS-006",
@@ -221,44 +206,59 @@
       "query_type": "Persona-Specific Applicability",
       "difficulty_level": "Hard",
       "target_regime": "1962",
-      "expected_ay": null,
-      "expected_fy": null,
+      "expected_ay": "AY 2024-25",
+      "expected_fy": "FY 2023-24",
       "is_negative": false,
-      "direct_answer": "Yes, as a 77-year-old senior citizen receiving pension and interest income, you can submit a declaration in Form No. 12BBA (in paper form duly verified) to your specified bank under Rule 26D of the Income-tax Rules, 1962. Once you furnish this declaration along with evidence of Chapter VI-A deductions, the bank will compute your total income, allow eligible deductions and Section 87A rebate, and deduct the appropriate tax under Section 194P, exempting you from the requirement to file an income tax return.",
-      "temporal_applicability": "Applies for Assessment Year 2022-23 onwards (Financial Year 2021-22 onwards), following the effective insertion date of Rule 26D on September 2, 2021.",
+      "direct_answer": "No, submitting a declaration under Rule 26D does not mean no tax return is required. As a senior citizen (age 77) eligible under Section 61(1)(a) of the Income-tax Act, 1961, you must still file a tax return to claim the Section 194P deduction. Rule 26D provides a simplified mechanism for banks to verify your pension and interest income and compute the appropriate tax deduction, but it does not waive the mandatory return filing requirement for Section 194P benefits.",
+      "temporal_applicability": "Rule 26D was effective from 2-9-2021 (September 2, 2021) and applies to Assessment Years from FY 2021-22 onwards (AY 2022-23 and subsequent years). Since the query specifies the 1962 regime, this rule is fully in force for the relevant assessment years.",
       "citations": [
         {
           "rule_id": "26D",
-          "sub_rule": "Sub-rules (1) to (3)",
-          "statutory_path": "Rule 26D",
+          "sub_rule": "(1)-(3)",
+          "statutory_path": "Rule 26D > Furnishing of declaration and evidence of claims by specified senior citizen under section 194P",
           "corpus_year": 1962,
           "sections_referenced": [
-            "194P",
-            "87A",
-            "Chapter VI-A"
+            "section 194P",
+            "chapter VI-A"
           ],
           "forms_referenced": [
             "Form No. 12BBA"
           ],
-          "effective_date": "02-09-2021",
-          "citation_text": "The declaration required to be furnished by the specified senior citizen to the specified bank under sub-clause (iii) of clause (b) of Explanation to section 194P shall be in Form No. 12BBA to be furnished in paper form duly verified. On furnishing of the declaration... the specified bank shall, after giving effect to the deduction allowable under Chapter VI-A and rebate allowable under section 87A, compute the total income... and deduct income-tax."
+          "effective_date": "2-9-2021",
+          "citation_text": "The declaration required to be furnished by the specified senior citizen to the specified bank under sub-clause (iii) of clause (b) of explanation to section 194P shall be in Form No. 12BBA to be furnished in paper form duly verified."
+        },
+        {
+          "rule_id": "194P",
+          "sub_rule": "Not explicitly numbered but referenced in Rule 26D",
+          "statutory_path": "Income-tax Act, 1961 - Section 194P",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "section 194P"
+          ],
+          "forms_referenced": [],
+          "effective_date": "1962",
+          "citation_text": "Allowance of deduction of up to Rs. 50,000 per annum for pension income for specified senior citizens."
         }
       ],
       "citation_precision": 0.5,
       "citation_recall": 1.0,
       "citation_f1": 0.6667,
-      "criteria_match_rate": 1.0,
+      "criteria_keyword_coverage_rate": 0.75,
+      "criteria_match_rate": 0.75,
       "matched_criteria": [
         "References Rule 26D and Section 194P",
-        "Mentions age threshold (75 years or more)",
         "Identifies Form No. 12BBA",
         "States pension and interest income condition"
       ],
-      "missed_criteria": [],
-      "temporal_validity_score": 1.0,
+      "missed_criteria": [
+        "Mentions age threshold (75 years or more)"
+      ],
+      "temporal_validity_score": 0.0,
+      "is_labelled_temporal_case": true,
+      "verified_correct_year": false,
       "negative_handling_correct": true,
       "is_out_of_scope": false,
-      "composite_score": 0.9
+      "composite_score": 0.6625
     },
     {
       "case_id": "GOLD-PERS-007",
@@ -266,32 +266,33 @@
       "query_type": "Persona-Specific Applicability",
       "difficulty_level": "Easy",
       "target_regime": "1962",
-      "expected_ay": null,
-      "expected_fy": null,
+      "expected_ay": "AY 2024-25",
+      "expected_fy": "FY 2023-24",
       "is_negative": false,
-      "direct_answer": "Under Rule 26A of the Income-tax Rules, 1962, you must submit either Form No. 16 or Form No. 12BA to your current employer, depending on the amount of salary paid from your previous employer. If the total salary from the previous employer is ₹1,50,000 or less, you file Form No. 16. If it exceeds ₹1,50,000, you file Form No. 12BA along with your income tax return (ITR).",
-      "temporal_applicability": "This applies to the Financial Year (FY) 2019-20 and Assessment Year (AY) 2020-21 under the Income-tax Rules, 1962. The effective date of Rule 26A is not specified (None), so it has been in continuous operation since its introduction under the 1962 regime.",
+      "direct_answer": "Under Rule 26A of the Income-tax Rules, 1962, you must submit either Form No. 16 (if your total salary from the previous employer is ₹1,50,000 or less) or Form No. 12BA (if your total salary exceeds ₹1,50,000) to your current employer to declare the income and TDS from your previous employment.",
+      "temporal_applicability": "Rule 26A applies to the Financial Year (FY) 1998-99 and subsequent years under the 1962 regime. There is no specific effective date restriction for this rule in the provided context. It is distinct from the 2026 regime (Rule 26B, effective 15-10-2024) which uses different forms (Form No. 12BAA).",
       "citations": [
         {
           "rule_id": "26A",
-          "sub_rule": "(1)",
-          "statutory_path": "Rule 26A > Sub-rule (1)",
+          "sub_rule": "N/A (standalone rule)",
+          "statutory_path": "Rule 26A > (1) Furnishing of particulars of income under the head 'Salaries'",
           "corpus_year": 1962,
           "sections_referenced": [
-            "section 192",
-            "section 139"
+            "Section 192",
+            "Section 194P"
           ],
           "forms_referenced": [
             "Form No. 16",
             "Form No. 12BA"
           ],
-          "effective_date": "N/A (in force since 1962)",
-          "citation_text": "The assessee may furnish to the person responsible for making the payment... a statement giving correct and complete particulars of perquisites or profits in lieu of salary... in Form No. 16 (if salary ≤ ₹1,50,000) or Form No. 12BA (if salary > ₹1,50,000)."
+          "effective_date": "None (in force from inception of 1962 rules)",
+          "citation_text": "The assessee may furnish to the person responsible for making the payment a statement giving correct and complete particulars of perquisites or profits in lieu of salary and the value thereof in relevant columns provided in Form No. 16, if the amount of salary paid or payable to the employee is not more than one lakh and fifty thousand rupees; or Form No. 12BA, if the amount of salary paid or payable to the employee is more than one lakh and fifty thousand rupees."
         }
       ],
-      "citation_precision": 1.0,
-      "citation_recall": 1.0,
-      "citation_f1": 1.0,
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_keyword_coverage_rate": 1.0,
       "criteria_match_rate": 1.0,
       "matched_criteria": [
         "Mentions Rule 26A",
@@ -299,10 +300,12 @@
         "Specifies furnishing details of previous employer salary and TDS"
       ],
       "missed_criteria": [],
-      "temporal_validity_score": 1.0,
+      "temporal_validity_score": 0.0,
+      "is_labelled_temporal_case": true,
+      "verified_correct_year": false,
       "negative_handling_correct": true,
       "is_out_of_scope": false,
-      "composite_score": 1.0
+      "composite_score": 0.35
     },
     {
       "case_id": "GOLD-TEMP-001",
@@ -313,8 +316,8 @@
       "expected_ay": "AY 2020-2021",
       "expected_fy": "FY 2019-2020",
       "is_negative": false,
-      "direct_answer": "No, you cannot file an Updated Return of Income (ITR-U) under Rule 12AC for Financial Year 2019-20. Rule 12AC was not in force during the relevant Assessment Year (AY 2020-21) that covers FY 2019-20. The rule has an effective date of 29-4-2022 and only applies to Assessment Years commencing on 1st April 2020 and subsequent. For FY 2019-20, you should file a regular ITR-U under the original 1962 rules.",
-      "temporal_applicability": "Rule 12AC (Effective Date: 29-4-2022) applies to Assessment Years commencing on 1st April 2020 and subsequent (i.e., AY 2020-21 and beyond). It does NOT apply to AY 2020-21 (which covers FY 2019-20) or any earlier Assessment Years. Therefore, this rule cannot be used to update returns for FY 2019-20.",
+      "direct_answer": "No, you cannot file an Updated Return of Income (ITR-U) under Rule 12AC of the 1962 Income Tax Rules for Financial Year (FY) 2019-20. Rule 12AC was not in force during that assessment year.",
+      "temporal_applicability": "Rule 12AC was not applicable to FY 2019-20 (AY 2020-21). The rule became effective on 29-4-2022, which is after the assessment year commenced on 1st April 2020. Therefore, this provision could not be used to report income for FY 2019-20.",
       "citations": [
         {
           "rule_id": "12AC",
@@ -328,24 +331,13 @@
             "Form ITR-U"
           ],
           "effective_date": "29-04-2022",
-          "citation_text": "The return of income to be furnished by any person... relating to the assessment year commencing on the 1st day of April, 2020 and subsequent assessment years, shall be in the Form ITR-U"
-        },
-        {
-          "rule_id": "26B",
-          "sub_rule": "",
-          "statutory_path": "Rule 26B > Statement of particulars",
-          "corpus_year": 1962,
-          "sections_referenced": [
-            "section 139"
-          ],
-          "forms_referenced": [],
-          "effective_date": "15-10-2024",
-          "citation_text": "The assessee may submit... details of any income chargeable under any head of income other than 'Salaries'... in Form No. 12BAA"
+          "citation_text": "The return of income to be furnished... relating to the assessment year commencing on the 1st day of April, 2020 and subsequent assessment years, shall be in the Form ITR-U"
         }
       ],
-      "citation_precision": 0.5,
+      "citation_precision": 1.0,
       "citation_recall": 1.0,
-      "citation_f1": 0.6667,
+      "citation_f1": 1.0,
+      "criteria_keyword_coverage_rate": 0.5,
       "criteria_match_rate": 0.5,
       "matched_criteria": [
         "Maps FY 2019-20 to AY 2020-21",
@@ -356,9 +348,11 @@
         "Identifies Form ITR-U u/s 139(8A)"
       ],
       "temporal_validity_score": 1.0,
-      "negative_handling_correct": true,
-      "is_out_of_scope": false,
-      "composite_score": 0.725
+      "is_labelled_temporal_case": true,
+      "verified_correct_year": true,
+      "negative_handling_correct": false,
+      "is_out_of_scope": true,
+      "composite_score": 0.825
     },
     {
       "case_id": "GOLD-TEMP-002",
@@ -369,636 +363,8 @@
       "expected_ay": "AY 2018-2019",
       "expected_fy": "FY 2017-2018",
       "is_negative": false,
-      "direct_answer": "No, you cannot file an updated return under Rule 12AC for income earned during Financial Year 2017-18 (Assessment Year 2018-19). Rule 12AC was not in force for this assessment year.",
-      "temporal_applicability": "Rule 12AC applies to assessment years commencing on 1st April 2020 and subsequent (AY 2020-21 and beyond). Financial Year 2017-18 (AY 2018-19) falls before this effective date (29-4-2022) and therefore is outside the scope of Rule 12AC applicability.",
-      "citations": [
-        {
-          "rule_id": "12AC",
-          "sub_rule": "(1)",
-          "statutory_path": "Rule 12AC > Sub-rule (1)",
-          "corpus_year": 1962,
-          "sections_referenced": [
-            "section 139"
-          ],
-          "forms_referenced": [
-            "Form ITR-U"
-          ],
-          "effective_date": "29-04-2022",
-          "citation_text": "The return of income to be furnished by any person... relating to the assessment year commencing on the 1st day of April, 2020 and subsequent assessment years, shall be in the Form ITR-U"
-        }
-      ],
-      "citation_precision": 1.0,
-      "citation_recall": 1.0,
-      "citation_f1": 1.0,
-      "criteria_match_rate": 1.0,
-      "matched_criteria": [
-        "Maps FY 2017-18 to AY 2018-19",
-        "Cites Rule 12AC(1) commencing on 1st April 2020 (AY 2020-21)",
-        "Explicitly denies eligibility for FY 2017-18 / AY 2018-19"
-      ],
-      "missed_criteria": [],
-      "temporal_validity_score": 1.0,
-      "negative_handling_correct": true,
-      "is_out_of_scope": false,
-      "composite_score": 1.0
-    },
-    {
-      "case_id": "GOLD-TEMP-003",
-      "query": "How did the Leave Travel Concession (LTC) exemption rules change between Rule 2B of the 1962 rules and Rule 278 of the 2026 rules regarding block years?",
-      "query_type": "Intra-Document Temporal Validation",
-      "difficulty_level": "Hard",
-      "target_regime": "both",
-      "expected_ay": null,
-      "expected_fy": null,
-      "is_negative": false,
-      "direct_answer": "The LTC exemption rules evolved significantly between the 1962 and 2026 regimes. Under the 1962 rules (Rule 2B), the exemption was available for travel concessions received during a block of four calendar years, with the right to claim the amount in the first year of the next block if not utilized previously. The 2026 rules (Rule 278) introduced stricter limitations including a cap of two surviving children per individual for the exemption, a specific Rs. 30 per km calculation method for non-rail connections without recognized public transport, and explicitly limited the exemption to two journeys within a block of four calendar years starting from 2022.",
-      "temporal_applicability": "Both the 1962 Rule 2B and 2026 Rule 278 are currently in force with no effective date restrictions noted in the provided statutory context. The 2026 rules specifically reference the financial year/calendar year 2022 onwards, while the 1962 rules apply retroactively to relevant periods.",
-      "citations": [
-        {
-          "rule_id": "Rule 2B",
-          "sub_rule": "(3) and (1)",
-          "statutory_path": "Rule 2B > (3) (Conditions for the purpose of section 10(5))",
-          "corpus_year": 1962,
-          "sections_referenced": [
-            "section 10(5)",
-            "section 10(5)"
-          ],
-          "forms_referenced": [
-            "Form ITR-U"
-          ],
-          "effective_date": "N/A",
-          "citation_text": "The amount exempted under clause (5) of section 10 in respect of travel concession or assistance... where the journey is performed on or after the 1st day of October, 1997..."
-        },
-        {
-          "rule_id": "Rule 278",
-          "sub_rule": "(1) and (3)",
-          "statutory_path": "Rule 278 (Conditions for purposes of Schedule III)",
-          "corpus_year": 2026,
-          "sections_referenced": [
-            "Schedule III",
-            "Sl. No. 8"
-          ],
-          "forms_referenced": [],
-          "effective_date": "N/A",
-          "citation_text": "The amount exempted under Schedule III... The exemption referred to in sub-rule (1) shall be available to an individual in respect of two journeys performed in a block of four calendar years commencing from the calendar year 2022."
-        }
-      ],
-      "citation_precision": 1.0,
-      "citation_recall": 1.0,
-      "citation_f1": 1.0,
-      "criteria_match_rate": 0.6667,
-      "matched_criteria": [
-        "Mentions Rule 2B (1962) and Rule 278 (2026)",
-        "Explains 2 journeys in a block of 4 calendar years"
-      ],
-      "missed_criteria": [
-        "Highlights statutory transition from Section 10(5) to Schedule III"
-      ],
-      "temporal_validity_score": 1.0,
-      "negative_handling_correct": true,
-      "is_out_of_scope": false,
-      "composite_score": 0.8833
-    },
-    {
-      "case_id": "GOLD-TEMP-006",
-      "query": "For Financial Year 2021-22, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
-      "query_type": "Intra-Document Temporal Validation",
-      "difficulty_level": "Hard",
-      "target_regime": "1962",
-      "expected_ay": "AY 2022-2023",
-      "expected_fy": "FY 2021-2022",
-      "is_negative": false,
-      "direct_answer": "For Financial Year 2021-22 (Assessment Year 2022-23), under the regular tax regime of the Income-tax Rules, 1962, a salaried employee claiming a Special Compensatory Border Area Allowance (or Remote Locality/Difficult Area/Disturbed Area Allowance) under Rule 2BB(2) (Serial No. 2) is eligible for a monthly tax exemption ranging from Rs. 200 to Rs. 1,300 per month depending on the specific specified geographical category. However, this exemption cannot be claimed simultaneously with Field Area or Modified Field Area allowances (Serial Nos. 7 & 8), and is entirely disentitled if the employee opts for the concessional tax regime under Section 115BAC.",
-      "temporal_applicability": "Applicable for Financial Year 2021-22 (Assessment Year 2022-23) under the Income-tax Rules, 1962 (effective 23-09-2015 for sub-rules (1) and (2)).",
-      "citations": [
-        {
-          "rule_id": "2BB",
-          "sub_rule": "(2)",
-          "statutory_path": "Rule 2BB > Sub-rule (2) > Table (Serial No. 2)",
-          "corpus_year": 1962,
-          "sections_referenced": [
-            "section 10(14)(ii)"
-          ],
-          "forms_referenced": [],
-          "effective_date": "23-09-2015",
-          "citation_text": "Serial No. 2 of Table below Rule 2BB(2): Any Special Compensatory Allowance in the nature of Border Area Allowance, Remote Locality Allowance or Difficult Area Allowance or Disturbed Area Allowance is exempt from Rs. 200 up to Rs. 1,300 per month depending on the specified category/location."
-        },
-        {
-          "rule_id": "2BB",
-          "sub_rule": "(3)",
-          "statutory_path": "Rule 2BB > Sub-rule (3)",
-          "corpus_year": 1962,
-          "sections_referenced": [
-            "section 115BAC"
-          ],
-          "forms_referenced": [],
-          "effective_date": "21-06-2023",
-          "citation_text": "An employee who has exercised option under sub-section (5) of section 115BAC shall be entitled to exemption only in respect of allowances mentioned in sub-clauses (a) to (c) of sub-rule (1) and at serial No. 11 of the Table below sub-rule (2)."
-        }
-      ],
-      "citation_precision": 1.0,
-      "citation_recall": 1.0,
-      "citation_f1": 1.0,
-      "criteria_match_rate": 0.6667,
-      "matched_criteria": [
-        "Mentions Rule 2BB",
-        "States monthly exemption ceiling from table"
-      ],
-      "missed_criteria": [
-        "Maps FY to corresponding AY"
-      ],
-      "temporal_validity_score": 1.0,
-      "negative_handling_correct": true,
-      "is_out_of_scope": false,
-      "composite_score": 0.8833
-    },
-    {
-      "case_id": "GOLD-TEMP-008",
-      "query": "For Financial Year 2023-24, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
-      "query_type": "Intra-Document Temporal Validation",
-      "difficulty_level": "Medium",
-      "target_regime": "1962",
-      "expected_ay": "AY 2024-2025",
-      "expected_fy": "FY 2023-2024",
-      "is_negative": false,
-      "direct_answer": "For Financial Year 2023-24 (Assessment Year 2024-25), your eligibility for exemption on Special Compensatory Allowance depends on whether you have opted for the new tax regime under section 115BAC. If you have exercised the option under section 115BAC(5) or your income is chargeable under section 115BAC(1A), you are only entitled to exemptions for specific allowances, and Special Compensatory Allowance is NOT among the permitted exemptions. If you are under the old tax regime, you can claim exemption for Special Compensatory Allowance based on the specific location and altitude criteria defined in Rule 2BB(1), with limits ranging from Rs. 300 to Rs. 7,000 per month depending on the area.",
-      "temporal_applicability": "The query pertains to Financial Year (FY) 2023-24, which corresponds to Assessment Year (AY) 2024-25. The provisions of Rule 2BB as provided are applicable for this period.",
-      "citations": [
-        {
-          "rule_id": "2BB",
-          "sub_rule": "(3)",
-          "statutory_path": "Rule 2BB > (3)",
-          "corpus_year": 1962,
-          "sections_referenced": [
-            "section 115BAC(5)",
-            "section 115BAC(1A)"
-          ],
-          "forms_referenced": [],
-          "effective_date": "21-06-2023",
-          "citation_text": "An employee who has exercised option under sub-section (5) of section 115BAC... shall be entitled to exemption only in respect of the allowances mentioned in sub-clauses (a) to (c) of sub-rule (1) and at serial No. 11 of the Table."
-        },
-        {
-          "rule_id": "2BB",
-          "sub_rule": "(1)",
-          "statutory_path": "Rule 2BB > (1)",
-          "corpus_year": 1962,
-          "sections_referenced": [
-            "section 10(14)"
-          ],
-          "forms_referenced": [],
-          "effective_date": "23-09-2015",
-          "citation_text": "Prescribed allowances for the purposes of clause (14) of section 10, including Special Compensatory Allowance."
-        }
-      ],
-      "citation_precision": 1.0,
-      "citation_recall": 1.0,
-      "citation_f1": 1.0,
-      "criteria_match_rate": 0.6667,
-      "matched_criteria": [
-        "Mentions Rule 2BB",
-        "States monthly exemption ceiling from table"
-      ],
-      "missed_criteria": [
-        "Maps FY to corresponding AY"
-      ],
-      "temporal_validity_score": 1.0,
-      "negative_handling_correct": true,
-      "is_out_of_scope": false,
-      "composite_score": 0.8833
-    },
-    {
-      "case_id": "GOLD-PROC-001",
-      "query": "I am a salaried individual filing an Updated Return (ITR-U) under Rule 12AC. My accounts are not required to be audited, and I do NOT have a Digital Signature Certificate (DSC). How am I permitted to verify my return according to the table in Rule 12AC?",
-      "query_type": "Procedural / Condition Matching",
-      "difficulty_level": "Medium",
-      "target_regime": "1962",
-      "expected_ay": null,
-      "expected_fy": null,
-      "is_negative": false,
-      "direct_answer": "As a salaried individual whose accounts are not required to be audited under section 44AB and who does not possess a Digital Signature Certificate (DSC), you are permitted under Rule 12AC to verify your Updated Return (Form ITR-U) by transmitting the data electronically in the return under an Electronic Verification Code (EVC).",
-      "temporal_applicability": "Rule 12AC came into effect on 29-04-2022 and is applicable for updated returns filed under section 139(8A) relating to Assessment Year 2020-21 (Financial Year 2019-20) and subsequent assessment years.",
-      "citations": [
-        {
-          "rule_id": "12AC",
-          "sub_rule": "(2)",
-          "statutory_path": "Rule 12AC > Sub-rule (2) > Table > Sl. No. 2",
-          "corpus_year": 1962,
-          "sections_referenced": [
-            "139",
-            "139(8A)",
-            "44AB"
-          ],
-          "forms_referenced": [
-            "Form ITR-U"
-          ],
-          "effective_date": "29-04-2022",
-          "citation_text": "Sl. No. 2: Individual... other than a person mentioned in column (2) of Sl. No. (1) above: (A) Electronically under digital signature; (B) Transmitting the data electronically in the return under electronic verification code."
-        }
-      ],
-      "citation_precision": 1.0,
-      "citation_recall": 1.0,
-      "citation_f1": 1.0,
-      "criteria_match_rate": 0.6667,
-      "matched_criteria": [
-        "Traverses Rule 12AC Table Sl. No. 1(2)",
-        "Identifies Sub-item (B) EVC verification"
-      ],
-      "missed_criteria": [
-        "Confirms DSC is not mandatory for unaudited individual"
-      ],
-      "temporal_validity_score": 1.0,
-      "negative_handling_correct": true,
-      "is_out_of_scope": false,
-      "composite_score": 0.8833
-    },
-    {
-      "case_id": "GOLD-PROC-002",
-      "query": "What specific form must a salaried employee furnish to their employer under Rule 26C to claim tax deductions for House Rent Allowance (HRA), Leave Travel Concession (LTC), and home loan interest?",
-      "query_type": "Procedural / Condition Matching",
-      "difficulty_level": "Easy",
-      "target_regime": "1962",
-      "expected_ay": null,
-      "expected_fy": null,
-      "is_negative": false,
-      "direct_answer": "Under Rule 26C of the Income-tax Rules, 1962, a salaried employee must furnish **Form No. 12BB** to their employer to claim tax deductions for House Rent Allowance (HRA), Leave Travel Concession (LTC), and home loan interest.",
-      "temporal_applicability": "This provision applies to the Financial Year 2020-21 and subsequent Assessment Years under the Income-tax Rules, 1962. There is no effective date restriction noted for Rule 26C in the provided statutory context, meaning it remains in full force for all applicable fiscal years under the 1962 regime.",
-      "citations": [
-        {
-          "rule_id": "26C",
-          "sub_rule": "(2)",
-          "statutory_path": "Rule 26C > Furnishing of evidence of claims by employee for deduction of tax under section 192",
-          "corpus_year": 1962,
-          "sections_referenced": [
-            "section 192"
-          ],
-          "forms_referenced": [
-            "Form No. 12BB"
-          ],
-          "effective_date": "N/A (no effective date specified in context)",
-          "citation_text": "The assessee shall furnish to the person responsible for making payment under sub-section (1) of section 192, the evidence or the particulars of the claims referred to in sub-rule (2), in Form No. 12BB for the purpose of estimating his income or computing the tax deduction at source."
-        }
-      ],
-      "citation_precision": 1.0,
-      "citation_recall": 1.0,
-      "citation_f1": 1.0,
-      "criteria_match_rate": 1.0,
-      "matched_criteria": [
-        "Mentions Rule 26C",
-        "Explicitly identifies Form No. 12BB",
-        "Lists evidence of claims (HRA, LTC, housing interest, Chapter VI-A)"
-      ],
-      "missed_criteria": [],
-      "temporal_validity_score": 1.0,
-      "negative_handling_correct": true,
-      "is_out_of_scope": false,
-      "composite_score": 1.0
-    },
-    {
-      "case_id": "GOLD-PROC-003",
-      "query": "Under the 2026 rules (Rule 205), what is the prescribed form for an employee to submit evidence of claims to the employer for TDS estimation?",
-      "query_type": "Procedural / Condition Matching",
-      "difficulty_level": "Easy",
-      "target_regime": "2026",
-      "expected_ay": null,
-      "expected_fy": null,
-      "is_negative": false,
-      "direct_answer": "Under Rule 205 of the Income-tax Rules, 2026, an employee must submit evidence of claims to the employer for TDS estimation using **Form No. 124**.",
-      "temporal_applicability": "This provision applies to the Financial Year 2026-27 and Assessment Year 2027-28 onwards. The Effective Date is not specified as a restriction, so it applies to all TDS assessments under the 2026 rules for the relevant fiscal years.",
-      "citations": [
-        {
-          "rule_id": "205",
-          "sub_rule": "(2)",
-          "statutory_path": "Rule 205 > Furnishing of evidence of claims by employee under section 392(5)(b)",
-          "corpus_year": 2026,
-          "sections_referenced": [
-            "section 392(5)(b)",
-            "section 392(1)"
-          ],
-          "forms_referenced": [
-            "Form No. 124"
-          ],
-          "effective_date": "N/A (No effective date restriction mentioned)",
-          "citation_text": "The assessee shall furnish to the person responsible for making payment under section 392(1), the evidence or the particulars of the claims... in Form No. 124, for the purpose of estimating his income or for computing the tax required to be deducted at source."
-        }
-      ],
-      "citation_precision": 1.0,
-      "citation_recall": 1.0,
-      "citation_f1": 1.0,
-      "criteria_match_rate": 1.0,
-      "matched_criteria": [
-        "Mentions Rule 205 (2026)",
-        "Identifies Form No. 124"
-      ],
-      "missed_criteria": [],
-      "temporal_validity_score": 1.0,
-      "negative_handling_correct": true,
-      "is_out_of_scope": false,
-      "composite_score": 1.0
-    },
-    {
-      "case_id": "GOLD-PROC-005",
-      "query": "Under Rule 31 of the 1962 rules, what certificate is required to be issued by an employer for tax deducted at source on salary, and what is the deadline?",
-      "query_type": "Procedural / Condition Matching",
-      "difficulty_level": "Medium",
-      "target_regime": "1962",
-      "expected_ay": null,
-      "expected_fy": null,
-      "is_negative": false,
-      "direct_answer": "Under Rule 31(1) of the Income-tax Rules, 1962, an employer deducting tax at source on salary under Section 192 is required to issue a certificate in Form No. 16. If you have worked for multiple employers in a financial year, each employer must issue Part A of Form No. 16, while Part B may be issued by each employer or consolidated by the last employer at your option. (Note: The specific calendar deadline for issuance is governed by Rule 31(3), which is not included in the provided statutory context snippet).",
-      "temporal_applicability": "Applicable for Assessment Year (AY) 2022-23 onwards corresponding to Financial Year (FY) 2021-22 onwards, based on the statutory context effective date of 02-09-2021.",
-      "citations": [
-        {
-          "rule_id": "31",
-          "sub_rule": "(1)",
-          "statutory_path": "Rule 31 > (1)",
-          "corpus_year": 1962,
-          "sections_referenced": [
-            "section 192",
-            "section 194P",
-            "section 203"
-          ],
-          "forms_referenced": [
-            "Form No. 16",
-            "Form No. 16A"
-          ],
-          "effective_date": "02-09-2021",
-          "citation_text": "The certificate of deduction of tax at source by any person in accordance with Chapter XVII-B... shall be in Form No. 16, if the deduction or payment of tax is under section 192 and section 194P."
-        },
-        {
-          "rule_id": "31",
-          "sub_rule": "(4)",
-          "statutory_path": "Rule 31 > (4)",
-          "corpus_year": 1962,
-          "sections_referenced": [
-            "section 203"
-          ],
-          "forms_referenced": [
-            "Form No. 16"
-          ],
-          "effective_date": "02-09-2021",
-          "citation_text": "If an assessee is employed by more than one employer during the year, each of the employers shall issue Part A of the certificate in Form No. 16... and Part B may be issued by each of the employers or the last employer at the option of the assessee."
-        }
-      ],
-      "citation_precision": 1.0,
-      "citation_recall": 1.0,
-      "citation_f1": 1.0,
-      "criteria_match_rate": 0.6667,
-      "matched_criteria": [
-        "Mentions Rule 31",
-        "Identifies Form No. 16 for salary TDS under Section 192"
-      ],
-      "missed_criteria": [
-        "Specifies deadline as 15th June following the financial year"
-      ],
-      "temporal_validity_score": 1.0,
-      "negative_handling_correct": true,
-      "is_out_of_scope": false,
-      "composite_score": 0.8833
-    },
-    {
-      "case_id": "GOLD-PROC-006",
-      "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
-      "query_type": "Procedural / Condition Matching",
-      "difficulty_level": "Hard",
-      "target_regime": "2026",
-      "expected_ay": null,
-      "expected_fy": null,
-      "is_negative": false,
-      "direct_answer": "A salaried resident individual may file Form SAHAJ (ITR-1) under Rule 164 > (2) of the Income-tax Rules, 2026 if they are a resident other than 'not ordinarily resident' and their total income includes income chargeable to income-tax under the head 'Salaries' (or alternatively 'Income from house property', 'Income from other sources', or 'Capital gains' within the specified limits). For a typical salaried individual, the primary qualifying head is 'Salaries'.",
-      "temporal_applicability": "Rule 164 (2026) applies to all financial years where the rules are in force. There is no effective date restriction noted in the provided context for Rule 164 > (2). Therefore, this provision is generally applicable to the current financial year and subsequent assessment years under the 2026 regime.",
-      "citations": [],
-      "citation_precision": 0.0,
-      "citation_recall": 0.0,
-      "citation_f1": 0.0,
-      "criteria_match_rate": 0.6,
-      "matched_criteria": [
-        "Mentions Rule 164",
-        "Identifies Form SAHAJ (ITR-1)",
-        "Mentions salary and one house property"
-      ],
-      "missed_criteria": [
-        "Mentions resident status",
-        "Mentions total income threshold (up to 50 lakh rupees)"
-      ],
-      "temporal_validity_score": 1.0,
-      "negative_handling_correct": true,
-      "is_out_of_scope": false,
-      "composite_score": 0.36
-    },
-    {
-      "case_id": "GOLD-NEG-001",
-      "query": "How is Minimum Alternate Tax (MAT) under section 115JB calculated for a private limited corporate taxpayer under these salary rules?",
-      "query_type": "Negative / Out-of-Scope",
-      "difficulty_level": "Easy",
-      "target_regime": "none",
-      "expected_ay": null,
-      "expected_fy": null,
-      "is_negative": true,
-      "direct_answer": "Minimum Alternate Tax (MAT) under section 115JB applies to corporate taxpayers and falls outside the scope of tax rules for salaried individuals. The provided statutory context does not contain the provisions or mathematical steps for computing MAT or adjusting book profit under section 115JB, other than mentioning that audit reports under section 115JB must be submitted electronically under Rule 12(2).",
-      "temporal_applicability": "Not applicable, as corporate MAT computation under section 115JB is out of scope for salaried individual tax provisions.",
-      "citations": [
-        {
-          "rule_id": "12",
-          "sub_rule": "(2)",
-          "statutory_path": "Rule 12 > (2) (Return of income and return of fringe benefits)",
-          "corpus_year": 1962,
-          "sections_referenced": [
-            "section 115JB"
-          ],
-          "forms_referenced": [
-            "Form SAHAJ (ITR-1)",
-            "Form No. ITR-2",
-            "Form No. ITR-3",
-            "Form SUGAM (ITR-4)",
-            "Form No. ITR-5",
-            "Form No. ITR-6",
-            "Form No. ITR-7"
-          ],
-          "effective_date": "1-4-2017",
-          "citation_text": "Provided that where an assessee is required to furnish a report of audit specified under... section 115JB... he shall furnish the same electronically."
-        }
-      ],
-      "citation_precision": 0.0,
-      "citation_recall": 0.0,
-      "citation_f1": 0.0,
-      "criteria_match_rate": 0.6667,
-      "matched_criteria": [
-        "Identifies query as Out-of-Scope / Not Covered",
-        "States that MAT under section 115JB is a corporate tax provision"
-      ],
-      "missed_criteria": [
-        "Refuses hallucination with null chunk expectation"
-      ],
-      "temporal_validity_score": 1.0,
-      "negative_handling_correct": true,
-      "is_out_of_scope": true,
-      "composite_score": 0.3833
-    },
-    {
-      "case_id": "GOLD-NEG-002",
-      "query": "What is the TDS rate and threshold for Virtual Digital Assets (cryptocurrency) transfers under section 194S for crypto traders under Rule 31?",
-      "query_type": "Negative / Out-of-Scope",
-      "difficulty_level": "Easy",
-      "target_regime": "none",
-      "expected_ay": null,
-      "expected_fy": null,
-      "is_negative": true,
-      "direct_answer": "Rule 31 of the Income-tax Rules, 1962 does not specify the substantive TDS rates or monetary thresholds for Virtual Digital Asset (VDA) transfers under section 194S. Rule 31(3D) exclusively governs the procedural requirement for TDS certificates, prescribing that every specified person responsible for deducting tax under section 194S must furnish a certificate of deduction in Form No. 16E to the payee within fifteen days from the due date for furnishing the challan-cum-statement in Form No. 26QE.",
-      "temporal_applicability": "Rule 31(3D) came into force on 01-07-2022, applying to Financial Year (FY) 2022-23 corresponding to Assessment Year (AY) 2023-24 onwards.",
-      "citations": [
-        {
-          "rule_id": "31",
-          "sub_rule": "(3D)",
-          "statutory_path": "Rule 31 > (3D)",
-          "corpus_year": 1962,
-          "sections_referenced": [
-            "section 194S",
-            "section 203"
-          ],
-          "forms_referenced": [
-            "Form No. 16E",
-            "Form No. 26QE"
-          ],
-          "effective_date": "01-07-2022",
-          "citation_text": "every person, being a specified person referred to in section 194S and responsible for deduction of tax under that section shall furnish the certificate of deduction of tax at source in Form No.16E to the payee within fifteen days from the due date for furnishing the challan-cum-statement in Form No. 26QE under rule 31A"
-        }
-      ],
-      "citation_precision": 0.0,
-      "citation_recall": 0.0,
-      "citation_f1": 0.0,
-      "criteria_match_rate": 0.3333,
-      "matched_criteria": [
-        "Confirms crypto trading u/s 194S is outside salaried scope"
-      ],
-      "missed_criteria": [
-        "Identifies query as Out-of-Scope",
-        "Returns zero chunk expectation"
-      ],
-      "temporal_validity_score": 1.0,
-      "negative_handling_correct": true,
-      "is_out_of_scope": true,
-      "composite_score": 0.2667
-    },
-    {
-      "case_id": "GOLD-NEG-003",
-      "query": "Can a salaried individual claim Input Tax Credit (ITC) under Goods and Services Tax (GST) for office suits purchased from salary?",
-      "query_type": "Negative / Out-of-Scope",
-      "difficulty_level": "Easy",
-      "target_regime": "none",
-      "expected_ay": null,
-      "expected_fy": null,
-      "is_negative": true,
-      "direct_answer": "No, a salaried individual cannot claim Input Tax Credit (ITC) under GST for office suits purchased from their employer. GST ITC is only available for purchases from GST-registered vendors, not from employers or personal sources. Office suits purchased from an employer are not eligible for GST ITC as they fall under the category of wages/salary, which are exempt from GST and do not generate GST liability for the purchaser.",
-      "temporal_applicability": "Not applicable - This is a jurisdictional mismatch between Income Tax and GST regimes. The query involves GST ITC which is outside the scope of the provided Income Tax statutory context.",
-      "citations": [
-        {
-          "rule_id": "12AC",
-          "sub_rule": "(5)(c)",
-          "statutory_path": "Income-tax Rules, 1962 > Section 10(5)(c)",
-          "corpus_year": 1962,
-          "sections_referenced": [
-            "section 10(5)"
-          ],
-          "forms_referenced": [
-            "Form ITR-U"
-          ],
-          "effective_date": "29-04-2022",
-          "citation_text": "Allows ITC for office supplies purchased from GST-registered persons within a specified period with an exemption limit of Rs. 36,000 per person."
-        },
-        {
-          "rule_id": "37BA",
-          "sub_rule": "",
-          "statutory_path": "Income-tax Rules, 1962 > Rule 37BA",
-          "corpus_year": 1962,
-          "sections_referenced": [
-            "section 37BA"
-          ],
-          "forms_referenced": [],
-          "effective_date": "1-9-2019",
-          "citation_text": "Provides credit for tax deducted at source under Income Tax, not applicable to GST ITC claims."
-        },
-        {
-          "rule_id": "203",
-          "sub_rule": "",
-          "statutory_path": "Income-tax Rules, 2026 > Rule 203",
-          "corpus_year": 2026,
-          "sections_referenced": [
-            "section 203"
-          ],
-          "forms_referenced": [],
-          "effective_date": "None",
-          "citation_text": "Deals with credit for tax deducted/collected at source under Income Tax, not GST ITC."
-        },
-        {
-          "rule_id": "204",
-          "sub_rule": "",
-          "statutory_path": "Income-tax Rules, 2026 > Rule 204",
-          "corpus_year": 2026,
-          "sections_referenced": [
-            "section 204"
-          ],
-          "forms_referenced": [
-            "Form No. 122"
-          ],
-          "effective_date": "None",
-          "citation_text": "Relates to furnishing particulars for deduction of tax at source from salaries, not GST ITC."
-        }
-      ],
-      "citation_precision": 0.0,
-      "citation_recall": 0.0,
-      "citation_f1": 0.0,
-      "criteria_match_rate": 0.6667,
-      "matched_criteria": [
-        "Identifies query as Out-of-Scope",
-        "Differentiates GST Input Tax Credit from Income Tax Rules"
-      ],
-      "missed_criteria": [
-        "Returns null retrieval"
-      ],
-      "temporal_validity_score": 0.5,
-      "negative_handling_correct": true,
-      "is_out_of_scope": true,
-      "composite_score": 0.3083
-    },
-    {
-      "case_id": "GOLD-NEG-004",
-      "query": "What are the transfer pricing documentation requirements under Rule 10D for international transactions between associated enterprises?",
-      "query_type": "Negative / Out-of-Scope",
-      "difficulty_level": "Easy",
-      "target_regime": "none",
-      "expected_ay": null,
-      "expected_fy": null,
-      "is_negative": true,
-      "direct_answer": "The query regarding transfer pricing documentation requirements under Rule 10D for international transactions between associated enterprises falls outside the provided statutory context. The supplied context contains provisions relating to lower/nil deduction certificates for dividends (Rule 29), prescribed allowances (Rule 2BB), Leave Travel Concession (Rule 2B), and valuation of perquisites (Rule 15), and does not contain Rule 10D or corporate transfer pricing regulations.",
-      "temporal_applicability": "Not applicable as Rule 10D is not available in the provided statutory corpus.",
-      "citations": [],
-      "citation_precision": 1.0,
-      "citation_recall": 1.0,
-      "citation_f1": 1.0,
-      "criteria_match_rate": 0.3333,
-      "matched_criteria": [
-        "Specifies Transfer Pricing is for corporate enterprises"
-      ],
-      "missed_criteria": [
-        "Identifies query as Out-of-Scope",
-        "Returns null retrieval"
-      ],
-      "temporal_validity_score": 0.5,
-      "negative_handling_correct": true,
-      "is_out_of_scope": true,
-      "composite_score": 0.6917
-    },
-    {
-      "case_id": "GOLD-NEG-005",
-      "query": "I want to file an Updated Return in Form ITR-U under Rule 12AC for Assessment Year 2017-18. What are the applicable verification procedures?",
-      "query_type": "Negative / Out-of-Scope",
-      "difficulty_level": "Medium",
-      "target_regime": "none",
-      "expected_ay": "AY 2020-2021",
-      "expected_fy": "FY 2019-2020",
-      "is_negative": true,
-      "direct_answer": "Rule 12AC (Income-tax Rules, 1962) is NOT applicable for Assessment Year 2017-18. The rule has an effective date of 29-4-2022 and only applies to assessment years commencing on 1-4-2020 and subsequent. For AY 2017-18 (starting 1-4-2017), the applicable updated return procedure is governed by different rules (specifically Rule 165 under Income-tax Rules, 2026 for companies and other entities, or Section 139(8A) under the Income-tax Act, 1961).",
-      "temporal_applicability": "Assessment Year 2017-18 (FY 2016-17) is OUT OF SCOPE for Rule 12AC. Rule 12AC (effective 29-4-2022) applies only to assessment years commencing on 1-4-2020 and subsequent (i.e., AY 2020-21 and beyond). The request for an updated return under Rule 12AC for AY 2017-18 cannot be fulfilled as the rule was not in force during that period.",
+      "direct_answer": "No, you cannot file an updated return under Rule 12AC for income earned during Financial Year 2017-18. Rule 12AC was not in force during the assessment period for FY 2017-18 (AY 2018-19).",
+      "temporal_applicability": "Rule 12AC was not applicable to Assessment Year 2018-19 (FY 2017-18). The rule became effective on 29-4-2022, which is after the assessment period for FY 2017-18 (ended 31-03-2018). Therefore, this rule cannot be used for updating returns related to income earned during FY 2017-18.",
       "citations": [
         {
           "rule_id": "12AC",
@@ -1012,26 +378,671 @@
             "Form ITR-U"
           ],
           "effective_date": "29-04-2022",
-          "citation_text": "The return of income to be furnished by any person... relating to the assessment year commencing on the 1st day of April, 2020 and subsequent assessment years, shall be in the Form ITR-U and be verified in the manner indicated therein."
-        },
-        {
-          "rule_id": "165",
-          "sub_rule": "General",
-          "statutory_path": "Income-tax Rules, 2026",
-          "corpus_year": 2026,
-          "sections_referenced": [
-            "Section 263(6) read with 263(2)"
-          ],
-          "forms_referenced": [
-            "Form ITR-UN"
-          ],
-          "effective_date": "None (current)",
-          "citation_text": "The return of income to be furnished by any person, eligible to file such return under section 263(6), shall be in the Form ITR-UN and be verified in the manner indicated therein."
+          "citation_text": "The return of income to be furnished ... relating to the assessment year commencing on the 1st day of April, 2020 and subsequent assessment years, shall be in the Form ITR-U"
         }
       ],
-      "citation_precision": 0.3333,
+      "citation_precision": 1.0,
       "citation_recall": 1.0,
-      "citation_f1": 0.5,
+      "citation_f1": 1.0,
+      "criteria_keyword_coverage_rate": 0.6667,
+      "criteria_match_rate": 0.6667,
+      "matched_criteria": [
+        "Maps FY 2017-18 to AY 2018-19",
+        "Explicitly denies eligibility for FY 2017-18 / AY 2018-19"
+      ],
+      "missed_criteria": [
+        "Cites Rule 12AC(1) commencing on 1st April 2020 (AY 2020-21)"
+      ],
+      "temporal_validity_score": 1.0,
+      "is_labelled_temporal_case": true,
+      "verified_correct_year": true,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.8833
+    },
+    {
+      "case_id": "GOLD-TEMP-003",
+      "query": "How did the Leave Travel Concession (LTC) exemption rules change between Rule 2B of the 1962 rules and Rule 278 of the 2026 rules regarding block years?",
+      "query_type": "Intra-Document Temporal Validation",
+      "difficulty_level": "Hard",
+      "target_regime": "both",
+      "expected_ay": "AY 2024-25",
+      "expected_fy": "FY 2023-24",
+      "is_negative": false,
+      "direct_answer": "```json\n{\n  \"direct_answer\": \"The LTC exemption rules differ significantly between the 1962 and 2026 regimes primarily in the block-year allocation mechanism and the number of journeys covered. Under the 1962 rules (Rule 2B), the exemption can be claimed for up to four journeys across a block of four calendar years without restriction on the number of trips. However, the 2026 rules (Rule 278) impose a stricter limit of only two journeys per block of four calendar years, and additionally restrict the exemption to no more than two surviving children. Additionally, the 2026 rules include specific exclusions for children born before October 1, 1998, and multiple births beyond one child.\",\n  \"step_by_step_reasoning\": [\n    \"Step 1: Identify the relevant provisions in the 1962 rules - Rule 2B provides the framework for LTC exemption where travel concessions are not availed during a block of four calendar years, allowing recovery in the first year of the subsequent block.\",\n    \"Step 2: Identify the relevant provisions in the 2026 rules - Rule 278 (Sub-rule 1) establishes similar conditions for air, rail, and non-rail travel but adds a specific limitation that the exemption is available to an individual in respect of only two journeys performed in a block of four calendar years commencing from the calendar year 2022.\",\n    \"Step 3: Compare the block-year application - The 1962 rules allow the exemption to be claimed for up to four journeys across a block of four years, while the 2026 rules cap this at two journeys per block.\",\n    \"Step 4: Note additional restrictions in 2026 - The 2026 rules further limit the exemption to no more than two surviving children, and exclude children born before October 1, 1998, as well as multiple births beyond one child.\",\n    \"Step 5: Verify the temporal applicability - Both sets of rules are presented without effective date constraints in the provided context, indicating they are current provisions.\"\n  ],\n  \"temporal_applicability\": \"Both the 1962 Rule 2B and 2026 Rule 278 provisions are stated without effective date limitations in the provided context. They represent current statutory provisions applicable to the respective financial years (FY 2021-22 onwards for 1962 rules, and FY 2026 onwards for 2026 rules).\",\n  \"statutory_citations\": [\n    {\n      \"rule_id\": \"Rule 2B\",\n      \"sub_rule\": \"(2)\",\n      \"statutory_path\": \"Rule 2B > (2)\",\n      \"corpus_year\": 1962,\n      \"sections_referenced\": [\"Section 10(5)\", \"Section 139\"],\n      \"forms_referenced\": [\"Form ITR-U\"],\n      \"effective_date\": \"N/A\",\n      \"citation_text\": \"The amount in respect of the value of the travel concession or assistance... shall be eligible for exemption... where the journey is performed on or after the 1st day of October, 1997, by air... by any mode of transport other than by air... and where no recognised public transport system exists...\"\n    },\n    {\n      \"rule_id\": \"Rule 278\",\n      \"sub_rule\": \"(1)\",\n      \"statutory_path\": \"Rule 278 > (1)\",\n      \"corpus_year\": 2026,\n      \"sections_referenced\": [\"Schedule III, Table Sl. No. 8\"],\n      \"forms_referenced\": [\"Form ITR-U\"],\n      \"effective_date\": \"N/A\",\n      \"citation_text\": \"The amount exempted under Schedule III... shall be the amount actually incurred on the performance of such travel, subject to the following conditions... The exemption referred to in sub-rule (1) shall be available to an individual in respect of two journeys performed in a block of four calendar years commencing from the calendar year 2022.\"\n    },\n    {\n      \"rule_id\": \"Rule 278\",\n      \"sub_rule\": \"(5)\",\n      \"statutory_path\": \"Rule 278 > (5)\",\n      \"corpus_year\": 2026,\n      \"sections_referenced\": [\"Section 10(5)\"],,\n      \"forms_referenced\": [\"Form ITR-U\"],\n      \"effective_date\": \"N/A\",\n      \"citation_text\": \"The amount in respect of the value of the travel concession or assistance referred to in sub-rule (3) shall not be taken into account in determining the eligibility of the amount in respect of the value of the travel concession or assistance in relation to the number of journeys under sub-rule (2).\"\n    }\n  ],\n  \"regime_differences\": [\n    {\n      \"aspect\": \"Number of journeys per block\",\n      \"rule_1962_provision\": \"No explicit limit on the number of journeys; the exemption can be claimed for up to four journeys across a block of four calendar years.\",\n      \"rule_2026_provision\": \"Limited to two journeys per block of four calendar years (specifically starting from the calendar year 2022).\",\n      \"key_change_summary\": \"The 2026 rules impose a strict cap of two journeys per four-year block, whereas the 1962 rules allowed up to four journeys.\"\n    },\n    {\n      \"aspect\": \"Child-related restrictions\",\n      \"rule_1962_provision\": \"Not specified in the provided context.\",\n      \"rule_2026_provision\": \"The exemption is restricted to no more than two surviving children of an individual, and does not apply to children born before October 1, 1998, nor to multiple births beyond one child.\",\n      \"key_change_summary\": \"The 2026 rules introduce specific familial limitations on the number of children who can benefit from the LTC exemption.\"\n    },\n    {\n      \"aspect\": \"Verification and documentation\",\n      \"rule_1962_provision\": \"Evidence of travel expense must be maintained per Section 10(5) conditions.\",\n      \"rule_2026_provision\": \"Similar requirement to furnish evidence of expenditure under Form No. 124 for claiming LTC exemption.\",\n      \"key_change_summary\": \"Both regimes require evidence of travel expenses, but the 2026 rules add specific forms reference (Form No. 124) for furnishing evidence.\"\n    }\n  ],\n  \"is_out_of_scope\": false,\n  \"out_of_scope_reason\": null,\n  \"confidence_score\": 0.95\n}\n```",
+      "temporal_applicability": "Extracted from raw text",
+      "citations": [],
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_keyword_coverage_rate": 1.0,
+      "criteria_match_rate": 1.0,
+      "matched_criteria": [
+        "Mentions Rule 2B (1962) and Rule 278 (2026)",
+        "Explains 2 journeys in a block of 4 calendar years",
+        "Highlights statutory transition from Section 10(5) to Schedule III"
+      ],
+      "missed_criteria": [],
+      "temporal_validity_score": 0.0,
+      "is_labelled_temporal_case": true,
+      "verified_correct_year": false,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.35
+    },
+    {
+      "case_id": "GOLD-TEMP-006",
+      "query": "For Financial Year 2021-22, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "difficulty_level": "Hard",
+      "target_regime": "1962",
+      "expected_ay": "AY 2022-2023",
+      "expected_fy": "FY 2021-2022",
+      "is_negative": false,
+      "direct_answer": "For Financial Year 2021-22 (Assessment Year 2022-2023), the special compensatory border allowance is governed by Rule 2BB > (1) of the Income-tax Rules, 1962, which was effective from 23-09-2015. Under this provision, the 'Border Area Allowance' (Item II(a)) is Rs. 300 per month for areas throughout Lakshadweep and Minicoy Islands, as well as locality allowances or difficult places on or north of the specified demarcation line. Note that Rule 2BB > (3), which references Table 11, became effective on 21-06-2023 and therefore did not apply to FY 2021-22.",
+      "temporal_applicability": "The rule governing FY 2021-22 (Assessment Year 2022-2023) is Rule 2BB > (1) of the Income-tax Rules, 1962, which was effective from 23-09-2015. Rule 2BB > (3) (referencing Table 11) became effective on 21-06-2023 and thus did not apply to this assessment year. Therefore, the special compensatory border allowance is governed by the provisions in Rule 2BB > (1).",
+      "citations": [],
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_keyword_coverage_rate": 0.3333,
+      "criteria_match_rate": 0.3333,
+      "matched_criteria": [
+        "Mentions Rule 2BB"
+      ],
+      "missed_criteria": [
+        "Maps FY to corresponding AY",
+        "States monthly exemption ceiling from table"
+      ],
+      "temporal_validity_score": 1.0,
+      "is_labelled_temporal_case": true,
+      "verified_correct_year": true,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.2667
+    },
+    {
+      "case_id": "GOLD-TEMP-008",
+      "query": "For Financial Year 2023-24, how does the temporal allowance schedule under Rule 2BB apply to a salaried employee claiming special compensatory border allowance?",
+      "query_type": "Intra-Document Temporal Validation",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "expected_ay": "AY 2024-2025",
+      "expected_fy": "FY 2023-2024",
+      "is_negative": false,
+      "direct_answer": "Under Rule 2BB of the Income-tax Rules, 1962 (effective from 21-6-2023), a salaried individual claiming special compensatory border allowance is entitled to exemption for the specified border area allowances as per the prescribed schedule in Table 1 (Sub-rule 2). For Financial Year 2023-24 (Assessment Year 2024-2025), this provision is fully applicable as the effective date (21-6-2023) precedes the financial year end (March 31, 2024). The special compensatory border allowance is exempted entirely under Section 10(14) for the listed remote locality areas.",
+      "temporal_applicability": "The temporal allowance schedule under Rule 2BB (Sub-rule 2, effective 23-09-2015) and its Table 1 (effective 21-06-2023) is fully applicable to Financial Year 2023-24 (Assessment Year 2024-2025). The effective date of 21-06-2023 predates the financial year end (31-03-2024), making the provision operative for all assessments in FY 2023-24.",
+      "citations": [
+        {
+          "rule_id": "2BB",
+          "sub_rule": "(3)",
+          "statutory_path": "Rule 2BB > (3) (Prescribed allowances for the purposes of clause (14) of section 10)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "section 10",
+            "section 139"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "2023-06-21",
+          "citation_text": "Any assessee whose income is chargeable to tax under sub-section (1A) of section 115BAC shall be entitled to exemption only in respect of the allowances mentioned in sub-clauses (a) to (c) of sub-rule (1) and at serial No. 11 of the Table below sub-rule (2) to the extent and subject to the conditions, if any, specified therein."
+        },
+        {
+          "rule_id": "2BB",
+          "sub_rule": "(2)",
+          "statutory_path": "Rule 2BB > (2) (Prescribed allowances for the purposes of clause (14) of section 10)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "section 10"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "2015-09-23",
+          "citation_text": "For the purposes of sub-clause (ii) of clause (14) of section 10, the prescribed allowances... shall be the following... (See Table 1 in Sub-rule 2)"
+        }
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "citation_f1": 1.0,
+      "criteria_keyword_coverage_rate": 0.6667,
+      "criteria_match_rate": 0.6667,
+      "matched_criteria": [
+        "Mentions Rule 2BB",
+        "States monthly exemption ceiling from table"
+      ],
+      "missed_criteria": [
+        "Maps FY to corresponding AY"
+      ],
+      "temporal_validity_score": 1.0,
+      "is_labelled_temporal_case": true,
+      "verified_correct_year": true,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.8833
+    },
+    {
+      "case_id": "GOLD-PROC-001",
+      "query": "I am a salaried individual filing an Updated Return (ITR-U) under Rule 12AC. My accounts are not required to be audited, and I do NOT have a Digital Signature Certificate (DSC). How am I permitted to verify my return according to the table in Rule 12AC?",
+      "query_type": "Procedural / Condition Matching",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "expected_ay": "AY 2024-25",
+      "expected_fy": "FY 2023-24",
+      "is_negative": false,
+      "direct_answer": "As a salaried individual whose accounts are not subject to audit and who does not possess a Digital Signature Certificate (DSC), you are permitted to verify your Form ITR-U return using Option (B) in Rule 12AC, namely 'Transmitting the data electronically in the return under electronic verification code.' Since you lack a DSC, you cannot use Option (A) ('Electronically under digital signature'), making Option (B) the sole permissible verification method under Rule 12AC, Sub-rule (2).",
+      "temporal_applicability": "Rule 12AC was effective from 29-4-2022 and applies to Assessment Year 2021-22 (Financial Year 2020-21) and subsequent years. It supersedes earlier versions of Rule 12 (such as Table 4 and Table 5 effective from 1-4-2015).",
+      "citations": [
+        {
+          "rule_id": "12AC",
+          "sub_rule": "Sub-rule (2)",
+          "statutory_path": "Rule 12AC > Sub-rule (2) - Return of income (other than persons requiring audit)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "section 139",
+            "section 44AB"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "29-04-2022",
+          "citation_text": "For persons whose accounts are not required to be audited under section 44AB, the return may be transmitted electronically and verified via Form ITRV."
+        },
+        {
+          "rule_id": "12AC",
+          "sub_rule": "Sub-rule (1)",
+          "statutory_path": "Rule 12AC > Sub-rule (1) - Persons requiring audit",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "section 139"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "29-04-2022",
+          "citation_text": "Persons whose accounts are required to be audited under section 44AB must use electronic verification code (Option B) along with audit evidence."
+        }
+      ],
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_keyword_coverage_rate": 0.3333,
+      "criteria_match_rate": 0.3333,
+      "matched_criteria": [
+        "Traverses Rule 12AC Table Sl. No. 1(2)"
+      ],
+      "missed_criteria": [
+        "Identifies Sub-item (B) EVC verification",
+        "Confirms DSC is not mandatory for unaudited individual"
+      ],
+      "temporal_validity_score": 0.0,
+      "is_labelled_temporal_case": true,
+      "verified_correct_year": false,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.1167
+    },
+    {
+      "case_id": "GOLD-PROC-002",
+      "query": "What specific form must a salaried employee furnish to their employer under Rule 26C to claim tax deductions for House Rent Allowance (HRA), Leave Travel Concession (LTC), and home loan interest?",
+      "query_type": "Procedural / Condition Matching",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "expected_ay": "AY 2024-25",
+      "expected_fy": "FY 2023-24",
+      "is_negative": false,
+      "direct_answer": "The salaried employee must furnish the claims for House Rent Allowance (HRA), Leave Travel Concession (LTC), and home loan interest deduction using **Form No. 12BB** to their employer under Rule 26C of the Income-tax Rules, 1962.",
+      "temporal_applicability": "Applicable to Assessment Year (AY) 2021-22 onwards (Financial Year 2020-21 onwards). Rule 26C of the Income-tax Rules, 1962 has no effective date restriction and applies universally under the 1962 regime.",
+      "citations": [
+        {
+          "rule_id": "26C",
+          "sub_rule": "(2)",
+          "statutory_path": "Rule 26C > Furnishing of evidence of claims by employee for deduction of tax under section 192",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "section 192"
+          ],
+          "forms_referenced": [
+            "Form 12BB"
+          ],
+          "effective_date": "N/A (No effective date restriction noted)",
+          "citation_text": "The assessee shall furnish to the person responsible for making payment under sub-section (1) of section 192, the evidence or the particulars of the claims referred to in sub-rule (2), in Form No. 12BB for the purpose of estimating his income or computing the tax deduction at source."
+        },
+        {
+          "rule_id": "12BB",
+          "sub_rule": "General Form Reference",
+          "statutory_path": "Form 12BB (Part of Rule 26C framework)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "Section 192"
+          ],
+          "forms_referenced": [
+            "Form 12BB"
+          ],
+          "effective_date": "1962",
+          "citation_text": "Form No. 12BB is used for furnishing evidence of claims for deduction of tax under section 192 of the Income-tax Act, 1962."
+        }
+      ],
+      "citation_precision": 0.5,
+      "citation_recall": 1.0,
+      "citation_f1": 0.6667,
+      "criteria_keyword_coverage_rate": 1.0,
+      "criteria_match_rate": 1.0,
+      "matched_criteria": [
+        "Mentions Rule 26C",
+        "Explicitly identifies Form No. 12BB",
+        "Lists evidence of claims (HRA, LTC, housing interest, Chapter VI-A)"
+      ],
+      "missed_criteria": [],
+      "temporal_validity_score": 0.0,
+      "is_labelled_temporal_case": true,
+      "verified_correct_year": false,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.75
+    },
+    {
+      "case_id": "GOLD-PROC-003",
+      "query": "Under the 2026 rules (Rule 205), what is the prescribed form for an employee to submit evidence of claims to the employer for TDS estimation?",
+      "query_type": "Procedural / Condition Matching",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "expected_ay": "AY 2026-27",
+      "expected_fy": "FY 2025-26",
+      "is_negative": false,
+      "direct_answer": "Under Rule 205 of the Income-tax Rules, 2026, an employee must submit evidence of claims to the employer for TDS estimation using **Form No. 124**.",
+      "temporal_applicability": "Applicable to Financial Year 2026-27 and subsequent Assessment Years (AY 2027-28 onwards). Rule 205 has no effective date restriction and is part of the Income-tax Rules, 2026.",
+      "citations": [
+        {
+          "rule_id": "205",
+          "sub_rule": "(1)",
+          "statutory_path": "Rule 205 > Furnishing of evidence of claims by employee under section 392(5)(b)",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "section 392(5)(b)",
+            "section 392(1)"
+          ],
+          "forms_referenced": [
+            "Form No. 124"
+          ],
+          "effective_date": "N/A (Rules 2026 have no effective date restriction)",
+          "citation_text": "The assessee shall furnish to the person responsible for making payment under section 392(1), the evidence or the particulars of the claims... in Form No. 124, for the purpose of estimating his income or for computing the tax required to be deducted at source."
+        }
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "citation_f1": 1.0,
+      "criteria_keyword_coverage_rate": 1.0,
+      "criteria_match_rate": 1.0,
+      "matched_criteria": [
+        "Mentions Rule 205 (2026)",
+        "Identifies Form No. 124"
+      ],
+      "missed_criteria": [],
+      "temporal_validity_score": 0.0,
+      "is_labelled_temporal_case": true,
+      "verified_correct_year": false,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.85
+    },
+    {
+      "case_id": "GOLD-PROC-005",
+      "query": "Under Rule 31 of the 1962 rules, what certificate is required to be issued by an employer for tax deducted at source on salary, and what is the deadline?",
+      "query_type": "Procedural / Condition Matching",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "expected_ay": "AY 2024-25",
+      "expected_fy": "FY 2023-24",
+      "is_negative": false,
+      "direct_answer": "Under Rule 31 of the Income-tax Rules, 1962, the employer (deductor) must issue Form No. 16 (Part A) of the Certificate of Tax Deducted at Source (Section 203) to the salaried employee. For deductions under other provisions of Chapter XVII-B, Form No. 16A may also be issued. There is no specific deadline mandated by Rule 31 itself; however, the certificate must be furnished to the assessee before the TDS return filing deadline (typically March 31st of the next financial year).",
+      "temporal_applicability": "The provisions of Rule 31 (including the certificate requirements under Sections 203) became effective on 2-9-2021. Therefore, they apply to Assessment Years (AY) starting from AY 2021-22 onwards (covering Financial Year 2021-22 and subsequent years). For earlier periods (e.g., AY 2018-19, FY 2018-19), different rules or practices may have applied.",
+      "citations": [
+        {
+          "rule_id": "Rule 31",
+          "sub_rule": "(1), (4), (6), (6A)",
+          "statutory_path": "Rule 31 > (1)/(4)/(6)/(6A) - Certificate of tax deducted at source under Section 203",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "Section 203",
+            "Section 192",
+            "Section 194P"
+          ],
+          "forms_referenced": [
+            "Form No. 16",
+            "Form No. 16A"
+          ],
+          "effective_date": "2-9-2021",
+          "citation_text": "Employers shall issue Part A of Form No. 16 (certificate of tax deducted at source) and Part B may be issued by each employer or the last employer at the option of the assessee. Certificates shall be in Form No. 16 for deductions under Section 192 and 194P, and Form No. 16A for other provisions of Chapter XVII-B."
+        },
+        {
+          "rule_id": "Rule 31(6A)",
+          "sub_rule": "(6A)",
+          "statutory_path": "Rule 31 > (6A) - Certificate of tax deducted at source under Section 203",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "Section 203"
+          ],
+          "forms_referenced": [
+            "Form No. 16A"
+          ],
+          "effective_date": "2-9-2021",
+          "citation_text": "The Director General of Income-tax (Systems) shall specify the procedure, formats and standards for the purposes of generation and download of certificates... The certificate shall be in Form No. 16A if the deduction is under any other provision of Chapter XVII-B."
+        }
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "citation_f1": 1.0,
+      "criteria_keyword_coverage_rate": 0.6667,
+      "criteria_match_rate": 0.6667,
+      "matched_criteria": [
+        "Mentions Rule 31",
+        "Identifies Form No. 16 for salary TDS under Section 192"
+      ],
+      "missed_criteria": [
+        "Specifies deadline as 15th June following the financial year"
+      ],
+      "temporal_validity_score": 0.0,
+      "is_labelled_temporal_case": true,
+      "verified_correct_year": false,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.7333
+    },
+    {
+      "case_id": "GOLD-PROC-006",
+      "query": "Under Rule 164 (2026 rules), what is the procedural eligibility condition to file return in Form SAHAJ (ITR-1) for a salaried resident individual?",
+      "query_type": "Procedural / Condition Matching",
+      "difficulty_level": "Hard",
+      "target_regime": "2026",
+      "expected_ay": "AY 2026-27",
+      "expected_fy": "FY 2025-26",
+      "is_negative": false,
+      "direct_answer": "A salaried resident individual may file their return in Form SAHAJ (ITR-1) under Rule 164 (2026) if they are an individual who is a resident other than 'not ordinarily resident' (i.e., an ordinarily resident individual) and their total income includes the 'Salaries' head. Additionally, individuals aged 80 years or more at any time during the financial year may also qualify for Form SAHAJ filing.",
+      "temporal_applicability": "Rule 164 (Income-tax Rules, 2026) applies to the relevant Assessment Year (AY). The rule has no stated effective date limitation (Effective Date: None), meaning it applies to all applicable Assessment Years under the 2026 regime.",
+      "citations": [
+        {
+          "rule_id": "164",
+          "sub_rule": "(2)",
+          "statutory_path": "Rule 164 > (2) (Forms, eligibility, verification etc. in respect of return of income)",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "Section 164"
+          ],
+          "forms_referenced": [
+            "Form SAHAJ (ITR-1)",
+            "Form SUGAM (ITR-4)"
+          ],
+          "effective_date": "N/A (No effective date restriction)",
+          "citation_text": "Return of income shall be in Form SAHAJ (ITR-1) for a person being an individual, who is a resident other than not ordinarily resident, and where total income includes income chargeable to income-tax under the head 'Salaries'."
+        },
+        {
+          "rule_id": "164",
+          "sub_rule": "(12)",
+          "statutory_path": "Rule 164 > (12) (Forms, eligibility, verification etc. in respect of return of income)",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "Section 164"
+          ],
+          "forms_referenced": [
+            "Form SAHAJ (ITR-1)",
+            "Form SUGAM (ITR-4)"
+          ],
+          "effective_date": "N/A (No effective date restriction)",
+          "citation_text": "Table Sl. 4 indicates that an individual of the age of eighty years or more at any time during the year may furnish return in Form SAHAJ (ITR-1)."
+        }
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "citation_f1": 1.0,
+      "criteria_keyword_coverage_rate": 0.4,
+      "criteria_match_rate": 0.4,
+      "matched_criteria": [
+        "Mentions Rule 164",
+        "Identifies Form SAHAJ (ITR-1)"
+      ],
+      "missed_criteria": [
+        "Mentions resident status",
+        "Mentions total income threshold (up to 50 lakh rupees)",
+        "Mentions salary and one house property"
+      ],
+      "temporal_validity_score": 0.0,
+      "is_labelled_temporal_case": true,
+      "verified_correct_year": false,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.64
+    },
+    {
+      "case_id": "GOLD-NEG-001",
+      "query": "How is Minimum Alternate Tax (MAT) under section 115JB calculated for a private limited corporate taxpayer under these salary rules?",
+      "query_type": "Negative / Out-of-Scope",
+      "difficulty_level": "Easy",
+      "target_regime": "none",
+      "expected_ay": "Not Applicable",
+      "expected_fy": "Not Applicable",
+      "is_negative": true,
+      "direct_answer": "Minimum Alternate Tax (MAT) under Section 115JB is NOT covered by the provided statutory context. The supplied rules (Income-tax Rules, 1962 and 2026) focus exclusively on salary-related relief provisions (Rule 21A for arrears/advance payments, Rule 204 for tax deduction at source, and Rule 12 for return filing). There are no provisions in the provided context addressing MAT calculations for corporate taxpayers under Section 115JB.",
+      "temporal_applicability": "N/A - The query concerns Section 115JB MAT provisions which are not present in the provided statutory context. The context covers general salary rules without specific temporal limitations affecting MAT.",
+      "citations": [],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "citation_f1": 1.0,
+      "criteria_keyword_coverage_rate": 0.6667,
+      "criteria_match_rate": 0.6667,
+      "matched_criteria": [
+        "Identifies query as Out-of-Scope / Not Covered",
+        "States that MAT under section 115JB is a corporate tax provision"
+      ],
+      "missed_criteria": [
+        "Refuses hallucination with null chunk expectation"
+      ],
+      "temporal_validity_score": 0.0,
+      "is_labelled_temporal_case": true,
+      "verified_correct_year": false,
+      "negative_handling_correct": true,
+      "is_out_of_scope": true,
+      "composite_score": 0.7333
+    },
+    {
+      "case_id": "GOLD-NEG-002",
+      "query": "What is the TDS rate and threshold for Virtual Digital Assets (cryptocurrency) transfers under section 194S for crypto traders under Rule 31?",
+      "query_type": "Negative / Out-of-Scope",
+      "difficulty_level": "Easy",
+      "target_regime": "none",
+      "expected_ay": "Not Applicable",
+      "expected_fy": "Not Applicable",
+      "is_negative": true,
+      "direct_answer": "The specific TDS rate and threshold for Virtual Digital Assets (crypto) transfers under Section 194S for crypto traders under Rule 31 cannot be definitively answered from the provided statutory context. The supplied context only contains Income-tax Rules, 1962 provisions (specifically Rule 31 sub-rules (1), (2), and (6)) which govern the requirement to furnish certificates of tax deduction at source. However, the query pertains to cryptocurrency-specific TDS rates and thresholds which would be governed by the Income-tax Rules, 2026 (or potentially updated 1962 provisions not included in the provided context). Without access to the 2026 rules or explicit 1962 provisions addressing crypto TDS rates/thresholds, a definitive answer cannot be given.",
+      "temporal_applicability": "The provided Income-tax Rules, 1962 context has effective dates of 2-9-2021 and 1-7-2022. These rules apply to Assessment Years (AY) corresponding to those effective dates. However, these provisions do not establish TDS rates or thresholds for cryptocurrency transactions under Section 194S.",
+      "citations": [
+        {
+          "rule_id": "12AC",
+          "sub_rule": "(1)-(6)",
+          "statutory_path": "Rule 12AC > Sub-rule (1), (2), (3), (6)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "section 194S",
+            "section 203"
+          ],
+          "forms_referenced": [
+            "Form No. 16",
+            "Form No. 16A"
+          ],
+          "effective_date": "29-04-2022",
+          "citation_text": "Rule 31 sub-rules (1), (2), (3), and (6) require furnishing certificates of tax deduction at source under section 203 for persons responsible for deduction under section 194S. These sub-rules govern certificate issuance and compliance but do not specify TDS rates or transactional thresholds for cryptocurrency."
+        },
+        {
+          "rule_id": "12AC",
+          "sub_rule": "(1)",
+          "statutory_path": "Rule 12AC > Sub-rule (1)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "section 203"
+          ],
+          "forms_referenced": [
+            "Form No. 16"
+          ],
+          "effective_date": "2-9-2021",
+          "citation_text": "Certificate of tax deduction at source to be furnished under section 203 in Form No. 16 for deductions under section 192 and section 194P."
+        }
+      ],
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_keyword_coverage_rate": 0.6667,
+      "criteria_match_rate": 0.6667,
+      "matched_criteria": [
+        "Identifies query as Out-of-Scope",
+        "Confirms crypto trading u/s 194S is outside salaried scope"
+      ],
+      "missed_criteria": [
+        "Returns zero chunk expectation"
+      ],
+      "temporal_validity_score": 0.0,
+      "is_labelled_temporal_case": true,
+      "verified_correct_year": false,
+      "negative_handling_correct": true,
+      "is_out_of_scope": true,
+      "composite_score": 0.2333
+    },
+    {
+      "case_id": "GOLD-NEG-003",
+      "query": "Can a salaried individual claim Input Tax Credit (ITC) under Goods and Services Tax (GST) for office suits purchased from salary?",
+      "query_type": "Negative / Out-of-Scope",
+      "difficulty_level": "Easy",
+      "target_regime": "none",
+      "expected_ay": "Not Applicable",
+      "expected_fy": "Not Applicable",
+      "is_negative": true,
+      "direct_answer": "No, a salaried individual cannot claim GST Input Tax Credit (ITC) for office suits purchased from salary under the GST regime. The query appears to confuse GST ITC with Income Tax ITC. The provided statutory context contains only Income-tax Rules (1962 and 2026), which govern taxation of individuals and companies under the Income Tax Act, not GST. GST ITC is a separate mechanism under the Central Goods and Services Tax Act, 2017, and falls outside the scope of these Income Tax Rules.",
+      "temporal_applicability": "Not applicable - The query is out of scope for the provided statutory context. The Income-tax Rules 1962 and 2026 do not contain provisions governing GST Input Tax Credits.",
+      "citations": [
+        {
+          "rule_id": "12AC",
+          "sub_rule": "(5)",
+          "statutory_path": "Rule 2B > (5) - Section 10(5) of the Income-tax Act, 1962",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "section 10(5)"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "29-04-2022",
+          "citation_text": "Allows ITC for unutilized journey expenses and certain specified expenditures including office supplies purchased from GST-registered vendors, with exemptions up to ₹36,000 per person or one-third of specified expenditure."
+        },
+        {
+          "rule_id": "12AC",
+          "sub_rule": "(2)",
+          "statutory_path": "Rule 2B > (2) - Section 10(2) of the Income-tax Act, 1962",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "section 10(2)"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "29-04-2022",
+          "citation_text": "Provides general framework for ITC claims under Section 10 of the Income-tax Act."
+        },
+        {
+          "rule_id": "19AC",
+          "sub_rule": "(203)",
+          "statutory_path": "Rule 203 - Credit for tax deducted or collected at source",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "section 193"
+          ],
+          "forms_referenced": [
+            "Form No. 122"
+          ],
+          "effective_date": "None",
+          "citation_text": "General credit mechanism for tax deducted/collected at source under Chapter XIX of the Income-tax Act, 2026."
+        },
+        {
+          "rule_id": "20AC",
+          "sub_rule": "(204)",
+          "statutory_path": "Rule 204 - Furnishing of particulars for deduction of tax from salaries",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "section 192"
+          ],
+          "forms_referenced": [
+            "Form No. 130",
+            "Form No. 123"
+          ],
+          "effective_date": "None",
+          "citation_text": "Requires furnishing of salary income details to the payer for deduction purposes."
+        }
+      ],
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_keyword_coverage_rate": 0.6667,
+      "criteria_match_rate": 0.6667,
+      "matched_criteria": [
+        "Identifies query as Out-of-Scope",
+        "Differentiates GST Input Tax Credit from Income Tax Rules"
+      ],
+      "missed_criteria": [
+        "Returns null retrieval"
+      ],
+      "temporal_validity_score": 0.0,
+      "is_labelled_temporal_case": true,
+      "verified_correct_year": false,
+      "negative_handling_correct": true,
+      "is_out_of_scope": true,
+      "composite_score": 0.2333
+    },
+    {
+      "case_id": "GOLD-NEG-004",
+      "query": "What are the transfer pricing documentation requirements under Rule 10D for international transactions between associated enterprises?",
+      "query_type": "Negative / Out-of-Scope",
+      "difficulty_level": "Easy",
+      "target_regime": "none",
+      "expected_ay": "Not Applicable",
+      "expected_fy": "Not Applicable",
+      "is_negative": true,
+      "direct_answer": "The provided statutory context does not contain any provisions related to 'Rule 10D' or transfer pricing documentation requirements for international transactions between associated enterprises. The available rules cover dividend certificates (Rule 29, 1962), valuation of perquisites (Rule 15, 2026), prescribed allowances for employees (Rule 2BB, 1962), and travel/concession exemptions (Rule 2B, 1962). There is no mention of transfer pricing documentation requirements in the provided text.",
+      "temporal_applicability": "The query is out of scope regardless of temporal applicability. The provided statutory context covers both 1962 and 2026 regimes but none contain transfer pricing documentation requirements. Therefore, no specific AY/FY applicability can be determined.",
+      "citations": [],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "citation_f1": 1.0,
+      "criteria_keyword_coverage_rate": 0.6667,
+      "criteria_match_rate": 0.6667,
+      "matched_criteria": [
+        "Identifies query as Out-of-Scope",
+        "Specifies Transfer Pricing is for corporate enterprises"
+      ],
+      "missed_criteria": [
+        "Returns null retrieval"
+      ],
+      "temporal_validity_score": 0.0,
+      "is_labelled_temporal_case": true,
+      "verified_correct_year": false,
+      "negative_handling_correct": true,
+      "is_out_of_scope": true,
+      "composite_score": 0.7333
+    },
+    {
+      "case_id": "GOLD-NEG-005",
+      "query": "I want to file an Updated Return in Form ITR-U under Rule 12AC for Assessment Year 2017-18. What are the applicable verification procedures?",
+      "query_type": "Negative / Out-of-Scope",
+      "difficulty_level": "Medium",
+      "target_regime": "none",
+      "expected_ay": "AY 2020-2021",
+      "expected_fy": "FY 2019-2020",
+      "is_negative": true,
+      "direct_answer": "Rule 12AC (Income-tax Rules, 1962, Sub-rule (2)) was NOT applicable for Assessment Year 2017-18. Its effective date is 29-04-2022, which is after the conclusion of AY 2017-18. For AY 2017-18, the updated return under Form ITR-U would have been governed by the pre-2022 provisions (typically Rule 12 of the 1962 Income-tax Rules), requiring electronic verification via digital signature or electronic verification codes as specified in those older rules.",
+      "temporal_applicability": "Rule 12AC (1962) is NOT applicable for Assessment Year 2017-18. The rule becomes effective from 29-04-2022 and applies only to AY 2021-22 and subsequent years. For AY 2017-18, the applicable rules were the pre-2022 provisions of the Income-tax Rules, 1962 (including Rule 12 for updated returns).",
+      "citations": [],
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_keyword_coverage_rate": 0.6667,
       "criteria_match_rate": 0.6667,
       "matched_criteria": [
         "States Rule 12AC only applies from AY 2020-21 onwards",
@@ -1040,10 +1051,12 @@
       "missed_criteria": [
         "Identifies temporal violation"
       ],
-      "temporal_validity_score": 1.0,
+      "temporal_validity_score": 0.0,
+      "is_labelled_temporal_case": true,
+      "verified_correct_year": false,
       "negative_handling_correct": true,
       "is_out_of_scope": true,
-      "composite_score": 0.75
+      "composite_score": 0.2333
     }
   ]
 }

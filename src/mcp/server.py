@@ -317,6 +317,9 @@ def compare_regimes(
     return output
 
 
+from src.enrichment.temporal_registry import StatutoryTemporalRegistry
+
+
 # ==============================================================================
 # TOOL 4: RESOLVE TAX YEAR (AY VS FY ARITHMETIC)
 # ==============================================================================
@@ -348,19 +351,20 @@ def resolve_tax_year(
             fy = "Unknown"
             ay = "Unknown"
 
-    # Legal routing: 1962 Rules apply to current notified years including AY 2024-25, 2025-26, 2026-27.
-    # Draft 2026 Rules apply only if explicitly requested or for post-notification prospective assessment.
-    regime = "1962"
-    if "2026" in year_input and "draft" in year_input.lower():
-        regime = "2026"
-
+    regime = "2026" if ("2026" in year_input.lower() and "draft" in year_input.lower()) else "1962"
     duration_ms = (time.perf_counter() - start_time) * 1000.0
 
     output = {
         "input_string": year_input,
         "resolved_financial_year": fy,
         "resolved_assessment_year": ay,
+        "notified_statutory_regime": "1962",
+        "draft_2026_regime_available": True,
         "default_applicable_regime": regime,
+        "regime_status": {
+            "1962_rules": "Legally notified & binding for current assessment years (including AY 2024-25, AY 2025-26, AY 2026-27).",
+            "2026_rules": "Draft statutory proposal (prospectively applicable upon official parliamentary/gazette notification)."
+        },
         "statutory_rule_definition": {
             "financial_year": f"Period from 1st April to 31st March (Year of earning income - {fy}).",
             "assessment_year": f"Period from 1st April to 31st March (Year of tax assessment & filing - {ay}).",
@@ -383,122 +387,40 @@ def resolve_tax_year(
 
 
 # ==============================================================================
-# TOOL 5: VERIFY STATUTORY EFFECTIVE DATE (STATUTORY REGISTRY)
+# TOOL 5: VERIFY STATUTORY EFFECTIVE DATE (UNIFIED REGISTRY)
 # ==============================================================================
-STATUTORY_EFFECTIVE_DATE_REGISTRY: Dict[str, Dict[str, Any]] = {
-    "12AC": {
-        "rule_title": "Updated Return of Income (ITR-U)",
-        "inserted_date": "2022-04-29",
-        "notification_no": "Notification No. 48/2022",
-        "earliest_applicable_ay": 2022,  # AY 2022-23 onwards
-        "earliest_applicable_ay_str": "AY 2022-23",
-        "notes": "Rule 12AC was inserted w.e.f. 29-04-2022. It is legally not available for assessment years prior to AY 2022-23."
-    },
-    "26D": {
-        "rule_title": "Declaration for Senior Citizen Pensioners (Form 12BBA u/s 194P)",
-        "inserted_date": "2021-09-02",
-        "notification_no": "Notification No. 98/2021",
-        "earliest_applicable_ay": 2021,  # AY 2021-22 onwards
-        "earliest_applicable_ay_str": "AY 2021-22",
-        "notes": "Rule 26D and Form 12BBA were inserted w.e.f. 02-09-2021 (Finance Act 2021)."
-    },
-    "21AAA": {
-        "rule_title": "Taxation of Relief from Specified Foreign Retirement Funds (Section 89A)",
-        "inserted_date": "2022-04-04",
-        "notification_no": "Notification No. 24/2022",
-        "earliest_applicable_ay": 2022,
-        "earliest_applicable_ay_str": "AY 2022-23",
-        "notes": "Rule 21AAA was inserted w.e.f. 04-04-2022."
-    },
-    "114AAA": {
-        "rule_title": "Manner of making PAN inoperative upon non-linking with Aadhaar",
-        "inserted_date": "2020-02-13",
-        "notification_no": "Notification No. 11/2020",
-        "earliest_applicable_ay": 2020,
-        "earliest_applicable_ay_str": "AY 2020-21",
-        "notes": "Rule 114AAA inserted w.e.f. 13-02-2020."
-    }
-}
-
-
 @mcp.tool()
 def verify_effective_date(
     rule_id: str,
     date_or_ay: str,
     regime: str = "1962"
 ) -> Dict[str, Any]:
-    """Verifies whether a statutory rule, sub-rule, or amendment was legally in force for a specific date or Assessment Year based on statutory commencement records.
+    """Verifies whether a statutory rule, sub-rule, or amendment was legally in force for a specific date or Assessment Year based on authoritative statutory commencement and notification records.
     
     Args:
-        rule_id: Rule identifier (e.g. '12AC', '3', '26D', '21AAA').
+        rule_id: Rule identifier (e.g. '12AC', '3', '26D', '21AAA', '114AAA').
         date_or_ay: Date string ('2020-04-01') or Assessment Year ('AY 2020-21', 'AY 2024-25').
         regime: '1962' or '2026'.
     """
     start_time = time.perf_counter()
-    clean_id = rule_id.upper().replace("RULE", "").replace("SEC", "").strip()
-    all_chunks = get_all_chunks()
-    target_year = "2026" if "2026" in regime else "1962"
-    chunks = all_chunks.get(target_year, [])
-
-    matching = [c for c in chunks if str(c.get("metadata", {}).get("rule_id", "")).upper() == clean_id]
+    output = StatutoryTemporalRegistry.verify_rule_effective_date(
+        rule_id=rule_id,
+        date_or_ay=date_or_ay,
+        regime=regime
+    )
     duration_ms = (time.perf_counter() - start_time) * 1000.0
-
-    if not matching:
-        output = {
-            "rule_id": clean_id,
-            "regime": target_year,
-            "status": "not_found",
-            "message": f"Rule {clean_id} is not in the {target_year} corpus."
-        }
-        telemetry_logger.log_event(
-            tool_name="verify_effective_date",
-            inputs={"rule_id": rule_id, "date_or_ay": date_or_ay, "regime": regime},
-            outputs=output,
-            target_regime=target_year,
-            duration_ms=duration_ms,
-            success=False
-        )
-        return output
-
-    # Check against structured Statutory Effective Date Registry
-    in_force = True
-    scope_note = "In force during queried period."
-    eff_record = STATUTORY_EFFECTIVE_DATE_REGISTRY.get(clean_id)
-
-    # Extract year from date_or_ay
-    year_match = re.search(r"\b(\d{4})\b", date_or_ay)
-    queried_year = int(year_match.group(1)) if year_match else None
-
-    if target_year == "2026":
-        in_force = False
-        scope_note = "Income-tax Rules, 2026 are currently in draft status and have not been officially notified."
-    elif eff_record and queried_year is not None:
-        earliest_ay = eff_record["earliest_applicable_ay"]
-        if queried_year < earliest_ay:
-            in_force = False
-            scope_note = f"Rule {clean_id} ({eff_record['rule_title']}) was inserted w.e.f. {eff_record['inserted_date']} via {eff_record['notification_no']} and was NOT in force for periods prior to {eff_record['earliest_applicable_ay_str']}."
-
-    eff_date_str = eff_record["inserted_date"] if eff_record else matching[0].get("metadata", {}).get("effective_date", "Standard statutory commencement")
-
-    output = {
-        "rule_id": clean_id,
-        "regime": target_year,
-        "queried_period": date_or_ay,
-        "effective_date_recorded": eff_date_str,
-        "is_in_force_for_period": in_force,
-        "scope_note": scope_note
-    }
 
     telemetry_logger.log_event(
         tool_name="verify_effective_date",
         inputs={"rule_id": rule_id, "date_or_ay": date_or_ay, "regime": regime},
         outputs=output,
-        target_regime=target_year,
+        target_regime="2026" if "2026" in regime else "1962",
         duration_ms=duration_ms,
         success=True
     )
 
     return output
+
 
 
 # ==============================================================================

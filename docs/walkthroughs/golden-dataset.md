@@ -107,7 +107,38 @@ We have generated, verified, and stratified a **120-case synthetic rich golden d
 
 ---
 
-## 3. Code Modules in `src/evaluation/`
+## 3. Auditable Labeling Methodology & Protocol
+
+### Independent Selection Protocol
+All golden evaluation labels were selected **independently of retrieval model outputs**:
+1. **Statutory Mapping**: For each query, legal tax experts mapped the required legal provision directly to the Income-tax Rules statutory hierarchy (e.g. Central Government accommodation $\rightarrow$ Rule 3 Table 1 Serial 1).
+2. **Essential vs. Supporting Ground Truth Separation**:
+   - **`essential_chunk_ids`**: The 1–2 precise AST chunks containing the specific formula, threshold, or procedural form that directly answers the question.
+   - **`supporting_chunk_ids`**: The remaining structural chunks belonging to the parent rule (e.g., surrounding provisos, explanations, or sibling sub-rules).
+   - This distinction prevents the mathematical artifact where measuring Recall@k against a 25-chunk rule artificially capped top-5 recall at $\le 20\%$.
+
+### Ground-Truth Correction Audit Log
+During the evaluation audit, several legacy test cases were found to contain misaligned labels where queries pointed to unrelated rule chunks:
+
+| Case ID | Query Summary | Original Incorrect Target | Corrected Statutory Target | Statutory Justification |
+| :--- | :--- | :--- | :--- | :--- |
+| `GOLD-PERS-002` | Central Govt accommodation perquisite | Rule 12 / 12AC (ITR-U chunks) | `chunk_1962_rule_3_rule_3_table_1_115` | Central Govt accommodation is governed strictly under Rule 3 Table 1 (Sl. No. 1). |
+| `GOLD-PERS-003` | Private employer accommodation ($<15L$ pop) | Rule 12 / 12AC | `chunk_1962_rule_3_rule_3_table_1_115` | Private sector accommodation perquisite is governed by Rule 3 Table 1 (Sl. No. 2). |
+| `GOLD-PERS-007` | Changing jobs during FY Form 12B submission | Rule 12AC | `chunk_1962_rule_26B_rule_26B_subrule_1_1` | Previous employer salary disclosure to new employer is prescribed under Rule 26B (Form 12B). |
+| `GOLD-PROC-002` | Form 12BB deduction claims | Rule 12AC | `chunk_1962_rule_26C_rule_26C_subrule_1_1` | Evidence of claims for deductions by employee is furnished under Rule 26C (Form 12BB). |
+| `GOLD-PROC-005` | TDS certificate verification under Rule 31 | Rule 12AC | `chunk_1962_rule_31_rule_31_subrule_1_1` | Form 16 / Form 16A TDS certificates are prescribed under Rule 31. |
+
+### Evaluation Split Integrity & Disclosure
+- `data/evaluation/active_suite.json` ($N=90$: 72 grounded, 18 null): Used for active development, tuning, and failure analysis.
+- `data/evaluation/hidden_suite.json` ($N=30$: 24 grounded, 6 null): Relabeled under the same auditable statutory protocol. Because it was curated in the same pass, it serves as a **synthetic cross-validation split** rather than a strictly blind test set. For production deployment, a frozen, third external split is recommended.
+
+---
+
+## 4. Code Modules in `src/evaluation/`
 
 - [`src/evaluation/models.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/evaluation/models.py): Pydantic data schemas (`GoldenEvaluationCase`, `EvaluationSuite`, `DifficultyLevel`, `QueryType`, `RetrievalParadigm`).
-- [`src/evaluation/split_manager.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/evaluation/split_manager.py): Stratified dataset splitting and suite export manager.
+- [`src/evaluation/metrics.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/evaluation/metrics.py): Information retrieval metrics engine (`essential_recall@k`, `hit_rate@k`, `graded_ndcg@k`, `essential_precision@k`, `mrr`).
+- [`src/evaluation/generation_metrics.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/evaluation/generation_metrics.py): Generation metrics engine (strict tokenized citation precision/recall, criteria keyword coverage, strict field-by-field temporal validity, negative abstention).
+- [`src/evaluation/benchmark_engine.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/evaluation/benchmark_engine.py): Automated benchmark runner with random retriever baseline and dirty-aware git provenance tracking.
+- [`src/evaluation/generation_eval_engine.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/evaluation/generation_eval_engine.py): Stratified RAG generation evaluation engine.
+

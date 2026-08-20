@@ -15,9 +15,12 @@ def test_resolve_tax_year():
     assert "2023" in str(res["resolved_financial_year"])
     assert "2024" in str(res["resolved_assessment_year"])
     assert res["default_applicable_regime"] == "1962"
+    assert res["notified_statutory_regime"] == "1962"
+    assert res["draft_2026_regime_available"] is True
 
     res_draft = resolve_tax_year("AY 2026-27 draft rules")
     assert res_draft["default_applicable_regime"] == "2026"
+    assert res_draft["draft_2026_regime_available"] is True
 
 
 def test_get_rule_details():
@@ -44,6 +47,7 @@ def test_compare_regimes():
 
 
 def test_verify_effective_date():
+    # 1. Rule 12AC
     res_invalid = verify_effective_date(rule_id="12AC", date_or_ay="AY 2020-21")
     assert res_invalid["is_in_force_for_period"] is False
     assert "NOT in force for periods prior to AY 2022-23" in res_invalid["scope_note"]
@@ -51,12 +55,22 @@ def test_verify_effective_date():
     res_valid = verify_effective_date(rule_id="12AC", date_or_ay="AY 2023-24")
     assert res_valid["is_in_force_for_period"] is True
 
-    # Rule 26D
+    # 2. Rule 26D
     res_26d_pre = verify_effective_date(rule_id="26D", date_or_ay="AY 2020-21")
     assert res_26d_pre["is_in_force_for_period"] is False
 
     res_26d_post = verify_effective_date(rule_id="26D", date_or_ay="AY 2023-24")
     assert res_26d_post["is_in_force_for_period"] is True
+
+    # 3. Rule 3 Accommodation Amendment
+    res_rule3_pre = verify_effective_date(rule_id="3", date_or_ay="AY 2021-22")
+    assert res_rule3_pre["is_in_force_for_period"] is True
+    assert "governed by Historical rates" in res_rule3_pre["scope_note"]
+
+    res_rule3_post = verify_effective_date(rule_id="3", date_or_ay="AY 2024-25")
+    assert res_rule3_post["is_in_force_for_period"] is True
+    assert "Notification No. 65/2023" in res_rule3_post["scope_note"]
+
 
 
 def test_perquisite_calculators():

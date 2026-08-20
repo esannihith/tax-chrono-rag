@@ -117,3 +117,65 @@ def test_generation_citation_metrics_on_empty_ground_truth():
     )
     assert res_hallucinated['citation_precision'] == 0.0
     assert res_hallucinated['citation_f1'] == 0.0
+
+
+def test_citation_tokenization_regression_suite():
+    """Regression test covering the four citation prefix / containment false positives:
+    1. Rule 30 != Rule 3
+    2. Rule 3A != Rule 3
+    3. Rule 12AC != Rule 12
+    4. Rule 3(1) != Rule 3(7)(i)
+    """
+    # 1. Rule 30 predicting when Rule 3 is ground truth
+    pred_30 = [StatutoryCitation(rule_id="30", sub_rule="", statutory_path="Rule 30", corpus_year=1962)]
+    res_30 = GenerationMetrics.compute_citation_metrics(pred_30, ["Rule 3"])
+    assert res_30["citation_recall"] == 0.0
+    assert res_30["citation_precision"] == 0.0
+
+    # 2. Rule 3A predicting when Rule 3 is ground truth
+    pred_3a = [StatutoryCitation(rule_id="3A", sub_rule="", statutory_path="Rule 3A", corpus_year=1962)]
+    res_3a = GenerationMetrics.compute_citation_metrics(pred_3a, ["Rule 3"])
+    assert res_3a["citation_recall"] == 0.0
+    assert res_3a["citation_precision"] == 0.0
+
+    # 3. Rule 12AC predicting when Rule 12 is ground truth
+    pred_12ac = [StatutoryCitation(rule_id="12AC", sub_rule="", statutory_path="Rule 12AC", corpus_year=1962)]
+    res_12ac = GenerationMetrics.compute_citation_metrics(pred_12ac, ["Rule 12"])
+    assert res_12ac["citation_recall"] == 0.0
+    assert res_12ac["citation_precision"] == 0.0
+
+    # 4. Rule 3(1) predicting when Rule 3(7)(i) is ground truth
+    pred_3_1 = [StatutoryCitation(rule_id="3", sub_rule="(1)", statutory_path="Rule 3(1)", corpus_year=1962)]
+    res_3_1 = GenerationMetrics.compute_citation_metrics(pred_3_1, ["Rule 3(7)(i)"])
+    assert res_3_1["citation_recall"] == 0.0
+    assert res_3_1["citation_precision"] == 0.0
+
+    # 5. Exact sub-rule match should succeed
+    pred_3_7_i = [StatutoryCitation(rule_id="3", sub_rule="(7)(i)", statutory_path="Rule 3(7)(i)", corpus_year=1962)]
+    res_3_7_i = GenerationMetrics.compute_citation_metrics(pred_3_7_i, ["Rule 3(7)(i)"])
+    assert res_3_7_i["citation_recall"] == 1.0
+    assert res_3_7_i["citation_precision"] == 1.0
+    assert res_3_7_i["citation_f1"] == 1.0
+
+
+def test_criteria_keyword_coverage_metrics():
+    output = GenerationOutput(
+        query="What is the accommodation perquisite?",
+        direct_answer="Perquisite value is 10% of salary for population exceeding 40 lakh under Rule 3.",
+        step_by_step_reasoning=["Step 1: Check population tier."],
+        temporal_applicability="Applicable for AY 2024-25 under Notification No. 65/2023.",
+        statutory_citations=[],
+        regime_differences=[],
+        is_out_of_scope=False,
+        confidence_score=0.95
+    )
+    criteria = [
+        "10% of salary for population > 40 lakh",
+        "Notification No. 65/2023 effective 01-09-2023",
+        "Completely irrelevant criterion that should fail"
+    ]
+    res = GenerationMetrics.compute_criteria_keyword_coverage(output, criteria)
+    assert res["criteria_keyword_coverage_rate"] == round(2 / 3, 4)
+    assert len(res["matched_criteria"]) == 2
+    assert len(res["missed_criteria"]) == 1
+

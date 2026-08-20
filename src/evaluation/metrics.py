@@ -76,6 +76,26 @@ class IRMetrics:
             return 0.0
         return dcg / idcg
 
+    @staticmethod
+    def calculate_random_baseline(
+        total_corpus_size: int,
+        avg_essential_count: float,
+        avg_relevant_count: float,
+        k_list: List[int] = [5, 10, 20]
+    ) -> Dict[str, float]:
+        """Calculates expected performance of an unguided random retriever on a corpus of size N."""
+        N = float(total_corpus_size)
+        res = {}
+        for k in k_list:
+            k_f = float(k)
+            # Probability of at least one hit in top-k
+            prob_hit = 1.0 - math.prod((N - avg_essential_count - i) / (N - i) for i in range(k)) if N > avg_essential_count + k else 1.0
+            res[f"random_hit_rate@{k}"] = round(prob_hit, 4)
+            res[f"random_essential_recall@{k}"] = round(min(1.0, k_f / N), 4)
+            res[f"random_essential_precision@{k}"] = round(avg_essential_count / N, 4)
+            res[f"random_full_precision@{k}"] = round(avg_relevant_count / N, 4)
+        return res
+
     @classmethod
     def evaluate_query(
         cls,
@@ -95,7 +115,10 @@ class IRMetrics:
             res[f"essential_recall@{k}"] = cls.recall_at_k(retrieved, essential_chunks if essential_chunks else all_relevant, k)
             res[f"recall@{k}"] = cls.recall_at_k(retrieved, essential_chunks if essential_chunks else all_relevant, k)
             res[f"full_recall@{k}"] = cls.recall_at_k(retrieved, all_relevant, k)
+            res[f"essential_precision@{k}"] = cls.precision_at_k(retrieved, essential_chunks if essential_chunks else all_relevant, k)
             res[f"precision@{k}"] = cls.precision_at_k(retrieved, all_relevant, k)
+            res[f"full_precision@{k}"] = cls.precision_at_k(retrieved, all_relevant, k)
             res[f"ndcg@{k}"] = cls.graded_ndcg_at_k(retrieved, essential_chunks, supporting_chunks, k)
         return res
+
 

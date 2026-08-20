@@ -9,8 +9,8 @@
     "persona_context": "Private sector salaried employee residing in Delhi (metro city)",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 2A"
@@ -42,8 +42,8 @@
     "persona_context": "Central government officer in government-allotted quarters",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 3"
@@ -122,8 +122,8 @@
     "persona_context": "Private sector employee provided employer-owned housing in a mid-sized city (population 12 lakhs)",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 3"
@@ -203,8 +203,8 @@
     "persona_context": "Software engineer opting for New Tax Regime u/s 115BAC with school-going children",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 2BB"
@@ -244,8 +244,8 @@
     "persona_context": "Salaried employee traveling abroad on holiday",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 2B"
@@ -288,8 +288,8 @@
     "persona_context": "77-year old pensioner wanting relief u/s 194P and Rule 26D",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 26D"
@@ -320,8 +320,8 @@
     "persona_context": "Salaried employee switching employers mid-year",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 26A"
@@ -351,8 +351,8 @@
     "persona_context": "Corporate manager with company-owned car (> 1.6L cubic capacity) used partly for personal purposes with employer-borne running expenses",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 3"
@@ -432,8 +432,8 @@
     "persona_context": "Salaried employee operating under the 2026 direct tax regime exercising section 202(4) option",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 280"
@@ -489,8 +489,8 @@
     "persona_context": "Visually impaired employee commuting to work",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 2BB"
@@ -529,8 +529,8 @@
     "persona_context": "Salaried employee with company loan under 2026 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 15"
@@ -601,8 +601,8 @@
     "persona_context": "Salaried employee with company loan under 1962 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 3"
@@ -681,8 +681,8 @@
     "persona_context": "Salaried employee with company loan under 2026 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 15"
@@ -753,8 +753,8 @@
     "persona_context": "Salaried employee with company loan under 1962 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 3"
@@ -833,8 +833,8 @@
     "persona_context": "Salaried employee with company loan under 2026 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 15"
@@ -905,8 +905,8 @@
     "persona_context": "Salaried employee with company loan under 1962 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 3"
@@ -985,8 +985,8 @@
     "persona_context": "Salaried employee with company loan under 2026 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 15"
@@ -1057,8 +1057,8 @@
     "persona_context": "Salaried employee with company loan under 1962 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 3"
@@ -1137,8 +1137,8 @@
     "persona_context": "Salaried employee with company loan under 2026 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 15"
@@ -1209,8 +1209,8 @@
     "persona_context": "Salaried employee with company loan under 1962 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 3"
@@ -1289,8 +1289,8 @@
     "persona_context": "Salaried employee with company loan under 2026 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 15"
@@ -1361,8 +1361,8 @@
     "persona_context": "Salaried employee with company loan under 1962 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 3"
@@ -1441,8 +1441,8 @@
     "persona_context": "Salaried employee with company loan under 2026 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 15"
@@ -1513,8 +1513,8 @@
     "persona_context": "Salaried employee with company loan under 1962 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 3"
@@ -1593,8 +1593,8 @@
     "persona_context": "Salaried employee with company loan under 2026 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 15"
@@ -1665,8 +1665,8 @@
     "persona_context": "Salaried employee with company loan under 1962 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 3"
@@ -1745,8 +1745,8 @@
     "persona_context": "Salaried employee with company loan under 2026 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 15"
@@ -1817,8 +1817,8 @@
     "persona_context": "Salaried employee with company loan under 1962 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 3"
@@ -1897,8 +1897,8 @@
     "persona_context": "Salaried employee with company loan under 2026 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 15"
@@ -1969,8 +1969,8 @@
     "persona_context": "Salaried employee with company loan under 1962 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 3"
@@ -2049,8 +2049,8 @@
     "persona_context": "Salaried employee with company loan under 2026 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 15"
@@ -2121,8 +2121,8 @@
     "persona_context": "Salaried employee with company loan under 1962 rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 3"
@@ -2264,8 +2264,8 @@
     "persona_context": "Salaried employee comparing LTC rules across 1962 and 2026 regimes",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 2B",
@@ -2311,8 +2311,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": "Inserted by IT (Eleventh Amdt.) Rules, 2022, w.e.f. 29-4-2022",
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 12AC"
@@ -2341,8 +2341,8 @@
     "persona_context": "Corporate employee analyzing rent-free accommodation valuation across 1962 and 2026 regimes",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 3",
@@ -3752,8 +3752,8 @@
     "persona_context": "Individual salaried taxpayer with no business audit and no digital signature certificate",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 12AC"
@@ -3783,8 +3783,8 @@
     "persona_context": "Salaried employee providing proof of tax investments and rent receipts to payroll department",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 26C"
@@ -3814,8 +3814,8 @@
     "persona_context": "Employee in 2026 submitting investment declarations to employer",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 205"
@@ -3844,8 +3844,8 @@
     "persona_context": "Government / PSU employee receiving 3 years of salary arrears in a single lump sum",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 21A",
@@ -3890,8 +3890,8 @@
     "persona_context": "Salaried employee requesting annual TDS certificate from HR",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 31"
@@ -3948,8 +3948,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 164"
@@ -4012,8 +4012,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 12"
@@ -4064,8 +4064,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 164"
@@ -4128,8 +4128,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 12"
@@ -4180,8 +4180,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 164"
@@ -4244,8 +4244,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 12"
@@ -4296,8 +4296,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 164"
@@ -4360,8 +4360,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 12"
@@ -4412,8 +4412,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 164"
@@ -4476,8 +4476,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 12"
@@ -4528,8 +4528,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 164"
@@ -4592,8 +4592,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 12"
@@ -4644,8 +4644,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 164"
@@ -4708,8 +4708,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 12"
@@ -4760,8 +4760,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 164"
@@ -4824,8 +4824,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 12"
@@ -4876,8 +4876,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 164"
@@ -4940,8 +4940,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 12"
@@ -4992,8 +4992,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 164"
@@ -5056,8 +5056,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 12"
@@ -5108,8 +5108,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 164"
@@ -5172,8 +5172,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 12"
@@ -5224,8 +5224,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 164"
@@ -5288,8 +5288,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 12"
@@ -5340,8 +5340,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 164"
@@ -5404,8 +5404,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2023-24",
+    "expected_ay": "AY 2024-25",
     "is_negative": false,
     "relevant_rules": [
       "Rule 12"
@@ -5456,8 +5456,8 @@
     "persona_context": null,
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "FY 2025-26",
+    "expected_ay": "AY 2026-27",
     "is_negative": false,
     "relevant_rules": [
       "Rule 164"
@@ -5520,8 +5520,8 @@
     "persona_context": "Out-of-scope query regarding corporate MAT provisions",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "Not Applicable",
+    "expected_ay": "Not Applicable",
     "is_negative": true,
     "relevant_rules": [],
     "essential_chunk_ids": [],
@@ -5545,8 +5545,8 @@
     "persona_context": "Out-of-scope query regarding cryptocurrency trading TDS rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "Not Applicable",
+    "expected_ay": "Not Applicable",
     "is_negative": true,
     "relevant_rules": [],
     "essential_chunk_ids": [],
@@ -5570,8 +5570,8 @@
     "persona_context": "Out-of-scope query confusing Income Tax with GST Input Tax Credit",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "Not Applicable",
+    "expected_ay": "Not Applicable",
     "is_negative": true,
     "relevant_rules": [],
     "essential_chunk_ids": [],
@@ -5595,8 +5595,8 @@
     "persona_context": "Out-of-scope query regarding corporate Transfer Pricing rules",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "Not Applicable",
+    "expected_ay": "Not Applicable",
     "is_negative": true,
     "relevant_rules": [],
     "essential_chunk_ids": [],
@@ -5647,8 +5647,8 @@
     "persona_context": "Temporal boundary query testing date prior to rule notification",
     "fy_ay_context": null,
     "temporal_constraint": "Rule 12AC came into force only on 29-04-2022",
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "Not Applicable",
+    "expected_ay": "Not Applicable",
     "is_negative": true,
     "relevant_rules": [
       "Rule 12AC"
@@ -5674,8 +5674,8 @@
     "persona_context": "Out of scope evaluation case",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "Not Applicable",
+    "expected_ay": "Not Applicable",
     "is_negative": true,
     "relevant_rules": [],
     "essential_chunk_ids": [],
@@ -5722,8 +5722,8 @@
     "persona_context": "Out of scope evaluation case",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "Not Applicable",
+    "expected_ay": "Not Applicable",
     "is_negative": true,
     "relevant_rules": [],
     "essential_chunk_ids": [],
@@ -5770,8 +5770,8 @@
     "persona_context": "Out of scope evaluation case",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "Not Applicable",
+    "expected_ay": "Not Applicable",
     "is_negative": true,
     "relevant_rules": [],
     "essential_chunk_ids": [],
@@ -5818,8 +5818,8 @@
     "persona_context": "Out of scope evaluation case",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "Not Applicable",
+    "expected_ay": "Not Applicable",
     "is_negative": true,
     "relevant_rules": [],
     "essential_chunk_ids": [],
@@ -5866,8 +5866,8 @@
     "persona_context": "Out of scope evaluation case",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "Not Applicable",
+    "expected_ay": "Not Applicable",
     "is_negative": true,
     "relevant_rules": [],
     "essential_chunk_ids": [],
@@ -5914,8 +5914,8 @@
     "persona_context": "Out of scope evaluation case",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "Not Applicable",
+    "expected_ay": "Not Applicable",
     "is_negative": true,
     "relevant_rules": [],
     "essential_chunk_ids": [],
@@ -5962,8 +5962,8 @@
     "persona_context": "Out of scope evaluation case",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "Not Applicable",
+    "expected_ay": "Not Applicable",
     "is_negative": true,
     "relevant_rules": [],
     "essential_chunk_ids": [],
@@ -6010,8 +6010,8 @@
     "persona_context": "Out of scope evaluation case",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "Not Applicable",
+    "expected_ay": "Not Applicable",
     "is_negative": true,
     "relevant_rules": [],
     "essential_chunk_ids": [],
@@ -6058,8 +6058,8 @@
     "persona_context": "Out of scope evaluation case",
     "fy_ay_context": null,
     "temporal_constraint": null,
-    "expected_fy": null,
-    "expected_ay": null,
+    "expected_fy": "Not Applicable",
+    "expected_ay": "Not Applicable",
     "is_negative": true,
     "relevant_rules": [],
     "essential_chunk_ids": [],

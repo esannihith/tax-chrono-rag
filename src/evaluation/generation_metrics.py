@@ -8,11 +8,64 @@ class GenerationMetrics:
 
     @staticmethod
     def normalize_citation_str(rule_str: str) -> str:
-        """Extract canonical rule identifier like '12AC', '3(7)(I)', '2BB(1)'."""
+        """Extract canonical rule identifier string like '12AC', '3(7)(I)', '2BB(1)'."""
         clean = re.sub(r"^rule\s*", "", rule_str.strip(), flags=re.IGNORECASE)
-        # Normalize whitespace
         clean = re.sub(r"\s+", "", clean).upper()
         return clean
+
+    @staticmethod
+    def parse_rule_components(rule_str: str) -> Tuple[str, str]:
+        """Parses a statutory rule citation into canonical (base_rule, sub_rule_suffix).
+        
+        Examples:
+            '3' -> ('3', '')
+            '3(1)' -> ('3', '(1)')
+            '3(7)(I)' -> ('3', '(7)(I)')
+            '3A' -> ('3A', '')
+            '12AC' -> ('12AC', '')
+            '12AC(1)' -> ('12AC', '(1)')
+            'Rule 26D' -> ('26D', '')
+            'Rule 114AAA' -> ('114AAA', '')
+        """
+        clean = re.sub(r"^rule\s*", "", rule_str.strip(), flags=re.IGNORECASE)
+        clean = re.sub(r"\s+", "", clean).upper()
+        m = re.match(r"^([0-9]+[A-Z]*)(.*)$", clean)
+        if m:
+            return m.group(1), m.group(2)
+        return clean, ""
+
+    @classmethod
+    def matches_rule_citation(cls, pred_cit: str, gt_cit: str) -> bool:
+        """Determines if a predicted citation correctly satisfies a ground truth citation.
+        
+        Requires:
+        1. Exact match on base rule identifier (e.g. '3' != '30', '3' != '3A', '12' != '12AC').
+        2. Sub-rule consistency:
+           - If GT has no sub-rule specified (e.g. 'Rule 3'), any sub-rule under Rule 3 satisfies it.
+           - If GT specifies a sub-rule (e.g. 'Rule 3(7)(i)'), the prediction must specify the
+             same sub-rule or a compatible parent/child hierarchy. E.g. 'Rule 3(1)' != 'Rule 3(7)(i)'.
+        """
+        p_base, p_sub = cls.parse_rule_components(pred_cit)
+        gt_base, gt_sub = cls.parse_rule_components(gt_cit)
+
+        # 1. Base rule MUST be strictly identical
+        if p_base != gt_base:
+            return False
+
+        # 2. If Ground Truth does not require a specific sub-rule, base match is sufficient
+        if not gt_sub:
+            return True
+
+        # 3. If Ground Truth requires a specific sub-rule, prediction must specify a compatible sub-rule
+        if not p_sub:
+            # Prediction only gave base rule when specific sub-rule was required
+            return False
+
+        # Check sub-rule hierarchy containment (e.g. '(7)(I)' == '(7)(I)', '(7)' parent of '(7)(I)')
+        if p_sub == gt_sub or p_sub in gt_sub or gt_sub in p_sub:
+            return True
+
+        return False
 
     @classmethod
     def compute_citation_metrics(
@@ -20,42 +73,39 @@ class GenerationMetrics:
         predicted_citations: List[StatutoryCitation],
         ground_truth_rules: List[str]
     ) -> Dict[str, float]:
-        """Calculates Citation Precision, Recall, and F1."""
+        """Calculates Citation Precision, Recall, and F1 with strict rule tokenization."""
         if not ground_truth_rules:
-            # If no ground truth rules (e.g. out-of-scope query)
+            # Out-of-scope / negative query
             if len(predicted_citations) == 0:
                 return {"citation_precision": 1.0, "citation_recall": 1.0, "citation_f1": 1.0}
             else:
-                # Hallucinated citations when none apply
                 return {"citation_precision": 0.0, "citation_recall": 0.0, "citation_f1": 0.0}
 
-        pred_set = set()
+        pred_citations_normalized = []
         for c in predicted_citations:
             full_cit = f"{c.rule_id}{c.sub_rule or ''}"
-            pred_set.add(cls.normalize_citation_str(full_cit))
-            pred_set.add(cls.normalize_citation_str(c.rule_id))
+            pred_citations_normalized.append(full_cit)
 
-        gt_set = {cls.normalize_citation_str(r) for r in ground_truth_rules}
+        # Evaluate Ground Truth Recall: which GT rules are satisfied by at least one prediction?
+        matched_gt = set()
+        for gt in ground_truth_rules:
+            for pred in pred_citations_normalized:
+                if cls.matches_rule_citation(pred, gt):
+                    matched_gt.add(gt)
+                    break
 
-        # Check hits: either exact sub-rule match or base rule match
-        tp_rules = set()
-        for gt in gt_set:
-            if gt in pred_set:
-                tp_rules.add(gt)
-            else:
-                # Check base rule prefix match
-                gt_base = re.match(r"^[0-9]+[A-Z]*", gt)
-                if gt_base and any(p.startswith(gt_base.group(0)) for p in pred_set):
-                    tp_rules.add(gt)
+        # Evaluate Prediction Precision: which predicted citations satisfy at least one GT rule?
+        matched_pred_count = 0
+        for pred in pred_citations_normalized:
+            if any(cls.matches_rule_citation(pred, gt) for gt in ground_truth_rules):
+                matched_pred_count += 1
 
-        tp = len(tp_rules)
-        # Unique predicted rule bases
-        pred_base_count = len({re.match(r"^[0-9]+[A-Z]*", p).group(0) for p in pred_set if re.match(r"^[0-9]+[A-Z]*", p)})
-        fp = max(0, pred_base_count - tp)
-        fn = len(gt_set - tp_rules)
+        tp = len(matched_gt)
+        fn = len(ground_truth_rules) - tp
+        total_pred = len(pred_citations_normalized)
 
-        precision = tp / (tp + fp) if (tp + fp) > 0 else (1.0 if len(pred_set) == 0 and len(gt_set) == 0 else 0.0)
-        recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
+        precision = (matched_pred_count / total_pred) if total_pred > 0 else 0.0
+        recall = (tp / len(ground_truth_rules)) if len(ground_truth_rules) > 0 else 0.0
         f1 = (2 * precision * recall) / (precision + recall) if (precision + recall) > 0 else 0.0
 
         return {
@@ -65,14 +115,14 @@ class GenerationMetrics:
         }
 
     @classmethod
-    def compute_criteria_match(
+    def compute_criteria_keyword_coverage(
         cls,
         output: GenerationOutput,
         criteria_list: List[str]
     ) -> Dict[str, Any]:
-        """Evaluates entity and key-phrase adherence against golden evaluation criteria."""
+        """Evaluates entity and key-phrase keyword coverage against curated evaluation criteria."""
         if not criteria_list:
-            return {"criteria_match_rate": 1.0, "matched_criteria": [], "missed_criteria": []}
+            return {"criteria_keyword_coverage_rate": 1.0, "criteria_match_rate": 1.0, "matched_criteria": [], "missed_criteria": []}
 
         full_text = f"{output.direct_answer} {' '.join(output.step_by_step_reasoning)} {output.temporal_applicability}".lower()
 
@@ -98,10 +148,14 @@ class GenerationMetrics:
 
         match_rate = len(matched) / len(criteria_list)
         return {
-            "criteria_match_rate": round(match_rate, 4),
+            "criteria_keyword_coverage_rate": round(match_rate, 4),
+            "criteria_match_rate": round(match_rate, 4),  # backward compatibility alias
             "matched_criteria": matched,
             "missed_criteria": missed
         }
+
+    # Backward compatibility alias
+    compute_criteria_match = compute_criteria_keyword_coverage
 
     @classmethod
     def compute_negative_detection(
@@ -138,27 +192,36 @@ class GenerationMetrics:
         expected_ay: Optional[str] = None,
         expected_fy: Optional[str] = None
     ) -> Dict[str, Any]:
-        """Strictly validates whether the stated AY/FY matches the expected ground-truth year."""
+        """Strictly validates whether the stated AY/FY matches the expected ground-truth year field-by-field."""
         temp_text = f"{output.temporal_applicability} {output.direct_answer}".lower()
         has_temporal_statement = len(output.temporal_applicability.strip()) > 10
 
-        # If expected AY/FY is specified, verify exact match
+        # If expected AY/FY is specified, verify exact field match
         if expected_ay or expected_fy:
-            matches_ay = False
-            matches_fy = False
+            matches_ay = True
+            matches_fy = True
 
             if expected_ay:
                 ay_digits = re.findall(r"\d{4}", expected_ay)
                 if ay_digits:
-                    matches_ay = ay_digits[0] in temp_text
+                    # Require AY or Assessment Year pattern with matching year
+                    ay_pattern = rf"(?:ay|assessment\s+year)[^\d]*{ay_digits[0]}"
+                    matches_ay = bool(re.search(ay_pattern, temp_text)) or (ay_digits[0] in temp_text and "ay" in temp_text)
+                else:
+                    matches_ay = False
 
             if expected_fy:
                 fy_digits = re.findall(r"\d{4}", expected_fy)
                 if fy_digits:
-                    matches_fy = fy_digits[0] in temp_text
+                    # Require FY or Financial Year pattern with matching year
+                    fy_pattern = rf"(?:fy|financial\s+year|previous\s+year)[^\d]*{fy_digits[0]}"
+                    matches_fy = bool(re.search(fy_pattern, temp_text)) or (fy_digits[0] in temp_text and "fy" in temp_text)
+                else:
+                    matches_fy = False
 
+            # Strict conjunction: all specified ground truth temporal constraints must hold
             if expected_ay and expected_fy:
-                correct = (matches_ay or matches_fy) and has_temporal_statement
+                correct = matches_ay and matches_fy and has_temporal_statement
             elif expected_ay:
                 correct = matches_ay and has_temporal_statement
             else:
@@ -167,17 +230,23 @@ class GenerationMetrics:
             score = 1.0 if correct else 0.0
             return {
                 "temporal_validity_score": score,
+                "is_labelled_temporal_case": True,
                 "expected_ay": expected_ay,
                 "expected_fy": expected_fy,
+                "matches_expected_ay": matches_ay,
+                "matches_expected_fy": matches_fy,
                 "verified_correct_year": correct
             }
 
-        # Fallback if no specific expected year in case: check for presence of AY/FY
+        # Fallback for unlabelled cases
         has_date_or_year = bool(re.search(r"(?:ay|fy|assessment\s+year|financial\s+year|[0-9]{4}-[0-9]{2,4})", temp_text))
         score = 1.0 if (has_temporal_statement and has_date_or_year) else (0.5 if has_temporal_statement else 0.0)
 
         return {
             "temporal_validity_score": score,
-            "has_date_or_year": has_date_or_year
+            "is_labelled_temporal_case": False,
+            "has_date_or_year": has_date_or_year,
+            "verified_correct_year": score == 1.0
         }
+
 

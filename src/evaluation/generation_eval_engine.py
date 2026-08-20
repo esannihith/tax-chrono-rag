@@ -23,14 +23,23 @@ class GenerationEvaluationEngine:
     def get_git_commit_sha() -> str:
         try:
             res = subprocess.run(
-                ["git", "rev-parse", "HEAD"],
+                ["git", "describe", "--always", "--dirty"],
                 capture_output=True,
                 text=True,
                 check=True
             )
             return res.stdout.strip()
         except Exception:
-            return "uncommitted_or_non_git"
+            try:
+                res = subprocess.run(
+                    ["git", "rev-parse", "HEAD"],
+                    capture_output=True,
+                    text=True,
+                    check=True
+                )
+                return res.stdout.strip()
+            except Exception:
+                return "uncommitted_or_non_git"
 
     @staticmethod
     def compute_file_sha256(filepath: str) -> str:
@@ -92,13 +101,13 @@ class GenerationEvaluationEngine:
                     ground_truth_rules=case.relevant_rules
                 )
 
-                # 2. Criteria Match Metrics
-                crit_metrics = GenerationMetrics.compute_criteria_match(
+                # 2. Criteria Keyword Coverage Metrics
+                crit_metrics = GenerationMetrics.compute_criteria_keyword_coverage(
                     output=output,
                     criteria_list=case.evaluation_criteria
                 )
 
-                # 3. Temporal Validity
+                # 3. Strict Temporal Validity
                 temp_metrics = GenerationMetrics.compute_temporal_validity(
                     output=output,
                     expected_ay=case.expected_ay,
@@ -113,7 +122,7 @@ class GenerationEvaluationEngine:
 
                 # Composite score per case
                 case_score = (
-                    0.35 * crit_metrics["criteria_match_rate"] +
+                    0.35 * crit_metrics["criteria_keyword_coverage_rate"] +
                     0.30 * cit_metrics["citation_recall"] +
                     0.20 * cit_metrics["citation_precision"] +
                     0.15 * temp_metrics["temporal_validity_score"]
@@ -134,10 +143,13 @@ class GenerationEvaluationEngine:
                     "citation_precision": cit_metrics["citation_precision"],
                     "citation_recall": cit_metrics["citation_recall"],
                     "citation_f1": cit_metrics["citation_f1"],
-                    "criteria_match_rate": crit_metrics["criteria_match_rate"],
+                    "criteria_keyword_coverage_rate": crit_metrics["criteria_keyword_coverage_rate"],
+                    "criteria_match_rate": crit_metrics["criteria_keyword_coverage_rate"],
                     "matched_criteria": crit_metrics["matched_criteria"],
                     "missed_criteria": crit_metrics["missed_criteria"],
                     "temporal_validity_score": temp_metrics["temporal_validity_score"],
+                    "is_labelled_temporal_case": temp_metrics.get("is_labelled_temporal_case", False),
+                    "verified_correct_year": temp_metrics.get("verified_correct_year", False),
                     "negative_handling_correct": neg_metrics["negative_handling_correct"],
                     "is_out_of_scope": output.is_out_of_scope,
                     "composite_score": round(case_score, 4)
@@ -156,8 +168,11 @@ class GenerationEvaluationEngine:
                     "citation_precision": 0.0,
                     "citation_recall": 0.0,
                     "citation_f1": 0.0,
+                    "criteria_keyword_coverage_rate": 0.0,
                     "criteria_match_rate": 0.0,
                     "temporal_validity_score": 0.0,
+                    "is_labelled_temporal_case": False,
+                    "verified_correct_year": False,
                     "negative_handling_correct": False
                 })
 
@@ -170,10 +185,16 @@ class GenerationEvaluationEngine:
         mean_cit_prec = float(np.mean([r.get("citation_precision", 0) for r in per_case_results]))
         mean_cit_rec = float(np.mean([r.get("citation_recall", 0) for r in per_case_results]))
         mean_cit_f1 = float(np.mean([r.get("citation_f1", 0) for r in per_case_results]))
-        mean_crit_match = float(np.mean([r.get("criteria_match_rate", 0) for r in per_case_results]))
+        mean_crit_cov = float(np.mean([r.get("criteria_keyword_coverage_rate", 0) for r in per_case_results]))
         mean_temp_val = float(np.mean([r.get("temporal_validity_score", 0) for r in per_case_results]))
         mean_composite = float(np.mean([r.get("composite_score", 0) for r in per_case_results]))
         
+        # Strict temporal validation subset
+        labelled_temp_cases = [r for r in per_case_results if r.get("is_labelled_temporal_case", False)]
+        strict_temp_acc = (
+            sum(1 for r in labelled_temp_cases if r.get("verified_correct_year", False)) / len(labelled_temp_cases)
+        ) if labelled_temp_cases else 1.0
+
         # Negative / Abstention accuracy
         neg_cases = [r for r in per_case_results if r.get("is_negative", False)]
         neg_accuracy = (sum(1 for r in neg_cases if r.get("negative_handling_correct", False)) / len(neg_cases)) if neg_cases else 1.0
@@ -186,13 +207,13 @@ class GenerationEvaluationEngine:
                 query_type_breakdown[qt] = {"count": 0, "scores": [], "criteria_matches": []}
             query_type_breakdown[qt]["count"] += 1
             query_type_breakdown[qt]["scores"].append(r.get("composite_score", 0))
-            query_type_breakdown[qt]["criteria_matches"].append(r.get("criteria_match_rate", 0))
+            query_type_breakdown[qt]["criteria_matches"].append(r.get("criteria_keyword_coverage_rate", 0))
 
         qt_summary = {
             qt: {
                 "count": data["count"],
                 "mean_composite_score": round(float(np.mean(data["scores"])), 4),
-                "mean_criteria_match": round(float(np.mean(data["criteria_matches"])), 4)
+                "mean_criteria_keyword_coverage": round(float(np.mean(data["criteria_matches"])), 4)
             }
             for qt, data in query_type_breakdown.items()
         }
@@ -224,14 +245,17 @@ class GenerationEvaluationEngine:
             },
             "suite": Path(suite_path).name,
             "total_cases_evaluated": len(per_case_results),
+            "labelled_temporal_cases_count": len(labelled_temp_cases),
+            "unlabelled_temporal_cases_count": len(per_case_results) - len(labelled_temp_cases),
             "negative_cases_count": len(neg_cases),
             "elapsed_seconds": round(elapsed, 2),
             "mean_composite_score": round(mean_composite, 4),
-            "mean_criteria_match_rate": round(mean_crit_match, 4),
+            "mean_criteria_keyword_coverage": round(mean_crit_cov, 4),
             "mean_citation_precision": round(mean_cit_prec, 4),
             "mean_citation_recall": round(mean_cit_rec, 4),
             "mean_citation_f1": round(mean_cit_f1, 4),
             "mean_temporal_validity_score": round(mean_temp_val, 4),
+            "strict_temporal_accuracy": round(strict_temp_acc, 4),
             "negative_abstention_accuracy": round(neg_accuracy, 4),
             "query_type_breakdown": qt_summary,
             "regime_breakdown": reg_summary,
@@ -239,4 +263,5 @@ class GenerationEvaluationEngine:
         }
 
         return summary
+
 
