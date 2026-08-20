@@ -82,10 +82,20 @@ def main():
     parser.add_argument("--transport", choices=["stdio", "sse", "test"], default="stdio", help="MCP transport mode (stdio, sse, or test)")
     parser.add_argument("--port", type=int, default=8000, help="Port for SSE transport (default: 8000)")
     parser.add_argument("--host", type=str, default="127.0.0.1", help="Host for SSE transport (default: 127.0.0.1)")
+    parser.add_argument("--analyze-telemetry", action="store_true", help="Print statistical summary report of MCP query telemetry")
+    parser.add_argument("--export-telemetry", type=str, default=None, help="Export logged queries to standard RAG evaluation JSON suite path")
 
     args = parser.parse_args()
 
-    if args.transport == "test":
+    if args.analyze_telemetry:
+        from src.evaluation.telemetry_analyzer import print_telemetry_summary
+        print_telemetry_summary()
+    elif args.export_telemetry:
+        from src.evaluation.telemetry_analyzer import MCPTelemetryAnalyzer
+        analyzer = MCPTelemetryAnalyzer()
+        res = analyzer.export_to_eval_suite(args.export_telemetry)
+        print(f"Exported {res['exported_cases_count']} evaluation cases to {res['output_path']}")
+    elif args.transport == "test":
         run_self_test()
     elif args.transport == "sse":
         print(f"Starting FastMCP Server on http://{args.host}:{args.port}/sse ...")

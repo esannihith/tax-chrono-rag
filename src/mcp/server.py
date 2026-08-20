@@ -1,4 +1,5 @@
 import os
+import time
 import json
 from pathlib import Path
 from typing import Dict, Any, List, Optional
@@ -10,6 +11,7 @@ from src.enrichment.normalizer import TaxEntityNormalizer
 from src.generation.pipeline import GenerationPipeline
 from src.generation.models import GenerationOutput
 from src.mcp.calculators import PerquisiteCalculator
+from src.mcp.telemetry import telemetry_logger
 
 # Instantiate FastMCP server
 mcp = FastMCP(
@@ -78,6 +80,7 @@ def search_tax_rules(
         ay_year: Assessment Year mentioned by user (e.g. '2024-25').
         top_k: Number of statutory chunks to retrieve (default: 5).
     """
+    start_time = time.perf_counter()
     store = get_store()
     embedder = get_embedder()
 
@@ -96,6 +99,8 @@ def search_tax_rules(
     )
 
     retrieved_items = []
+    chunk_ids = []
+    stat_paths = []
     for r in results:
         meta = r.payload.metadata or {}
         retrieved_items.append({
@@ -107,8 +112,12 @@ def search_tax_rules(
             "hybrid_score": round(r.score, 4),
             "content": r.payload.display_content
         })
+        chunk_ids.append(r.chunk_id)
+        stat_paths.append(r.payload.statutory_path)
 
-    return {
+    duration_ms = (time.perf_counter() - start_time) * 1000.0
+
+    output = {
         "query": query,
         "normalized_dense_query": norm_query.dense_query,
         "resolved_temporal": {
@@ -119,6 +128,22 @@ def search_tax_rules(
         "total_retrieved": len(retrieved_items),
         "results": retrieved_items
     }
+
+    # Non-blocking telemetry log
+    telemetry_logger.log_event(
+        tool_name="search_tax_rules",
+        inputs={"query": query, "target_regime": target_regime, "top_k": top_k, "fy_year": fy_year, "ay_year": ay_year},
+        outputs=output,
+        retrieved_chunk_ids=chunk_ids,
+        retrieved_statutory_paths=stat_paths,
+        detected_fy=norm_query.detected_fy or fy_year,
+        detected_ay=norm_query.detected_ay or ay_year,
+        target_regime=resolved_regime,
+        duration_ms=duration_ms,
+        success=True
+    )
+
+    return output
 
 
 # ==============================================================================
@@ -135,6 +160,7 @@ def get_rule_details(
         rule_id: Rule number (e.g. '3', '12AC', '2BB', '114B', '26C').
         regime: '1962' for Income-tax Rules, 1962 or '2026' for Draft Rules, 2026.
     """
+    start_time = time.perf_counter()
     clean_id = rule_id.upper().replace("RULE", "").replace("SEC", "").strip()
     all_chunks = get_all_chunks()
     target_year = "2026" if "2026" in regime else "1962"
@@ -145,16 +171,30 @@ def get_rule_details(
         if str(c.get("metadata", {}).get("rule_id", "")).upper() == clean_id
     ]
 
+    duration_ms = (time.perf_counter() - start_time) * 1000.0
+
     if not matching_chunks:
-        return {
+        output = {
             "rule_id": clean_id,
             "regime": target_year,
             "found": False,
             "message": f"Rule '{clean_id}' not found in Income-tax Rules, {target_year} index."
         }
+        telemetry_logger.log_event(
+            tool_name="get_rule_details",
+            inputs={"rule_id": rule_id, "regime": regime},
+            outputs=output,
+            target_regime=target_year,
+            duration_ms=duration_ms,
+            success=False
+        )
+        return output
 
     first_meta = matching_chunks[0].get("metadata", {})
-    return {
+    chunk_ids = [c.get("chunk_id") for c in matching_chunks]
+    stat_paths = [c.get("metadata", {}).get("statutory_path", "") for c in matching_chunks]
+
+    output = {
         "rule_id": clean_id,
         "regime": target_year,
         "found": True,
@@ -171,6 +211,19 @@ def get_rule_details(
         ]
     }
 
+    telemetry_logger.log_event(
+        tool_name="get_rule_details",
+        inputs={"rule_id": rule_id, "regime": regime},
+        outputs=output,
+        retrieved_chunk_ids=chunk_ids,
+        retrieved_statutory_paths=stat_paths,
+        target_regime=target_year,
+        duration_ms=duration_ms,
+        success=True
+    )
+
+    return output
+
 
 # ==============================================================================
 # TOOL 3: COMPARE STATUTORY REGIMES (1962 VS DRAFT 2026)
@@ -186,6 +239,7 @@ def compare_regimes(
         topic: Subject to compare (e.g. 'rent free accommodation', 'car perquisite', 'interest free loan', 'ITR filing forms').
         top_k_per_regime: Number of statutory chunks to retrieve from each regime (default: 2).
     """
+    start_time = time.perf_counter()
     store = get_store()
     embedder = get_embedder()
 
@@ -210,7 +264,11 @@ def compare_regimes(
         corpus_year_filter=2026
     )
 
-    return {
+    chunk_ids = [r.chunk_id for r in res_1962] + [r.chunk_id for r in res_2026]
+    stat_paths = [r.payload.statutory_path for r in res_1962] + [r.payload.statutory_path for r in res_2026]
+    duration_ms = (time.perf_counter() - start_time) * 1000.0
+
+    output = {
         "topic": topic,
         "comparison": {
             "income_tax_rules_1962": [
@@ -235,6 +293,18 @@ def compare_regimes(
         "key_transition_summary": "Draft Rules 2026 streamline tables into standardized schedules and eliminate redundant historical provisos."
     }
 
+    telemetry_logger.log_event(
+        tool_name="compare_regimes",
+        inputs={"topic": topic, "top_k_per_regime": top_k_per_regime},
+        outputs=output,
+        retrieved_chunk_ids=chunk_ids,
+        retrieved_statutory_paths=stat_paths,
+        duration_ms=duration_ms,
+        success=True
+    )
+
+    return output
+
 
 # ==============================================================================
 # TOOL 4: RESOLVE TAX YEAR (AY VS FY ARITHMETIC)
@@ -248,6 +318,7 @@ def resolve_tax_year(
     Args:
         year_input: Any temporal mention (e.g. 'FY 2023-24', 'AY 2024-25', '2023-2024', '2025').
     """
+    start_time = time.perf_counter()
     import re
     norm = TaxEntityNormalizer.normalize_query(year_input)
     fy = norm.detected_fy
@@ -268,8 +339,9 @@ def resolve_tax_year(
             ay = "Unknown"
 
     regime = "2026" if ("2026" in str(ay) or "2027" in str(ay) or "2026" in str(fy)) else "1962"
+    duration_ms = (time.perf_counter() - start_time) * 1000.0
 
-    return {
+    output = {
         "input_string": year_input,
         "resolved_financial_year": fy,
         "resolved_assessment_year": ay,
@@ -280,6 +352,19 @@ def resolve_tax_year(
             "legal_precedence": "In Indian tax jurisprudence, AY is always FY + 1."
         }
     }
+
+    telemetry_logger.log_event(
+        tool_name="resolve_tax_year",
+        inputs={"year_input": year_input},
+        outputs=output,
+        detected_fy=fy,
+        detected_ay=ay,
+        target_regime=regime,
+        duration_ms=duration_ms,
+        success=True
+    )
+
+    return output
 
 
 # ==============================================================================
@@ -298,19 +383,31 @@ def verify_effective_date(
         date_or_ay: Date string ('2020-04-01') or Assessment Year ('AY 2021-22').
         regime: '1962' or '2026'.
     """
+    start_time = time.perf_counter()
     clean_id = rule_id.upper().replace("RULE", "").strip()
     all_chunks = get_all_chunks()
     target_year = "2026" if "2026" in regime else "1962"
     chunks = all_chunks.get(target_year, [])
 
     matching = [c for c in chunks if str(c.get("metadata", {}).get("rule_id", "")).upper() == clean_id]
+    duration_ms = (time.perf_counter() - start_time) * 1000.0
+
     if not matching:
-        return {
+        output = {
             "rule_id": clean_id,
             "regime": target_year,
             "status": "not_found",
             "message": f"Rule {clean_id} is not in the {target_year} corpus."
         }
+        telemetry_logger.log_event(
+            tool_name="verify_effective_date",
+            inputs={"rule_id": rule_id, "date_or_ay": date_or_ay, "regime": regime},
+            outputs=output,
+            target_regime=target_year,
+            duration_ms=duration_ms,
+            success=False
+        )
+        return output
 
     eff_date = matching[0].get("metadata", {}).get("effective_date", "Standard statutory commencement")
     
@@ -324,7 +421,7 @@ def verify_effective_date(
             in_force = False
             scope_note = "Rule 12AC was inserted w.e.f. 29-04-2022 and was NOT in force for periods prior to AY 2022-23."
 
-    return {
+    output = {
         "rule_id": clean_id,
         "regime": target_year,
         "queried_period": date_or_ay,
@@ -332,6 +429,17 @@ def verify_effective_date(
         "is_in_force_for_period": in_force,
         "scope_note": scope_note
     }
+
+    telemetry_logger.log_event(
+        tool_name="verify_effective_date",
+        inputs={"rule_id": rule_id, "date_or_ay": date_or_ay, "regime": regime},
+        outputs=output,
+        target_regime=target_year,
+        duration_ms=duration_ms,
+        success=True
+    )
+
+    return output
 
 
 # ==============================================================================
@@ -347,17 +455,14 @@ def calculate_perquisite(
     
     Args:
         perquisite_type: One of 'rent_free_accommodation', 'motor_car', 'interest_free_loan', 'free_food'.
-        parameters: Dictionary of numerical inputs for the perquisite calculation:
-            - rent_free_accommodation: {'salary_for_period': float, 'population_tier': '>40L'|'15L-40L'|'<=15L', 'is_owned_by_employer': bool, 'actual_lease_rent_paid': float, 'is_furnished': bool, 'furniture_original_cost': float, 'amount_recovered': float}
-            - motor_car: {'cubic_capacity_cc': int, 'is_employer_owned_or_hired': bool, 'is_employer_expenses_met': bool, 'usage_type': 'mixed'|'official'|'personal', 'is_driver_provided': bool, 'months_used': int, 'amount_recovered': float}
-            - interest_free_loan: {'max_outstanding_monthly_balance': float, 'actual_interest_rate_charged_pct': float, 'sbi_benchmark_rate_pct': float, 'is_medical_treatment_specified_disease': bool, 'months_outstanding': int}
-            - free_food: {'cost_per_meal': float, 'num_meals_per_day': int, 'working_days': int, 'amount_recovered_per_meal': float}
+        parameters: Dictionary of numerical inputs for the perquisite calculation.
         regime: '1962' or '2026'.
     """
+    start_time = time.perf_counter()
     ptype = perquisite_type.lower().strip()
 
     if ptype in ["rent_free_accommodation", "accommodation", "rfa"]:
-        return PerquisiteCalculator.calculate_rent_free_accommodation(
+        result = PerquisiteCalculator.calculate_rent_free_accommodation(
             salary_for_period=float(parameters.get("salary_for_period", 0.0)),
             is_government_employee=bool(parameters.get("is_government_employee", False)),
             government_license_fee=float(parameters.get("government_license_fee", 0.0)),
@@ -371,7 +476,7 @@ def calculate_perquisite(
             regime=regime
         )
     elif ptype in ["motor_car", "car", "vehicle"]:
-        return PerquisiteCalculator.calculate_motor_car(
+        result = PerquisiteCalculator.calculate_motor_car(
             cubic_capacity_cc=int(parameters.get("cubic_capacity_cc", 1500)),
             is_employer_owned_or_hired=bool(parameters.get("is_employer_owned_or_hired", True)),
             is_employer_expenses_met=bool(parameters.get("is_employer_expenses_met", True)),
@@ -384,7 +489,7 @@ def calculate_perquisite(
             regime=regime
         )
     elif ptype in ["interest_free_loan", "loan", "concessional_loan"]:
-        return PerquisiteCalculator.calculate_interest_free_loan(
+        result = PerquisiteCalculator.calculate_interest_free_loan(
             max_outstanding_monthly_balance=float(parameters.get("max_outstanding_monthly_balance", parameters.get("loan_amount", 0.0))),
             actual_interest_rate_charged_pct=float(parameters.get("actual_interest_rate_charged_pct", 0.0)),
             sbi_benchmark_rate_pct=float(parameters.get("sbi_benchmark_rate_pct", 8.5)),
@@ -395,7 +500,7 @@ def calculate_perquisite(
             regime=regime
         )
     elif ptype in ["free_food", "food", "beverages", "meal"]:
-        return PerquisiteCalculator.calculate_free_food(
+        result = PerquisiteCalculator.calculate_free_food(
             cost_per_meal=float(parameters.get("cost_per_meal", 80.0)),
             num_meals_per_day=int(parameters.get("num_meals_per_day", 1)),
             working_days=int(parameters.get("working_days", 250)),
@@ -405,10 +510,23 @@ def calculate_perquisite(
             regime=regime
         )
     else:
-        return {
+        result = {
             "error": f"Unsupported perquisite type '{perquisite_type}'.",
             "supported_types": ["rent_free_accommodation", "motor_car", "interest_free_loan", "free_food"]
         }
+
+    duration_ms = (time.perf_counter() - start_time) * 1000.0
+
+    telemetry_logger.log_event(
+        tool_name="calculate_perquisite",
+        inputs={"perquisite_type": perquisite_type, "parameters": parameters, "regime": regime},
+        outputs=result,
+        target_regime=regime,
+        duration_ms=duration_ms,
+        success="error" not in result
+    )
+
+    return result
 
 
 # ==============================================================================
@@ -427,13 +545,29 @@ def ask_tax_copilot(
         persona_context: Persona description (e.g. 'Senior Citizen', 'Salaried Central Govt Employee', 'Blind Individual').
         target_regime: '1962', '2026', or 'auto'.
     """
+    start_time = time.perf_counter()
     pipeline = get_pipeline()
     output: GenerationOutput = pipeline.run(
         query=query,
         persona_context=persona_context,
         target_regime=target_regime
     )
-    return output.model_dump()
+    result_dict = output.model_dump()
+    duration_ms = (time.perf_counter() - start_time) * 1000.0
+
+    citations = [f"Rule {c.rule_id}{c.sub_rule or ''}" for c in output.statutory_citations]
+
+    telemetry_logger.log_event(
+        tool_name="ask_tax_copilot",
+        inputs={"query": query, "persona_context": persona_context, "target_regime": target_regime},
+        outputs=result_dict,
+        retrieved_statutory_paths=[c.statutory_path for c in output.statutory_citations if c.statutory_path],
+        duration_ms=duration_ms,
+        success=True,
+        metadata={"confidence_score": output.confidence_score, "is_out_of_scope": output.is_out_of_scope}
+    )
+
+    return result_dict
 
 
 # Stdio runner entry point

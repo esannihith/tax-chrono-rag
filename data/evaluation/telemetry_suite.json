@@ -1,0 +1,2108 @@
+[
+  {
+    "id": "telemetry_q_001",
+    "query": "rent free accommodation census population",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "both",
+    "financial_year": null,
+    "assessment_year": null,
+    "expected_chunks": [
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_2026_rule_15_rule_15_table_1_98"
+    ],
+    "expected_statutory_paths": [
+      "Rule 15 > (2)",
+      "Rule 3 > Table 1",
+      "Rule 15 > Table 1"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_002",
+    "query": "test query 0",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_0_1",
+      "chunk_0_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 0 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_003",
+    "query": "test query 1",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_1_1",
+      "chunk_1_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 1 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_004",
+    "query": "test query 2",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_2_1",
+      "chunk_2_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 2 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_005",
+    "query": "test query 3",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_3_1",
+      "chunk_3_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 3 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_006",
+    "query": "test query 4",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_4_1",
+      "chunk_4_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 4 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_007",
+    "query": "test query 5",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_5_1",
+      "chunk_5_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 5 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_008",
+    "query": "test query 6",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_6_1",
+      "chunk_6_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 6 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_009",
+    "query": "test query 7",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_7_1",
+      "chunk_7_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 7 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_010",
+    "query": "test query 8",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_8_1",
+      "chunk_8_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 8 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_011",
+    "query": "test query 9",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_9_1",
+      "chunk_9_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 9 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_012",
+    "query": "test query 10",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_10_1",
+      "chunk_10_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 10 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_013",
+    "query": "test query 11",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_11_1",
+      "chunk_11_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 11 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_014",
+    "query": "test query 12",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_12_1",
+      "chunk_12_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 12 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_015",
+    "query": "test query 13",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_13_1",
+      "chunk_13_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 13 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_016",
+    "query": "test query 14",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_14_1",
+      "chunk_14_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 14 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_017",
+    "query": "test query 15",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_15_1",
+      "chunk_15_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 15 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_018",
+    "query": "test query 16",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_16_1",
+      "chunk_16_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 16 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_019",
+    "query": "test query 17",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_17_1",
+      "chunk_17_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 17 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_020",
+    "query": "test query 18",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_18_1",
+      "chunk_18_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 18 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_021",
+    "query": "test query 19",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_19_1",
+      "chunk_19_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 19 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_022",
+    "query": "test query 20",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_20_1",
+      "chunk_20_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 20 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_023",
+    "query": "test query 21",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_21_1",
+      "chunk_21_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 21 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_024",
+    "query": "test query 22",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_22_1",
+      "chunk_22_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 22 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_025",
+    "query": "test query 23",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_23_1",
+      "chunk_23_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 23 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_026",
+    "query": "test query 24",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_24_1",
+      "chunk_24_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 24 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_027",
+    "query": "test query 25",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_25_1",
+      "chunk_25_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 25 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_028",
+    "query": "test query 26",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_26_1",
+      "chunk_26_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 26 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_029",
+    "query": "test query 27",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_27_1",
+      "chunk_27_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 27 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_030",
+    "query": "test query 28",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_28_1",
+      "chunk_28_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 28 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_031",
+    "query": "test query 29",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_29_1",
+      "chunk_29_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 29 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_032",
+    "query": "test query 30",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_30_1",
+      "chunk_30_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 30 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_033",
+    "query": "test query 31",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_31_1",
+      "chunk_31_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 31 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_034",
+    "query": "test query 32",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_32_1",
+      "chunk_32_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 32 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_035",
+    "query": "test query 33",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_33_1",
+      "chunk_33_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 33 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_036",
+    "query": "test query 34",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_34_1",
+      "chunk_34_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 34 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_037",
+    "query": "test query 35",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_35_1",
+      "chunk_35_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 35 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_038",
+    "query": "test query 36",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_36_1",
+      "chunk_36_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 36 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_039",
+    "query": "test query 37",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_37_1",
+      "chunk_37_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 37 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_040",
+    "query": "test query 38",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_38_1",
+      "chunk_38_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 38 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_041",
+    "query": "test query 39",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_39_1",
+      "chunk_39_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 39 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_042",
+    "query": "test query 40",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_40_1",
+      "chunk_40_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 40 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_043",
+    "query": "test query 41",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_41_1",
+      "chunk_41_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 41 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_044",
+    "query": "test query 42",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_42_1",
+      "chunk_42_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 42 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_045",
+    "query": "test query 43",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_43_1",
+      "chunk_43_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 43 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_046",
+    "query": "test query 44",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_44_1",
+      "chunk_44_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 44 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_047",
+    "query": "test query 45",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_45_1",
+      "chunk_45_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 45 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_048",
+    "query": "test query 46",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_46_1",
+      "chunk_46_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 46 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_049",
+    "query": "test query 47",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_47_1",
+      "chunk_47_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 47 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_050",
+    "query": "test query 48",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_48_1",
+      "chunk_48_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 48 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_051",
+    "query": "test query 49",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_49_1",
+      "chunk_49_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 49 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_052",
+    "query": "test query 50",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_50_1",
+      "chunk_50_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 50 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_053",
+    "query": "test query 51",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_51_1",
+      "chunk_51_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 51 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_054",
+    "query": "test query 52",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_52_1",
+      "chunk_52_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 52 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_055",
+    "query": "test query 53",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_53_1",
+      "chunk_53_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 53 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_056",
+    "query": "test query 54",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_54_1",
+      "chunk_54_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 54 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_057",
+    "query": "test query 55",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_55_1",
+      "chunk_55_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 55 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_058",
+    "query": "test query 56",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_56_1",
+      "chunk_56_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 56 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_059",
+    "query": "test query 57",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_57_1",
+      "chunk_57_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 57 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_060",
+    "query": "test query 58",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_58_1",
+      "chunk_58_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 58 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_061",
+    "query": "test query 59",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_59_1",
+      "chunk_59_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 59 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_062",
+    "query": "test query 60",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_60_1",
+      "chunk_60_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 60 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_063",
+    "query": "test query 61",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_61_1",
+      "chunk_61_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 61 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_064",
+    "query": "test query 62",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_62_1",
+      "chunk_62_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 62 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_065",
+    "query": "test query 63",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_63_1",
+      "chunk_63_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 63 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_066",
+    "query": "test query 64",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_64_1",
+      "chunk_64_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 64 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_067",
+    "query": "test query 65",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_65_1",
+      "chunk_65_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 65 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_068",
+    "query": "test query 66",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_66_1",
+      "chunk_66_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 66 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_069",
+    "query": "test query 67",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_67_1",
+      "chunk_67_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 67 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_070",
+    "query": "test query 68",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_68_1",
+      "chunk_68_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 68 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_071",
+    "query": "test query 69",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_69_1",
+      "chunk_69_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 69 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_072",
+    "query": "test query 70",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_70_1",
+      "chunk_70_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 70 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_073",
+    "query": "test query 71",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_71_1",
+      "chunk_71_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 71 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_074",
+    "query": "test query 72",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_72_1",
+      "chunk_72_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 72 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_075",
+    "query": "test query 73",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_73_1",
+      "chunk_73_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 73 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_076",
+    "query": "test query 74",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_74_1",
+      "chunk_74_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 74 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_077",
+    "query": "test query 75",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_75_1",
+      "chunk_75_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 75 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_078",
+    "query": "test query 76",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_76_1",
+      "chunk_76_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 76 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_079",
+    "query": "test query 77",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_77_1",
+      "chunk_77_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 77 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_080",
+    "query": "test query 78",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_78_1",
+      "chunk_78_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 78 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_081",
+    "query": "test query 79",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_79_1",
+      "chunk_79_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 79 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_082",
+    "query": "test query 80",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_80_1",
+      "chunk_80_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 80 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_083",
+    "query": "test query 81",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_81_1",
+      "chunk_81_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 81 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_084",
+    "query": "test query 82",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_82_1",
+      "chunk_82_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 82 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_085",
+    "query": "test query 83",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_83_1",
+      "chunk_83_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 83 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_086",
+    "query": "test query 84",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_84_1",
+      "chunk_84_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 84 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_087",
+    "query": "test query 85",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_85_1",
+      "chunk_85_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 85 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_088",
+    "query": "test query 86",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_86_1",
+      "chunk_86_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 86 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_089",
+    "query": "test query 87",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_87_1",
+      "chunk_87_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 87 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_090",
+    "query": "test query 88",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_88_1",
+      "chunk_88_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 88 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_091",
+    "query": "test query 89",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_89_1",
+      "chunk_89_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 89 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_092",
+    "query": "test query 90",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_90_1",
+      "chunk_90_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 90 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_093",
+    "query": "test query 91",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_91_1",
+      "chunk_91_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 91 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_094",
+    "query": "test query 92",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_92_1",
+      "chunk_92_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 92 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_095",
+    "query": "test query 93",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_93_1",
+      "chunk_93_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 93 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_096",
+    "query": "test query 94",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_94_1",
+      "chunk_94_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 94 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_097",
+    "query": "test query 95",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_95_1",
+      "chunk_95_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 95 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_098",
+    "query": "test query 96",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_96_1",
+      "chunk_96_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 96 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_099",
+    "query": "test query 97",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_97_1",
+      "chunk_97_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 97 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_100",
+    "query": "test query 98",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_98_1",
+      "chunk_98_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 98 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_101",
+    "query": "test query 99",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "chunk_99_1",
+      "chunk_99_2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 99 > Sub-rule (1)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_102",
+    "query": "interest free loan perquisite valuation",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "1962",
+    "financial_year": "FY 2023-2024",
+    "assessment_year": "AY 2024-2025",
+    "expected_chunks": [
+      "1962_rule3_sub7_clause_i_p1",
+      "1962_rule3_sub7_clause_i_p2"
+    ],
+    "expected_statutory_paths": [
+      "Rule 3 > Sub-rule (7) > Clause (i) > Proviso 1"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_103",
+    "query": "perquisite car motor vehicle",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": null,
+    "financial_year": null,
+    "assessment_year": null,
+    "expected_chunks": [
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_2026_rule_15_rule_15_subrule_3_24"
+    ],
+    "expected_statutory_paths": [
+      "Rule 3 > (3)",
+      "Rule 15 > (3)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using compare_regimes.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_104",
+    "query": "interest free loan valuation",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": "both",
+    "financial_year": null,
+    "assessment_year": null,
+    "expected_chunks": [
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_1962_rule_3_rule_3_subrule_7_49"
+    ],
+    "expected_statutory_paths": [
+      "Rule 15 > Table 5",
+      "Rule 3 > (7)"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using search_tax_rules.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  },
+  {
+    "id": "telemetry_q_105",
+    "query": "rent free accommodation",
+    "persona": "Salaried Individual",
+    "query_type": "telemetry_user_query",
+    "target_regime": null,
+    "financial_year": null,
+    "assessment_year": null,
+    "expected_chunks": [
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_2026_rule_15_rule_15_table_1_98"
+    ],
+    "expected_statutory_paths": [
+      "Rule 3 > Table 1",
+      "Rule 15 > Table 1"
+    ],
+    "evaluation_criteria": [
+      "Grounded response retrieved using compare_regimes.",
+      "Cites applicable statutory sub-rules and provisos."
+    ]
+  }
+]

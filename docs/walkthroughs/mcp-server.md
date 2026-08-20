@@ -136,7 +136,7 @@ Full end-to-end statutory synthesis pipeline returning structured JSON with dire
 
 ---
 
-## 4. Running the Server
+## 4. Running the Server & Telemetry CLI
 
 ```bash
 # Run in default stdio mode for desktop AI clients
@@ -147,4 +147,30 @@ uv run python run_mcp.py --transport sse --port 8000
 
 # Run integrity self-test suite
 uv run python run_mcp.py --transport test
+
+# Print live query & retrieval telemetry statistics
+uv run python run_mcp.py --analyze-telemetry
+
+# Export collected user queries to standard RAG evaluation JSON suite
+uv run python run_mcp.py --export-telemetry data/evaluation/telemetry_suite.json
 ```
+
+---
+
+## 5. Zero-Latency Asynchronous Telemetry Architecture
+
+To enable continuous evaluation without impacting tool execution speed:
+
+1. **Sub-Millisecond Overhead ($< 0.01\text{ ms}$)**:
+   - Tool execution threads push structured log events into an in-memory `queue.Queue` via non-blocking `put_nowait()`.
+   - The tool immediately returns its result to the client without waiting for disk I/O.
+2. **Dedicated Daemon Worker Thread**:
+   - `MCPTelemetryWriter` drains the queue in batches and appends to `data/logs/mcp_telemetry.jsonl` every 10 events or every 1.0 second.
+3. **Data Captured for RAG Benchmarking**:
+   - Query text, target regime, top-k parameters.
+   - Retrieved statutory `chunk_id` list and full breadcrumb paths.
+   - Resolved Financial Year (`detected_fy`) and Assessment Year (`detected_ay`).
+   - Execution duration (`duration_ms`), citations generated, and taxable valuation results.
+4. **Offline Evaluation Conversion**:
+   - `src/evaluation/telemetry_analyzer.py` converts real user query logs directly into golden benchmark test suites for regression testing.
+

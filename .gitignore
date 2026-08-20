@@ -9,3 +9,6 @@ wheels/
 # Virtual environments
 .venv
 .env
+
+# Runtime Telemetry Logs
+data/logs/*.jsonl
