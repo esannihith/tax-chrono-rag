@@ -1,5 +1,8 @@
 import json
 import time
+import hashlib
+import subprocess
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 import numpy as np
@@ -16,20 +19,56 @@ class GenerationEvaluationEngine:
     def __init__(self, pipeline: GenerationPipeline):
         self.pipeline = pipeline
 
+    @staticmethod
+    def get_git_commit_sha() -> str:
+        try:
+            res = subprocess.run(
+                ["git", "rev-parse", "HEAD"],
+                capture_output=True,
+                text=True,
+                check=True
+            )
+            return res.stdout.strip()
+        except Exception:
+            return "uncommitted_or_non_git"
+
+    @staticmethod
+    def compute_file_sha256(filepath: str) -> str:
+        p = Path(filepath)
+        if not p.exists():
+            return "file_not_found"
+        h = hashlib.sha256()
+        with open(p, "rb") as f:
+            while chunk := f.read(8192):
+                h.update(chunk)
+        return h.hexdigest()
+
     def evaluate_suite(
         self,
         suite_path: str,
         max_cases: Optional[int] = None,
         top_k: int = 4,
-        pacing_delay_sec: float = 0.5
+        pacing_delay_sec: float = 0.5,
+        stratified: bool = True
     ) -> Dict[str, Any]:
         """Executes generation evaluation across the specified suite and computes aggregated metrics."""
         with open(suite_path, "r", encoding="utf-8") as f:
             raw_cases = json.load(f)
 
         cases = [GoldenEvaluationCase.model_validate(c) for c in raw_cases]
-        if max_cases:
-            cases = cases[:max_cases]
+        if max_cases and max_cases < len(cases):
+            if stratified:
+                # Stratified sample across query types
+                by_type = {}
+                for c in cases:
+                    by_type.setdefault(c.query_type.value, []).append(c)
+                per_type_count = max(1, max_cases // len(by_type))
+                sampled_cases = []
+                for qtype, qcases in by_type.items():
+                    sampled_cases.extend(qcases[:per_type_count])
+                cases = sampled_cases[:max_cases]
+            else:
+                cases = cases[:max_cases]
 
         print(f"\nStarting generation evaluation for {len(cases)} cases...", flush=True)
 
@@ -60,13 +99,16 @@ class GenerationEvaluationEngine:
                 )
 
                 # 3. Temporal Validity
-                temp_metrics = GenerationMetrics.compute_temporal_validity(output)
+                temp_metrics = GenerationMetrics.compute_temporal_validity(
+                    output=output,
+                    expected_ay=case.expected_ay,
+                    expected_fy=case.expected_fy
+                )
 
                 # 4. Negative / Out-of-scope Handling
-                is_negative_case = (case.query_type == QueryType.NEGATIVE_OUT_OF_SCOPE or len(case.ground_truth_chunk_ids) == 0)
                 neg_metrics = GenerationMetrics.compute_negative_detection(
                     output=output,
-                    is_negative_case=is_negative_case
+                    is_negative_case=case.is_negative
                 )
 
                 # Composite score per case
@@ -83,6 +125,9 @@ class GenerationEvaluationEngine:
                     "query_type": case.query_type.value if hasattr(case.query_type, "value") else str(case.query_type),
                     "difficulty_level": case.difficulty_level.value if hasattr(case.difficulty_level, "value") else str(case.difficulty_level),
                     "target_regime": case.target_regime,
+                    "expected_ay": case.expected_ay,
+                    "expected_fy": case.expected_fy,
+                    "is_negative": case.is_negative,
                     "direct_answer": output.direct_answer,
                     "temporal_applicability": output.temporal_applicability,
                     "citations": [c.model_dump() for c in output.statutory_citations],
@@ -128,8 +173,10 @@ class GenerationEvaluationEngine:
         mean_crit_match = float(np.mean([r.get("criteria_match_rate", 0) for r in per_case_results]))
         mean_temp_val = float(np.mean([r.get("temporal_validity_score", 0) for r in per_case_results]))
         mean_composite = float(np.mean([r.get("composite_score", 0) for r in per_case_results]))
-        neg_correct_count = sum(1 for r in per_case_results if r.get("negative_handling_correct", False))
-        neg_accuracy = neg_correct_count / len(per_case_results) if per_case_results else 0.0
+        
+        # Negative / Abstention accuracy
+        neg_cases = [r for r in per_case_results if r.get("is_negative", False)]
+        neg_accuracy = (sum(1 for r in neg_cases if r.get("negative_handling_correct", False)) / len(neg_cases)) if neg_cases else 1.0
 
         # Breakdown by Query Type
         query_type_breakdown = {}
@@ -168,8 +215,16 @@ class GenerationEvaluationEngine:
         }
 
         summary = {
+            "provenance": {
+                "git_commit_sha": self.get_git_commit_sha(),
+                "timestamp_utc": datetime.now(timezone.utc).isoformat(),
+                "suite_file": suite_path,
+                "suite_sha256": self.compute_file_sha256(suite_path),
+                "top_k": top_k
+            },
             "suite": Path(suite_path).name,
             "total_cases_evaluated": len(per_case_results),
+            "negative_cases_count": len(neg_cases),
             "elapsed_seconds": round(elapsed, 2),
             "mean_composite_score": round(mean_composite, 4),
             "mean_criteria_match_rate": round(mean_crit_match, 4),
@@ -177,10 +232,11 @@ class GenerationEvaluationEngine:
             "mean_citation_recall": round(mean_cit_rec, 4),
             "mean_citation_f1": round(mean_cit_f1, 4),
             "mean_temporal_validity_score": round(mean_temp_val, 4),
-            "negative_handling_accuracy": round(neg_accuracy, 4),
+            "negative_abstention_accuracy": round(neg_accuracy, 4),
             "query_type_breakdown": qt_summary,
             "regime_breakdown": reg_summary,
             "per_case_results": per_case_results
         }
 
         return summary
+

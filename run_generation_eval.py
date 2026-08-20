@@ -56,7 +56,9 @@ def main():
     print(f"Mean Citation Recall         : {results['mean_citation_recall'] * 100:.2f}%")
     print(f"Mean Citation F1             : {results['mean_citation_f1'] * 100:.2f}%")
     print(f"Mean Temporal Validity Score : {results['mean_temporal_validity_score'] * 100:.2f}%")
-    print(f"Negative Handling Accuracy   : {results['negative_handling_accuracy'] * 100:.2f}%")
+    neg_acc = results.get('negative_abstention_accuracy', results.get('negative_handling_accuracy', 0.0))
+    print(f"Negative Abstention Accuracy : {neg_acc * 100:.2f}%")
+
 
     print("\n[Breakdown by Query Type]")
     print(f"{'Query Type':<35} | {'Count':<6} | {'Criteria Match':<16} | {'Composite Score':<16}")

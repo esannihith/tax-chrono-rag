@@ -1,6 +1,9 @@
 import json
 import csv
 import sys
+import hashlib
+import subprocess
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 import numpy as np
@@ -13,11 +16,35 @@ from src.enrichment.normalizer import TaxEntityNormalizer
 
 
 class BenchmarkEngine:
-    """Executes full evaluation across active and hidden suites, computes detailed IR metrics, and logs per-query results."""
+    """Executes full evaluation across active and hidden suites, computes detailed IR metrics with provenance metadata."""
 
     def __init__(self, vector_store: HybridVectorStore, embedder: DenseEmbedder):
         self.store = vector_store
         self.embedder = embedder
+
+    @staticmethod
+    def get_git_commit_sha() -> str:
+        try:
+            res = subprocess.run(
+                ["git", "rev-parse", "HEAD"],
+                capture_output=True,
+                text=True,
+                check=True
+            )
+            return res.stdout.strip()
+        except Exception:
+            return "uncommitted_or_non_git"
+
+    @staticmethod
+    def compute_file_sha256(filepath: str) -> str:
+        p = Path(filepath)
+        if not p.exists():
+            return "file_not_found"
+        h = hashlib.sha256()
+        with open(p, "rb") as f:
+            while chunk := f.read(8192):
+                h.update(chunk)
+        return h.hexdigest()
 
     def run_evaluation(
         self,
@@ -31,8 +58,8 @@ class BenchmarkEngine:
             raw_cases = json.load(f)
 
         cases = [GoldenEvaluationCase.model_validate(c) for c in raw_cases]
-        grounded_cases = [c for c in cases if len(c.ground_truth_chunk_ids) > 0]
-        null_cases = [c for c in cases if len(c.ground_truth_chunk_ids) == 0]
+        grounded_cases = [c for c in cases if len(c.essential_chunk_ids) > 0 or len(c.ground_truth_chunk_ids) > 0]
+        null_cases = [c for c in cases if len(c.essential_chunk_ids) == 0 and len(c.ground_truth_chunk_ids) == 0]
 
         per_query_results = []
         max_k = max(k_list)
@@ -57,14 +84,20 @@ class BenchmarkEngine:
                 target_rules=target_rules
             )
             retrieved_chunk_ids = [h.chunk_id for h in search_hits]
-            relevant_chunk_ids = case.ground_truth_chunk_ids
+            essential_chunks = case.essential_chunk_ids or case.ground_truth_chunk_ids
+            supporting_chunks = case.supporting_chunk_ids
 
-            q_metrics = IRMetrics.evaluate_query(retrieved_chunk_ids, relevant_chunk_ids, k_list=k_list)
+            q_metrics = IRMetrics.evaluate_query(
+                retrieved=retrieved_chunk_ids,
+                essential_chunks=essential_chunks,
+                supporting_chunks=supporting_chunks,
+                k_list=k_list
+            )
             
-            # Find ranks of relevant chunks
+            # Find ranks of essential and relevant chunks
             retrieved_ranks = []
             for rank, cid in enumerate(retrieved_chunk_ids, start=1):
-                if cid in relevant_chunk_ids:
+                if cid in essential_chunks or cid in supporting_chunks:
                     retrieved_ranks.append(rank)
 
             query_record = {
@@ -75,8 +108,9 @@ class BenchmarkEngine:
                 "difficulty_level": case.difficulty_level.value,
                 "target_regime": case.target_regime,
                 "relevant_rules": case.relevant_rules,
-                "num_gold_chunks": len(relevant_chunk_ids),
-                "gold_chunks": relevant_chunk_ids,
+                "num_essential_chunks": len(essential_chunks),
+                "essential_chunks": essential_chunks,
+                "supporting_chunks": supporting_chunks,
                 "retrieved_ranks": retrieved_ranks,
                 "first_hit_rank": retrieved_ranks[0] if retrieved_ranks else None,
                 "metrics": q_metrics
@@ -89,7 +123,10 @@ class BenchmarkEngine:
         if num_q > 0:
             mean_metrics["mrr"] = sum(r["metrics"]["mrr"] for r in per_query_results) / num_q
             for k in k_list:
+                mean_metrics[f"hit_rate@{k}"] = sum(r["metrics"][f"hit_rate@{k}"] for r in per_query_results) / num_q
                 mean_metrics[f"recall@{k}"] = sum(r["metrics"][f"recall@{k}"] for r in per_query_results) / num_q
+                mean_metrics[f"essential_recall@{k}"] = sum(r["metrics"][f"essential_recall@{k}"] for r in per_query_results) / num_q
+                mean_metrics[f"full_recall@{k}"] = sum(r["metrics"][f"full_recall@{k}"] for r in per_query_results) / num_q
                 mean_metrics[f"precision@{k}"] = sum(r["metrics"][f"precision@{k}"] for r in per_query_results) / num_q
                 mean_metrics[f"ndcg@{k}"] = sum(r["metrics"][f"ndcg@{k}"] for r in per_query_results) / num_q
 
@@ -105,6 +142,8 @@ class BenchmarkEngine:
             breakdown_qt[qt] = {
                 "count": n,
                 "mrr": sum(rec["metrics"]["mrr"] for rec in records) / n,
+                "hit_rate@5": sum(rec["metrics"]["hit_rate@5"] for rec in records) / n,
+                "hit_rate@10": sum(rec["metrics"]["hit_rate@10"] for rec in records) / n,
                 "recall@5": sum(rec["metrics"]["recall@5"] for rec in records) / n,
                 "recall@10": sum(rec["metrics"]["recall@10"] for rec in records) / n,
                 "recall@20": sum(rec["metrics"]["recall@20"] for rec in records) / n,
@@ -123,6 +162,7 @@ class BenchmarkEngine:
             breakdown_diff[diff] = {
                 "count": n,
                 "mrr": sum(rec["metrics"]["mrr"] for rec in records) / n,
+                "hit_rate@5": sum(rec["metrics"]["hit_rate@5"] for rec in records) / n,
                 "recall@5": sum(rec["metrics"]["recall@5"] for rec in records) / n,
                 "recall@10": sum(rec["metrics"]["recall@10"] for rec in records) / n,
                 "recall@20": sum(rec["metrics"]["recall@20"] for rec in records) / n,
@@ -141,6 +181,7 @@ class BenchmarkEngine:
             breakdown_para[para] = {
                 "count": n,
                 "mrr": sum(rec["metrics"]["mrr"] for rec in records) / n,
+                "hit_rate@5": sum(rec["metrics"]["hit_rate@5"] for rec in records) / n,
                 "recall@5": sum(rec["metrics"]["recall@5"] for rec in records) / n,
                 "recall@10": sum(rec["metrics"]["recall@10"] for rec in records) / n,
                 "recall@20": sum(rec["metrics"]["recall@20"] for rec in records) / n,
@@ -148,6 +189,20 @@ class BenchmarkEngine:
             }
 
         return {
+            "provenance": {
+                "git_commit_sha": self.get_git_commit_sha(),
+                "timestamp_utc": datetime.now(timezone.utc).isoformat(),
+                "configuration": {
+                    "alpha": alpha,
+                    "dynamic_alpha_enabled": True,
+                    "dense_embedding_model": getattr(self.embedder, "model_name", "sentence-transformers/all-MiniLM-L6-v2"),
+                    "rule_boost": 0.25 if apply_rule_boost else 0.0,
+                    "k_list": k_list,
+                    "apply_normalization": apply_normalization
+                },
+                "suite_file": suite_path,
+                "suite_sha256": self.compute_file_sha256(suite_path)
+            },
             "suite_file": suite_path,
             "total_cases": len(cases),
             "grounded_cases": num_q,
@@ -166,7 +221,8 @@ class BenchmarkEngine:
         
         headers = [
             "id", "query_type", "retrieval_paradigm", "difficulty_level", "target_regime",
-            "mrr", "recall@5", "recall@10", "recall@20",
+            "mrr", "hit_rate@5", "hit_rate@10", "hit_rate@20",
+            "recall@5", "recall@10", "recall@20",
             "precision@5", "precision@10", "precision@20",
             "ndcg@5", "ndcg@10", "ndcg@20", "first_hit_rank", "query"
         ]
@@ -182,6 +238,9 @@ class BenchmarkEngine:
                     "difficulty_level": r["difficulty_level"],
                     "target_regime": r["target_regime"],
                     "mrr": f"{r['metrics']['mrr']:.4f}",
+                    "hit_rate@5": f"{r['metrics']['hit_rate@5']:.4f}",
+                    "hit_rate@10": f"{r['metrics']['hit_rate@10']:.4f}",
+                    "hit_rate@20": f"{r['metrics']['hit_rate@20']:.4f}",
                     "recall@5": f"{r['metrics']['recall@5']:.4f}",
                     "recall@10": f"{r['metrics']['recall@10']:.4f}",
                     "recall@20": f"{r['metrics']['recall@20']:.4f}",
@@ -196,3 +255,4 @@ class BenchmarkEngine:
                 }
                 writer.writerow(row)
         print(f"Exported per-query CSV to {output_file}")
+

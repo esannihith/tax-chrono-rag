@@ -48,37 +48,40 @@ def main():
         mm = results["mean_metrics"]
         print(f"\n--- OVERALL AGGREGATED METRICS ({suite_name.upper()}) ---")
         print(f"Evaluated Cases: {results['grounded_cases']} Grounded | {results['null_cases']} Out-of-Scope (Null)")
-        print(f"MRR (Mean Reciprocal Rank): {mm['mrr']:.4f}")
-        print(f"Recall@5                  : {mm['recall@5']*100:.2f}%")
-        print(f"Recall@10                 : {mm['recall@10']*100:.2f}%")
-        print(f"Recall@20                 : {mm['recall@20']*100:.2f}%")
-        print(f"Precision@5               : {mm['precision@5']*100:.2f}%")
-        print(f"Precision@10              : {mm['precision@10']*100:.2f}%")
-        print(f"Precision@20              : {mm['precision@20']*100:.2f}%")
-        print(f"NDCG@5                    : {mm['ndcg@5']:.4f}")
-        print(f"NDCG@10                   : {mm['ndcg@10']:.4f}")
-        print(f"NDCG@20                   : {mm['ndcg@20']:.4f}")
+        print(f"MRR (Mean Reciprocal Rank)    : {mm['mrr']:.4f}")
+        print(f"HitRate@5 (Top-5 Hit Rate)    : {mm['hit_rate@5']*100:.2f}%")
+        print(f"HitRate@10 (Top-10 Hit Rate)  : {mm['hit_rate@10']*100:.2f}%")
+        print(f"HitRate@20 (Top-20 Hit Rate)  : {mm['hit_rate@20']*100:.2f}%")
+        print(f"Essential Recall@5            : {mm['essential_recall@5']*100:.2f}%")
+        print(f"Essential Recall@10           : {mm['essential_recall@10']*100:.2f}%")
+        print(f"Essential Recall@20           : {mm['essential_recall@20']*100:.2f}%")
+        print(f"Precision@5                   : {mm['precision@5']*100:.2f}%")
+        print(f"Precision@10                  : {mm['precision@10']*100:.2f}%")
+        print(f"Precision@20                  : {mm['precision@20']*100:.2f}%")
+        print(f"Graded NDCG@5                 : {mm['ndcg@5']:.4f}")
+        print(f"Graded NDCG@10                : {mm['ndcg@10']:.4f}")
+        print(f"Graded NDCG@20                : {mm['ndcg@20']:.4f}")
 
         # Breakdown by Query Type
         print(f"\n--- BREAKDOWN BY QUERY TYPE ---")
-        print(f"{'Query Type':35} | {'Count':5} | {'MRR':6} | {'R@5':7} | {'R@10':7} | {'R@20':7} | {'NDCG@10':7}")
-        print("-" * 85)
+        print(f"{'Query Type':35} | {'Count':5} | {'MRR':6} | {'Hit@5':7} | {'R@5':7} | {'R@10':7} | {'R@20':7} | {'NDCG@10':7}")
+        print("-" * 95)
         for qt, stats in results["breakdown_by_query_type"].items():
-            print(f"{qt:35} | {stats['count']:5} | {stats['mrr']:.4f} | {stats['recall@5']*100:5.1f}% | {stats['recall@10']*100:5.1f}% | {stats['recall@20']*100:5.1f}% | {stats['ndcg@10']:7.4f}")
+            print(f"{qt:35} | {stats['count']:5} | {stats['mrr']:.4f} | {stats.get('hit_rate@5', 0)*100:5.1f}% | {stats['recall@5']*100:5.1f}% | {stats['recall@10']*100:5.1f}% | {stats['recall@20']*100:5.1f}% | {stats['ndcg@10']:7.4f}")
 
         # Breakdown by Difficulty
         print(f"\n--- BREAKDOWN BY DIFFICULTY ---")
-        print(f"{'Difficulty':12} | {'Count':5} | {'MRR':6} | {'R@5':7} | {'R@10':7} | {'R@20':7} | {'NDCG@10':7}")
-        print("-" * 65)
+        print(f"{'Difficulty':12} | {'Count':5} | {'MRR':6} | {'Hit@5':7} | {'R@5':7} | {'R@10':7} | {'R@20':7} | {'NDCG@10':7}")
+        print("-" * 75)
         for diff, stats in results["breakdown_by_difficulty"].items():
-            print(f"{diff:12} | {stats['count']:5} | {stats['mrr']:.4f} | {stats['recall@5']*100:5.1f}% | {stats['recall@10']*100:5.1f}% | {stats['recall@20']*100:5.1f}% | {stats['ndcg@10']:7.4f}")
+            print(f"{diff:12} | {stats['count']:5} | {stats['mrr']:.4f} | {stats.get('hit_rate@5', 0)*100:5.1f}% | {stats['recall@5']*100:5.1f}% | {stats['recall@10']*100:5.1f}% | {stats['recall@20']*100:5.1f}% | {stats['ndcg@10']:7.4f}")
 
         # Breakdown by Paradigm
         print(f"\n--- BREAKDOWN BY RETRIEVAL PARADIGM ---")
-        print(f"{'Paradigm':18} | {'Count':5} | {'MRR':6} | {'R@5':7} | {'R@10':7} | {'R@20':7} | {'NDCG@10':7}")
-        print("-" * 75)
+        print(f"{'Paradigm':18} | {'Count':5} | {'MRR':6} | {'Hit@5':7} | {'R@5':7} | {'R@10':7} | {'R@20':7} | {'NDCG@10':7}")
+        print("-" * 85)
         for para, stats in results["breakdown_by_paradigm"].items():
-            print(f"{para:18} | {stats['count']:5} | {stats['mrr']:.4f} | {stats['recall@5']*100:5.1f}% | {stats['recall@10']*100:5.1f}% | {stats['recall@20']*100:5.1f}% | {stats['ndcg@10']:7.4f}")
+            print(f"{para:18} | {stats['count']:5} | {stats['mrr']:.4f} | {stats.get('hit_rate@5', 0)*100:5.1f}% | {stats['recall@5']*100:5.1f}% | {stats['recall@10']*100:5.1f}% | {stats['recall@20']*100:5.1f}% | {stats['ndcg@10']:7.4f}")
 
     print("\n" + "=" * 90)
     print("BENCHMARK COMPLETED SUCCESSFULLY!")
@@ -87,3 +90,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

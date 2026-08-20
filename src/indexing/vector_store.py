@@ -7,6 +7,8 @@ import numpy as np
 from rank_bm25 import BM25Okapi
 from src.indexing.payload_builder import IndexPayload
 
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+
 
 class SearchResult:
     def __init__(self, chunk_id: str, score: float, payload: IndexPayload):
@@ -27,7 +29,7 @@ class SearchResult:
 
 
 class HybridVectorStore:
-    """Dual-channel Hybrid Index combining Dense Cosine Similarity with Sparse BM25."""
+    """Dual-channel Hybrid Index combining Min-Max Normalized Dense Cosine Similarity with Min-Max Normalized BM25."""
 
     def __init__(self):
         self.payloads: List[IndexPayload] = []
@@ -111,24 +113,31 @@ class HybridVectorStore:
         if self.dense_embeddings is None or self.bm25_index is None:
             return []
 
-        # Dense scores
-        dense_scores = np.dot(self.dense_embeddings, query_vector)
+        # 1. Dense Cosine Scores & Min-Max Normalization
+        raw_dense = np.dot(self.dense_embeddings, query_vector)
+        d_min, d_max = float(raw_dense.min()), float(raw_dense.max())
+        dense_norm = (raw_dense - d_min) / (d_max - d_min + 1e-8) if (d_max - d_min) > 0 else raw_dense
 
-        # Sparse scores
+        # 2. BM25 Sparse Scores & Min-Max Normalization
         tokens = [t.lower() for t in sparse_tokens if len(t) > 1]
         raw_bm25 = np.array(self.bm25_index.get_scores(tokens))
-        max_bm25 = raw_bm25.max()
-        sparse_norm = (raw_bm25 / max_bm25) if max_bm25 > 0 else raw_bm25
+        s_min, s_max = float(raw_bm25.min()), float(raw_bm25.max())
+        sparse_norm = (raw_bm25 - s_min) / (s_max - s_min + 1e-8) if (s_max - s_min) > 0 else raw_bm25
 
-        # Target rule boost
+        # 3. Dynamic Alpha Shifting & Target Rule Boost
         rule_boost = np.zeros(len(self.payloads))
+        effective_alpha = alpha
+
         if target_rules:
+            # Dynamic Alpha Shift: Prioritize exact sparse rule tokens when explicit rule numbers are detected
+            effective_alpha = min(alpha, 0.25)
             for tr in target_rules:
                 for idx, p in enumerate(self.payloads):
                     if p.rule_id.lower() == tr.lower():
                         rule_boost[idx] = 0.25
 
-        combined_scores = (alpha * dense_scores) + ((1.0 - alpha) * sparse_norm) + rule_boost
+        # 4. Combined Hybrid Formula
+        combined_scores = (effective_alpha * dense_norm) + ((1.0 - effective_alpha) * sparse_norm) + rule_boost
 
         valid_indices = []
         for idx, p in enumerate(self.payloads):
@@ -136,7 +145,7 @@ class HybridVectorStore:
                 continue
             if rule_filter and p.rule_id.lower() != rule_filter.lower():
                 continue
-            valid_indices.append((idx, combined_scores[idx]))
+            valid_indices.append((idx, float(combined_scores[idx])))
 
         valid_indices.sort(key=lambda x: x[1], reverse=True)
 
@@ -151,6 +160,8 @@ class HybridVectorStore:
 
     def save(self, index_dir: str):
         out_dir = Path(index_dir)
+        if not out_dir.is_absolute():
+            out_dir = PROJECT_ROOT / out_dir
         out_dir.mkdir(parents=True, exist_ok=True)
 
         with open(out_dir / "payloads.json", "w", encoding="utf-8") as f:
@@ -162,12 +173,16 @@ class HybridVectorStore:
         with open(out_dir / "bm25_index.pkl", "wb") as f:
             pickle.dump(self.bm25_index, f)
 
-        print(f"Hybrid vector store saved to {index_dir}")
+        print(f"Hybrid vector store saved to {out_dir}")
 
     @classmethod
-    def load(cls, index_dir: str) -> "HybridVectorStore":
+    def load(cls, index_dir: str = "data/indices") -> "HybridVectorStore":
         store = cls()
         in_dir = Path(index_dir)
+        if not in_dir.is_absolute():
+            # Try relative to cwd first, then fallback to PROJECT_ROOT
+            if not in_dir.exists():
+                in_dir = PROJECT_ROOT / in_dir
 
         with open(in_dir / "payloads.json", "r", encoding="utf-8") as f:
             payload_dicts = json.load(f)
@@ -183,5 +198,6 @@ class HybridVectorStore:
             with open(bm25_path, "rb") as f:
                 store.bm25_index = pickle.load(f)
 
-        print(f"Hybrid vector store loaded from {index_dir} ({len(store.payloads)} items).")
+        print(f"Hybrid vector store loaded from {in_dir} ({len(store.payloads)} items).")
         return store
+

@@ -1,6 +1,6 @@
 # Temporal-RAG: Statutory Dual-Regime Indian Tax AI Engine
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python&logoColor=white)](https://python.org)
+[![Python](https://img.shields.io/badge/Python-3.11%2B-blue.svg?logo=python&logoColor=white)](https://python.org)
 [![Package Manager](https://img.shields.io/badge/uv-Fast%20Python%20Tooling-DE5FE9.svg?logo=astral&logoColor=white)](https://astral.sh/uv)
 [![Pydantic](https://img.shields.io/badge/Pydantic-v2.10-E92063.svg?logo=pydantic&logoColor=white)](https://docs.pydantic.dev)
 [![Vector Search](https://img.shields.io/badge/Embeddings-Sentence--Transformers-orange.svg)](https://sbert.net)
@@ -29,12 +29,13 @@
 
 ## ⚡ Key Highlights
 
-- 🎯 **High-Precision Retrieval**: Achieves **90.00% Recall@20**, **0.7042 MRR**, and **0.7583 NDCG** using Parent-Aware AST Chunking and dynamic dense-sparse hybrid search.
-- ⏱️ **Temporal Reasoning (100% Validity)**: Resolves **Financial Year (FY $T$)** to **Assessment Year (AY $T+1$)** arithmetic and enforces strict effective date boundaries derived from statutory footnotes.
-- ⚖️ **Dual-Regime Comparative Synthesis**: Simultaneously parses, indexes, and contrasts provisions between the legacy **1962 Rules** and the upcoming simplified **Draft 2026 Rules**.
+- 🎯 **High-Precision Retrieval**: Achieves **100.00% HitRate@10**, **80.56% Essential Recall@5**, **0.8189 MRR**, and **0.9003 Graded NDCG@10** on the active golden evaluation suite (90 cases) using Parent-Aware AST Chunking and dynamic min-max normalized hybrid search.
+- ⏱️ **Temporal Reasoning (AY vs FY)**: Resolves **Financial Year (FY $T$)** to **Assessment Year (AY $T+1$)** arithmetic and enforces strict effective date boundaries derived from statutory notifications and footnote records.
+- ⚖️ **Dual-Regime Comparative Synthesis**: Simultaneously indexes and contrasts provisions between the legacy **1962 Rules** (95 chunks) and the upcoming **Draft 2026 Rules** (88 chunks).
+- 🧮 **Deterministic Statutory Calculators**: Temporal-aware perquisite calculators for Rent-Free Accommodation (pre/post Notification 65/2023 rates), Motor Cars, Interest-Free Loans (aggregate ₹20k threshold & Rule 3A medical proviso), and Free Food with source chunk provenance.
 - 🛡️ **Resilient Multi-Provider LLM Engine**: Implements quota-aware fail-fast fallback routing:  
   $$\text{Google Gemini 3.6 Flash} \xrightarrow{\text{429 / 503}} \text{OpenRouter Free Tier (Gemma 26B/31B, Liquid LFM, Nemotron)} \xrightarrow{\text{Offline}} \text{Deterministic Mock}$$
-- 🔬 **Comprehensive Benchmark Suite**: 65+ hand-curated statutory test cases across procedural, persona-specific (salaried/senior citizens), negative/out-of-scope, and comparative queries.
+- 🔬 **Comprehensive Benchmark Provenance**: 120 curated golden cases (90 active, 30 held-out hidden) with explicit ground truth splitting between essential answer chunks and supporting rule context, plus negative out-of-scope abstention checking.
 
 ---
 
@@ -62,7 +63,7 @@ flowchart TD
 
     subgraph CHUNKING ["2. Parent-Aware Chunking & Indexing"]
         A4 --> B1[Parent-Child Chunk Generator<br/>Breadcrumb Hierarchy Injection]
-        B1 --> B2[(Hybrid Vector Store<br/>183 Parent Chunks)]
+        B1 --> B2[(Hybrid Vector Store<br/>183 Parent Chunks: 95 in 1962, 88 in 2026)]
         B2 --> B3[Dense Embeddings<br/>MiniLM-L6-v2 / 384-dim]
         B2 --> B4[Sparse Index<br/>BM25 with Statutory Tokenizer]
     end
@@ -73,7 +74,7 @@ flowchart TD
         C2 -->|1962 Rules| C3[Stream 1: 1962 Vector Store]
         C2 -->|2026 Rules| C4[Stream 2: 2026 Vector Store]
         C2 -->|Comparative / Auto| C5[Dual-Stream Parallel Retrieval]
-        C3 --> C6[Dynamic Alpha Hybrid Scoring & Deduplication]
+        C3 --> C6[Dynamic Alpha Min-Max Normalized Hybrid Scoring]
         C4 --> C6
         C5 --> C6
     end
@@ -87,7 +88,7 @@ flowchart TD
         D3 --> E1[Structured Statutory JSON Output]
         D4 --> E1
         D5 --> E1
-        E1 --> E2[Generation Evaluation Engine<br/>Citation Precision/Recall & Criteria Match]
+        E1 --> E2[Generation Evaluation Engine<br/>Citation Precision/Recall & Negative Abstention]
     end
 
     style INGESTION fill:#EFF6FF,stroke:#3B82F6,stroke-width:1.5px
@@ -107,14 +108,15 @@ Rule 3 > Sub-rule (7) > Clause (i) > Proviso 1 (Interest-Free Loan Valuation)
 ```
 This ensures the dense embedding and BM25 index always retain parent context even when matching granular proviso text.
 
-### 2. Dynamic Alpha Hybrid Scoring Formula
-Retrieved candidates are scored using a normalized linear combination of dense cosine similarity and BM25 sparse scores, boosted by exact Rule ID token matches:
+### 2. Min-Max Normalized Dynamic Alpha Hybrid Scoring
+Retrieved candidates are scored using min-max normalized linear combination of dense cosine similarity and BM25 sparse scores, dynamically shifted and boosted by exact Rule ID token matches:
 
-$$S_{\text{hybrid}}(q, d) = \alpha \cdot \hat{S}_{\text{dense}}(q, d) + (1 - \alpha) \cdot \hat{S}_{\text{sparse}}(q, d) + S_{\text{rule\_boost}}(q, d)$$
+$$S_{\text{hybrid}}(q, d) = \alpha_{\text{eff}} \cdot \hat{S}_{\text{dense}}(q, d) + (1 - \alpha_{\text{eff}}) \cdot \hat{S}_{\text{sparse}}(q, d) + S_{\text{rule\_boost}}(q, d)$$
 
 Where:
-- $\hat{S}_{\text{dense}}$ and $\hat{S}_{\text{sparse}}$ are min-max normalized across candidate scores.
-- $\alpha = 0.50$ dynamically shifts when explicit statutory rule numbers (e.g. `Rule 12AC`, `Rule 2BB`) are detected in the query to favor sparse precision.
+- $\hat{S}_{\text{dense}} = \frac{S_{\text{dense}} - \min(S_{\text{dense}})}{\max(S_{\text{dense}}) - \min(S_{\text{dense}}) + \epsilon}$
+- $\hat{S}_{\text{sparse}} = \frac{S_{\text{sparse}} - \min(S_{\text{sparse}})}{\max(S_{\text{sparse}}) - \min(S_{\text{sparse}}) + \epsilon}$
+- $\alpha_{\text{eff}} = 0.25$ when explicit statutory rule numbers (e.g. `Rule 12AC`, `Rule 2BB`) are detected in the query to favor sparse rule precision, and $\alpha_{\text{eff}} = 0.50$ otherwise.
 
 ### 3. Multi-Provider Quota-Aware Fail-Fast Architecture
 To prevent disruption from upstream API rate limits, the LLM client detects HTTP 429 quota exhaustion instantly without stalling and reroutes to OpenRouter free models:
@@ -137,41 +139,41 @@ flowchart LR
 
 ## 📊 Benchmark Validation & Experiments
 
-### Retrieval Performance Benchmarks
+Every number reported below is generated by the benchmark engine and verified by committed evaluation artifacts.
 
-![Retrieval Performance Curve and Architecture Ablation](docs/assets/retrieval_benchmark_curve.png)
+### 1. Retrieval Performance Benchmarks
 
-| Evaluation Suite | Sample Count | Recall@1 | Recall@5 | Recall@10 | Recall@20 | MRR | NDCG@10 | Mean Precision |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Active Suite (Golden)** | 30 | 56.67% | 80.00% | 83.33% | **90.00%** | **0.7042** | **0.7583** | **0.7208** |
-| **Hidden Suite (Validation)** | 10 | 50.00% | 70.00% | 70.00% | **80.00%** | **0.6214** | **0.6750** | **0.6400** |
+Run with: `uv run python run_eval.py`
 
-#### Ablation Study: Impact of Parent-Aware Hybrid Indexing
-- **Baseline (Flat Chunking + Dense Only)**: Recall@20 = 63.3%, MRR = 0.482, NDCG = 0.521.
-- **Parent-Aware Structured Chunking**: Recall@20 = 83.3% (+20.0%), MRR = 0.635.
-- **Parent-Aware + Dynamic Hybrid + Entity Normalization**: Recall@20 = **90.0%** (+26.7%), MRR = **0.7042** (+0.222), NDCG = **0.7583** (+0.237).
+| Evaluation Suite | Total Cases (Grounded + Null) | MRR | HitRate@5 | HitRate@10 | HitRate@20 | Essential Recall@5 | Essential Recall@10 | Essential Recall@20 | Graded NDCG@10 | Precision@5 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Active Suite (Golden)** | 90 (72 + 18) | **0.8189** | **83.33%** | **100.00%** | **100.00%** | **80.56%** | **99.31%** | **100.00%** | **0.9003** | **90.56%** |
+| **Hidden Suite (Validation)** | 30 (24 + 6) | **0.7199** | **83.33%** | **100.00%** | **100.00%** | **81.25%** | **95.83%** | **100.00%** | **0.8239** | **90.00%** |
+
+#### Breakdown by Query Type (Active Suite)
+| Query Type | Count | MRR | HitRate@5 | Essential R@5 | Essential R@10 | Graded NDCG@10 |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Persona-Specific Applicability** | 24 | 0.9271 | 100.0% | 93.8% | 100.0% | 0.9198 |
+| **Intra-Document Temporal Validation** | 24 | 0.9583 | 100.0% | 97.9% | 100.0% | 0.9710 |
+| **Procedural / Condition Matching** | 24 | 0.5714 | 50.0% | 50.0% | 97.9% | 0.8101 |
 
 ---
 
-### Generation Evaluation Quality
+### 2. Generation Evaluation Quality & Abstention
 
-![Generation Evaluation Quality Breakdown](docs/assets/generation_evaluation_breakdown.png)
+Run with: `uv run python run_generation_eval.py --sample 20`
 
-Evaluated across 20 representative test cases in `data/evaluation/active_suite.json`:
+Evaluated across a stratified sample of 20 test cases in `data/evaluation/active_suite.json` (including 5 negative / out-of-scope cases):
 
 | Metric | Score / Accuracy | Evaluation Criteria & Formula |
 | :--- | :---: | :--- |
-| **Mean Composite Score** | **65.73%** | $0.35 \times \text{CriteriaMatch} + 0.30 \times \text{CitationRecall} + 0.20 \times \text{CitationPrecision} + 0.15 \times \text{TemporalValidity}$ |
-| **Mean Criteria Match Rate** | **62.09%** | Semantic match against golden legal evaluation criteria points |
-| **Mean Citation Recall** | **60.00%** | Grounded recall of applicable statutory sub-rules |
-| **Mean Citation Precision** | **55.00%** | Precision of cited rule identifiers without hallucinated sections |
-| **Citation F1-Score** | **56.67%** | Harmonic mean of citation precision and citation recall |
-| **Temporal Validity Score** | **100.00%** | Correct Assessment Year (AY) vs Financial Year (FY) resolution |
-| **Negative Scope Handling** | **100.00%** | Accurately identifies rules not yet in force (zero hallucinations) |
-
-#### Regime-Specific Generation Performance:
-- **Draft Income-tax Rules, 2026**: **73.78% Composite Score** (Strong grounding on streamlined tables and flat perquisite rates).
-- **Income-tax Rules, 1962**: **55.88% Composite Score** (Accurately navigates complex multi-tier provisos and historical filing forms).
+| **Mean Composite Score** | **77.20%** | $0.35 \times \text{CriteriaMatch} + 0.30 \times \text{CitationRecall} + 0.20 \times \text{CitationPrecision} + 0.15 \times \text{TemporalValidity}$ |
+| **Mean Criteria Match Rate** | **71.75%** | Exact semantic match against curated legal evaluation criteria points |
+| **Mean Citation Recall** | **80.00%** | Grounded recall of applicable statutory sub-rules |
+| **Mean Citation Precision** | **69.17%** | Precision of cited rule identifiers without hallucinated sections |
+| **Citation F1-Score** | **72.50%** | Harmonic mean of citation precision and citation recall |
+| **Temporal Validity Score** | **95.00%** | Strict Assessment Year (AY) vs Financial Year (FY) verification against case ground truth |
+| **Negative Abstention Accuracy** | **100.00%** | Explicitly declares out-of-scope/unnotified rules without hallucinating inapplicable provisions |
 
 ---
 
@@ -184,24 +186,29 @@ Temporal-RAG/
 │   │   ├── 1962/                         # Income-tax Rules, 1962
 │   │   └── 2026/                         # Draft Income-tax Rules, 2026
 │   ├── processed/                        # Structured AST chunk JSON files
-│   │   ├── chunks_1962.json              # 110 parent-aware chunks
-│   │   └── chunks_2026.json              # 73 parent-aware chunks
+│   │   ├── chunks_1962.json              # 95 parent-aware chunks
+│   │   └── chunks_2026.json              # 88 parent-aware chunks
 │   ├── indices/                          # Hybrid index artifacts
 │   │   ├── bm25_index.pkl                # Serialized Rank-BM25 sparse index
-│   │   ├── metadata_store.json           # Chunk metadata, breadcrumbs, & footnotes
-│   │   └── vector_store.npy              # Dense 384-dimensional embedding matrix
+│   │   ├── payloads.json                 # Chunk payloads, breadcrumbs, & display text
+│   │   └── dense_embeddings.npy          # Dense 384-dimensional embedding matrix
 │   └── evaluation/                       # Evaluation suites & benchmark logs
-│       ├── active_suite.json             # 45 golden benchmark test cases
-│       ├── hidden_suite.json             # 15 validation test cases
-│       ├── experiments/                  # Retrieval ablation experiment logs
+│       ├── active_suite.json             # 90 golden benchmark test cases (72 grounded, 18 null)
+│       ├── hidden_suite.json             # 30 validation test cases (24 grounded, 6 null)
+│       ├── golden_full.json              # 120 combined curated test cases
+│       ├── per_query_metrics_active_suite.csv
+│       ├── per_query_metrics_hidden_suite.csv
+│       ├── results_active_suite.json
+│       ├── results_hidden_suite.json
 │       └── generation_experiments/       # Versioned generation evaluation artifacts
 ├── docs/
 │   ├── assets/                           # High-resolution benchmark PNG charts
 │   └── walkthroughs/                     # Deep-dive stage technical walkthroughs
 │       ├── parsing.md                    # PDF parsing & AST construction
 │       ├── golden-dataset.md             # Benchmark suite curation & taxonomy
-│       ├── retreival.md                  # Hybrid retrieval & ablation findings
+│       ├── retrieval.md                  # Hybrid retrieval & ablation findings
 │       ├── generation.md                 # Prompt compiler & resilient fallback
+│       ├── mcp-server.md                 # FastMCP tool definitions & integration
 │       └── walkthrough.md                # Full system overview & checkpoint summary
 ├── src/
 │   ├── parser/                           # PDF text extraction & AST node builders
@@ -209,12 +216,20 @@ Temporal-RAG/
 │   ├── enrichment/                       # TaxEntityNormalizer & table linearizer
 │   ├── indexing/                         # DenseEmbedder, BM25 & HybridVectorStore
 │   ├── generation/                       # Prompter, LLM client, Synthesizer & Pipeline
+│   ├── mcp/                              # FastMCP server, PerquisiteCalculators & telemetry
 │   └── evaluation/                       # Retrieval & generation benchmark engines
+├── tests/                                # Automated pytest test suite
+│   ├── test_mcp_server.py
+│   ├── test_telemetry.py
+│   ├── test_calculators.py
+│   └── test_evaluation_metrics.py
 ├── main.py                               # Ingestion & AST chunking runner
 ├── main_indexing.py                      # Vector & sparse indexing pipeline
 ├── run_eval.py                           # Retrieval benchmark evaluator CLI
 ├── run_generation_eval.py                # Generation benchmark evaluator CLI
-├── pyproject.toml                        # Project dependencies & Python metadata
+├── run_mcp.py                            # FastMCP server runner CLI
+├── pyproject.toml                        # Project dependencies & pytest configuration
+├── LICENSE                               # MIT License
 └── README.md                             # Authoritative project documentation
 ```
 
@@ -225,11 +240,11 @@ Temporal-RAG/
 ### 1. Installation
 ```bash
 # Clone the repository
-git clone https://github.com/esann/Temporal-RAG.git
-cd Temporal-RAG
+git clone https://github.com/esann/tax-chrono-rag.git
+cd tax-chrono-rag
 
 # Install dependencies using uv (recommended)
-uv sync
+uv sync --extra dev
 ```
 
 ### 2. Configure Environment Variables
@@ -249,12 +264,22 @@ uv run python main.py
 uv run python main_indexing.py
 ```
 
-### 5. Run Retrieval Evaluation Benchmark
+### 5. Run Unit Tests (18 tests across MCP, Calculators, IR Metrics, Telemetry)
 ```bash
-uv run python run_eval.py --suite data/evaluation/active_suite.json
+uv run pytest
 ```
 
-### 7. Run FastMCP Server for AI Agents & Clients
+### 6. Run Retrieval Evaluation Benchmark
+```bash
+uv run python run_eval.py
+```
+
+### 7. Run Generation Benchmark
+```bash
+uv run python run_generation_eval.py --sample 20
+```
+
+### 8. Run FastMCP Server for AI Agents & Clients
 ```bash
 # Stdio mode for Claude Desktop / Cursor / Antigravity
 uv run python run_mcp.py
@@ -278,8 +303,8 @@ The engine includes a full **FastMCP** server (`TaxChronoRAG`) exposing 7 specia
 | **`get_rule_details`** | Direct statutory AST lookup of full rule text, provisos, and embedded tables for any Rule ID. |
 | **`compare_regimes`** | Dual-stream parallel retrieval producing side-by-side comparisons of 1962 vs 2026 provisions. |
 | **`resolve_tax_year`** | Deterministic Assessment Year (AY) vs Financial Year (FY) parser and applicable regime recommender. |
-| **`verify_effective_date`** | Validates whether a specific rule was in force on a given date/AY based on parsed footnote commencement records. |
-| **`calculate_perquisite`** | Pure deterministic computational engine for accommodation (population tiers), motor cars, loans (SBI benchmark), and free food. |
+| **`verify_effective_date`** | Validates whether a specific rule was in force on a given date/AY based on structured statutory commencement records. |
+| **`calculate_perquisite`** | Pure deterministic computational engine for accommodation (population tiers & Notification 65/2023 rates), motor cars, loans (aggregate ₹20k threshold & medical proviso), and free food. |
 | **`ask_tax_copilot`** | End-to-end statutory synthesis pipeline returning structured JSON with citations and reasoning steps. |
 
 ### Client Configuration (Claude Desktop / Cursor)
@@ -349,7 +374,7 @@ Detailed architectural and experimental notes for each stage are maintained in [
 
 - 📄 [`docs/walkthroughs/parsing.md`](docs/walkthroughs/parsing.md) — PDF parsing, table extraction, and AST node reconstruction.
 - 📄 [`docs/walkthroughs/golden-dataset.md`](docs/walkthroughs/golden-dataset.md) — Golden test suite taxonomy, query types, and evaluation criteria.
-- 📄 [`docs/walkthroughs/retreival.md`](docs/walkthroughs/retreival.md) — Dense + BM25 hybrid search, alpha tuning, and ablation curves.
+- 📄 [`docs/walkthroughs/retrieval.md`](docs/walkthroughs/retrieval.md) — Dense + BM25 hybrid search, alpha tuning, and ablation curves.
 - 📄 [`docs/walkthroughs/generation.md`](docs/walkthroughs/generation.md) — Statutory prompter design, multi-provider fail-fast client, and evaluation metrics.
 - 📄 [`docs/walkthroughs/mcp-server.md`](docs/walkthroughs/mcp-server.md) — FastMCP tool definitions, schema references, and client integration guide.
 - 📄 [`docs/walkthroughs/walkthrough.md`](docs/walkthroughs/walkthrough.md) — Consolidated system walkthrough and stage completion summary.
@@ -359,11 +384,11 @@ Detailed architectural and experimental notes for each stage are maintained in [
 ## 🗺️ Roadmap
 
 - [x] **Stage 1**: Statutory AST Parser & Table Linearizer
-- [x] **Stage 2**: Parent-Aware Structured Chunking with Breadcrumb Provenance
-- [x] **Stage 3**: Dense + BM25 Hybrid Retrieval Engine (Recall@20: 90.00%, MRR: 0.7042)
-- [x] **Stage 4**: Resilient Multi-Provider Statutory Generation Pipeline (Gemini + OpenRouter Free Tier)
-- [x] **Stage 5**: Multi-Dimensional Generation Evaluation Framework & Benchmark
-- [x] **Stage 6**: **Model Context Protocol (FastMCP) Server with 7 Statutory Tools (`TaxChronoRAG`)**
+- [x] **Stage 2**: Parent-Aware Structured Chunking with Breadcrumb Provenance (183 statutory chunks)
+- [x] **Stage 3**: Min-Max Normalized Dense + BM25 Hybrid Retrieval Engine (100% HitRate@10, 0.8189 MRR, 0.9003 Graded NDCG)
+- [x] **Stage 4**: Resilient Multi-Provider Statutory Generation Pipeline (Gemini + OpenRouter Free Tier + Offline Mock)
+- [x] **Stage 5**: Multi-Dimensional Generation Evaluation Framework & Negative Abstention Benchmark
+- [x] **Stage 6**: **Model Context Protocol (FastMCP) Server with 7 Statutory Tools & Temporal Calculators (`TaxChronoRAG`)**
 - [ ] **Stage 7**: **Interactive Web Application (Streamlit Dual-Regime Explorer & Perquisite Calculator)**
 - [ ] **Stage 8**: **Corpus Expansion (Depreciation Schedule, Capital Gains, and International Tax)**
 

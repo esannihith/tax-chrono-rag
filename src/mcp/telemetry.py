@@ -11,11 +11,12 @@ from typing import Dict, Any, List, Optional
 
 
 class MCPTelemetryLogger:
-    """Zero-latency, thread-safe asynchronous telemetry logger for MCP tool invocations.
+    """Thread-safe asynchronous telemetry logger for MCP tool invocations.
     
     Uses an in-memory non-blocking queue and a background daemon worker thread
-    to batch-append telemetry records to JSONL on disk without adding latency to tool responses.
+    to batch-append telemetry records to JSONL on disk without blocking tool responses.
     """
+
 
     def __init__(self, log_dir: str = "data/logs", log_file: str = "mcp_telemetry.jsonl"):
         self.log_dir = Path(log_dir)
@@ -95,8 +96,9 @@ class MCPTelemetryLogger:
         error_message: Optional[str] = None,
         metadata: Optional[Dict[str, Any]] = None
     ):
-        """Enqueues a telemetry record non-blockingly (execution takes < 0.01 ms)."""
+        """Enqueues a telemetry record non-blockingly to the in-memory queue."""
         record = {
+
             "log_id": str(uuid.uuid4()),
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "tool_name": tool_name,

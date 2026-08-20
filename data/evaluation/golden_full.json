@@ -7,9 +7,18 @@
     "difficulty_level": "Easy",
     "target_regime": "1962",
     "persona_context": "Private sector salaried employee residing in Delhi (metro city)",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 2A"
     ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_2A_full"
+    ],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_2A_full"
     ],
@@ -31,8 +40,42 @@
     "difficulty_level": "Easy",
     "target_regime": "1962",
     "persona_context": "Central government officer in government-allotted quarters",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 3"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_subrule_1_6"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_2_12",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_3_rule_3_body_1",
@@ -77,8 +120,42 @@
     "difficulty_level": "Medium",
     "target_regime": "1962",
     "persona_context": "Private sector employee provided employer-owned housing in a mid-sized city (population 12 lakhs)",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 3"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_subrule_10_94"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_12",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_3_rule_3_body_1",
@@ -124,8 +201,22 @@
     "difficulty_level": "Medium",
     "target_regime": "1962",
     "persona_context": "Software engineer opting for New Tax Regime u/s 115BAC with school-going children",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 2BB"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
@@ -151,8 +242,24 @@
     "difficulty_level": "Easy",
     "target_regime": "1962",
     "persona_context": "Salaried employee traveling abroad on holiday",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 2B"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_2B_rule_2B_subrule_1_1",
+      "chunk_1962_rule_2B_rule_2B_subrule_1A_9"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_2B_rule_2B_subrule_1B_23",
+      "chunk_1962_rule_2B_rule_2B_subrule_2_24",
+      "chunk_1962_rule_2B_rule_2B_subrule_3_26",
+      "chunk_1962_rule_2B_rule_2B_subrule_4_28",
+      "chunk_1962_rule_2B_rule_2B_subrule_5_11"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_2B_rule_2B_subrule_1A_9",
@@ -179,9 +286,18 @@
     "difficulty_level": "Hard",
     "target_regime": "1962",
     "persona_context": "77-year old pensioner wanting relief u/s 194P and Rule 26D",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 26D"
     ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_26D_full"
+    ],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_26D_full"
     ],
@@ -202,9 +318,18 @@
     "difficulty_level": "Easy",
     "target_regime": "1962",
     "persona_context": "Salaried employee switching employers mid-year",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 26A"
     ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_26A_full"
+    ],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_26A_full"
     ],
@@ -224,8 +349,42 @@
     "difficulty_level": "Medium",
     "target_regime": "1962",
     "persona_context": "Corporate manager with company-owned car (> 1.6L cubic capacity) used partly for personal purposes with employer-borne running expenses",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 3"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_subrule_2_12"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_3_rule_3_body_1",
@@ -271,8 +430,30 @@
     "difficulty_level": "Hard",
     "target_regime": "2026",
     "persona_context": "Salaried employee operating under the 2026 direct tax regime exercising section 202(4) option",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 280"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_subrule_1_1"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_7_119",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
@@ -306,8 +487,22 @@
     "difficulty_level": "Easy",
     "target_regime": "1962",
     "persona_context": "Visually impaired employee commuting to work",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 2BB"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
@@ -332,8 +527,38 @@
     "difficulty_level": "Easy",
     "target_regime": "2026",
     "persona_context": "Salaried employee with company loan under 2026 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 15"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_subrule_5_48"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
@@ -374,8 +599,42 @@
     "difficulty_level": "Hard",
     "target_regime": "1962",
     "persona_context": "Salaried employee with company loan under 1962 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 3"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_2_12"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_3_rule_3_body_1",
@@ -420,8 +679,38 @@
     "difficulty_level": "Easy",
     "target_regime": "2026",
     "persona_context": "Salaried employee with company loan under 2026 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 15"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_subrule_5_48"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
@@ -462,8 +751,42 @@
     "difficulty_level": "Medium",
     "target_regime": "1962",
     "persona_context": "Salaried employee with company loan under 1962 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 3"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_2_12"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_3_rule_3_body_1",
@@ -508,8 +831,38 @@
     "difficulty_level": "Hard",
     "target_regime": "2026",
     "persona_context": "Salaried employee with company loan under 2026 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 15"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_subrule_5_48"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
@@ -550,8 +903,42 @@
     "difficulty_level": "Medium",
     "target_regime": "1962",
     "persona_context": "Salaried employee with company loan under 1962 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 3"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_2_12"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_3_rule_3_body_1",
@@ -596,8 +983,38 @@
     "difficulty_level": "Easy",
     "target_regime": "2026",
     "persona_context": "Salaried employee with company loan under 2026 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 15"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_subrule_5_48"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
@@ -638,8 +1055,42 @@
     "difficulty_level": "Hard",
     "target_regime": "1962",
     "persona_context": "Salaried employee with company loan under 1962 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 3"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_2_12"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_3_rule_3_body_1",
@@ -684,8 +1135,38 @@
     "difficulty_level": "Easy",
     "target_regime": "2026",
     "persona_context": "Salaried employee with company loan under 2026 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 15"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_subrule_5_48"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
@@ -726,8 +1207,42 @@
     "difficulty_level": "Medium",
     "target_regime": "1962",
     "persona_context": "Salaried employee with company loan under 1962 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 3"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_2_12"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_3_rule_3_body_1",
@@ -772,8 +1287,38 @@
     "difficulty_level": "Hard",
     "target_regime": "2026",
     "persona_context": "Salaried employee with company loan under 2026 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 15"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_subrule_5_48"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
@@ -814,8 +1359,42 @@
     "difficulty_level": "Medium",
     "target_regime": "1962",
     "persona_context": "Salaried employee with company loan under 1962 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 3"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_2_12"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_3_rule_3_body_1",
@@ -860,8 +1439,38 @@
     "difficulty_level": "Easy",
     "target_regime": "2026",
     "persona_context": "Salaried employee with company loan under 2026 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 15"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_subrule_5_48"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
@@ -902,8 +1511,42 @@
     "difficulty_level": "Hard",
     "target_regime": "1962",
     "persona_context": "Salaried employee with company loan under 1962 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 3"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_2_12"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_3_rule_3_body_1",
@@ -948,8 +1591,38 @@
     "difficulty_level": "Easy",
     "target_regime": "2026",
     "persona_context": "Salaried employee with company loan under 2026 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 15"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_subrule_5_48"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
@@ -990,8 +1663,42 @@
     "difficulty_level": "Medium",
     "target_regime": "1962",
     "persona_context": "Salaried employee with company loan under 1962 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 3"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_2_12"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_3_rule_3_body_1",
@@ -1036,8 +1743,38 @@
     "difficulty_level": "Hard",
     "target_regime": "2026",
     "persona_context": "Salaried employee with company loan under 2026 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 15"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_subrule_5_48"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
@@ -1078,8 +1815,42 @@
     "difficulty_level": "Medium",
     "target_regime": "1962",
     "persona_context": "Salaried employee with company loan under 1962 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 3"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_2_12"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_3_rule_3_body_1",
@@ -1124,8 +1895,38 @@
     "difficulty_level": "Easy",
     "target_regime": "2026",
     "persona_context": "Salaried employee with company loan under 2026 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 15"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_subrule_5_48"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
@@ -1166,8 +1967,42 @@
     "difficulty_level": "Hard",
     "target_regime": "1962",
     "persona_context": "Salaried employee with company loan under 1962 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 3"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_2_12"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_3_rule_3_body_1",
@@ -1212,8 +2047,38 @@
     "difficulty_level": "Easy",
     "target_regime": "2026",
     "persona_context": "Salaried employee with company loan under 2026 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 15"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_subrule_5_48"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_1_98",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_15_rule_15_subrule_1_1",
@@ -1254,8 +2119,42 @@
     "difficulty_level": "Medium",
     "target_regime": "1962",
     "persona_context": "Salaried employee with company loan under 1962 rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 3"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_2_12"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_3_rule_3_body_1",
@@ -1302,9 +2201,16 @@
     "persona_context": "Salaried employee wanting to correct omitted income from FY 2019-20",
     "fy_ay_context": "User asks for FY 2019-20 (which corresponds to Assessment Year 2020-21)",
     "temporal_constraint": "Rule 12AC w.e.f. 29-04-2022 applies to AY commencing 1st April 2020 and subsequent years",
+    "expected_fy": "FY 2019-2020",
+    "expected_ay": "AY 2020-2021",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 12AC"
     ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_12AC_full"
+    ],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_12AC_full"
     ],
@@ -1327,9 +2233,16 @@
     "persona_context": "Salaried person querying an older financial year for ITR-U",
     "fy_ay_context": "User asks for FY 2017-18 (which corresponds to AY 2018-19)",
     "temporal_constraint": "Rule 12AC eligibility begins only from AY 2020-21 onwards",
+    "expected_fy": "FY 2017-2018",
+    "expected_ay": "AY 2018-2019",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 12AC"
     ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_12AC_full"
+    ],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_12AC_full"
     ],
@@ -1349,9 +2262,26 @@
     "difficulty_level": "Hard",
     "target_regime": "both",
     "persona_context": "Salaried employee comparing LTC rules across 1962 and 2026 regimes",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 2B",
       "Rule 278"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_278_full",
+      "chunk_1962_rule_2B_rule_2B_subrule_5_11"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_2B_rule_2B_subrule_1A_9",
+      "chunk_1962_rule_2B_rule_2B_subrule_1B_23",
+      "chunk_1962_rule_2B_rule_2B_subrule_1_1",
+      "chunk_1962_rule_2B_rule_2B_subrule_2_24",
+      "chunk_1962_rule_2B_rule_2B_subrule_3_26",
+      "chunk_1962_rule_2B_rule_2B_subrule_4_28"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_2B_rule_2B_subrule_1A_9",
@@ -1378,10 +2308,19 @@
     "retrieval_paradigm": "simple_semantic",
     "difficulty_level": "Easy",
     "target_regime": "1962",
+    "persona_context": null,
+    "fy_ay_context": null,
     "temporal_constraint": "Inserted by IT (Eleventh Amdt.) Rules, 2022, w.e.f. 29-4-2022",
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 12AC"
     ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_12AC_full"
+    ],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_12AC_full"
     ],
@@ -1400,9 +2339,64 @@
     "difficulty_level": "Hard",
     "target_regime": "both",
     "persona_context": "Corporate employee analyzing rent-free accommodation valuation across 1962 and 2026 regimes",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 3",
       "Rule 15"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_table_1_115",
+      "chunk_2026_rule_15_rule_15_table_1_98"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_3_rule_3_body_1",
+      "chunk_1962_rule_3_rule_3_body_2",
+      "chunk_1962_rule_3_rule_3_body_3",
+      "chunk_1962_rule_3_rule_3_subrule_10_94",
+      "chunk_1962_rule_3_rule_3_subrule_1_25",
+      "chunk_1962_rule_3_rule_3_subrule_1_26",
+      "chunk_1962_rule_3_rule_3_subrule_1_4",
+      "chunk_1962_rule_3_rule_3_subrule_1_5",
+      "chunk_1962_rule_3_rule_3_subrule_1_6",
+      "chunk_1962_rule_3_rule_3_subrule_2_12",
+      "chunk_1962_rule_3_rule_3_subrule_2_24",
+      "chunk_1962_rule_3_rule_3_subrule_2_32",
+      "chunk_1962_rule_3_rule_3_subrule_2_7",
+      "chunk_1962_rule_3_rule_3_subrule_3_11",
+      "chunk_1962_rule_3_rule_3_subrule_3_35",
+      "chunk_1962_rule_3_rule_3_subrule_3_43",
+      "chunk_1962_rule_3_rule_3_subrule_4_44",
+      "chunk_1962_rule_3_rule_3_subrule_5_45",
+      "chunk_1962_rule_3_rule_3_subrule_6_47",
+      "chunk_1962_rule_3_rule_3_subrule_7_49",
+      "chunk_1962_rule_3_rule_3_subrule_8_75",
+      "chunk_1962_rule_3_rule_3_subrule_9_92",
+      "chunk_1962_rule_3_rule_3_table_2_116",
+      "chunk_1962_rule_3_rule_3_table_3_117",
+      "chunk_2026_rule_15_rule_15_subrule_1_1",
+      "chunk_2026_rule_15_rule_15_subrule_1_25",
+      "chunk_2026_rule_15_rule_15_subrule_1_3",
+      "chunk_2026_rule_15_rule_15_subrule_2_2",
+      "chunk_2026_rule_15_rule_15_subrule_2_31",
+      "chunk_2026_rule_15_rule_15_subrule_2_4",
+      "chunk_2026_rule_15_rule_15_subrule_3_24",
+      "chunk_2026_rule_15_rule_15_subrule_3_34",
+      "chunk_2026_rule_15_rule_15_subrule_3_9",
+      "chunk_2026_rule_15_rule_15_subrule_4_44",
+      "chunk_2026_rule_15_rule_15_subrule_5_48",
+      "chunk_2026_rule_15_rule_15_subrule_6_62",
+      "chunk_2026_rule_15_rule_15_subrule_7_70",
+      "chunk_2026_rule_15_rule_15_subrule_8_71",
+      "chunk_2026_rule_15_rule_15_table_2_99",
+      "chunk_2026_rule_15_rule_15_table_3_100",
+      "chunk_2026_rule_15_rule_15_table_4_101",
+      "chunk_2026_rule_15_rule_15_table_5_102",
+      "chunk_2026_rule_15_rule_15_table_6_103",
+      "chunk_2026_rule_15_rule_15_table_7_104"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_3_rule_3_body_1",
@@ -1467,9 +2461,23 @@
     "retrieval_paradigm": "hybrid_temporal",
     "difficulty_level": "Hard",
     "target_regime": "1962",
+    "persona_context": null,
     "fy_ay_context": "FY 2021-22 maps to AY 2022-23",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2021-2022",
+    "expected_ay": "AY 2022-2023",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 2BB"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
@@ -1493,9 +2501,31 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Easy",
     "target_regime": "2026",
+    "persona_context": null,
     "fy_ay_context": "FY 2022-23 maps to AY 2023-24",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2022-2023",
+    "expected_ay": "AY 2023-2024",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 280"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_table_7_119"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
@@ -1527,9 +2557,23 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Medium",
     "target_regime": "1962",
+    "persona_context": null,
     "fy_ay_context": "FY 2023-24 maps to AY 2024-25",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2023-2024",
+    "expected_ay": "AY 2024-2025",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 2BB"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
@@ -1553,9 +2597,31 @@
     "retrieval_paradigm": "hybrid_temporal",
     "difficulty_level": "Hard",
     "target_regime": "2026",
+    "persona_context": null,
     "fy_ay_context": "FY 2024-25 maps to AY 2025-26",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2024-2025",
+    "expected_ay": "AY 2025-2026",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 280"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_table_7_119"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
@@ -1587,9 +2653,23 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Medium",
     "target_regime": "1962",
+    "persona_context": null,
     "fy_ay_context": "FY 2020-21 maps to AY 2021-22",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2020-2021",
+    "expected_ay": "AY 2021-2022",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 2BB"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
@@ -1613,9 +2693,31 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Easy",
     "target_regime": "2026",
+    "persona_context": null,
     "fy_ay_context": "FY 2021-22 maps to AY 2022-23",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2021-2022",
+    "expected_ay": "AY 2022-2023",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 280"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_table_7_119"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
@@ -1647,9 +2749,23 @@
     "retrieval_paradigm": "hybrid_temporal",
     "difficulty_level": "Hard",
     "target_regime": "1962",
+    "persona_context": null,
     "fy_ay_context": "FY 2022-23 maps to AY 2023-24",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2022-2023",
+    "expected_ay": "AY 2023-2024",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 2BB"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
@@ -1673,9 +2789,31 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Easy",
     "target_regime": "2026",
+    "persona_context": null,
     "fy_ay_context": "FY 2023-24 maps to AY 2024-25",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2023-2024",
+    "expected_ay": "AY 2024-2025",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 280"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_table_7_119"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
@@ -1707,9 +2845,23 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Medium",
     "target_regime": "1962",
+    "persona_context": null,
     "fy_ay_context": "FY 2024-25 maps to AY 2025-26",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2024-2025",
+    "expected_ay": "AY 2025-2026",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 2BB"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
@@ -1733,9 +2885,31 @@
     "retrieval_paradigm": "hybrid_temporal",
     "difficulty_level": "Hard",
     "target_regime": "2026",
+    "persona_context": null,
     "fy_ay_context": "FY 2020-21 maps to AY 2021-22",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2020-2021",
+    "expected_ay": "AY 2021-2022",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 280"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_table_7_119"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
@@ -1767,9 +2941,23 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Medium",
     "target_regime": "1962",
+    "persona_context": null,
     "fy_ay_context": "FY 2021-22 maps to AY 2022-23",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2021-2022",
+    "expected_ay": "AY 2022-2023",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 2BB"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
@@ -1793,9 +2981,31 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Easy",
     "target_regime": "2026",
+    "persona_context": null,
     "fy_ay_context": "FY 2022-23 maps to AY 2023-24",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2022-2023",
+    "expected_ay": "AY 2023-2024",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 280"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_table_7_119"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
@@ -1827,9 +3037,23 @@
     "retrieval_paradigm": "hybrid_temporal",
     "difficulty_level": "Hard",
     "target_regime": "1962",
+    "persona_context": null,
     "fy_ay_context": "FY 2023-24 maps to AY 2024-25",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2023-2024",
+    "expected_ay": "AY 2024-2025",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 2BB"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
@@ -1853,9 +3077,31 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Easy",
     "target_regime": "2026",
+    "persona_context": null,
     "fy_ay_context": "FY 2024-25 maps to AY 2025-26",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2024-2025",
+    "expected_ay": "AY 2025-2026",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 280"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_table_7_119"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
@@ -1887,9 +3133,23 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Medium",
     "target_regime": "1962",
+    "persona_context": null,
     "fy_ay_context": "FY 2020-21 maps to AY 2021-22",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2020-2021",
+    "expected_ay": "AY 2021-2022",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 2BB"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
@@ -1913,9 +3173,31 @@
     "retrieval_paradigm": "hybrid_temporal",
     "difficulty_level": "Hard",
     "target_regime": "2026",
+    "persona_context": null,
     "fy_ay_context": "FY 2021-22 maps to AY 2022-23",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2021-2022",
+    "expected_ay": "AY 2022-2023",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 280"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_table_7_119"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
@@ -1947,9 +3229,23 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Medium",
     "target_regime": "1962",
+    "persona_context": null,
     "fy_ay_context": "FY 2022-23 maps to AY 2023-24",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2022-2023",
+    "expected_ay": "AY 2023-2024",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 2BB"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
@@ -1973,9 +3269,31 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Easy",
     "target_regime": "2026",
+    "persona_context": null,
     "fy_ay_context": "FY 2023-24 maps to AY 2024-25",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2023-2024",
+    "expected_ay": "AY 2024-2025",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 280"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_table_7_119"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
@@ -2007,9 +3325,23 @@
     "retrieval_paradigm": "hybrid_temporal",
     "difficulty_level": "Hard",
     "target_regime": "1962",
+    "persona_context": null,
     "fy_ay_context": "FY 2024-25 maps to AY 2025-26",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2024-2025",
+    "expected_ay": "AY 2025-2026",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 2BB"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
@@ -2033,9 +3365,31 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Easy",
     "target_regime": "2026",
+    "persona_context": null,
     "fy_ay_context": "FY 2020-21 maps to AY 2021-22",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2020-2021",
+    "expected_ay": "AY 2021-2022",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 280"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_table_7_119"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
@@ -2067,9 +3421,23 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Medium",
     "target_regime": "1962",
+    "persona_context": null,
     "fy_ay_context": "FY 2021-22 maps to AY 2022-23",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2021-2022",
+    "expected_ay": "AY 2022-2023",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 2BB"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
@@ -2093,9 +3461,31 @@
     "retrieval_paradigm": "hybrid_temporal",
     "difficulty_level": "Hard",
     "target_regime": "2026",
+    "persona_context": null,
     "fy_ay_context": "FY 2022-23 maps to AY 2023-24",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2022-2023",
+    "expected_ay": "AY 2023-2024",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 280"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_table_7_119"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
@@ -2127,9 +3517,23 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Medium",
     "target_regime": "1962",
+    "persona_context": null,
     "fy_ay_context": "FY 2023-24 maps to AY 2024-25",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2023-2024",
+    "expected_ay": "AY 2024-2025",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 2BB"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
@@ -2153,9 +3557,31 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Easy",
     "target_regime": "2026",
+    "persona_context": null,
     "fy_ay_context": "FY 2024-25 maps to AY 2025-26",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2024-2025",
+    "expected_ay": "AY 2025-2026",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 280"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_table_7_119"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
@@ -2187,9 +3613,23 @@
     "retrieval_paradigm": "hybrid_temporal",
     "difficulty_level": "Hard",
     "target_regime": "1962",
+    "persona_context": null,
     "fy_ay_context": "FY 2020-21 maps to AY 2021-22",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2020-2021",
+    "expected_ay": "AY 2021-2022",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 2BB"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
@@ -2213,9 +3653,31 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Easy",
     "target_regime": "2026",
+    "persona_context": null,
     "fy_ay_context": "FY 2021-22 maps to AY 2022-23",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2021-2022",
+    "expected_ay": "AY 2022-2023",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 280"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_2_9",
+      "chunk_2026_rule_280_rule_280_table_7_119"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_280_rule_280_subrule_1_1",
+      "chunk_2026_rule_280_rule_280_subrule_3_112",
+      "chunk_2026_rule_280_rule_280_table_10_122",
+      "chunk_2026_rule_280_rule_280_table_1_113",
+      "chunk_2026_rule_280_rule_280_table_2_114",
+      "chunk_2026_rule_280_rule_280_table_3_115",
+      "chunk_2026_rule_280_rule_280_table_4_116",
+      "chunk_2026_rule_280_rule_280_table_5_117",
+      "chunk_2026_rule_280_rule_280_table_6_118",
+      "chunk_2026_rule_280_rule_280_table_8_120",
+      "chunk_2026_rule_280_rule_280_table_9_121"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_280_rule_280_subrule_1_1",
@@ -2247,9 +3709,23 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Medium",
     "target_regime": "1962",
+    "persona_context": null,
     "fy_ay_context": "FY 2022-23 maps to AY 2023-24",
+    "temporal_constraint": null,
+    "expected_fy": "FY 2022-2023",
+    "expected_ay": "AY 2023-2024",
+    "is_negative": false,
     "relevant_rules": [
       "Rule 2BB"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_11",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_3_121"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
+      "chunk_1962_rule_2BB_rule_2BB_subrule_2_10",
+      "chunk_1962_rule_2BB_rule_2BB_table_1_124"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_2BB_rule_2BB_subrule_1_1",
@@ -2274,9 +3750,18 @@
     "difficulty_level": "Medium",
     "target_regime": "1962",
     "persona_context": "Individual salaried taxpayer with no business audit and no digital signature certificate",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 12AC"
     ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_12AC_full"
+    ],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_12AC_full"
     ],
@@ -2296,9 +3781,18 @@
     "difficulty_level": "Easy",
     "target_regime": "1962",
     "persona_context": "Salaried employee providing proof of tax investments and rent receipts to payroll department",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 26C"
     ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_26C_full"
+    ],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_26C_full"
     ],
@@ -2318,9 +3812,18 @@
     "difficulty_level": "Easy",
     "target_regime": "2026",
     "persona_context": "Employee in 2026 submitting investment declarations to employer",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 205"
     ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_205_full"
+    ],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_205_full"
     ],
@@ -2339,9 +3842,25 @@
     "difficulty_level": "Hard",
     "target_regime": "1962",
     "persona_context": "Government / PSU employee receiving 3 years of salary arrears in a single lump sum",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 21A",
       "Rule 21AA"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_21A_rule_21A_subrule_2_7",
+      "chunk_1962_rule_21A_rule_21A_subrule_1_1"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_21AA_full",
+      "chunk_1962_rule_21A_rule_21A_subrule_3_13",
+      "chunk_1962_rule_21A_rule_21A_subrule_4_21",
+      "chunk_1962_rule_21A_rule_21A_subrule_5_23",
+      "chunk_1962_rule_21A_rule_21A_subrule_6_26"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_21AA_full",
@@ -2369,8 +3888,31 @@
     "difficulty_level": "Medium",
     "target_regime": "1962",
     "persona_context": "Salaried employee requesting annual TDS certificate from HR",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 31"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_31_rule_31_subrule_1_12",
+      "chunk_1962_rule_31_rule_31_table_1_27"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_31_rule_31_subrule_1_1",
+      "chunk_1962_rule_31_rule_31_subrule_2_4",
+      "chunk_1962_rule_31_rule_31_subrule_3A_13",
+      "chunk_1962_rule_31_rule_31_subrule_3B_14",
+      "chunk_1962_rule_31_rule_31_subrule_3C_15",
+      "chunk_1962_rule_31_rule_31_subrule_3D_16",
+      "chunk_1962_rule_31_rule_31_subrule_3_11",
+      "chunk_1962_rule_31_rule_31_subrule_4_17",
+      "chunk_1962_rule_31_rule_31_subrule_5_18",
+      "chunk_1962_rule_31_rule_31_subrule_6A_24",
+      "chunk_1962_rule_31_rule_31_subrule_6_19",
+      "chunk_1962_rule_31_rule_31_subrule_7_25"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_31_rule_31_subrule_1_1",
@@ -2403,8 +3945,34 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Hard",
     "target_regime": "2026",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 164"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_6_26"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_164_rule_164_subrule_10_45",
@@ -2441,8 +4009,28 @@
     "retrieval_paradigm": "simple_semantic",
     "difficulty_level": "Easy",
     "target_regime": "1962",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 12"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_3_47"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_12_rule_12_subrule_1_1",
@@ -2473,8 +4061,34 @@
     "retrieval_paradigm": "simple_semantic",
     "difficulty_level": "Medium",
     "target_regime": "2026",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 164"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_6_26"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_164_rule_164_subrule_10_45",
@@ -2511,8 +4125,28 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Hard",
     "target_regime": "1962",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 12"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_3_47"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_12_rule_12_subrule_1_1",
@@ -2543,8 +4177,34 @@
     "retrieval_paradigm": "simple_semantic",
     "difficulty_level": "Medium",
     "target_regime": "2026",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 164"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_6_26"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_164_rule_164_subrule_10_45",
@@ -2581,8 +4241,28 @@
     "retrieval_paradigm": "simple_semantic",
     "difficulty_level": "Easy",
     "target_regime": "1962",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 12"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_3_47"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_12_rule_12_subrule_1_1",
@@ -2613,8 +4293,34 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Hard",
     "target_regime": "2026",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 164"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_6_26"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_164_rule_164_subrule_10_45",
@@ -2651,8 +4357,28 @@
     "retrieval_paradigm": "simple_semantic",
     "difficulty_level": "Easy",
     "target_regime": "1962",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 12"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_3_47"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_12_rule_12_subrule_1_1",
@@ -2683,8 +4409,34 @@
     "retrieval_paradigm": "simple_semantic",
     "difficulty_level": "Medium",
     "target_regime": "2026",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 164"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_6_26"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_164_rule_164_subrule_10_45",
@@ -2721,8 +4473,28 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Hard",
     "target_regime": "1962",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 12"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_3_47"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_12_rule_12_subrule_1_1",
@@ -2753,8 +4525,34 @@
     "retrieval_paradigm": "simple_semantic",
     "difficulty_level": "Medium",
     "target_regime": "2026",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 164"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_6_26"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_164_rule_164_subrule_10_45",
@@ -2791,8 +4589,28 @@
     "retrieval_paradigm": "simple_semantic",
     "difficulty_level": "Easy",
     "target_regime": "1962",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 12"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_3_47"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_12_rule_12_subrule_1_1",
@@ -2823,8 +4641,34 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Hard",
     "target_regime": "2026",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 164"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_6_26"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_164_rule_164_subrule_10_45",
@@ -2861,8 +4705,28 @@
     "retrieval_paradigm": "simple_semantic",
     "difficulty_level": "Easy",
     "target_regime": "1962",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 12"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_3_47"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_12_rule_12_subrule_1_1",
@@ -2893,8 +4757,34 @@
     "retrieval_paradigm": "simple_semantic",
     "difficulty_level": "Medium",
     "target_regime": "2026",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 164"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_6_26"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_164_rule_164_subrule_10_45",
@@ -2931,8 +4821,28 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Hard",
     "target_regime": "1962",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 12"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_3_47"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_12_rule_12_subrule_1_1",
@@ -2963,8 +4873,34 @@
     "retrieval_paradigm": "simple_semantic",
     "difficulty_level": "Medium",
     "target_regime": "2026",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 164"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_6_26"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_164_rule_164_subrule_10_45",
@@ -3001,8 +4937,28 @@
     "retrieval_paradigm": "simple_semantic",
     "difficulty_level": "Easy",
     "target_regime": "1962",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 12"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_3_47"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_12_rule_12_subrule_1_1",
@@ -3033,8 +4989,34 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Hard",
     "target_regime": "2026",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 164"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_6_26"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_164_rule_164_subrule_10_45",
@@ -3071,8 +5053,28 @@
     "retrieval_paradigm": "simple_semantic",
     "difficulty_level": "Easy",
     "target_regime": "1962",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 12"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_3_47"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_12_rule_12_subrule_1_1",
@@ -3103,8 +5105,34 @@
     "retrieval_paradigm": "simple_semantic",
     "difficulty_level": "Medium",
     "target_regime": "2026",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 164"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_6_26"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_164_rule_164_subrule_10_45",
@@ -3141,8 +5169,28 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Hard",
     "target_regime": "1962",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 12"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_3_47"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_12_rule_12_subrule_1_1",
@@ -3173,8 +5221,34 @@
     "retrieval_paradigm": "simple_semantic",
     "difficulty_level": "Medium",
     "target_regime": "2026",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 164"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_6_26"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_164_rule_164_subrule_10_45",
@@ -3211,8 +5285,28 @@
     "retrieval_paradigm": "simple_semantic",
     "difficulty_level": "Easy",
     "target_regime": "1962",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 12"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_3_47"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_12_rule_12_subrule_1_1",
@@ -3243,8 +5337,34 @@
     "retrieval_paradigm": "multi_hop",
     "difficulty_level": "Hard",
     "target_regime": "2026",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 164"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_6_26"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_164_rule_164_subrule_10_45",
@@ -3281,8 +5401,28 @@
     "retrieval_paradigm": "simple_semantic",
     "difficulty_level": "Easy",
     "target_regime": "1962",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 12"
+    ],
+    "essential_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_1_1",
+      "chunk_1962_rule_12_rule_12_subrule_3_47"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_1962_rule_12_rule_12_subrule_2_46",
+      "chunk_1962_rule_12_rule_12_subrule_4_61",
+      "chunk_1962_rule_12_rule_12_subrule_5_62",
+      "chunk_1962_rule_12_rule_12_table_1_63",
+      "chunk_1962_rule_12_rule_12_table_2_64",
+      "chunk_1962_rule_12_rule_12_table_3_65",
+      "chunk_1962_rule_12_rule_12_table_4_66",
+      "chunk_1962_rule_12_rule_12_table_5_67"
     ],
     "ground_truth_chunk_ids": [
       "chunk_1962_rule_12_rule_12_subrule_1_1",
@@ -3313,8 +5453,34 @@
     "retrieval_paradigm": "simple_semantic",
     "difficulty_level": "Medium",
     "target_regime": "2026",
+    "persona_context": null,
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": false,
     "relevant_rules": [
       "Rule 164"
+    ],
+    "essential_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_7_42",
+      "chunk_2026_rule_164_rule_164_subrule_6_26"
+    ],
+    "supporting_chunk_ids": [
+      "chunk_2026_rule_164_rule_164_subrule_10_45",
+      "chunk_2026_rule_164_rule_164_subrule_11_46",
+      "chunk_2026_rule_164_rule_164_subrule_12_47",
+      "chunk_2026_rule_164_rule_164_subrule_13_53",
+      "chunk_2026_rule_164_rule_164_subrule_14_54",
+      "chunk_2026_rule_164_rule_164_subrule_1_1",
+      "chunk_2026_rule_164_rule_164_subrule_2_2",
+      "chunk_2026_rule_164_rule_164_subrule_3_7",
+      "chunk_2026_rule_164_rule_164_subrule_4_22",
+      "chunk_2026_rule_164_rule_164_subrule_5_23",
+      "chunk_2026_rule_164_rule_164_subrule_8_43",
+      "chunk_2026_rule_164_rule_164_subrule_9_44",
+      "chunk_2026_rule_164_rule_164_table_1_55",
+      "chunk_2026_rule_164_rule_164_table_2_56"
     ],
     "ground_truth_chunk_ids": [
       "chunk_2026_rule_164_rule_164_subrule_10_45",
@@ -3352,7 +5518,14 @@
     "difficulty_level": "Easy",
     "target_regime": "none",
     "persona_context": "Out-of-scope query regarding corporate MAT provisions",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. The provided corpus contains Indian Income Tax Rules specifically applicable to salaried individuals and related procedures. Minimum Alternate Tax (MAT) under section 115JB applies to corporate companies and is not covered in this salaried individual rules corpus.",
     "evaluation_criteria": [
@@ -3370,7 +5543,14 @@
     "difficulty_level": "Easy",
     "target_regime": "none",
     "persona_context": "Out-of-scope query regarding cryptocurrency trading TDS rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. Detailed provisions for cryptocurrency / Virtual Digital Asset (VDA) trading under section 194S are business/trading provisions not covered in the salaried rules corpus.",
     "evaluation_criteria": [
@@ -3388,7 +5568,14 @@
     "difficulty_level": "Easy",
     "target_regime": "none",
     "persona_context": "Out-of-scope query confusing Income Tax with GST Input Tax Credit",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. Goods and Services Tax (GST) Input Tax Credit (ITC) is governed by GST legislation for registered businesses, not under the Income Tax Rules for salaried individuals.",
     "evaluation_criteria": [
@@ -3406,7 +5593,14 @@
     "difficulty_level": "Easy",
     "target_regime": "none",
     "persona_context": "Out-of-scope query regarding corporate Transfer Pricing rules",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. Transfer pricing documentation under Rule 10D applies to multinational corporate enterprises engaged in cross-border international transactions and is not part of the salaried rules corpus.",
     "evaluation_criteria": [
@@ -3424,10 +5618,16 @@
     "difficulty_level": "Medium",
     "target_regime": "none",
     "persona_context": "Temporal boundary query asking for ITR-U for an excluded historical assessment year",
+    "fy_ay_context": null,
     "temporal_constraint": "Rule 12AC only applies from AY 2020-21 onwards",
+    "expected_fy": "FY 2019-2020",
+    "expected_ay": "AY 2020-2021",
+    "is_negative": true,
     "relevant_rules": [
       "Rule 12AC"
     ],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This request is invalid and outside the temporal scope of the rule. Under Rule 12AC(1), the updated return in Form ITR-U is applicable only for Assessment Year commencing 1st April 2020 (AY 2020-21) and subsequent years. An updated return cannot be filed for AY 2017-18 as it is outside the temporal jurisdiction of Rule 12AC.",
     "evaluation_criteria": [
@@ -3445,10 +5645,16 @@
     "difficulty_level": "Hard",
     "target_regime": "none",
     "persona_context": "Temporal boundary query testing date prior to rule notification",
+    "fy_ay_context": null,
     "temporal_constraint": "Rule 12AC came into force only on 29-04-2022",
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": true,
     "relevant_rules": [
       "Rule 12AC"
     ],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This request is temporally invalid. Rule 12AC and Form ITR-U were inserted by the Income-tax (Eleventh Amendment) Rules, 2022 and came into force only on 29th April, 2022. On 15th January 2021, Rule 12AC and Form ITR-U did not legally exist.",
     "evaluation_criteria": [
@@ -3466,7 +5672,14 @@
     "difficulty_level": "Medium",
     "target_regime": "none",
     "persona_context": "Out of scope evaluation case",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. Business boiler depreciation under section 32 is a commercial enterprise provision not covered under the salaried individual rules corpus.",
     "evaluation_criteria": [
@@ -3483,7 +5696,14 @@
     "difficulty_level": "Hard",
     "target_regime": "none",
     "persona_context": "Out of scope evaluation case",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": "FY 2014-2015",
+    "expected_ay": "AY 2015-2016",
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. Rule 12AC is temporally restricted to AY 2020-21 onwards and cannot apply to AY 2015-16.",
     "evaluation_criteria": [
@@ -3500,7 +5720,14 @@
     "difficulty_level": "Medium",
     "target_regime": "none",
     "persona_context": "Out of scope evaluation case",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. Business boiler depreciation under section 32 is a commercial enterprise provision not covered under the salaried individual rules corpus.",
     "evaluation_criteria": [
@@ -3517,7 +5744,14 @@
     "difficulty_level": "Hard",
     "target_regime": "none",
     "persona_context": "Out of scope evaluation case",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": "FY 2014-2015",
+    "expected_ay": "AY 2015-2016",
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. Rule 12AC is temporally restricted to AY 2020-21 onwards and cannot apply to AY 2015-16.",
     "evaluation_criteria": [
@@ -3534,7 +5768,14 @@
     "difficulty_level": "Medium",
     "target_regime": "none",
     "persona_context": "Out of scope evaluation case",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. Business boiler depreciation under section 32 is a commercial enterprise provision not covered under the salaried individual rules corpus.",
     "evaluation_criteria": [
@@ -3551,7 +5792,14 @@
     "difficulty_level": "Hard",
     "target_regime": "none",
     "persona_context": "Out of scope evaluation case",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": "FY 2014-2015",
+    "expected_ay": "AY 2015-2016",
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. Rule 12AC is temporally restricted to AY 2020-21 onwards and cannot apply to AY 2015-16.",
     "evaluation_criteria": [
@@ -3568,7 +5816,14 @@
     "difficulty_level": "Medium",
     "target_regime": "none",
     "persona_context": "Out of scope evaluation case",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. Business boiler depreciation under section 32 is a commercial enterprise provision not covered under the salaried individual rules corpus.",
     "evaluation_criteria": [
@@ -3585,7 +5840,14 @@
     "difficulty_level": "Hard",
     "target_regime": "none",
     "persona_context": "Out of scope evaluation case",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": "FY 2014-2015",
+    "expected_ay": "AY 2015-2016",
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. Rule 12AC is temporally restricted to AY 2020-21 onwards and cannot apply to AY 2015-16.",
     "evaluation_criteria": [
@@ -3602,7 +5864,14 @@
     "difficulty_level": "Medium",
     "target_regime": "none",
     "persona_context": "Out of scope evaluation case",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. Business boiler depreciation under section 32 is a commercial enterprise provision not covered under the salaried individual rules corpus.",
     "evaluation_criteria": [
@@ -3619,7 +5888,14 @@
     "difficulty_level": "Hard",
     "target_regime": "none",
     "persona_context": "Out of scope evaluation case",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": "FY 2014-2015",
+    "expected_ay": "AY 2015-2016",
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. Rule 12AC is temporally restricted to AY 2020-21 onwards and cannot apply to AY 2015-16.",
     "evaluation_criteria": [
@@ -3636,7 +5912,14 @@
     "difficulty_level": "Medium",
     "target_regime": "none",
     "persona_context": "Out of scope evaluation case",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. Business boiler depreciation under section 32 is a commercial enterprise provision not covered under the salaried individual rules corpus.",
     "evaluation_criteria": [
@@ -3653,7 +5936,14 @@
     "difficulty_level": "Hard",
     "target_regime": "none",
     "persona_context": "Out of scope evaluation case",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": "FY 2014-2015",
+    "expected_ay": "AY 2015-2016",
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. Rule 12AC is temporally restricted to AY 2020-21 onwards and cannot apply to AY 2015-16.",
     "evaluation_criteria": [
@@ -3670,7 +5960,14 @@
     "difficulty_level": "Medium",
     "target_regime": "none",
     "persona_context": "Out of scope evaluation case",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. Business boiler depreciation under section 32 is a commercial enterprise provision not covered under the salaried individual rules corpus.",
     "evaluation_criteria": [
@@ -3687,7 +5984,14 @@
     "difficulty_level": "Hard",
     "target_regime": "none",
     "persona_context": "Out of scope evaluation case",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": "FY 2014-2015",
+    "expected_ay": "AY 2015-2016",
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. Rule 12AC is temporally restricted to AY 2020-21 onwards and cannot apply to AY 2015-16.",
     "evaluation_criteria": [
@@ -3704,7 +6008,14 @@
     "difficulty_level": "Medium",
     "target_regime": "none",
     "persona_context": "Out of scope evaluation case",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. Business boiler depreciation under section 32 is a commercial enterprise provision not covered under the salaried individual rules corpus.",
     "evaluation_criteria": [
@@ -3721,7 +6032,14 @@
     "difficulty_level": "Hard",
     "target_regime": "none",
     "persona_context": "Out of scope evaluation case",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": "FY 2014-2015",
+    "expected_ay": "AY 2015-2016",
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. Rule 12AC is temporally restricted to AY 2020-21 onwards and cannot apply to AY 2015-16.",
     "evaluation_criteria": [
@@ -3738,7 +6056,14 @@
     "difficulty_level": "Medium",
     "target_regime": "none",
     "persona_context": "Out of scope evaluation case",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": null,
+    "expected_ay": null,
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. Business boiler depreciation under section 32 is a commercial enterprise provision not covered under the salaried individual rules corpus.",
     "evaluation_criteria": [
@@ -3755,7 +6080,14 @@
     "difficulty_level": "Hard",
     "target_regime": "none",
     "persona_context": "Out of scope evaluation case",
+    "fy_ay_context": null,
+    "temporal_constraint": null,
+    "expected_fy": "FY 2014-2015",
+    "expected_ay": "AY 2015-2016",
+    "is_negative": true,
     "relevant_rules": [],
+    "essential_chunk_ids": [],
+    "supporting_chunk_ids": [],
     "ground_truth_chunk_ids": [],
     "ground_truth_answer": "This query is out of scope. Rule 12AC is temporally restricted to AY 2020-21 onwards and cannot apply to AY 2015-16.",
     "evaluation_criteria": [

@@ -1,6 +1,7 @@
 import os
 import time
 import json
+import re
 from pathlib import Path
 from typing import Dict, Any, List, Optional
 from fastmcp import FastMCP
@@ -12,6 +13,8 @@ from src.generation.pipeline import GenerationPipeline
 from src.generation.models import GenerationOutput
 from src.mcp.calculators import PerquisiteCalculator
 from src.mcp.telemetry import telemetry_logger
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 # Instantiate FastMCP server
 mcp = FastMCP(
@@ -30,7 +33,8 @@ _processed_chunks: Optional[Dict[str, List[Dict[str, Any]]]] = None
 def get_store() -> HybridVectorStore:
     global _vector_store
     if _vector_store is None:
-        _vector_store = HybridVectorStore.load("data/indices")
+        idx_dir = PROJECT_ROOT / "data/indices"
+        _vector_store = HybridVectorStore.load(str(idx_dir))
     return _vector_store
 
 
@@ -44,7 +48,8 @@ def get_embedder() -> DenseEmbedder:
 def get_pipeline() -> GenerationPipeline:
     global _generation_pipeline
     if _generation_pipeline is None:
-        _generation_pipeline = GenerationPipeline(indices_dir="data/indices")
+        idx_dir = PROJECT_ROOT / "data/indices"
+        _generation_pipeline = GenerationPipeline(indices_dir=str(idx_dir))
     return _generation_pipeline
 
 
@@ -53,7 +58,7 @@ def get_all_chunks() -> Dict[str, List[Dict[str, Any]]]:
     if _processed_chunks is None:
         _processed_chunks = {"1962": [], "2026": []}
         for y in ["1962", "2026"]:
-            fpath = Path(f"data/processed/chunks_{y}.json")
+            fpath = PROJECT_ROOT / f"data/processed/chunks_{y}.json"
             if fpath.exists():
                 with open(fpath, "r", encoding="utf-8") as f:
                     _processed_chunks[y] = json.load(f)
@@ -157,7 +162,7 @@ def get_rule_details(
     """Retrieves the full statutory text, sub-rules, provisos, and embedded tables for a specific Rule ID.
     
     Args:
-        rule_id: Rule number (e.g. '3', '12AC', '2BB', '114B', '26C').
+        rule_id: Rule number (e.g. '3', '12AC', '2BB', '26D', '26A').
         regime: '1962' for Income-tax Rules, 1962 or '2026' for Draft Rules, 2026.
     """
     start_time = time.perf_counter()
@@ -199,7 +204,7 @@ def get_rule_details(
         "regime": target_year,
         "found": True,
         "rule_title": first_meta.get("rule_title", f"Rule {clean_id}"),
-        "effective_date": first_meta.get("effective_date", "Standard"),
+        "effective_date": first_meta.get("effective_date", "Standard statutory commencement"),
         "total_sub_chunks": len(matching_chunks),
         "sub_rules": [
             {
@@ -268,6 +273,12 @@ def compare_regimes(
     stat_paths = [r.payload.statutory_path for r in res_1962] + [r.payload.statutory_path for r in res_2026]
     duration_ms = (time.perf_counter() - start_time) * 1000.0
 
+    # Dynamic transition summary generation based on retrieved provisions
+    r1962_rules = sorted(list({r.payload.rule_id for r in res_1962}))
+    r2026_rules = sorted(list({r.payload.rule_id for r in res_2026}))
+    
+    dynamic_summary = f"Statutory comparison for topic '{topic}': Evaluated Rule(s) {', '.join(r1962_rules)} under 1962 Rules against Rule(s) {', '.join(r2026_rules)} under Draft 2026 Rules. Draft Rules 2026 restructure historical clauses and provisos into consolidated schedules."
+
     output = {
         "topic": topic,
         "comparison": {
@@ -290,7 +301,7 @@ def compare_regimes(
                 for r in res_2026
             ]
         },
-        "key_transition_summary": "Draft Rules 2026 streamline tables into standardized schedules and eliminate redundant historical provisos."
+        "key_transition_summary": dynamic_summary
     }
 
     telemetry_logger.log_event(
@@ -319,7 +330,6 @@ def resolve_tax_year(
         year_input: Any temporal mention (e.g. 'FY 2023-24', 'AY 2024-25', '2023-2024', '2025').
     """
     start_time = time.perf_counter()
-    import re
     norm = TaxEntityNormalizer.normalize_query(year_input)
     fy = norm.detected_fy
     ay = norm.detected_ay
@@ -338,7 +348,12 @@ def resolve_tax_year(
             fy = "Unknown"
             ay = "Unknown"
 
-    regime = "2026" if ("2026" in str(ay) or "2027" in str(ay) or "2026" in str(fy)) else "1962"
+    # Legal routing: 1962 Rules apply to current notified years including AY 2024-25, 2025-26, 2026-27.
+    # Draft 2026 Rules apply only if explicitly requested or for post-notification prospective assessment.
+    regime = "1962"
+    if "2026" in year_input and "draft" in year_input.lower():
+        regime = "2026"
+
     duration_ms = (time.perf_counter() - start_time) * 1000.0
 
     output = {
@@ -349,7 +364,7 @@ def resolve_tax_year(
         "statutory_rule_definition": {
             "financial_year": f"Period from 1st April to 31st March (Year of earning income - {fy}).",
             "assessment_year": f"Period from 1st April to 31st March (Year of tax assessment & filing - {ay}).",
-            "legal_precedence": "In Indian tax jurisprudence, AY is always FY + 1."
+            "legal_precedence": "In Indian tax jurisprudence, AY is always FY + 1. Income-tax Rules, 1962 remain the governing notified statutory law until Draft Rules 2026 take legislative effect."
         }
     }
 
@@ -368,23 +383,59 @@ def resolve_tax_year(
 
 
 # ==============================================================================
-# TOOL 5: VERIFY STATUTORY EFFECTIVE DATE
+# TOOL 5: VERIFY STATUTORY EFFECTIVE DATE (STATUTORY REGISTRY)
 # ==============================================================================
+STATUTORY_EFFECTIVE_DATE_REGISTRY: Dict[str, Dict[str, Any]] = {
+    "12AC": {
+        "rule_title": "Updated Return of Income (ITR-U)",
+        "inserted_date": "2022-04-29",
+        "notification_no": "Notification No. 48/2022",
+        "earliest_applicable_ay": 2022,  # AY 2022-23 onwards
+        "earliest_applicable_ay_str": "AY 2022-23",
+        "notes": "Rule 12AC was inserted w.e.f. 29-04-2022. It is legally not available for assessment years prior to AY 2022-23."
+    },
+    "26D": {
+        "rule_title": "Declaration for Senior Citizen Pensioners (Form 12BBA u/s 194P)",
+        "inserted_date": "2021-09-02",
+        "notification_no": "Notification No. 98/2021",
+        "earliest_applicable_ay": 2021,  # AY 2021-22 onwards
+        "earliest_applicable_ay_str": "AY 2021-22",
+        "notes": "Rule 26D and Form 12BBA were inserted w.e.f. 02-09-2021 (Finance Act 2021)."
+    },
+    "21AAA": {
+        "rule_title": "Taxation of Relief from Specified Foreign Retirement Funds (Section 89A)",
+        "inserted_date": "2022-04-04",
+        "notification_no": "Notification No. 24/2022",
+        "earliest_applicable_ay": 2022,
+        "earliest_applicable_ay_str": "AY 2022-23",
+        "notes": "Rule 21AAA was inserted w.e.f. 04-04-2022."
+    },
+    "114AAA": {
+        "rule_title": "Manner of making PAN inoperative upon non-linking with Aadhaar",
+        "inserted_date": "2020-02-13",
+        "notification_no": "Notification No. 11/2020",
+        "earliest_applicable_ay": 2020,
+        "earliest_applicable_ay_str": "AY 2020-21",
+        "notes": "Rule 114AAA inserted w.e.f. 13-02-2020."
+    }
+}
+
+
 @mcp.tool()
 def verify_effective_date(
     rule_id: str,
     date_or_ay: str,
     regime: str = "1962"
 ) -> Dict[str, Any]:
-    """Verifies whether a statutory rule, sub-rule, or amendment was legally in force for a specific date or Assessment Year.
+    """Verifies whether a statutory rule, sub-rule, or amendment was legally in force for a specific date or Assessment Year based on statutory commencement records.
     
     Args:
-        rule_id: Rule identifier (e.g. '12AC', '3', '26C').
-        date_or_ay: Date string ('2020-04-01') or Assessment Year ('AY 2021-22').
+        rule_id: Rule identifier (e.g. '12AC', '3', '26D', '21AAA').
+        date_or_ay: Date string ('2020-04-01') or Assessment Year ('AY 2020-21', 'AY 2024-25').
         regime: '1962' or '2026'.
     """
     start_time = time.perf_counter()
-    clean_id = rule_id.upper().replace("RULE", "").strip()
+    clean_id = rule_id.upper().replace("RULE", "").replace("SEC", "").strip()
     all_chunks = get_all_chunks()
     target_year = "2026" if "2026" in regime else "1962"
     chunks = all_chunks.get(target_year, [])
@@ -409,23 +460,31 @@ def verify_effective_date(
         )
         return output
 
-    eff_date = matching[0].get("metadata", {}).get("effective_date", "Standard statutory commencement")
-    
-    # Specific known statutory timeline checks
+    # Check against structured Statutory Effective Date Registry
     in_force = True
     scope_note = "In force during queried period."
+    eff_record = STATUTORY_EFFECTIVE_DATE_REGISTRY.get(clean_id)
 
-    if clean_id == "12AC":
-        # Rule 12AC (Updated Return ITR-U) inserted w.e.f. 29-04-2022 (Notification No. 48/2022)
-        if any(term in date_or_ay for term in ["2020", "2021", "2019", "AY 2021-22", "AY 2020-21"]):
+    # Extract year from date_or_ay
+    year_match = re.search(r"\b(\d{4})\b", date_or_ay)
+    queried_year = int(year_match.group(1)) if year_match else None
+
+    if target_year == "2026":
+        in_force = False
+        scope_note = "Income-tax Rules, 2026 are currently in draft status and have not been officially notified."
+    elif eff_record and queried_year is not None:
+        earliest_ay = eff_record["earliest_applicable_ay"]
+        if queried_year < earliest_ay:
             in_force = False
-            scope_note = "Rule 12AC was inserted w.e.f. 29-04-2022 and was NOT in force for periods prior to AY 2022-23."
+            scope_note = f"Rule {clean_id} ({eff_record['rule_title']}) was inserted w.e.f. {eff_record['inserted_date']} via {eff_record['notification_no']} and was NOT in force for periods prior to {eff_record['earliest_applicable_ay_str']}."
+
+    eff_date_str = eff_record["inserted_date"] if eff_record else matching[0].get("metadata", {}).get("effective_date", "Standard statutory commencement")
 
     output = {
         "rule_id": clean_id,
         "regime": target_year,
         "queried_period": date_or_ay,
-        "effective_date_recorded": eff_date,
+        "effective_date_recorded": eff_date_str,
         "is_in_force_for_period": in_force,
         "scope_note": scope_note
     }
@@ -460,10 +519,12 @@ def calculate_perquisite(
     """
     start_time = time.perf_counter()
     ptype = perquisite_type.lower().strip()
+    ay = str(parameters.get("assessment_year", parameters.get("ay", "AY 2024-25")))
 
     if ptype in ["rent_free_accommodation", "accommodation", "rfa"]:
         result = PerquisiteCalculator.calculate_rent_free_accommodation(
             salary_for_period=float(parameters.get("salary_for_period", 0.0)),
+            assessment_year=ay,
             is_government_employee=bool(parameters.get("is_government_employee", False)),
             government_license_fee=float(parameters.get("government_license_fee", 0.0)),
             is_owned_by_employer=bool(parameters.get("is_owned_by_employer", True)),
@@ -477,6 +538,7 @@ def calculate_perquisite(
         )
     elif ptype in ["motor_car", "car", "vehicle"]:
         result = PerquisiteCalculator.calculate_motor_car(
+            assessment_year=ay,
             cubic_capacity_cc=int(parameters.get("cubic_capacity_cc", 1500)),
             is_employer_owned_or_hired=bool(parameters.get("is_employer_owned_or_hired", True)),
             is_employer_expenses_met=bool(parameters.get("is_employer_expenses_met", True)),
@@ -491,6 +553,8 @@ def calculate_perquisite(
     elif ptype in ["interest_free_loan", "loan", "concessional_loan"]:
         result = PerquisiteCalculator.calculate_interest_free_loan(
             max_outstanding_monthly_balance=float(parameters.get("max_outstanding_monthly_balance", parameters.get("loan_amount", 0.0))),
+            original_aggregate_loan_amount=float(parameters["original_aggregate_loan_amount"]) if "original_aggregate_loan_amount" in parameters else None,
+            assessment_year=ay,
             actual_interest_rate_charged_pct=float(parameters.get("actual_interest_rate_charged_pct", 0.0)),
             sbi_benchmark_rate_pct=float(parameters.get("sbi_benchmark_rate_pct", 8.5)),
             is_medical_treatment_specified_disease=bool(parameters.get("is_medical_treatment_specified_disease", False)),
@@ -502,6 +566,7 @@ def calculate_perquisite(
     elif ptype in ["free_food", "food", "beverages", "meal"]:
         result = PerquisiteCalculator.calculate_free_food(
             cost_per_meal=float(parameters.get("cost_per_meal", 80.0)),
+            assessment_year=ay,
             num_meals_per_day=int(parameters.get("num_meals_per_day", 1)),
             working_days=int(parameters.get("working_days", 250)),
             amount_recovered_per_meal=float(parameters.get("amount_recovered_per_meal", 0.0)),
@@ -555,8 +620,6 @@ def ask_tax_copilot(
     result_dict = output.model_dump()
     duration_ms = (time.perf_counter() - start_time) * 1000.0
 
-    citations = [f"Rule {c.rule_id}{c.sub_rule or ''}" for c in output.statutory_citations]
-
     telemetry_logger.log_event(
         tool_name="ask_tax_copilot",
         inputs={"query": query, "persona_context": persona_context, "target_regime": target_regime},
@@ -577,3 +640,4 @@ def run_stdio():
 
 if __name__ == "__main__":
     run_stdio()
+
