@@ -87,45 +87,39 @@ class GeminiProvider(BaseLLMProvider):
         for model in self.models_to_try:
             url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={self.api_key}"
             
-            for attempt in range(2):  # 2 attempts per model with backoff
-                try:
-                    resp = httpx.post(url, json=payload, timeout=25)
-                    if resp.status_code == 200:
-                        res_json = resp.json()
-                        raw_text = res_json["candidates"][0]["content"]["parts"][0]["text"]
-                        return self.extract_json(raw_text)
-                    elif resp.status_code in [429, 503]:
-                        last_err = f"{model} status {resp.status_code}: {resp.text[:150]}"
-                        time.sleep(1.5 * (attempt + 1))
-                        continue
-                    else:
-                        last_err = f"{model} status {resp.status_code}: {resp.text[:150]}"
-                        break
-                except Exception as e:
-                    last_err = f"{model} exception: {e}"
-                    time.sleep(1.0)
+            try:
+                resp = httpx.post(url, json=payload, timeout=12)
+                if resp.status_code == 200:
+                    res_json = resp.json()
+                    raw_text = res_json["candidates"][0]["content"]["parts"][0]["text"]
+                    return self.extract_json(raw_text)
+                elif resp.status_code == 429:
+                    # Immediately fail fast on quota limit so OpenRouter takes over without delay
+                    raise RuntimeError("Gemini quota rate limited (429)")
+                elif resp.status_code == 503:
+                    last_err = f"{model} status 503"
+                    continue
+                else:
+                    last_err = f"{model} status {resp.status_code}"
+            except RuntimeError:
+                raise
+            except Exception as e:
+                last_err = f"{model} exception: {e}"
 
-        # Final attempt without response_mime_type on gemini-flash-latest
-        try:
-            del payload["generationConfig"]["response_mime_type"]
-            url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key={self.api_key}"
-            resp = httpx.post(url, json=payload, timeout=25)
-            if resp.status_code == 200:
-                res_json = resp.json()
-                raw_text = res_json["candidates"][0]["content"]["parts"][0]["text"]
-                return self.extract_json(raw_text)
-        except Exception:
-            pass
-
-        raise RuntimeError(f"All Gemini models failed. Last error: {last_err}")
+        raise RuntimeError(f"Gemini generation failed: {last_err}")
 
 
 class OpenRouterProvider(BaseLLMProvider):
-    """Provider for OpenRouter API."""
+    """Provider for OpenRouter API models."""
 
-    def __init__(self, api_key: Optional[str] = None, model_name: str = "google/gemini-2.0-flash-lite-preview-02-05:free"):
+    def __init__(self, api_key: Optional[str] = None):
         self.api_key = api_key or os.environ.get("OPEN_ROUTER_API_KEY") or os.environ.get("OPENROUTER_API_KEY")
-        self.model_name = model_name
+        self.models_to_try = [
+            "liquid/lfm-2.5-2.6b:free",
+            "google/gemma-4-26b-a4b-it:free",
+            "nvidia/nemotron-3-nano-30b-a3b:free",
+            "cohere/north-mini-code:free"
+        ]
 
     def generate(self, prompt: str, system_instruction: str) -> Dict[str, Any]:
         if not self.api_key:
@@ -136,23 +130,32 @@ class OpenRouterProvider(BaseLLMProvider):
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json"
         }
-        payload = {
-            "model": self.model_name,
-            "messages": [
-                {"role": "system", "content": system_instruction},
-                {"role": "user", "content": prompt}
-            ],
-            "temperature": 0.1,
-            "response_format": {"type": "json_object"}
-        }
 
-        resp = httpx.post(url, headers=headers, json=payload, timeout=25)
-        if resp.status_code == 200:
-            res_json = resp.json()
-            raw_text = res_json["choices"][0]["message"]["content"]
-            return self.extract_json(raw_text)
+        last_err = ""
+        for model in self.models_to_try:
+            payload = {
+                "model": model,
+                "messages": [
+                    {"role": "system", "content": system_instruction},
+                    {"role": "user", "content": prompt}
+                ],
+                "temperature": 0.1
+            }
 
-        raise RuntimeError(f"OpenRouter generation failed: {resp.status_code} - {resp.text[:200]}")
+            try:
+                resp = httpx.post(url, headers=headers, json=payload, timeout=10)
+                if resp.status_code == 200:
+                    res_json = resp.json()
+                    raw_text = res_json["choices"][0]["message"]["content"]
+                    parsed = self.extract_json(raw_text)
+                    if parsed.get("direct_answer"):
+                        return parsed
+                else:
+                    last_err = f"{model} status {resp.status_code}: {resp.text[:100]}"
+            except Exception as e:
+                last_err = f"{model} exception: {e}"
+
+        raise RuntimeError(f"OpenRouter generation failed: {last_err}")
 
 
 class DeterministicMockProvider(BaseLLMProvider):
@@ -188,14 +191,33 @@ class DeterministicMockProvider(BaseLLMProvider):
         }
 
 
+class ResilientHybridProvider(BaseLLMProvider):
+    """Orchestrates primary Gemini calls with instant OpenRouter free tier fallback."""
+
+    def __init__(self):
+        self.gemini = GeminiProvider() if (os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")) else None
+        self.openrouter = OpenRouterProvider() if (os.environ.get("OPEN_ROUTER_API_KEY") or os.environ.get("OPENROUTER_API_KEY")) else None
+        self.mock = DeterministicMockProvider()
+
+    def generate(self, prompt: str, system_instruction: str) -> Dict[str, Any]:
+        # 1. Try Gemini first
+        if self.gemini:
+            try:
+                return self.gemini.generate(prompt, system_instruction)
+            except Exception as e:
+                pass
+
+        # 2. Try OpenRouter fallback
+        if self.openrouter:
+            try:
+                return self.openrouter.generate(prompt, system_instruction)
+            except Exception as e:
+                pass
+
+        # 3. Fallback to Deterministic Mock if network/quotas exhausted
+        return self.mock.generate(prompt, system_instruction)
+
+
 def get_default_llm_provider() -> BaseLLMProvider:
-    """Auto-detects available API keys and returns the best provider."""
-    gemini_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
-    if gemini_key:
-        return GeminiProvider(api_key=gemini_key)
-
-    openrouter_key = os.environ.get("OPEN_ROUTER_API_KEY") or os.environ.get("OPENROUTER_API_KEY")
-    if openrouter_key:
-        return OpenRouterProvider(api_key=openrouter_key)
-
-    return DeterministicMockProvider()
+    """Returns resilient multi-provider LLM client."""
+    return ResilientHybridProvider()

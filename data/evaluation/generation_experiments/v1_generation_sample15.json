@@ -1,0 +1,384 @@
+{
+  "suite": "active_suite.json",
+  "total_cases_evaluated": 15,
+  "elapsed_seconds": 364.02,
+  "mean_composite_score": 0.3333,
+  "mean_criteria_match_rate": 0.3333,
+  "mean_citation_precision": 0.3333,
+  "mean_citation_recall": 0.3333,
+  "mean_citation_f1": 0.3333,
+  "mean_temporal_validity_score": 0.3333,
+  "negative_handling_accuracy": 0.3333,
+  "query_type_breakdown": {
+    "Persona-Specific Applicability": {
+      "count": 15,
+      "mean_composite_score": 0.3333,
+      "mean_criteria_match": 0.3333
+    }
+  },
+  "regime_breakdown": {
+    "2026": {
+      "count": 8,
+      "mean_composite_score": 0.375
+    },
+    "1962": {
+      "count": 7,
+      "mean_composite_score": 0.2857
+    }
+  },
+  "per_case_results": [
+    {
+      "case_id": "GOLD-PERS-027",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Hard",
+      "target_regime": "2026",
+      "direct_answer": "Under Rule 15 (sub-rule 5 / Table IV) of the Income-tax Rules, 2026, the perquisite value of an interest-free or concessional loan provided by an employer is calculated by applying the annual interest rate charged by the State Bank of India (SBI) as on the 1st day of the relevant tax year (for the same purpose) to the maximum outstanding monthly balance, minus any interest actually paid by the employee. For medical loans, no perquisite value is charged if the loan is for specified diseases under Rule 18 (unless reimbursed by insurance) or if total aggregate loans do not exceed Rs. 2,00,000. Educational loans follow the standard SBI interest calculation unless the total aggregate loan threshold of Rs. 2,00,000 applies.",
+      "temporal_applicability": "Applies under the Income-tax Rules, 2026 for the tax year (Financial Year) relevant to Assessment Year 2026-27 onwards.",
+      "citations": [
+        {
+          "rule_id": "15",
+          "sub_rule": "(5)",
+          "statutory_path": "Rule 15 > Sub-rule (5) > Table IV Sl. No. 1",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "section 17(1)(e)"
+          ],
+          "forms_referenced": [],
+          "effective_date": "01-04-2026",
+          "citation_text": "Benefit from provision of interest-free or concessional loan calculated using SBI rate as on 1st day of tax year on maximum outstanding monthly balance, minus actual interest paid. Exempt if for medical treatment under Rule 18 or aggregate loan <= Rs. 2,00,000, subject to insurance reimbursement restriction."
+        }
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "citation_f1": 1.0,
+      "criteria_match_rate": 1.0,
+      "matched_criteria": [
+        "Mentions Rule 15",
+        "Refers to SBI benchmark lending rate",
+        "Mentions Rs. 20,000 threshold or medical treatment exemption"
+      ],
+      "missed_criteria": [],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 1.0
+    },
+    {
+      "case_id": "GOLD-PERS-006",
+      "query": "I am a senior citizen aged 77 who receives only pension and interest income. Can I submit a declaration to my bank under Rule 26D so that no tax return is required to be filed?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Hard",
+      "target_regime": "1962",
+      "direct_answer": "Yes, as a senior citizen aged 75 years or above receiving only pension and interest income (from the same specified bank), you can submit a paper declaration in Form No. 12BBA to your specified bank under Rule 26D of the Income-tax Rules, 1962. Upon submitting this declaration along with evidence of Chapter VI-A deductions, the specified bank will compute your total income, apply applicable deductions and section 87A rebates, and deduct the appropriate tax. Consequently, you will be exempted from filing an income tax return under section 194P.",
+      "temporal_applicability": "Rule 26D came into effect on 2-9-2021 and is applicable from Assessment Year (AY) 2022-23 (Financial Year 2021-22) onwards.",
+      "citations": [
+        {
+          "rule_id": "26D",
+          "sub_rule": "(1)",
+          "statutory_path": "Rule 26D > Sub-rule (1)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "194P"
+          ],
+          "forms_referenced": [
+            "Form No. 12BBA"
+          ],
+          "effective_date": "02-09-2021",
+          "citation_text": "The declaration required to be furnished by the specified senior citizen to the specified bank under sub-clause (iii) of clause (b) of Explanation to section 194P shall be in Form No. 12BBA to be furnished in paper form duly verified."
+        },
+        {
+          "rule_id": "26D",
+          "sub_rule": "(2)",
+          "statutory_path": "Rule 26D > Sub-rule (2)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "87A",
+            "Chapter VI-A"
+          ],
+          "forms_referenced": [
+            "Form No. 12BBA"
+          ],
+          "effective_date": "02-09-2021",
+          "citation_text": "On furnishing of the declaration in Form No. 12BBA, the specified bank shall, after giving effect to the deduction allowable under Chapter VI-A and rebate allowable under section 87A, compute the total income of such specified senior citizen for the relevant assessment year and deduct income-tax on such total income on the basis of the rates in force."
+        }
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "citation_f1": 1.0,
+      "criteria_match_rate": 1.0,
+      "matched_criteria": [
+        "References Rule 26D and Section 194P",
+        "Mentions age threshold (75 years or more)",
+        "Identifies Form No. 12BBA",
+        "States pension and interest income condition"
+      ],
+      "missed_criteria": [],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 1.0
+    },
+    {
+      "case_id": "GOLD-PERS-011",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "direct_answer": "Under Rule 15 (Table IV / Table 5, Sl. No. 1) of the Income-tax Rules, 2026, the perquisite value for an interest-free or concessional loan is calculated as the interest computed at the annual rate charged by the State Bank of India (SBI) as on the 1st day of the relevant tax year for a loan for the same purpose, applied on the maximum outstanding monthly balance, reduced by any interest actually paid by the employee. For medical loans, no perquisite value is charged if the loan is for medical treatment of specified diseases under Rule 18 or if the aggregate loan amount does not exceed Rs. 2,00,000 (subject to restriction on insurance-reimbursed amounts). Education loans are taxable per the standard formula unless the aggregate loan limit of Rs. 2,00,000 applies.",
+      "temporal_applicability": "Applicable for the relevant Tax Year / Financial Year governed by the Income-tax Rules, 2026 (Assessment Year 2026-27 onwards).",
+      "citations": [
+        {
+          "rule_id": "15",
+          "sub_rule": "(5)",
+          "statutory_path": "Rule 15 > Sub-rule (5) > Table IV > Sl. No. 1",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "section 17(1)(e)"
+          ],
+          "forms_referenced": [],
+          "effective_date": null,
+          "citation_text": "Perquisite value shall be interest computed at the annual rate charged by SBI as on 1st day of relevant tax year... using maximum outstanding monthly balance as reduced by interest actually paid. No value charged if for medical treatment in respect of diseases specified in rule 18 or where aggregate loan amount does not exceed Rs. 2,00,000; exemption shall not apply to amount reimbursed under medical insurance."
+        }
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "citation_f1": 1.0,
+      "criteria_match_rate": 1.0,
+      "matched_criteria": [
+        "Mentions Rule 15",
+        "Refers to SBI benchmark lending rate",
+        "Mentions Rs. 20,000 threshold or medical treatment exemption"
+      ],
+      "missed_criteria": [],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 1.0
+    },
+    {
+      "case_id": "GOLD-PERS-016",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "error": "All Gemini models failed. Last error: gemini-2.5-flash status 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use",
+      "composite_score": 0.0,
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_match_rate": 0.0,
+      "temporal_validity_score": 0.0,
+      "negative_handling_correct": false
+    },
+    {
+      "case_id": "GOLD-PERS-026",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "direct_answer": "Under Rule 3(7) of the Income-tax Rules, 1962, the perquisite value of an interest-free or concessional loan provided by an employer is calculated by applying the interest rate charged by the State Bank of India (SBI) as on the 1st day of the relevant previous year (for the same purpose) to the maximum outstanding monthly balance, reduced by any interest actually paid by the employee or their household member. For medical loans taken for diseases specified in Rule 3A, the perquisite value is nil (exempt), except to the extent the medical expenses are reimbursed under a medical insurance scheme. Loans for education purposes follow the standard SBI benchmark interest calculation without a specific exemption unless the aggregate petty loan threshold (not exceeding ₹20,000) applies.",
+      "temporal_applicability": "Applicable under Rule 3(7) of the Income-tax Rules, 1962 (effective from 01-09-2023). In Indian taxation, the perquisite is computed for the relevant Previous Year (Financial Year - FY) and assessed in the immediately following Assessment Year (AY).",
+      "citations": [
+        {
+          "rule_id": "3",
+          "sub_rule": "(7)",
+          "statutory_path": "Rule 3 > Sub-rule (7)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "section 17(2)(viii)"
+          ],
+          "forms_referenced": [],
+          "effective_date": "01-09-2023",
+          "citation_text": "The value of the benefit to the assessee resulting from the provision of interest-free or concessional loan for any purpose... shall be determined as the sum equal to the interest computed at the rate charged per annum by the State Bank of India... as on the 1st day of the relevant previous year in respect of loans for the same purpose advanced by it on the maximum outstanding monthly balance as reduced by the interest, if any, actually paid... Provided that no value would be charged if such loans are made available for medical treatment in respect of diseases specified in rule 3A... or where the amount of loans are petty not exceeding in the aggregate twenty thousand rupees: Provided further that... the exemption so provided shall not apply to so much of the loan as has been reimbursed to the employee under any medical insurance scheme."
+        }
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "citation_f1": 1.0,
+      "criteria_match_rate": 1.0,
+      "matched_criteria": [
+        "Mentions Rule 3",
+        "Refers to SBI benchmark lending rate",
+        "Mentions Rs. 20,000 threshold or medical treatment exemption"
+      ],
+      "missed_criteria": [],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 1.0
+    },
+    {
+      "case_id": "GOLD-PERS-012",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Hard",
+      "target_regime": "1962",
+      "error": "All Gemini models failed. Last error: gemini-2.5-flash status 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use",
+      "composite_score": 0.0,
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_match_rate": 0.0,
+      "temporal_validity_score": 0.0,
+      "negative_handling_correct": false
+    },
+    {
+      "case_id": "GOLD-PERS-023",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "direct_answer": "Under Rule 15(5) (Table IV, Item 1) of the Income-tax Rules, 2026, the perquisite value of an interest-free or concessional loan is calculated as the interest computed at the annual rate charged by the State Bank of India (SBI) as on the 1st day of the relevant tax year for the same purpose on the maximum outstanding monthly balance, reduced by any interest actually paid by the employee or household member. For medical loans taken for diseases specified in Rule 18, or where total aggregate loans do not exceed Rs. 2,00,000, the perquisite value is nil (exempt). However, for medical treatment loans, the exemption does not apply to the portion of the loan reimbursed under a medical insurance scheme.",
+      "temporal_applicability": "Applicable under the Income-tax Rules, 2026 for the relevant tax year (Financial Year) and corresponding Assessment Year.",
+      "citations": [
+        {
+          "rule_id": "15",
+          "sub_rule": "(5)",
+          "statutory_path": "Rule 15 > (5) > Table IV > Sl. No. 1",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "section 17(1)(e)"
+          ],
+          "forms_referenced": [],
+          "effective_date": null,
+          "citation_text": "Interest computed at the annual rate charged by the State Bank of India as on the 1st day of the relevant tax year in respect of loans by the bank for the same purpose, using the maximum outstanding monthly balance as reduced by the interest, if any, actually paid. No value charged if loans are for medical treatment of diseases specified in rule 18 or where aggregate loans do not exceed Rs. 2,00,000, except to the extent reimbursed under medical insurance."
+        }
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "citation_f1": 1.0,
+      "criteria_match_rate": 1.0,
+      "matched_criteria": [
+        "Mentions Rule 15",
+        "Refers to SBI benchmark lending rate",
+        "Mentions Rs. 20,000 threshold or medical treatment exemption"
+      ],
+      "missed_criteria": [],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 1.0
+    },
+    {
+      "case_id": "GOLD-PERS-007",
+      "query": "I changed jobs during the previous year. What form must I submit to my current employer to declare salary and TDS from my previous employer under Rule 26A?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "error": "All Gemini models failed. Last error: gemini-2.5-flash status 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use",
+      "composite_score": 0.0,
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_match_rate": 0.0,
+      "temporal_validity_score": 0.0,
+      "negative_handling_correct": false
+    },
+    {
+      "case_id": "GOLD-PERS-020",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "error": "All Gemini models failed. Last error: gemini-2.5-flash status 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use",
+      "composite_score": 0.0,
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_match_rate": 0.0,
+      "temporal_validity_score": 0.0,
+      "negative_handling_correct": false
+    },
+    {
+      "case_id": "GOLD-PERS-013",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "error": "All Gemini models failed. Last error: gemini-2.5-flash status 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use",
+      "composite_score": 0.0,
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_match_rate": 0.0,
+      "temporal_validity_score": 0.0,
+      "negative_handling_correct": false
+    },
+    {
+      "case_id": "GOLD-PERS-017",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "error": "All Gemini models failed. Last error: gemini-2.5-flash status 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use",
+      "composite_score": 0.0,
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_match_rate": 0.0,
+      "temporal_validity_score": 0.0,
+      "negative_handling_correct": false
+    },
+    {
+      "case_id": "GOLD-PERS-010",
+      "query": "I am a blind salaried individual. What is the monthly transport allowance exemption available to me under Rule 2BB of the 1962 rules?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "error": "All Gemini models failed. Last error: gemini-2.5-flash status 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use",
+      "composite_score": 0.0,
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_match_rate": 0.0,
+      "temporal_validity_score": 0.0,
+      "negative_handling_correct": false
+    },
+    {
+      "case_id": "GOLD-PERS-029",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "error": "All Gemini models failed. Last error: gemini-2.5-flash status 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use",
+      "composite_score": 0.0,
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_match_rate": 0.0,
+      "temporal_validity_score": 0.0,
+      "negative_handling_correct": false
+    },
+    {
+      "case_id": "GOLD-PERS-015",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Hard",
+      "target_regime": "2026",
+      "error": "All Gemini models failed. Last error: gemini-2.5-flash status 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use",
+      "composite_score": 0.0,
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_match_rate": 0.0,
+      "temporal_validity_score": 0.0,
+      "negative_handling_correct": false
+    },
+    {
+      "case_id": "GOLD-PERS-025",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "error": "All Gemini models failed. Last error: gemini-2.5-flash status 404: {\n  \"error\": {\n    \"code\": 404,\n    \"message\": \"This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use",
+      "composite_score": 0.0,
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_match_rate": 0.0,
+      "temporal_validity_score": 0.0,
+      "negative_handling_correct": false
+    }
+  ]
+}

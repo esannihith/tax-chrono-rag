@@ -1,0 +1,962 @@
+{
+  "suite": "active_suite.json",
+  "total_cases_evaluated": 20,
+  "elapsed_seconds": 227.94,
+  "mean_composite_score": 0.6573,
+  "mean_criteria_match_rate": 0.6209,
+  "mean_citation_precision": 0.55,
+  "mean_citation_recall": 0.6,
+  "mean_citation_f1": 0.5667,
+  "mean_temporal_validity_score": 1.0,
+  "negative_handling_accuracy": 1.0,
+  "query_type_breakdown": {
+    "Persona-Specific Applicability": {
+      "count": 20,
+      "mean_composite_score": 0.6573,
+      "mean_criteria_match": 0.6209
+    }
+  },
+  "regime_breakdown": {
+    "2026": {
+      "count": 11,
+      "mean_composite_score": 0.7378
+    },
+    "1962": {
+      "count": 9,
+      "mean_composite_score": 0.5588
+    }
+  },
+  "per_case_results": [
+    {
+      "case_id": "GOLD-PERS-027",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Hard",
+      "target_regime": "2026",
+      "direct_answer": "Under Rule 15 of the Income-tax Rules, 2026 (Table 5 - Valuation of Perquisites, sub-rule (1)), the value of an interest-free or concessional loan provided by an employer for education or medical purposes is calculated as the sum equal to the interest computed at the annual rate charged by the State Bank of India (as on the 1st day of the relevant tax year) for the maximum outstanding monthly balance, reduced by any interest already paid by the employee or their household member. For medical treatment loans (for diseases specified in Rule 18), no value is charged if the loan amount does not exceed Rs. 2,00,000 in the aggregate.",
+      "temporal_applicability": "This provision applies to the relevant tax year under the Income-tax Rules, 2026. The rule has no effective date restriction (Effective Date: None), meaning it is fully applicable to all relevant tax years under the 2026 regime. The calculation is based on the tax year (AY) rather than the financial year (FY), with the rate determined as of the 1st day of the relevant tax year.",
+      "citations": [
+        {
+          "rule_id": "Rule 15",
+          "sub_rule": "(1)",
+          "statutory_path": "Rule 15 > Table 5 (Valuation of Perquisites)",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "Section 13(14) - Valuation of Perquisites"
+          ],
+          "forms_referenced": [
+            "Form ITR-11"
+          ],
+          "effective_date": "None",
+          "citation_text": "Interest-free or concessional loan benefit is valued at the interest computed at the annual rate charged by SBI as on the 1st day of the relevant tax year, using the maximum outstanding monthly balance reduced by interest already paid."
+        }
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "citation_f1": 1.0,
+      "criteria_match_rate": 0.6667,
+      "matched_criteria": [
+        "Mentions Rule 15",
+        "Mentions Rs. 20,000 threshold or medical treatment exemption"
+      ],
+      "missed_criteria": [
+        "Refers to SBI benchmark lending rate"
+      ],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.8833
+    },
+    {
+      "case_id": "GOLD-PERS-006",
+      "query": "I am a senior citizen aged 77 who receives only pension and interest income. Can I submit a declaration to my bank under Rule 26D so that no tax return is required to be filed?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Hard",
+      "target_regime": "1962",
+      "direct_answer": "Yes, a 77-year-old senior citizen who receives only pension and interest income can submit a declaration under Rule 26D of the Income-tax Rules, 1962 to have tax deducted at source via their bank. However, this does NOT eliminate the mandatory requirement to file a regular income tax return (Form 16A/ITR-1). Rule 26D is a supplementary mechanism to ensure tax is deducted at source, while the standard return filing obligation remains unchanged.",
+      "temporal_applicability": "Rule 26D was introduced with an effective date of 2-9-2021. Therefore, it applies to Assessment Years (AY) starting from AY 2021-22 onwards. For any AY before September 2, 2021, this rule was not in force and cannot be used.",
+      "citations": [
+        {
+          "rule_id": "26D",
+          "sub_rule": "(1)(iii)",
+          "statutory_path": "Rule 26D > Sub-rule (1)(iii)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "section 194P",
+            "Chapter VI-A"
+          ],
+          "forms_referenced": [
+            "Form No. 12BBA"
+          ],
+          "effective_date": "2-9-2021",
+          "citation_text": "The declaration required to be furnished by the specified senior citizen to the specified bank under sub-clause (iii) of clause (b) of Explanation to section 194P shall be in Form No. 12BBA to be furnished in paper form duly verified."
+        },
+        {
+          "rule_id": "194P",
+          "sub_rule": "Not explicitly numbered but referenced",
+          "statutory_path": "Income-tax Rules, 1962 > Section 194P",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "section 194P"
+          ],
+          "forms_referenced": [],
+          "effective_date": "Pre-2021 (original enactment)",
+          "citation_text": "Allows deduction of tax on pension income for persons aged 60 and above."
+        }
+      ],
+      "citation_precision": 0.5,
+      "citation_recall": 1.0,
+      "citation_f1": 0.6667,
+      "criteria_match_rate": 0.75,
+      "matched_criteria": [
+        "References Rule 26D and Section 194P",
+        "Identifies Form No. 12BBA",
+        "States pension and interest income condition"
+      ],
+      "missed_criteria": [
+        "Mentions age threshold (75 years or more)"
+      ],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.8125
+    },
+    {
+      "case_id": "GOLD-PERS-011",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "direct_answer": "Under Rule 15 of the Income-tax Rules, 2026 (Table 5 - Valuation of Perquisites), the value of an interest-free or concessional loan provided by an employer for education or medical purposes is calculated as the sum of the interest computed at the annual rate charged by the State Bank of India (as on the 1st day of the relevant tax year) for the loan amount. However, if the loan is for medical treatment related to diseases specified in Rule 18 or the total loan amount does not exceed Rs. 2,00,000 in the aggregate, no value is charged (exemption applies). Additionally, any portion of the loan reimbursed under a medical insurance scheme is excluded from the exemption.",
+      "temporal_applicability": "Applicable to the 2026 Income-tax Rules (Financial Year 2025-26 and subsequent years). The rule has no effective date restriction noted in the provided context. It applies to the relevant tax year (AY 2026-27 onwards).",
+      "citations": [
+        {
+          "rule_id": "Rule 15",
+          "sub_rule": "(1)",
+          "statutory_path": "Rule 15 > Table 5 (Valuation of perquisites)",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "Section 1"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "N/A (no effective date restriction noted)",
+          "citation_text": "Interest computed at the annual rate charged by the State Bank of India... using the maximum outstanding monthly balance as reduced by the interest, if any, actually paid."
+        },
+        {
+          "rule_id": "Rule 15",
+          "sub_rule": "(a)-(b)",
+          "statutory_path": "Rule 15 > Table 5 (Valuation of perquisites)",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "Section 1(a)-(b)"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "N/A (no effective date restriction noted)",
+          "citation_text": "No value would be charged if such loans are made available for medical treatment... or where the amount of loans is not exceeding Rs. 2,00,000 in the aggregate."
+        }
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "citation_f1": 1.0,
+      "criteria_match_rate": 0.6667,
+      "matched_criteria": [
+        "Mentions Rule 15",
+        "Mentions Rs. 20,000 threshold or medical treatment exemption"
+      ],
+      "missed_criteria": [
+        "Refers to SBI benchmark lending rate"
+      ],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.8833
+    },
+    {
+      "case_id": "GOLD-PERS-016",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "direct_answer": "Under Rule 3 > (7) of the Income-tax Rules, 1962, the value of an interest-free or concessional loan provided by an employer for education or medical purposes is calculated as the sum equal to the interest computed at the rate charged per annum by the State Bank of India (as on the 1st day of the relevant previous year) on the maximum outstanding monthly balance of the loan, reduced by the interest actually paid by the employee or any member of his household (or their family).",
+      "temporal_applicability": "The rule (Rule 3 > (7)) has an effective date of 1-9-2023. Therefore, it would only apply to Assessment Years from AY 2023-24 onwards under the 1962 rules framework. For earlier Assessment Years (AY 1998-99 to AY 2022-23), this specific sub-rule would not have been in force and would not apply.",
+      "citations": [
+        {
+          "rule_id": "12AC",
+          "sub_rule": "(7)",
+          "statutory_path": "Rule 12AC > Sub-rule (7)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "Section 17(2)(viii)"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "1-9-2023",
+          "citation_text": "The value of the benefit... shall be determined as the sum equal to the interest computed at the rate charged per annum by the State Bank of India... as on the 1st day of the relevant previous year... reduced by the interest, if any, actually paid by him or any such member of his household."
+        }
+      ],
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_match_rate": 0.3333,
+      "matched_criteria": [
+        "Mentions Rule 3"
+      ],
+      "missed_criteria": [
+        "Refers to SBI benchmark lending rate",
+        "Mentions Rs. 20,000 threshold or medical treatment exemption"
+      ],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.2667
+    },
+    {
+      "case_id": "GOLD-PERS-026",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "direct_answer": "Under Rule 3(7) of the Income-tax Rules, 1962, the value of an interest-free or concessional loan provided by an employer for education or medical purposes is calculated as the sum of the interest computed at the rate charged per annum by the State Bank of India (as on the 1st day of the relevant previous year) on the maximum outstanding monthly balance of the loan. This interest amount is then reduced by any interest actually paid by the employee or their family member towards repayment of the loan.",
+      "temporal_applicability": "The rule was introduced under the Income-tax Rules, 1962 with an effective date of 1-9-2023. Therefore, it applies to Assessment Years (AY) 2023-24 and onwards (corresponding to Financial Years FY 2023-24 and subsequent years). For AY 2022-23 and earlier, the original 1962 provisions would have applied unless superseded by other legislation.",
+      "citations": [
+        {
+          "rule_id": "12AC",
+          "sub_rule": "(7)",
+          "statutory_path": "Rule 12AC > Sub-rule (7)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "Section 139 (Perquisites)"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "1-9-2023",
+          "citation_text": "The value of the benefit... shall be determined as the sum equal to the interest computed at the rate charged per annum by the State Bank of India... as on the 1st day of the relevant previous year... reduced by the interest, if any, actually paid by him or any such member of his household."
+        }
+      ],
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_match_rate": 0.3333,
+      "matched_criteria": [
+        "Mentions Rule 3"
+      ],
+      "missed_criteria": [
+        "Refers to SBI benchmark lending rate",
+        "Mentions Rs. 20,000 threshold or medical treatment exemption"
+      ],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.2667
+    },
+    {
+      "case_id": "GOLD-PERS-012",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Hard",
+      "target_regime": "1962",
+      "direct_answer": "Under Rule 3 > (7) of the Income-tax Rules, 1962, the value of an interest-free or concessional loan provided by an employer for education or medical purposes is calculated as the sum equal to the interest computed at the rate charged per annum by the State Bank of India (as on the 1st day of the relevant previous year) on the maximum outstanding monthly balance of the loan, reduced by any interest actually paid by the employee or family member.",
+      "temporal_applicability": "Rule 3 > (7) was amended effective 1-9-2023. Therefore, for Assessment Year 2024-25 (Financial Year 2023-24), this provision applies. For earlier Assessment Years (e.g., AY 2023-24 and prior), the original 1962 rule wording would govern unless subsequently amended. The effective date of the amendment (1-9-2023) marks when the current calculation methodology became operative.",
+      "citations": [
+        {
+          "rule_id": "12AC",
+          "sub_rule": "(7)",
+          "statutory_path": "Rule 12AC > Sub-rule (7)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "Section 17",
+            "Section 10(13)"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "1-9-2023",
+          "citation_text": "The value of the benefit ... shall be determined as the sum equal to the interest computed at the rate charged per annum by the State Bank of India ... as on the 1st day of the relevant previous year ... reduced by the interest, if any, actually paid by him or any such member of his household."
+        }
+      ],
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_match_rate": 0.3333,
+      "matched_criteria": [
+        "Mentions Rule 3"
+      ],
+      "missed_criteria": [
+        "Refers to SBI benchmark lending rate",
+        "Mentions Rs. 20,000 threshold or medical treatment exemption"
+      ],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.2667
+    },
+    {
+      "case_id": "GOLD-PERS-023",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "direct_answer": "Under Rule 15 of the Income-tax Rules, 2026 (Table 5 - Valuation of Perquisites), the value of an interest-free or concessional loan provided by an employer for education or medical purposes is calculated as the sum of the interest computed at the annual rate charged by the State Bank of India (SBI) as on the 1st day of the relevant tax year, using the maximum outstanding monthly balance as reduced by the interest actually paid by the employee. However, two important exceptions apply: (a) No value is charged if the loan is for medical treatment of diseases specified in Rule 18, and (b) No value is charged if the total amount of such loans does not exceed Rs. 2,00,000 in the aggregate.",
+      "temporal_applicability": "The rule applies to the relevant tax year under the Income-tax Rules, 2026. There is no effective date restriction (none stated in the statutory context). Therefore, it is applicable to all Assessment Years (AY) under the 2026 regime, corresponding to respective Financial Years (FY). For example, AY 2025-26 would correspond to FY 2024-25.",
+      "citations": [],
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_match_rate": 0.6667,
+      "matched_criteria": [
+        "Mentions Rule 15",
+        "Mentions Rs. 20,000 threshold or medical treatment exemption"
+      ],
+      "missed_criteria": [
+        "Refers to SBI benchmark lending rate"
+      ],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.3833
+    },
+    {
+      "case_id": "GOLD-PERS-007",
+      "query": "I changed jobs during the previous year. What form must I submit to my current employer to declare salary and TDS from my previous employer under Rule 26A?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "direct_answer": "Under Rule 26A of the Income-tax Rules, 1962, you must submit either Form No. 16 or Form No. 12BA to your current employer (the person responsible for making the salary payment) to declare your salary and TDS from your previous employer. Specifically, if your total salary from the previous employer was ₹1,50,000 or less, you must file Form No. 16. If it exceeded ₹1,50,000, you must file Form No. 12BA along with your income tax return.",
+      "temporal_applicability": "Applicable to Financial Year 2018-19 and subsequent years under the Income-tax Rules, 1962. The rule has no effective date restriction and remains in force for all relevant assessment years.",
+      "citations": [
+        {
+          "rule_id": "26A",
+          "sub_rule": "(1)",
+          "statutory_path": "Rule 26A > Sub-rule (1)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "section 192",
+            "section 193"
+          ],
+          "forms_referenced": [
+            "Form No. 16",
+            "Form No. 12BA"
+          ],
+          "effective_date": "N/A (no effective date restriction mentioned)",
+          "citation_text": "The assessee may furnish to the person responsible for making the payment the details of the income under the head 'Salaries' due or received from the other employer... Form No. 16 if the amount of salary paid or payable to the employee is not more than one lakh and fifty thousand rupees; or Form No. 12BA if the amount of salary paid or payable to the employee is more than one lakh and fifty thousand rupees."
+        }
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "citation_f1": 1.0,
+      "criteria_match_rate": 1.0,
+      "matched_criteria": [
+        "Mentions Rule 26A",
+        "Identifies Form No. 12B",
+        "Specifies furnishing details of previous employer salary and TDS"
+      ],
+      "missed_criteria": [],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 1.0
+    },
+    {
+      "case_id": "GOLD-PERS-020",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "direct_answer": "Under Rule 3 > (7) of the Income-tax Rules, 1962, the value of an interest-free or concessional loan provided by an employer for education or medical purposes is calculated as the interest computed at the rate charged per annum by the State Bank of India (as on the 1st day of the relevant previous year) on the maximum outstanding monthly balance of the loan, reduced by any interest already paid by the employee. Notably, if the loan is for medical treatment of diseases specified in Rule 3A, no value is charged (full exemption).",
+      "temporal_applicability": "This applies to the Financial Year 2023-24 (Assessment Year 2024-25) onwards. The amendment to Rule 3 > (7) was effective from 1-9-2023. The calculation methodology follows the 1962 version of Rule 3 > (7) as amended.",
+      "citations": [
+        {
+          "rule_id": "12AC",
+          "sub_rule": "(7)",
+          "statutory_path": "Rule 12AC > Sub-rule (7)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "Section 17(2)(viii)"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "1-9-2023",
+          "citation_text": "The value of the benefit ... shall be determined as the sum equal to the interest computed at the rate charged per annum by the State Bank of India ... as on the 1st day of the relevant previous year"
+        },
+        {
+          "rule_id": "12AC",
+          "sub_rule": "(5)",
+          "statutory_path": "Rule 12AC > Sub-rule (5)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "Section 17(2)(vi)"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "1-9-2023",
+          "citation_text": "The value of any benefit or amenity resulting from the provision by an employer ... for personal or private journey free of cost or at concessional fare ... shall be taken to be the value at which such benefit or amenity is offered by such employer to the public"
+        }
+      ],
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_match_rate": 0.6667,
+      "matched_criteria": [
+        "Mentions Rule 3",
+        "Mentions Rs. 20,000 threshold or medical treatment exemption"
+      ],
+      "missed_criteria": [
+        "Refers to SBI benchmark lending rate"
+      ],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.3833
+    },
+    {
+      "case_id": "GOLD-PERS-013",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "direct_answer": "Under Rule 15 of the Income-tax Rules, 2026 (Table 5 - Valuation of Perquisites, sub-rule (1)), the value of an interest-free or concessional loan provided by an employer for educational or medical purposes is calculated as the interest computed at the annual rate charged by the State Bank of India (as on the 1st day of the relevant tax year) on the maximum outstanding monthly balance after deducting any interest already paid. However, no value is charged if the loan is for medical treatment (for diseases specified in Rule 18) or if the total loan amount does not exceed Rs. 2,00,000 in the aggregate.",
+      "temporal_applicability": "These rules are part of the Income-tax Rules, 2026 and are fully applicable without any effective date restriction (no effective date noted in the statutory context). They apply to the relevant tax year (AY) corresponding to the financial year in which the loan was availed.",
+      "citations": [
+        {
+          "rule_id": "Rule 15",
+          "sub_rule": "(1)",
+          "statutory_path": "Rule 15 > Table 5 (Valuation of Perquisites)",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "Section 15(1)(1)",
+            "Table 5"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "None (fully applicable)",
+          "citation_text": "Interest computed at annual rate charged by SBI as on 1st day of relevant tax year; no value charged for medical treatment loans up to Rs. 2,00,000 aggregate"
+        },
+        {
+          "rule_id": "Rule 18",
+          "sub_rule": "N/A",
+          "statutory_path": "Related to medical treatment specification",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "Rule 18 (specifies diseases for medical treatment exemption)"
+          ],
+          "forms_referenced": [],
+          "effective_date": "None",
+          "citation_text": "Defines diseases for which medical treatment loans qualify for the Rs. 2,00,000 exemption under Rule 15"
+        }
+      ],
+      "citation_precision": 0.5,
+      "citation_recall": 1.0,
+      "citation_f1": 0.6667,
+      "criteria_match_rate": 0.6667,
+      "matched_criteria": [
+        "Mentions Rule 15",
+        "Mentions Rs. 20,000 threshold or medical treatment exemption"
+      ],
+      "missed_criteria": [
+        "Refers to SBI benchmark lending rate"
+      ],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.7833
+    },
+    {
+      "case_id": "GOLD-PERS-017",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "direct_answer": "Under Rule 15 of the Income-tax Rules, 2026 (Table 5 - Valuation of Perquisites, sub-rule (1)), the value of an interest-free or concessional loan provided by an employer for education or medical purposes is calculated as the sum of the interest computed at the annual rate charged by the State Bank of India (as on the 1st day of the relevant tax year) on the maximum outstanding monthly balance of the loan, reduced by any interest already paid by the employee. However, if the loan is for medical treatment (as specified in Rule 18) and the total amount of such loans does not exceed Rs. 2,00,000 in the aggregate, no value is charged. Additionally, if the employee has reimbursed any amount under a medical insurance scheme, the exemption does not apply to the reimbursed portion.",
+      "temporal_applicability": "Applicable to the 2026 Income-tax Rules (Financial Year 2025-26 and subsequent years). The rules have no stated effective date limitation and are current. They apply to the relevant Assessment Year (AY) corresponding to the financial year in which the loan was availed.",
+      "citations": [
+        {
+          "rule_id": "Rule 15",
+          "sub_rule": "(1)",
+          "statutory_path": "Income-tax Rules, 2026 > Table 5 (Valuation of Perquisites) > Sub-rule (1)",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "Section 13(14) - Perquisite valuation",
+            "Rule 15"
+          ],
+          "forms_referenced": [
+            "Form ITR-11"
+          ],
+          "effective_date": "N/A (current rules)",
+          "citation_text": "Interest computed at the annual rate charged by the State Bank of India... No value would be charged if such loans are made available for medical treatment... amount of loans is not exceeding Rs. 2,00,000 in the aggregate"
+        }
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "citation_f1": 1.0,
+      "criteria_match_rate": 0.6667,
+      "matched_criteria": [
+        "Mentions Rule 15",
+        "Mentions Rs. 20,000 threshold or medical treatment exemption"
+      ],
+      "missed_criteria": [
+        "Refers to SBI benchmark lending rate"
+      ],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.8833
+    },
+    {
+      "case_id": "GOLD-PERS-010",
+      "query": "I am a blind salaried individual. What is the monthly transport allowance exemption available to me under Rule 2BB of the 1962 rules?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "direct_answer": "Under Rule 2BB of the Income-tax Rules, 1962, the monthly transport allowance (for meeting the cost of travel on tour or on transfer) is fully exempt from taxation for blind salaried individuals. This exemption arises under sub-clause (i) of clause 14(10) of the Income-tax Act, 1962, as specified in the prescribed allowances table (Sub-rule 2) of Rule 2BB.",
+      "temporal_applicability": "The rules were effective from 23-09-2015 (Rule 2BB > (1)) and subsequently amended on 21-06-2023 (Rule 2BB > (3)). These amendments remain in force for Assessment Years starting from FY 2019-20 onwards. The exemption applies to the relevant financial year(s) after these effective dates.",
+      "citations": [
+        {
+          "rule_id": "2BB",
+          "sub_rule": "(2)",
+          "statutory_path": "Rule 2BB > Sub-rule (2)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "Section 10(14)",
+            "Section 10(15)"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "23-09-2015",
+          "citation_text": "Lists prescribed allowances for sub-clause (i) of clause 14(10) including 'any allowance granted to meet the cost of travel on tour or on transfer'"
+        },
+        {
+          "rule_id": "2BB",
+          "sub_rule": "(3)",
+          "statutory_path": "Rule 2BB > Sub-rule (3)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "Section 10(14)"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "21-06-2023",
+          "citation_text": "Amends the scope of exemption to allowances mentioned in sub-clauses (a) to (c) of sub-rule (1) and at serial No. 11 of the Table below sub-rule (2)"
+        }
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "citation_f1": 1.0,
+      "criteria_match_rate": 0.6667,
+      "matched_criteria": [
+        "References Rule 2BB(2) Table Sl. No. 11",
+        "States monthly exemption limit of Rs. 3,200"
+      ],
+      "missed_criteria": [
+        "Identifies purpose: commuting between residence and work"
+      ],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.8833
+    },
+    {
+      "case_id": "GOLD-PERS-029",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "direct_answer": "Under Rule 15 of the Income-tax Rules, 2026 (Table 5 - Valuation of Perquisites), the value of an interest-free or concessional loan provided by an employer for education or medical purposes is calculated as the sum equal to the interest computed at the annual rate charged by the State Bank of India (as on the 1st day of the relevant tax year) for loans of the same purpose. The calculation uses the maximum outstanding monthly balance as reduced by any interest already paid by the employee. However, if the loan is for medical treatment (for diseases specified in Rule 18) AND the total loan amount does not exceed Rs. 2,00,000 in the aggregate, then no value is charged (exempt). Additionally, the exemption does not apply to the portion of the loan reimbursed under any medical insurance scheme.",
+      "temporal_applicability": "Applicable to the relevant tax year under the Income-tax Rules, 2026. The provisions in Rule 15 > Table 5 have no stated effective date limitation in the provided context. They apply to the financial year (FY) corresponding to the relevant tax year (AY = FY + 1). For example, FY 2025-26 would correspond to AY 2026-27.",
+      "citations": [
+        {
+          "rule_id": "Rule 15",
+          "sub_rule": "(1)",
+          "statutory_path": "Income-tax Rules, 2026 > Table 5 (Valuation of perquisites)",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "Section 13 (Perquisites)",
+            "Table 5"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "None (no effective date restriction noted)",
+          "citation_text": "Interest computed at the annual rate charged by the State Bank of India... using the maximum outstanding monthly balance as reduced by the interest, if any, actually paid."
+        },
+        {
+          "rule_id": "Rule 15",
+          "sub_rule": "(a)",
+          "statutory_path": "Income-tax Rules, 2026 > Table 5 (Valuation of perquisites)",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "Section 13 (Perquisites)",
+            "Table 5"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "None",
+          "citation_text": "No value would be charged if such loans are made available for medical treatment in respect of diseases specified in rule 18 or where the amount of loans is not exceeding Rs. 2,00,000 in the aggregate."
+        }
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "citation_f1": 1.0,
+      "criteria_match_rate": 0.6667,
+      "matched_criteria": [
+        "Mentions Rule 15",
+        "Mentions Rs. 20,000 threshold or medical treatment exemption"
+      ],
+      "missed_criteria": [
+        "Refers to SBI benchmark lending rate"
+      ],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.8833
+    },
+    {
+      "case_id": "GOLD-PERS-015",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Hard",
+      "target_regime": "2026",
+      "direct_answer": "Under Rule 15 of the Income-tax Rules, 2026 (Table 5 - Valuation of Perquisites), the value of an interest-free or concessional loan provided by an employer for education or medical purposes is calculated as the sum equal to the interest computed at the annual rate charged by the State Bank of India (as on the 1st day of the relevant tax year) for the same purpose, using the maximum outstanding monthly balance as reduced by the interest actually paid by the employee or family member. However, if the loan is for medical treatment (as specified in Rule 18) and the total loan amount does not exceed Rs. 2,00,000 in the aggregate, no value is charged. Additionally, any portion of the loan reimbursed under a medical insurance scheme is excluded from the exemption.",
+      "temporal_applicability": "The provisions under Rule 15, Table 5 (Valuation of Perquisites) of the Income-tax Rules, 2026 are applicable to the relevant Assessment Year (AY) corresponding to the financial year in which the loan was availed. Since there is no effective date restriction (None) for these provisions, they apply to all AYs under the 2026 rules. Note that AY 2026-27 would correspond to FY 2025-26.",
+      "citations": [
+        {
+          "rule_id": "Rule 15",
+          "sub_rule": "(1)",
+          "statutory_path": "Income-tax Rules, 2026 > Table 5 (Valuation of Perquisites)",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "Section 14(32) - Valuation of Perquisites"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "N/A (No effective date restriction)",
+          "citation_text": "The benefit from the provision of interest-free or concessional loan... shall be the sum equal to the interest computed at the annual rate charged by the State Bank of India... using the maximum outstanding monthly balance as reduced by the interest, if any, actually paid."
+        },
+        {
+          "rule_id": "Rule 15",
+          "sub_rule": "(a)",
+          "statutory_path": "Income-tax Rules, 2026 > Table 5 (Valuation of Perquisites)",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "Clause (a) - Medical treatment exception"
+          ],
+          "forms_referenced": [],
+          "effective_date": "N/A",
+          "citation_text": "No value would be charged if such loans are made available for medical treatment in respect of diseases specified in rule 18 or where the amount of loans is not exceeding Rs. 2,00,000 in the aggregate."
+        }
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "citation_f1": 1.0,
+      "criteria_match_rate": 0.6667,
+      "matched_criteria": [
+        "Mentions Rule 15",
+        "Mentions Rs. 20,000 threshold or medical treatment exemption"
+      ],
+      "missed_criteria": [
+        "Refers to SBI benchmark lending rate"
+      ],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.8833
+    },
+    {
+      "case_id": "GOLD-PERS-025",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "direct_answer": "Under Rule 15 of the Income-tax Rules, 2026, the value of an interest-free or concessional loan provided by an employer for education or medical purposes is calculated as the sum equal to the interest computed at the annual rate charged by the State Bank of India (SBI), as on the 1st day of the relevant tax year, based on the maximum outstanding monthly balance minus any interest already paid by the employee. However, a critical exemption applies: no value is charged if the loan is made available for medical treatment (for diseases specified in Rule 18) or if the total loan amount does not exceed Rs. 2,00,000 in the aggregate.",
+      "temporal_applicability": "Applicable to the Financial Year (FY) 2025-26 and Assessment Year (AY) 2026-27 onwards. The rules contain no effective date restriction and are fully operative under the 2026 income-tax rules.",
+      "citations": [
+        {
+          "rule_id": "Rule 15",
+          "sub_rule": "(1)",
+          "statutory_path": "Rule 15 > Table 5 (Valuation of perquisites)",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "Section 15",
+            "Table 5"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "None",
+          "citation_text": "Benefit from the provision of interest-free or concessional loan... It shall be the sum equal to the interest computed at the annual rate charged by the State Bank of India... as on the 1st day of the relevant tax year... No value would be charged if such loans are made available for medical treatment... or where the amount of loans is not exceeding Rs. 2,00,000 in the aggregate"
+        },
+        {
+          "rule_id": "Rule 15",
+          "sub_rule": "(2)",
+          "statutory_path": "Rule 15 > Table 5 (Valuation of perquisites)",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "Section 15",
+            "Table 5"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "None",
+          "citation_text": "The value of travelling, touring, accommodation and any other expenses... (not directly relevant but confirms Table 5 scope)"
+        }
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "citation_f1": 1.0,
+      "criteria_match_rate": 0.6667,
+      "matched_criteria": [
+        "Mentions Rule 15",
+        "Mentions Rs. 20,000 threshold or medical treatment exemption"
+      ],
+      "missed_criteria": [
+        "Refers to SBI benchmark lending rate"
+      ],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.8833
+    },
+    {
+      "case_id": "GOLD-PERS-021",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Hard",
+      "target_regime": "2026",
+      "direct_answer": "Under Rule 15 of the Income-tax Rules, 2026 (Table 5 - Valuation of Perquisites, Sub-rule (1)), the value of an interest-free or concessional loan provided by an employer for education or medical purposes is calculated as the sum of the interest computed at the annual rate charged by the State Bank of India (SBI), as on the 1st day of the relevant tax year, on the maximum outstanding monthly balance of the loan (reduced by any interest already paid). However, no value is charged if the loan is for medical treatment of diseases specified in Rule 18 or if the total loan amount does not exceed Rs. 2,00,000 in the aggregate.",
+      "temporal_applicability": "This provision applies to the relevant financial year (FY) and Assessment Year (AY) under the Income-tax Rules, 2026. The effective date is not specified as having any limitations (None), meaning it applies to all tax years under the 2026 rules. For FY 2025-26, the relevant tax year would be AY 2026-27.",
+      "citations": [],
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_match_rate": 0.6667,
+      "matched_criteria": [
+        "Mentions Rule 15",
+        "Mentions Rs. 20,000 threshold or medical treatment exemption"
+      ],
+      "missed_criteria": [
+        "Refers to SBI benchmark lending rate"
+      ],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.3833
+    },
+    {
+      "case_id": "GOLD-PERS-031",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "direct_answer": "Under Rule 15 of the Income-tax Rules, 2026 (Table 5 - Valuation of Perquisites, sub-rule (1)), the value of an interest-free or concessional loan provided by an employer for education or medical purposes is calculated as the sum of the interest computed at the annual rate charged by the State Bank of India (as on the 1st day of the relevant tax year) on the maximum outstanding monthly balance (after deducting any interest already paid). However, a critical exemption applies: no value is charged if the loan is for medical treatment (for diseases specified in Rule 18) or if the total loan amount does not exceed Rs. 2,00,000 in the aggregate. For medical loans that fall under the exemption, the exemption does not apply to the portion reimbursed under any medical insurance scheme.",
+      "temporal_applicability": "This provision applies to the relevant Assessment Year (AY) corresponding to the financial year in which the loan was availed. The rule has no effective date restriction (Effective Date: None) and is fully operative for the relevant tax year under the 2026 income-tax rules.",
+      "citations": [
+        {
+          "rule_id": "Rule 15",
+          "sub_rule": "(1)",
+          "statutory_path": "Rule 15 > Table 5 (Valuation of perquisites)",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "Section 15(1)",
+            "Table 5"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "N/A (No effective date restriction)",
+          "citation_text": "Interest-free or concessional loan benefit is valued at SBI's annual rate as of 1st day of relevant tax year, reduced by max outstanding monthly balance minus interest paid. Exemption applies for medical treatment (Rule 18 specified diseases) or loans ≤ Rs. 2,00,000."
+        }
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "citation_f1": 1.0,
+      "criteria_match_rate": 0.6667,
+      "matched_criteria": [
+        "Mentions Rule 15",
+        "Mentions Rs. 20,000 threshold or medical treatment exemption"
+      ],
+      "missed_criteria": [
+        "Refers to SBI benchmark lending rate"
+      ],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.8833
+    },
+    {
+      "case_id": "GOLD-PERS-002",
+      "query": "As a central government employee, how is the perquisite value of government-provided residential accommodation determined?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Easy",
+      "target_regime": "1962",
+      "direct_answer": "Under the Income-tax Rules, 1962, the perquisite value of government-provided residential accommodation is determined using Table I (Valuation of Perquisites). For accommodation provided by the Central Government (or State Government) where the employer furnishes the accommodation, the value is calculated as the license fee determined by the Central Government plus 10% per annum of the cost of furniture (including television sets, radio sets, refrigerators, household appliances, air-conditioning plant or equipment). If the furniture is hired from a third party, the actual hire charges payable are used instead. This base value is then reduced by the rent actually paid by the employee. For unfurnished accommodation, the value is fixed at 24% of salary (with variations based on city population size as per the 2011 census).",
+      "temporal_applicability": "This applies to the Financial Year (FY) 2021-22 and subsequent years assessed under the Assessment Year (AY) 2022-23 onwards. The effective date of these provisions is 1-9-2023 (as per Statutory Context 1, 2, 3, and 4). These are 1962 rules applied to modern fiscal years.",
+      "citations": [
+        {
+          "rule_id": "12AC",
+          "sub_rule": "(1) > (4) and (2) > (4)",
+          "statutory_path": "Rule 12AC > Sub-rule (1) > (4) and (2) > (4)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "Section 17(2)",
+            "Section 139"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "29-04-2022",
+          "citation_text": "Table I provides the valuation of perquisites including residential accommodation provided by the Central Government or State Government."
+        },
+        {
+          "rule_id": "12AC",
+          "sub_rule": "(1) > (3)",
+          "statutory_path": "Rule 12AC > Sub-rule (1) > (3)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "Section 17(2)"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "1-9-2023",
+          "citation_text": "For accommodation provided by the Central Government or State Government, the value is determined under column (3) and increased by 10% per annum of the cost of furniture."
+        },
+        {
+          "rule_id": "12AC",
+          "sub_rule": "(2) > (4)",
+          "statutory_path": "Rule 12AC > Sub-rule (2) > (4)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "Section 17(2)"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "1-9-2023",
+          "citation_text": "Table I provides fixed percentages (24%, 7.5%, 5%) for unfurnished versus furnished accommodation based on city population."
+        }
+      ],
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_match_rate": 0.6667,
+      "matched_criteria": [
+        "Refers to licence fee determined by the Government",
+        "Mentions deduction of rent actually paid by employee"
+      ],
+      "missed_criteria": [
+        "Mentions Rule 3(1)"
+      ],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.3833
+    },
+    {
+      "case_id": "GOLD-PERS-014",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 3 (1962 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Medium",
+      "target_regime": "1962",
+      "direct_answer": "Under Rule 3(7) of the Income-tax Rules, 1962, the value of an interest-free or concessional loan provided by an employer for education or medical purposes is calculated as the sum equal to the interest computed at the rate charged per annum by the State Bank of India (SBI) as on the 1st day of the relevant previous year, applied to the maximum outstanding monthly balance of the loan, reduced by any interest actually paid by the employee or family member. Notably, no value is charged if the loan is for medical treatment of diseases specified in Rule 3A of these rules.",
+      "temporal_applicability": "This rule applies to the relevant previous year (assessment year). The rule was introduced with effect from 1-9-2023. For Financial Years prior to 2023-24 (i.e., Assessment Years before 2023-24), this specific provision would not apply unless subsequently amended. The calculation methodology described remains the standard applicable under the 1962 rules for eligible years.",
+      "citations": [
+        {
+          "rule_id": "3",
+          "sub_rule": "(7)",
+          "statutory_path": "Rule 3 > (7) (Valuation of perquisites)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "Section 17"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "1-9-2023",
+          "citation_text": "The value of the benefit to the assessee resulting from the provision of interest-free or concessional loan ... shall be determined as the sum equal to the interest computed at the rate charged per annum by the State Bank of India ... as on the 1st day of the relevant previous year"
+        },
+        {
+          "rule_id": "3",
+          "sub_rule": "(5)",
+          "statutory_path": "Rule 3 > (5) (Valuation of perquisites)",
+          "corpus_year": 1962,
+          "sections_referenced": [
+            "Section 17"
+          ],
+          "forms_referenced": [
+            "Form ITR-U"
+          ],
+          "effective_date": "1-9-2023",
+          "citation_text": "The value of the benefit to the employee resulting from the provision of free or concessional educational facilities ... shall be determined as the sum equal to the amount of expenditure incurred by the employer"
+        }
+      ],
+      "citation_precision": 1.0,
+      "citation_recall": 1.0,
+      "citation_f1": 1.0,
+      "criteria_match_rate": 0.3333,
+      "matched_criteria": [
+        "Mentions Rule 3"
+      ],
+      "missed_criteria": [
+        "Refers to SBI benchmark lending rate",
+        "Mentions Rs. 20,000 threshold or medical treatment exemption"
+      ],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.7667
+    },
+    {
+      "case_id": "GOLD-PERS-019",
+      "query": "How is the value of interest-free or concessional loan provided by employer for education/medical purposes calculated for a salaried employee under Rule 15 (2026 rules)?",
+      "query_type": "Persona-Specific Applicability",
+      "difficulty_level": "Easy",
+      "target_regime": "2026",
+      "direct_answer": "Under Rule 15 of the Income-tax Rules, 2026 (Table 5 - Valuation of Perquisites, Sub-rule (1)), the value of an interest-free or concessional loan provided by an employer for education or medical purposes is calculated as the sum equal to the interest computed at the annual rate charged by the State Bank of India (SBI) as on the 1st day of the relevant tax year, using the maximum outstanding monthly balance as reduced by the interest actually paid. However, no value is charged (exempt) if the loan is for medical treatment in respect of diseases specified in Rule 18 or if the total loan amount does not exceed Rs. 2,00,000 in the aggregate.",
+      "temporal_applicability": "These rules apply to the relevant Assessment Year (AY) corresponding to the Financial Year (FY) under the Income-tax Rules, 2026. Since there is no effective date restriction noted in the statutory context, the provisions are fully operative for the current tax year under the 2026 regime.",
+      "citations": [
+        {
+          "rule_id": "Income-tax Rules, 2026",
+          "sub_rule": "(1)",
+          "statutory_path": "Rule 15 > Table 5 (Valuation of perquisites)",
+          "corpus_year": 2026,
+          "sections_referenced": [
+            "Section 13(43) - Valuation of perquisites"
+          ],
+          "forms_referenced": [
+            "Form ITR-11"
+          ],
+          "effective_date": "None (fully applicable under 2026 rules)",
+          "citation_text": "Interest computed at the annual rate charged by SBI as on the 1st day of the relevant tax year; no value charged if loans are for medical treatment (Rule 18 diseases) or amount not exceeding Rs. 2,00,000 in aggregate."
+        }
+      ],
+      "citation_precision": 0.0,
+      "citation_recall": 0.0,
+      "citation_f1": 0.0,
+      "criteria_match_rate": 0.6667,
+      "matched_criteria": [
+        "Mentions Rule 15",
+        "Mentions Rs. 20,000 threshold or medical treatment exemption"
+      ],
+      "missed_criteria": [
+        "Refers to SBI benchmark lending rate"
+      ],
+      "temporal_validity_score": 1.0,
+      "negative_handling_correct": true,
+      "is_out_of_scope": false,
+      "composite_score": 0.3833
+    }
+  ]
+}
