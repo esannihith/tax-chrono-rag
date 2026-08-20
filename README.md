@@ -176,12 +176,12 @@ Evaluated across a stratified sample of 20 test cases in `data/evaluation/active
 
 | Metric | Score / Accuracy | Evaluation Methodology |
 | :--- | :---: | :--- |
-| **Mean Composite Score** | **53.99%** | $0.35 \times \text{CriteriaCoverage} + 0.30 \times \text{CitationRecall} + 0.20 \times \text{CitationPrecision} + 0.15 \times \text{TemporalValidity}$ |
-| **Criteria Keyword Coverage Rate** | **67.83%** | Key-entity and phrase adherence against curated statutory criteria points |
-| **Mean Citation Recall** | **55.00%** | Strict tokenized recall of target statutory base rules and sub-rules |
-| **Mean Citation Precision** | **50.00%** | Exact base-rule match avoiding false-positive prefix matching (e.g. Rule 30 $\neq$ Rule 3) |
-| **Citation F1-Score** | **51.67%** | Harmonic mean of tokenized citation precision and recall |
-| **Strict Temporal Accuracy (Labelled)** | **25.00%** | Field-specific AY vs FY strict match against expected statutory period |
+| **Mean Composite Score** | **72.92%** | $0.35 \times \text{CriteriaCoverage} + 0.30 \times \text{CitationRecall} + 0.20 \times \text{CitationPrecision} + 0.15 \times \text{TemporalValidity}$ |
+| **Criteria Keyword Coverage Rate** | **70.50%** | Key-entity and phrase adherence against curated statutory criteria points |
+| **Mean Citation Recall** | **85.00%** | Strict tokenized recall of target statutory base rules and sub-rules |
+| **Mean Citation Precision** | **80.00%** | Exact base-rule match avoiding false-positive prefix matching (e.g. Rule 30 $\neq$ Rule 3) |
+| **Citation F1-Score** | **81.67%** | Harmonic mean of tokenized citation precision and recall |
+| **Strict Temporal Accuracy (Labelled)** | **31.25%** | Field-specific AY vs FY strict match against 16 labelled cases ($5 / 16$) excluding N/A negative queries |
 | **Negative Abstention Accuracy** | **100.00%** | Explicitly declares out-of-scope/unnotified rules without hallucinating citations |
 
 ![Generation Evaluation Breakdown](docs/assets/generation_evaluation_breakdown.png)

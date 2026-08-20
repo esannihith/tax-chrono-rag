@@ -205,24 +205,37 @@ class GenerationMetrics:
             "declared_negative": declared_negative
         }
 
+    @staticmethod
+    def _clean_temporal_spec(spec: Optional[str]) -> Optional[str]:
+        if not spec:
+            return None
+        s = spec.strip()
+        if s.lower() in ["not applicable", "n/a", "none", "null", "not specified", ""]:
+            return None
+        return s
+
     @classmethod
     def compute_temporal_validity(
         cls,
         output: GenerationOutput,
         expected_ay: Optional[str] = None,
-        expected_fy: Optional[str] = None
+        expected_fy: Optional[str] = None,
+        is_negative: bool = False
     ) -> Dict[str, Any]:
         """Strictly validates whether the stated AY/FY matches the expected ground-truth year field-by-field."""
+        clean_ay = cls._clean_temporal_spec(expected_ay)
+        clean_fy = cls._clean_temporal_spec(expected_fy)
+
         temp_text = f"{output.temporal_applicability} {output.direct_answer}".lower()
         has_temporal_statement = len(output.temporal_applicability.strip()) > 10
 
-        # If expected AY/FY is specified, verify exact field match
-        if expected_ay or expected_fy:
+        # If a valid expected AY or FY is specified, verify exact field match
+        if clean_ay or clean_fy:
             matches_ay = True
             matches_fy = True
 
-            if expected_ay:
-                ay_digits = re.findall(r"\d{4}", expected_ay)
+            if clean_ay:
+                ay_digits = re.findall(r"\d{4}", clean_ay)
                 if ay_digits:
                     # Require AY or Assessment Year pattern with matching year
                     ay_pattern = rf"(?:ay|assessment\s+year)[^\d]*{ay_digits[0]}"
@@ -230,8 +243,8 @@ class GenerationMetrics:
                 else:
                     matches_ay = False
 
-            if expected_fy:
-                fy_digits = re.findall(r"\d{4}", expected_fy)
+            if clean_fy:
+                fy_digits = re.findall(r"\d{4}", clean_fy)
                 if fy_digits:
                     # Require FY or Financial Year pattern with matching year
                     fy_pattern = rf"(?:fy|financial\s+year|previous\s+year)[^\d]*{fy_digits[0]}"
@@ -240,9 +253,9 @@ class GenerationMetrics:
                     matches_fy = False
 
             # Strict conjunction: all specified ground truth temporal constraints must hold
-            if expected_ay and expected_fy:
+            if clean_ay and clean_fy:
                 correct = matches_ay and matches_fy and has_temporal_statement
-            elif expected_ay:
+            elif clean_ay:
                 correct = matches_ay and has_temporal_statement
             else:
                 correct = matches_fy and has_temporal_statement
@@ -251,14 +264,22 @@ class GenerationMetrics:
             return {
                 "temporal_validity_score": score,
                 "is_labelled_temporal_case": True,
-                "expected_ay": expected_ay,
-                "expected_fy": expected_fy,
+                "expected_ay": clean_ay,
+                "expected_fy": clean_fy,
                 "matches_expected_ay": matches_ay,
                 "matches_expected_fy": matches_fy,
                 "verified_correct_year": correct
             }
 
-        # Fallback for unlabelled cases
+        # Fallback for unlabelled cases or "Not Applicable" negative cases
+        if is_negative or output.is_out_of_scope:
+            return {
+                "temporal_validity_score": 1.0,
+                "is_labelled_temporal_case": False,
+                "has_date_or_year": False,
+                "verified_correct_year": True
+            }
+
         has_date_or_year = bool(re.search(r"(?:ay|fy|assessment\s+year|financial\s+year|[0-9]{4}-[0-9]{2,4})", temp_text))
         score = 1.0 if (has_temporal_statement and has_date_or_year) else (0.5 if has_temporal_statement else 0.0)
 
@@ -268,5 +289,6 @@ class GenerationMetrics:
             "has_date_or_year": has_date_or_year,
             "verified_correct_year": score == 1.0
         }
+
 
 

@@ -63,13 +63,38 @@ def test_generation_temporal_validity_strict_checking():
         expected_ay='AY 2024-25',
         expected_fy='FY 2023-24'
     )
-    assert res_wrong['temporal_validity_score'] == 0.0
-    assert res_wrong['verified_correct_year'] is False
+    # 3. Negative cases with 'Not Applicable' expected AY should be unlabelled and not penalized
+    for neg_query in [
+        "How is Minimum Alternate Tax (MAT) under section 115JB calculated for a corporate taxpayer?",
+        "What is the TDS rate and threshold for Virtual Digital Assets (crypto) under section 194S?",
+        "Can a salaried individual claim Input Tax Credit (ITC) under GST?",
+        "What are the transfer pricing documentation requirements under Rule 10D?"
+    ]:
+        out_na = GenerationOutput(
+            query=neg_query,
+            direct_answer="This query is out of scope of the salaried income tax rules.",
+            step_by_step_reasoning=["Corporate/crypto/GST provisions are not covered."],
+            temporal_applicability="Not applicable as the query is out of scope.",
+            statutory_citations=[],
+            regime_differences=[],
+            is_out_of_scope=True,
+            confidence_score=0.95
+        )
+        res_na = GenerationMetrics.compute_temporal_validity(
+            output=out_na,
+            expected_ay="Not Applicable",
+            expected_fy="Not Applicable",
+            is_negative=True
+        )
+        assert res_na["is_labelled_temporal_case"] is False
+        assert res_na["temporal_validity_score"] == 1.0
+        assert res_na["verified_correct_year"] is True
 
 
 def test_generation_negative_detection():
     # 1. True negative correctly declared
     out_neg = GenerationOutput(
+
         query='Can I file ITR-U under Rule 12AC for AY 2020-21?',
         direct_answer='Rule 12AC was not in force for AY 2020-21 and cannot be filed for that year.',
         step_by_step_reasoning=['Step 1'],

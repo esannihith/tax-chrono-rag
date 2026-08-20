@@ -111,8 +111,10 @@ class GenerationEvaluationEngine:
                 temp_metrics = GenerationMetrics.compute_temporal_validity(
                     output=output,
                     expected_ay=case.expected_ay,
-                    expected_fy=case.expected_fy
+                    expected_fy=case.expected_fy,
+                    is_negative=case.is_negative
                 )
+
 
                 # 4. Negative / Out-of-scope Handling
                 neg_metrics = GenerationMetrics.compute_negative_detection(
