@@ -5,7 +5,7 @@
 [![Pydantic](https://img.shields.io/badge/Pydantic-v2.10-E92063.svg?logo=pydantic&logoColor=white)](https://docs.pydantic.dev)
 [![Vector Search](https://img.shields.io/badge/Embeddings-Sentence--Transformers-orange.svg)](https://sbert.net)
 [![BM25](https://img.shields.io/badge/Sparse%20Index-Rank--BM25-brightgreen.svg)](https://github.com/dorianbrown/rank_bm25)
-[![LLM Backends](https://img.shields.io/badge/LLM-Gemini%20%7C%20OpenRouter%20Free%20Tier-4285F4.svg?logo=google&logoColor=white)](https://ai.google.dev)
+[![LLM Backends](https://img.shields.io/badge/LLM-Gemini%203.6%20Flash%20%7C%20OpenRouter%20Free%20Tier-4285F4.svg?logo=google&logoColor=white)](https://ai.google.dev)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 > **A temporally grounded, structure-aware Retrieval-Augmented Generation (RAG) system specialized in Indian Income Tax jurisprudence.**  
@@ -29,12 +29,12 @@
 
 ## ⚡ Key Highlights
 
-- 🎯 **High-Precision Retrieval**: Achieves **100.00% HitRate@10**, **80.56% Essential Recall@5**, **0.8189 MRR**, and **0.9003 Graded NDCG@10** on the active golden evaluation suite (90 cases) using Parent-Aware AST Chunking and dynamic min-max normalized hybrid search.
-- ⏱️ **Temporal Reasoning (AY vs FY)**: Resolves **Financial Year (FY $T$)** to **Assessment Year (AY $T+1$)** arithmetic and enforces strict effective date boundaries derived from statutory notifications and footnote records.
+- 🎯 **High-Precision Retrieval**: Achieves **100.00% HitRate@10** (vs. 10.17% random baseline), **80.56% Essential Recall@5** (vs. 2.73% random baseline), **0.8189 MRR**, and **0.9003 Graded NDCG@10** on the active golden evaluation suite (90 cases) using Parent-Aware AST Chunking and dynamic min-max normalized hybrid search.
+- ⏱️ **Temporal Reasoning (AY vs FY)**: Resolves **Financial Year (FY $T$)** to **Assessment Year (AY $T+1$)** arithmetic and enforces commencement and amendment boundaries using a hand-curated registry of 7 key rules (Rules 2BB, 3, 12AC, 21AAA, 26D, 31, 114AAA), explicitly scoping uncurated rules as unverified.
 - ⚖️ **Dual-Regime Comparative Synthesis**: Simultaneously indexes and contrasts provisions between the legacy **1962 Rules** (95 chunks) and the upcoming **Draft 2026 Rules** (88 chunks).
-- 🧮 **Deterministic Statutory Calculators**: Temporal-aware perquisite calculators for Rent-Free Accommodation (pre/post Notification 65/2023 rates), Motor Cars, Interest-Free Loans (aggregate ₹20k threshold & Rule 3A medical proviso), and Free Food with source chunk provenance.
+- 🧮 **Deterministic Statutory Calculators**: Temporal-aware perquisite calculators for Rent-Free Accommodation (pre/post Notification 65/2023 rates linked to registry), Motor Cars, Interest-Free Loans (aggregate ₹20k threshold & Rule 3A medical proviso), and Free Food with source chunk provenance.
 - 🛡️ **Resilient Multi-Provider LLM Engine**: Implements quota-aware fail-fast fallback routing:  
-  $$\text{Google Gemini 2.5 Flash} \xrightarrow{\text{429 / 503}} \text{OpenRouter Free Tier (Gemma-4-26B, Liquid LFM, Nemotron)} \xrightarrow{\text{Offline}} \text{Deterministic Mock}$$
+  $$\text{Primary: Gemini 3.6 Flash} \xrightarrow{\text{429 / 503}} \text{Fallback: Gemini 2.5 Flash} \xrightarrow{\text{Quota Exceeded}} \text{OpenRouter Free (Gemma-4-26B, Liquid LFM, Nemotron)} \xrightarrow{\text{Offline}} \text{Deterministic Mock}$$
 
 - 🔬 **Comprehensive Benchmark Provenance**: 120 curated golden cases (90 active, 30 held-out hidden) with explicit ground truth splitting between essential answer chunks and supporting rule context, plus negative out-of-scope abstention checking.
 
@@ -84,7 +84,7 @@ flowchart TD
         C6 --> D1[Statutory Prompter<br/>Persona & Strict Grounding]
         D1 --> D2{Resilient Provider}
         D2 -->|Primary| D3[Google Gemini 3.6 Flash]
-        D2 -->|429 Quota Fallback| D4[OpenRouter Free Tier<br/>Gemma 26B / Liquid / Nemotron]
+        D2 -->|429 Quota Fallback| D4[Gemini 2.5 Flash / OpenRouter<br/>Gemma-4-26B / Liquid / Nemotron]
         D2 -->|Offline| D5[Deterministic Mock]
         D3 --> E1[Structured Statutory JSON Output]
         D4 --> E1
@@ -120,20 +120,23 @@ Where:
 - $\alpha_{\text{eff}} = 0.25$ when explicit statutory rule numbers (e.g. `Rule 12AC`, `Rule 2BB`) are detected in the query to favor sparse rule precision, and $\alpha_{\text{eff}} = 0.50$ otherwise.
 
 ### 3. Multi-Provider Quota-Aware Fail-Fast Architecture
-To prevent disruption from upstream API rate limits, the LLM client detects HTTP 429 quota exhaustion instantly without stalling and reroutes to OpenRouter free models:
+To prevent disruption from upstream API rate limits, the LLM client detects HTTP 429 quota exhaustion instantly without stalling and reroutes through the configured fallback chain:
 
 ```mermaid
 flowchart LR
-    A[Incoming Statutory Prompt] --> B[GeminiProvider<br/>gemini-3.6-flash]
+    A[Incoming Statutory Prompt] --> B[GeminiProvider<br/>Primary: gemini-3.6-flash]
     B -->|HTTP 200| C[Parsed JSON Response]
-    B -->|HTTP 429 / 503 Fail-Fast| D[OpenRouterProvider<br/>Gemma-26B / Liquid / Nemotron]
+    B -->|HTTP 429 / 503 Fail-Fast| D[GeminiProvider<br/>Fallback: gemini-2.5-flash]
     D -->|HTTP 200| C
-    D -->|Network Error| E[DeterministicMockProvider<br/>Offline Fallback]
-    E --> C
+    D -->|HTTP 429 Fail-Fast| E[OpenRouterProvider<br/>Gemma-4-26B / Liquid / Nemotron]
+    E -->|HTTP 200| C
+    E -->|Network Error| F[DeterministicMockProvider<br/>Offline Fallback]
+    F --> C
 
     style B fill:#EFF6FF,stroke:#3B82F6
-    style D fill:#F0FDF4,stroke:#10B981
-    style E fill:#FEF2F2,stroke:#EF4444
+    style D fill:#EFF6FF,stroke:#3B82F6
+    style E fill:#F0FDF4,stroke:#10B981
+    style F fill:#FEF2F2,stroke:#EF4444
 ```
 
 ---
@@ -147,7 +150,8 @@ Run with: `uv run python run_eval.py`
 | Evaluation Suite | Total Cases (Grounded + Null) | MRR | HitRate@5 | HitRate@10 | Essential Recall@5 | Essential Recall@10 | Essential Precision@5 | Full Precision@5 | Graded NDCG@10 | Random Baseline Hit@5 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Active Suite (Golden)** | 90 (72 + 18) | **0.8189** | **83.33%** | **100.00%** | **80.56%** | **99.31%** | **30.28%** | **90.56%** | **0.9003** | 5.15% |
-| **Hidden Suite (Validation)** | 30 (24 + 6) | **0.7199** | **83.33%** | **100.00%** | **100.00%** | **95.83%** | **30.83%** | **90.00%** | **0.8239** | 5.18% |
+| **Hidden Suite (Validation)** | 30 (24 + 6) | **0.7199** | **83.33%** | **100.00%** | **81.25%** | **95.83%** | **30.83%** | **90.00%** | **0.8239** | 5.18% |
+
 
 > **Corpus Context**: Total corpus consists of **183 AST chunks** (95 in 1962, 88 in 2026). Precision is reported both against target answer chunks (`Essential Precision@5: 30.28%` vs Random `1.04%`) and complete qualifying statutory context (`Full Precision@5: 90.56%` vs Random `7.06%`).
 

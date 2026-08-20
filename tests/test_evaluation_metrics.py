@@ -150,12 +150,19 @@ def test_citation_tokenization_regression_suite():
     assert res_3_1["citation_recall"] == 0.0
     assert res_3_1["citation_precision"] == 0.0
 
+    # 4b. Disjoint sub-rule token: Rule 3(i) predicting when Rule 3(7)(i) is ground truth
+    pred_3_i = [StatutoryCitation(rule_id="3", sub_rule="(i)", statutory_path="Rule 3(i)", corpus_year=1962)]
+    res_3_i = GenerationMetrics.compute_citation_metrics(pred_3_i, ["Rule 3(7)(i)"])
+    assert res_3_i["citation_recall"] == 0.0
+    assert res_3_i["citation_precision"] == 0.0
+
     # 5. Exact sub-rule match should succeed
     pred_3_7_i = [StatutoryCitation(rule_id="3", sub_rule="(7)(i)", statutory_path="Rule 3(7)(i)", corpus_year=1962)]
     res_3_7_i = GenerationMetrics.compute_citation_metrics(pred_3_7_i, ["Rule 3(7)(i)"])
     assert res_3_7_i["citation_recall"] == 1.0
     assert res_3_7_i["citation_precision"] == 1.0
     assert res_3_7_i["citation_f1"] == 1.0
+
 
 
 def test_criteria_keyword_coverage_metrics():

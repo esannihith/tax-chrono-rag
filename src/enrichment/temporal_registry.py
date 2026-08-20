@@ -1,4 +1,4 @@
-﻿import re
+import re
 from typing import Dict, Any, Optional
 
 
@@ -69,8 +69,55 @@ STATUTORY_EFFECTIVE_DATE_REGISTRY: Dict[str, Dict[str, Any]] = {
 }
 
 
+from datetime import datetime, date
+from typing import Dict, Any, Optional, Tuple
+
+
 class StatutoryTemporalRegistry:
-    """Authoritative statutory registry validating rule effective dates and amendment applicability."""
+    """Authoritative hand-curated statutory registry validating rule effective dates and amendment applicability for 7 key rules."""
+
+    @staticmethod
+    def parse_temporal_input(input_str: str) -> Tuple[Optional[date], Optional[int], str]:
+        """Parses an input string into (calendar_date, assessment_year_int, temporal_type).
+        
+        Returns:
+            (parsed_date, parsed_ay, 'calendar_date' | 'assessment_year' | 'financial_year' | 'unknown')
+        """
+        clean = input_str.strip()
+        
+        # 1. Check for full calendar dates (YYYY-MM-DD, DD-MM-YYYY, DD/MM/YYYY)
+        iso_match = re.search(r'\b(\d{4})[-/](\d{1,2})[-/](\d{1,2})\b', clean)
+        if iso_match:
+            try:
+                d = date(int(iso_match.group(1)), int(iso_match.group(2)), int(iso_match.group(3)))
+                return d, None, 'calendar_date'
+            except ValueError:
+                pass
+
+        dmy_match = re.search(r'\b(\d{1,2})[-/](\d{1,2})[-/](\d{4})\b', clean)
+        if dmy_match:
+            try:
+                d = date(int(dmy_match.group(3)), int(dmy_match.group(2)), int(dmy_match.group(1)))
+                return d, None, 'calendar_date'
+            except ValueError:
+                pass
+
+        # 2. Check for Assessment Year (AY 2022-23, Assessment Year 2022)
+        ay_match = re.search(r'\b(?:AY|Assessment\s+Year)\s*(\d{4})\b', clean, re.IGNORECASE)
+        if ay_match:
+            return None, int(ay_match.group(1)), 'assessment_year'
+
+        # 3. Check for Financial Year (FY 2021-22 -> AY 2022)
+        fy_match = re.search(r'\b(?:FY|Financial\s+Year)\s*(\d{4})\b', clean, re.IGNORECASE)
+        if fy_match:
+            return None, int(fy_match.group(1)) + 1, 'financial_year'
+
+        # 4. Fallback: 4 digit year
+        year_match = re.search(r'\b(\d{4})\b', clean)
+        if year_match:
+            return None, int(year_match.group(1)), 'assessment_year'
+
+        return None, None, 'unknown'
 
     @classmethod
     def verify_rule_effective_date(
@@ -95,46 +142,73 @@ class StatutoryTemporalRegistry:
 
         eff_record = STATUTORY_EFFECTIVE_DATE_REGISTRY.get(clean_id)
 
-        # Extract 4-digit year from date_or_ay
-        year_match = re.search(r'\b(\d{4})\b', date_or_ay)
-        queried_year = int(year_match.group(1)) if year_match else None
-
         if eff_record is None:
             return {
                 'rule_id': clean_id,
                 'regime': '1962',
                 'queried_period': date_or_ay,
-                'is_in_force_for_period': True,
-                'status': 'standard_commencement',
-                'effective_date_recorded': '1962-04-01',
-                'scope_note': f'Rule {clean_id} is part of the Income-tax Rules, 1962 and in force during queried period.'
+                'is_in_force_for_period': None,
+                'status': 'unverified',
+                'effective_date_recorded': None,
+                'scope_note': (
+                    f"Rule {clean_id} is present in the Income-tax Rules, 1962 corpus, but its specific "
+                    f"commencement and notification history is not recorded in the curated 7-rule registry. "
+                    f"Temporal verification cannot be confirmed deterministically."
+                )
             }
 
-        earliest_ay = eff_record.get('earliest_applicable_ay', 1962)
+        parsed_date, parsed_ay, temp_type = cls.parse_temporal_input(date_or_ay)
         in_force = True
         scope_note = eff_record.get('notes', f'Rule {clean_id} is in force during queried period.')
 
-        if queried_year is not None and queried_year < earliest_ay:
-            in_force = False
-            scope_note = (
-                f"Rule {clean_id} ({eff_record['rule_title']}) was inserted w.e.f. "
-                f"{eff_record.get('inserted_date', 'subsequent notification')} via "
-                f"{eff_record.get('notification_no', 'statutory amendment')} and was "
-                f"NOT in force for periods prior to {eff_record['earliest_applicable_ay_str']}."
-            )
-        elif 'amendments' in eff_record and queried_year is not None:
-            # Check specific amendment boundaries (e.g. Rule 3 accommodation rates)
-            for amd in eff_record['amendments']:
-                if queried_year < amd['effective_ay']:
+        # Case A: Queried with a specific calendar date (e.g. '2022-04-01')
+        if temp_type == 'calendar_date' and parsed_date is not None:
+            if 'inserted_date' in eff_record:
+                ins_date = date.fromisoformat(eff_record['inserted_date'])
+                if parsed_date < ins_date:
+                    in_force = False
                     scope_note = (
-                        f"Rule {clean_id} was in force for {date_or_ay}, but governed by {amd['prior_provision']}. "
-                        f"{amd['notification_no']} took effect later w.e.f. {amd['effective_ay_str']}."
+                        f"Rule {clean_id} ({eff_record['rule_title']}) was inserted w.e.f. "
+                        f"{eff_record['inserted_date']} via {eff_record.get('notification_no', 'notification')} "
+                        f"and was NOT in force on {date_or_ay}."
                     )
-                else:
-                    scope_note = (
-                        f"Rule {clean_id} is in force for {date_or_ay} under amended provisions "
-                        f"({amd['notification_no']} w.e.f. {amd['effective_ay_str']}: {amd['subject']})."
-                    )
+            elif 'amendments' in eff_record:
+                for amd in eff_record['amendments']:
+                    amd_date = date.fromisoformat(amd['effective_date'])
+                    if parsed_date < amd_date:
+                        scope_note = (
+                            f"Rule {clean_id} was in force on {date_or_ay}, but governed by {amd['prior_provision']}. "
+                            f"{amd['notification_no']} took effect later w.e.f. {amd['effective_date']}."
+                        )
+                    else:
+                        scope_note = (
+                            f"Rule {clean_id} is in force on {date_or_ay} under amended provisions "
+                            f"({amd['notification_no']} w.e.f. {amd['effective_date']}: {amd['subject']})."
+                        )
+
+        # Case B: Queried with an Assessment Year or Financial Year
+        elif parsed_ay is not None:
+            earliest_ay = eff_record.get('earliest_applicable_ay', 1962)
+            if parsed_ay < earliest_ay:
+                in_force = False
+                scope_note = (
+                    f"Rule {clean_id} ({eff_record['rule_title']}) was inserted w.e.f. "
+                    f"{eff_record.get('inserted_date', 'notification')} via "
+                    f"{eff_record.get('notification_no', 'statutory amendment')} and was "
+                    f"NOT in force for periods prior to {eff_record['earliest_applicable_ay_str']}."
+                )
+            elif 'amendments' in eff_record:
+                for amd in eff_record['amendments']:
+                    if parsed_ay < amd['effective_ay']:
+                        scope_note = (
+                            f"Rule {clean_id} was in force for {date_or_ay}, but governed by {amd['prior_provision']}. "
+                            f"{amd['notification_no']} took effect later w.e.f. {amd['effective_ay_str']}."
+                        )
+                    else:
+                        scope_note = (
+                            f"Rule {clean_id} is in force for {date_or_ay} under amended provisions "
+                            f"({amd['notification_no']} w.e.f. {amd['effective_ay_str']}: {amd['subject']})."
+                        )
 
         eff_date_str = eff_record.get('inserted_date', eff_record.get('standard_commencement', '1962-04-01'))
 
@@ -147,3 +221,4 @@ class StatutoryTemporalRegistry:
             'effective_date_recorded': eff_date_str,
             'scope_note': scope_note
         }
+

@@ -8,9 +8,9 @@ We have generated, verified, and stratified a **120-case synthetic rich golden d
 
 1. **120-Case Golden Dataset Created**:
    - Strictly grounded in the 56 rule documents and 1,177 AST chunks.
-   - **Active Suite (75%)**: 90 test cases in [`data/evaluation/active_suite.json`](file:///c:/Users/esann/Desktop/Temporal-RAG/data/evaluation/active_suite.json).
-   - **Hidden Suite (25%)**: 30 test cases in [`data/evaluation/hidden_suite.json`](file:///c:/Users/esann/Desktop/Temporal-RAG/data/evaluation/hidden_suite.json).
-   - **Consolidated Master Dataset**: 120 test cases in [`data/evaluation/golden_full.json`](file:///c:/Users/esann/Desktop/Temporal-RAG/data/evaluation/golden_full.json).
+   - **Active Suite (75%)**: 90 test cases in [`data/evaluation/active_suite.json`](../../data/evaluation/active_suite.json).
+   - **Hidden Suite (25%)**: 30 test cases in [`data/evaluation/hidden_suite.json`](../../data/evaluation/hidden_suite.json).
+   - **Consolidated Master Dataset**: 120 test cases in [`data/evaluation/golden_full.json`](../../data/evaluation/golden_full.json).
 2. **Stratified Split on Query Types**:
    - **Persona-Specific Applicability**: 24 Active, 8 Hidden (Total: 32)
    - **Intra-Document Temporal Validation**: 24 Active, 8 Hidden (Total: 32)
@@ -111,7 +111,7 @@ We have generated, verified, and stratified a **120-case synthetic rich golden d
 
 ### Independent Selection Protocol
 All golden evaluation labels were selected **independently of retrieval model outputs**:
-1. **Statutory Mapping**: For each query, legal tax experts mapped the required legal provision directly to the Income-tax Rules statutory hierarchy (e.g. Central Government accommodation $\rightarrow$ Rule 3 Table 1 Serial 1).
+1. **Statutory Mapping**: For each query, ground-truth rules and target provisions were **labelled by the author against statutory text, blind to retrieval output** (e.g. Central Government accommodation $\rightarrow$ Rule 3 Table 1 Serial 1).
 2. **Essential vs. Supporting Ground Truth Separation**:
    - **`essential_chunk_ids`**: The 1–2 precise AST chunks containing the specific formula, threshold, or procedural form that directly answers the question.
    - **`supporting_chunk_ids`**: The remaining structural chunks belonging to the parent rule (e.g., surrounding provisos, explanations, or sibling sub-rules).
@@ -136,9 +136,10 @@ During the evaluation audit, several legacy test cases were found to contain mis
 
 ## 4. Code Modules in `src/evaluation/`
 
-- [`src/evaluation/models.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/evaluation/models.py): Pydantic data schemas (`GoldenEvaluationCase`, `EvaluationSuite`, `DifficultyLevel`, `QueryType`, `RetrievalParadigm`).
-- [`src/evaluation/metrics.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/evaluation/metrics.py): Information retrieval metrics engine (`essential_recall@k`, `hit_rate@k`, `graded_ndcg@k`, `essential_precision@k`, `mrr`).
-- [`src/evaluation/generation_metrics.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/evaluation/generation_metrics.py): Generation metrics engine (strict tokenized citation precision/recall, criteria keyword coverage, strict field-by-field temporal validity, negative abstention).
-- [`src/evaluation/benchmark_engine.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/evaluation/benchmark_engine.py): Automated benchmark runner with random retriever baseline and dirty-aware git provenance tracking.
-- [`src/evaluation/generation_eval_engine.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/evaluation/generation_eval_engine.py): Stratified RAG generation evaluation engine.
+- [`src/evaluation/models.py`](../../src/evaluation/models.py): Pydantic data schemas (`GoldenEvaluationCase`, `EvaluationSuite`, `DifficultyLevel`, `QueryType`, `RetrievalParadigm`).
+- [`src/evaluation/metrics.py`](../../src/evaluation/metrics.py): Information retrieval metrics engine (`essential_recall@k`, `hit_rate@k`, `graded_ndcg@k`, `essential_precision@k`, `mrr`).
+- [`src/evaluation/generation_metrics.py`](../../src/evaluation/generation_metrics.py): Generation metrics engine (strict tokenized citation precision/recall, criteria keyword coverage, strict field-by-field temporal validity, negative abstention).
+- [`src/evaluation/benchmark_engine.py`](../../src/evaluation/benchmark_engine.py): Automated benchmark runner with random retriever baseline and dirty-aware git provenance tracking.
+- [`src/evaluation/generation_eval_engine.py`](../../src/evaluation/generation_eval_engine.py): Stratified RAG generation evaluation engine.
+
 

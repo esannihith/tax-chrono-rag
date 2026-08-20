@@ -47,13 +47,21 @@ def test_compare_regimes():
 
 
 def test_verify_effective_date():
-    # 1. Rule 12AC
-    res_invalid = verify_effective_date(rule_id="12AC", date_or_ay="AY 2020-21")
-    assert res_invalid["is_in_force_for_period"] is False
-    assert "NOT in force for periods prior to AY 2022-23" in res_invalid["scope_note"]
+    # 1. Rule 12AC: AY vs Calendar Date precision
+    res_invalid_ay = verify_effective_date(rule_id="12AC", date_or_ay="AY 2020-21")
+    assert res_invalid_ay["is_in_force_for_period"] is False
+    assert "NOT in force for periods prior to AY 2022-23" in res_invalid_ay["scope_note"]
 
-    res_valid = verify_effective_date(rule_id="12AC", date_or_ay="AY 2023-24")
-    assert res_valid["is_in_force_for_period"] is True
+    res_valid_ay = verify_effective_date(rule_id="12AC", date_or_ay="AY 2023-24")
+    assert res_valid_ay["is_in_force_for_period"] is True
+
+    # Strict calendar date check: 2022-04-01 is before insertion date 2022-04-29
+    res_cal_pre = verify_effective_date(rule_id="12AC", date_or_ay="2022-04-01")
+    assert res_cal_pre["is_in_force_for_period"] is False
+    assert "2022-04-29" in res_cal_pre["scope_note"]
+
+    res_cal_post = verify_effective_date(rule_id="12AC", date_or_ay="2022-05-01")
+    assert res_cal_post["is_in_force_for_period"] is True
 
     # 2. Rule 26D
     res_26d_pre = verify_effective_date(rule_id="26D", date_or_ay="AY 2020-21")
@@ -62,14 +70,21 @@ def test_verify_effective_date():
     res_26d_post = verify_effective_date(rule_id="26D", date_or_ay="AY 2023-24")
     assert res_26d_post["is_in_force_for_period"] is True
 
-    # 3. Rule 3 Accommodation Amendment
-    res_rule3_pre = verify_effective_date(rule_id="3", date_or_ay="AY 2021-22")
-    assert res_rule3_pre["is_in_force_for_period"] is True
-    assert "governed by Historical rates" in res_rule3_pre["scope_note"]
+    # 3. Rule 3 Accommodation Amendment (Calendar Date and AY)
+    res_rule3_pre_date = verify_effective_date(rule_id="3", date_or_ay="2023-08-15")
+    assert res_rule3_pre_date["is_in_force_for_period"] is True
+    assert "governed by Historical rates" in res_rule3_pre_date["scope_note"]
 
-    res_rule3_post = verify_effective_date(rule_id="3", date_or_ay="AY 2024-25")
-    assert res_rule3_post["is_in_force_for_period"] is True
-    assert "Notification No. 65/2023" in res_rule3_post["scope_note"]
+    res_rule3_post_date = verify_effective_date(rule_id="3", date_or_ay="2023-09-15")
+    assert res_rule3_post_date["is_in_force_for_period"] is True
+    assert "Notification No. 65/2023" in res_rule3_post_date["scope_note"]
+
+    # 4. Non-curated rule should return unverified status
+    res_unverified = verify_effective_date(rule_id="80C", date_or_ay="AY 2024-25")
+    assert res_unverified["status"] == "unverified"
+    assert res_unverified["is_in_force_for_period"] is None
+    assert "curated 7-rule registry" in res_unverified["scope_note"]
+
 
 
 

@@ -34,16 +34,24 @@ class GenerationMetrics:
             return m.group(1), m.group(2)
         return clean, ""
 
+    @staticmethod
+    def extract_subrule_tokens(sub_str: str) -> List[str]:
+        """Extracts ordered hierarchical sub-rule tokens (e.g. '(7)(i)' -> ['7', 'I'], '(1)' -> ['1'], '(i)' -> ['I'])."""
+        if not sub_str:
+            return []
+        return re.findall(r"[A-Z0-9]+", sub_str.upper())
+
     @classmethod
     def matches_rule_citation(cls, pred_cit: str, gt_cit: str) -> bool:
         """Determines if a predicted citation correctly satisfies a ground truth citation.
         
         Requires:
         1. Exact match on base rule identifier (e.g. '3' != '30', '3' != '3A', '12' != '12AC').
-        2. Sub-rule consistency:
+        2. Sub-rule hierarchy consistency:
            - If GT has no sub-rule specified (e.g. 'Rule 3'), any sub-rule under Rule 3 satisfies it.
            - If GT specifies a sub-rule (e.g. 'Rule 3(7)(i)'), the prediction must specify the
-             same sub-rule or a compatible parent/child hierarchy. E.g. 'Rule 3(1)' != 'Rule 3(7)(i)'.
+             exact sub-rule hierarchy or a valid parent/child prefix.
+           - Crucially, disjoint tokens like '(i)' will NOT match '(7)(i)'.
         """
         p_base, p_sub = cls.parse_rule_components(pred_cit)
         gt_base, gt_sub = cls.parse_rule_components(gt_cit)
@@ -58,14 +66,26 @@ class GenerationMetrics:
 
         # 3. If Ground Truth requires a specific sub-rule, prediction must specify a compatible sub-rule
         if not p_sub:
-            # Prediction only gave base rule when specific sub-rule was required
             return False
 
-        # Check sub-rule hierarchy containment (e.g. '(7)(I)' == '(7)(I)', '(7)' parent of '(7)(I)')
-        if p_sub == gt_sub or p_sub in gt_sub or gt_sub in p_sub:
+        p_tokens = cls.extract_subrule_tokens(p_sub)
+        gt_tokens = cls.extract_subrule_tokens(gt_sub)
+
+        if not p_tokens or not gt_tokens:
+            return False
+
+        # Exact match
+        if p_tokens == gt_tokens:
             return True
 
-        return False
+        # Hierarchical prefix matching:
+        # e.g. prediction ['7'] is parent prefix of ground truth ['7', 'I']
+        # e.g. prediction ['7', 'I', 'A'] is specific child of ground truth ['7', 'I']
+        if len(p_tokens) < len(gt_tokens):
+            return gt_tokens[:len(p_tokens)] == p_tokens
+        else:
+            return p_tokens[:len(gt_tokens)] == gt_tokens
+
 
     @classmethod
     def compute_citation_metrics(

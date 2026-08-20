@@ -1,5 +1,6 @@
 import re
 from typing import Dict, Any, Optional
+from src.enrichment.temporal_registry import STATUTORY_EFFECTIVE_DATE_REGISTRY
 
 
 class PerquisiteCalculator:
@@ -54,9 +55,11 @@ class PerquisiteCalculator:
                 source_citation = "Draft Income-tax Rules 2026 Schedule on Accommodation"
                 source_chunk_id = "chunk_2026_rule_15_rule_15_subrule_1_1"
             else:
-                # 1962 Rules: Check Notification 65/2023 boundary (effective w.e.f. 01-09-2023 / AY 2024-25 onwards)
-                if ay_year >= 2024:
+                # 1962 Rules: Check Notification 65/2023 boundary from authoritative registry
+                amd_eff_ay = STATUTORY_EFFECTIVE_DATE_REGISTRY["3"]["amendments"][0]["effective_ay"]
+                if ay_year >= amd_eff_ay:
                     # Post-Notification 65/2023 Rates
+
                     if is_owned_by_employer:
                         tier_rates = {">40L": 0.10, "15L-40L": 0.075, "<=15L": 0.05, ">25L": 0.10, "10L-25L": 0.075, "<=10L": 0.05}
                         rate = tier_rates.get(population_tier, 0.10)

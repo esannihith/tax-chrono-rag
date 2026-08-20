@@ -78,20 +78,21 @@ MRR (Mean Reciprocal Rank)
 
 ## 4. Stage 1 Generation: Architecture & Live Verification
 
-We implemented and verified the end-to-end statutory generation pipeline in [`src/generation/`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/generation/):
+We implemented and verified the end-to-end statutory generation pipeline in [`src/generation/`](../../src/generation/):
 
 ### Core Architecture Components
-1. **[`models.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/generation/models.py)**: Pydantic schemas enforcing structured legal reasoning:
+1. **[`models.py`](../../src/generation/models.py)**: Pydantic schemas enforcing structured legal reasoning:
    - `StatutoryCitation`: Structured rule ID, breadcrumb, corpus year, effective dates, and cross-referenced sections/forms.
    - `RegimeDifference`: Exact before/after comparison between 1962 and 2026 rules with key change summaries.
    - `GenerationOutput`: Type-safe generation payload containing `direct_answer`, `step_by_step_reasoning`, `temporal_applicability`, citations, regime differences, out-of-scope flags, and confidence scores.
-2. **[`prompter.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/generation/prompter.py)**: Salaried persona-grounded statutory prompt compiler enforcing:
+2. **[`prompter.py`](../../src/generation/prompter.py)**: Salaried persona-grounded statutory prompt compiler enforcing:
    - Strict adherence to effective dates from footnotes (e.g. Rule 12AC w.e.f. 29-04-2022; Rule 3 w.e.f. 01-09-2023).
    - Strict FY vs. AY temporal arithmetic ($\text{AY} = \text{FY} + 1$).
    - JSON-schema structured output generation.
-3. **[`llm_client.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/generation/llm_client.py)**: Provider abstraction with automatic exponential backoff and multi-model fallback (`gemini-3.6-flash` $\rightarrow$ `gemini-flash-latest` $\rightarrow$ `gemini-2.5-flash` and OpenRouter).
-4. **[`synthesizer.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/generation/synthesizer.py)**: Connects query normalization, dual-stream hybrid retrieval (1962 + 2026 for comparative queries), prompt construction, and response parsing.
-5. **[`pipeline.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/generation/pipeline.py)**: Unified high-level API entry point.
+3. **[`llm_client.py`](../../src/generation/llm_client.py)**: Provider abstraction with automatic exponential backoff and multi-model fallback (`gemini-3.6-flash` $\rightarrow$ `gemini-flash-latest` $\rightarrow$ `gemini-2.5-flash` and OpenRouter Free Tier).
+4. **[`synthesizer.py`](../../src/generation/synthesizer.py)**: Connects query normalization, dual-stream hybrid retrieval (1962 + 2026 for comparative queries), prompt construction, and response parsing.
+5. **[`pipeline.py`](../../src/generation/pipeline.py)**: Unified high-level API entry point.
+
 
 ### Live End-to-End Test Results
 

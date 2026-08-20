@@ -14,7 +14,7 @@ We have implemented and verified the end-to-end **Parsing -> Chunking** pipeline
    - Extracted and cataloged **64 statutory amendment footnotes**, detaching them from legal prose and transforming them into structured temporal metadata records.
 3. **Table Extraction & Formatting**:
    - Extracted **39 tables** across the corpus, formatting them into Markdown tables with header preservation.
-   - Handled complex multi-column structures and cross-referenced tables (e.g. [`Rule-12AC_1962`](file:///c:/Users/esann/Desktop/Temporal-RAG/data/raw/1962/Rule-12AC_1962.pdf), [`Rule-136_2026`](file:///c:/Users/esann/Desktop/Temporal-RAG/data/raw/2026/Rule-136_2026.pdf), [`Rule-2BB_1962`](file:///c:/Users/esann/Desktop/Temporal-RAG/data/raw/1962/Rule-2BB_1962.pdf), [`Rule-280_2026`](file:///c:/Users/esann/Desktop/Temporal-RAG/data/raw/2026/Rule-280_2026.pdf)).
+   - Handled complex multi-column structures and cross-referenced tables (e.g. [`Rule-12AC_1962`](../../data/raw/1962/Rule-12AC_1962.pdf), [`Rule-136_2026`](../../data/raw/2026/Rule-136_2026.pdf), [`Rule-2BB_1962`](../../data/raw/1962/Rule-2BB_1962.pdf), [`Rule-280_2026`](../../data/raw/2026/Rule-280_2026.pdf)).
 4. **Statutory Abstract Syntax Tree (AST)**:
    - Structured rules into hierarchical AST nodes: `Rule` -> `Sub-rule` -> `Clause` -> `Sub-clause` -> `Item` -> `Proviso` -> `Explanation` -> `Table`.
 5. **Context-Enriched Chunking**:
@@ -28,15 +28,16 @@ We have implemented and verified the end-to-end **Parsing -> Chunking** pipeline
 
 ## 2. Implemented Codebase Structure
 
-- [`src/models.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/models.py): Pydantic data models (`RuleDocument`, `StatutoryNode`, `NodeType`, `Footnote`, `TableData`, `Chunk`, `ChunkMetadata`).
-- [`src/parser/pdf_loader.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/parser/pdf_loader.py): PDF loader with character-level MCID index maps.
-- [`src/parser/cleaner.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/parser/cleaner.py): Deterministic noise removal and footnote parser.
-- [`src/parser/table_extractor.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/parser/table_extractor.py): Table parser & Markdown converter.
-- [`src/parser/ast_builder.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/parser/ast_builder.py): Legal AST builder following Indian statutory grammar.
-- [`src/parser/pipeline.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/parser/pipeline.py): End-to-end PDF parsing orchestrator.
-- [`src/chunker/breadcrumbs.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/chunker/breadcrumbs.py): Breadcrumb path generator.
-- [`src/chunker/legal_chunker.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/src/chunker/legal_chunker.py): Context-enriched legal & temporal chunker.
-- [`main.py`](file:///c:/Users/esann/Desktop/Temporal-RAG/main.py): Pipeline execution entrypoint across both 1962 and 2026 corpora.
+- [`src/models.py`](../../src/models.py): Pydantic data models (`RuleDocument`, `StatutoryNode`, `NodeType`, `Footnote`, `TableData`, `Chunk`, `ChunkMetadata`).
+- [`src/parser/pdf_loader.py`](../../src/parser/pdf_loader.py): PDF loader with character-level MCID index maps.
+- [`src/parser/cleaner.py`](../../src/parser/cleaner.py): Deterministic noise removal and footnote parser.
+- [`src/parser/table_extractor.py`](../../src/parser/table_extractor.py): Table parser & Markdown converter.
+- [`src/parser/ast_builder.py`](../../src/parser/ast_builder.py): Legal AST builder following Indian statutory grammar.
+- [`src/parser/pipeline.py`](../../src/parser/pipeline.py): End-to-end PDF parsing orchestrator.
+- [`src/chunker/breadcrumbs.py`](../../src/chunker/breadcrumbs.py): Breadcrumb path generator.
+- [`src/chunker/legal_chunker.py`](../../src/chunker/legal_chunker.py): Context-enriched legal & temporal chunker.
+- [`main.py`](../../main.py): Pipeline execution entrypoint across both 1962 and 2026 corpora.
+
 
 ---
 

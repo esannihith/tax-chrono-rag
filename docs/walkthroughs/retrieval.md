@@ -23,7 +23,8 @@ We have overhauled the chunking architecture, eliminated redundant metadata fiel
 
 ## 2. Versioned Experiment Trajectory & Growth Comparison
 
-All experimental runs are versioned and stored under [`data/evaluation/experiments/`](file:///c:/Users/esann/Desktop/Temporal-RAG/data/evaluation/experiments/):
+All experimental runs are versioned and stored under [`data/evaluation/experiments/`](../../data/evaluation/experiments/):
+
 
 ```
 ========================================================================================================
