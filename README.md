@@ -254,9 +254,50 @@ uv run python main_indexing.py
 uv run python run_eval.py --suite data/evaluation/active_suite.json
 ```
 
-### 6. Run Generation Benchmark Evaluator
+### 7. Run FastMCP Server for AI Agents & Clients
 ```bash
-uv run python run_generation_eval.py --suite data/evaluation/active_suite.json --sample 20 --output data/evaluation/generation_experiments/v1_generation_sample20.json
+# Stdio mode for Claude Desktop / Cursor / Antigravity
+uv run python run_mcp.py
+
+# SSE HTTP transport mode on port 8000
+uv run python run_mcp.py --transport sse --port 8000
+
+# Run internal integrity self-test
+uv run python run_mcp.py --transport test
+```
+
+---
+
+## 🔌 Model Context Protocol (FastMCP) Server
+
+The engine includes a full **FastMCP** server (`TaxChronoRAG`) exposing 7 specialized tools for AI agents:
+
+| Tool Name | Purpose & Functionality |
+| :--- | :--- |
+| **`search_tax_rules`** | Parent-aware hybrid dense-sparse retrieval with breadcrumb provenance and confidence scores. |
+| **`get_rule_details`** | Direct statutory AST lookup of full rule text, provisos, and embedded tables for any Rule ID. |
+| **`compare_regimes`** | Dual-stream parallel retrieval producing side-by-side comparisons of 1962 vs 2026 provisions. |
+| **`resolve_tax_year`** | Deterministic Assessment Year (AY) vs Financial Year (FY) parser and applicable regime recommender. |
+| **`verify_effective_date`** | Validates whether a specific rule was in force on a given date/AY based on parsed footnote commencement records. |
+| **`calculate_perquisite`** | Pure deterministic computational engine for accommodation (population tiers), motor cars, loans (SBI benchmark), and free food. |
+| **`ask_tax_copilot`** | End-to-end statutory synthesis pipeline returning structured JSON with citations and reasoning steps. |
+
+### Client Configuration (Claude Desktop / Cursor)
+```json
+{
+  "mcpServers": {
+    "tax-chrono-rag": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "C:\\Users\\esann\\Desktop\\Temporal-RAG",
+        "run",
+        "python",
+        "run_mcp.py"
+      ]
+    }
+  }
+}
 ```
 
 ---
@@ -310,6 +351,7 @@ Detailed architectural and experimental notes for each stage are maintained in [
 - 📄 [`docs/walkthroughs/golden-dataset.md`](docs/walkthroughs/golden-dataset.md) — Golden test suite taxonomy, query types, and evaluation criteria.
 - 📄 [`docs/walkthroughs/retreival.md`](docs/walkthroughs/retreival.md) — Dense + BM25 hybrid search, alpha tuning, and ablation curves.
 - 📄 [`docs/walkthroughs/generation.md`](docs/walkthroughs/generation.md) — Statutory prompter design, multi-provider fail-fast client, and evaluation metrics.
+- 📄 [`docs/walkthroughs/mcp-server.md`](docs/walkthroughs/mcp-server.md) — FastMCP tool definitions, schema references, and client integration guide.
 - 📄 [`docs/walkthroughs/walkthrough.md`](docs/walkthroughs/walkthrough.md) — Consolidated system walkthrough and stage completion summary.
 
 ---
@@ -321,11 +363,12 @@ Detailed architectural and experimental notes for each stage are maintained in [
 - [x] **Stage 3**: Dense + BM25 Hybrid Retrieval Engine (Recall@20: 90.00%, MRR: 0.7042)
 - [x] **Stage 4**: Resilient Multi-Provider Statutory Generation Pipeline (Gemini + OpenRouter Free Tier)
 - [x] **Stage 5**: Multi-Dimensional Generation Evaluation Framework & Benchmark
-- [ ] **Stage 6**: **Interactive Web Application (Streamlit Dual-Regime Explorer & Perquisite Calculator)**
-- [ ] **Stage 7**: **Model Context Protocol (FastMCP) Server for Client AI & IDE Tool Use**
+- [x] **Stage 6**: **Model Context Protocol (FastMCP) Server with 7 Statutory Tools (`TaxChronoRAG`)**
+- [ ] **Stage 7**: **Interactive Web Application (Streamlit Dual-Regime Explorer & Perquisite Calculator)**
 - [ ] **Stage 8**: **Corpus Expansion (Depreciation Schedule, Capital Gains, and International Tax)**
 
 ---
 
 ## 📄 License
 This project is open-source under the [MIT License](LICENSE).
+
