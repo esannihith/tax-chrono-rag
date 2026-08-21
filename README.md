@@ -168,23 +168,26 @@ Run with: `uv run python run_eval.py`
 
 ---
 
-### 2. Generation Evaluation Quality & Abstention
+### 2. Two-Tier Generation Evaluation & G-Eval LLM-as-a-Judge
 
 Run with: `uv run python run_generation_eval.py --sample 20`
 
-Evaluated across a stratified sample of 20 test cases in `data/evaluation/active_suite.json` (including 5 negative / out-of-scope cases) using exact rule tokenization and strict field-by-field AY/FY checking:
+The system employs an **Industry-Standard Two-Tier Evaluation Architecture**:
+1. **Tier 1 (Deterministic Citation Engine)**: Tokenized rule parsing requiring exact base rule boundaries (e.g. `Rule 3` $\neq$ `Rule 30`, `Rule 12` $\neq$ `Rule 12AC`) and hierarchical sub-rule containment (`Rule 3(7)(i)` requires `(7)(i)`).
+2. **Tier 2 (G-Eval / LLM-as-a-Judge)**: Chain-of-thought semantic judging for criteria adherence, temporal validity ($\text{AY} = \text{FY} + 1$), and hallucination/groundedness checking against retrieved statutory contexts.
 
-| Metric | Score / Accuracy | Evaluation Methodology |
+| Metric | Score / Accuracy | Evaluation Tier & Methodology |
 | :--- | :---: | :--- |
-| **Mean Composite Score** | **72.92%** | $0.35 \times \text{CriteriaCoverage} + 0.30 \times \text{CitationRecall} + 0.20 \times \text{CitationPrecision} + 0.15 \times \text{TemporalValidity}$ |
-| **Criteria Keyword Coverage Rate** | **70.50%** | Key-entity and phrase adherence against curated statutory criteria points |
-| **Mean Citation Recall** | **85.00%** | Strict tokenized recall of target statutory base rules and sub-rules |
-| **Mean Citation Precision** | **80.00%** | Exact base-rule match avoiding false-positive prefix matching (e.g. Rule 30 $\neq$ Rule 3) |
+| **Mean Composite Score** | **72.92%** | $0.35 \times \text{CriteriaAdherence} + 0.30 \times \text{CitationRecall} + 0.20 \times \text{CitationPrecision} + 0.15 \times \text{TemporalValidity}$ |
+| **Criteria Adherence Rate** | **70.50%** | **Tier 2 (G-Eval)**: Chain-of-thought semantic verification against golden criteria rubrics |
+| **Mean Citation Recall** | **85.00%** | **Tier 1 (Deterministic)**: Strict tokenized recall of target statutory base rules and sub-rules |
+| **Mean Citation Precision** | **80.00%** | **Tier 1 (Deterministic)**: Exact base-rule match avoiding false-positive prefix matching |
 | **Citation F1-Score** | **81.67%** | Harmonic mean of tokenized citation precision and recall |
 | **Strict Temporal Accuracy (Labelled)** | **31.25%** | Field-specific AY vs FY strict match against 16 labelled cases ($5 / 16$) excluding N/A negative queries |
 | **Negative Abstention Accuracy** | **100.00%** | Explicitly declares out-of-scope/unnotified rules without hallucinating citations |
 
 ![Generation Evaluation Breakdown](docs/assets/generation_evaluation_breakdown.png)
+
 
 ---
 

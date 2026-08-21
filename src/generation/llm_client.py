@@ -162,7 +162,40 @@ class DeterministicMockProvider(BaseLLMProvider):
     """Offline rule-guided mock provider for testing and deterministic benchmark validation."""
 
     def generate(self, prompt: str, system_instruction: str) -> Dict[str, Any]:
-        # Extract query from prompt
+        sys_lower = system_instruction.lower()
+        prompt_lower = prompt.lower()
+
+        # Judge: Criteria
+        if "criteria" in sys_lower or "criteria" in prompt_lower:
+            return {
+                "criteria_evaluations": [
+                    {"criterion": "all", "pass": True, "reasoning": "Criteria legally satisfied."}
+                ]
+            }
+
+        # Judge: Temporal Validity
+        if "temporal" in sys_lower or "assessment year" in sys_lower:
+            is_match = True
+            if "expected assessment year: ay 2024-25" in prompt_lower and "2021-22" in prompt_lower and "2024-25" not in prompt_lower:
+                is_match = False
+            return {
+                "is_correct": is_match,
+                "stated_ay": "AY 2024-25" if is_match else "AY 2021-22",
+                "stated_fy": "FY 2023-24",
+                "reasoning": "Evaluated stated assessment year."
+            }
+
+        # Judge: Faithfulness
+        if "faithfulness" in sys_lower or "hallucination" in sys_lower:
+            return {
+                "faithfulness_score": 1.0,
+                "supported_claims_count": 4,
+                "total_claims_count": 4,
+                "unsupported_claims": [],
+                "reasoning": "Faithful to statutory context."
+            }
+
+        # Standard generation mock
         match = re.search(r'USER QUERY:\s*"(.*?)"', prompt)
         q = match.group(1) if match else "Sample query"
 
@@ -189,6 +222,7 @@ class DeterministicMockProvider(BaseLLMProvider):
             "is_out_of_scope": False,
             "confidence_score": 1.0
         }
+
 
 
 class ResilientHybridProvider(BaseLLMProvider):
@@ -221,3 +255,7 @@ class ResilientHybridProvider(BaseLLMProvider):
 def get_default_llm_provider() -> BaseLLMProvider:
     """Returns resilient multi-provider LLM client."""
     return ResilientHybridProvider()
+
+
+get_llm_client = get_default_llm_provider
+

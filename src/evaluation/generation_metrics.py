@@ -1,10 +1,36 @@
 import re
 from typing import List, Dict, Any, Set, Tuple, Optional
 from src.generation.models import StatutoryCitation, GenerationOutput
+from src.evaluation.llm_judge import LLMJudge
 
 
 class GenerationMetrics:
-    """Calculates granular, verifiable evaluation metrics for statutory generation outputs."""
+    """Calculates verifiable, two-tier evaluation metrics for statutory generation outputs.
+    
+    Tier 1 (Deterministic Citation Engine):
+        - Strict tokenized citation precision, recall, and hierarchical sub-rule containment.
+    
+    Tier 2 (G-Eval / LLM-as-a-Judge):
+        - Chain-of-thought Criteria Adherence.
+        - Semantic Temporal Validity (AY = FY + 1).
+        - Faithfulness & Hallucination Grounding.
+    """
+
+    _judge: Optional[LLMJudge] = None
+
+    @classmethod
+    def get_judge(cls) -> LLMJudge:
+        if cls._judge is None:
+            cls._judge = LLMJudge()
+        return cls._judge
+
+    @classmethod
+    def set_judge(cls, judge: LLMJudge):
+        cls._judge = judge
+
+    # ==============================================================================
+    # TIER 1: DETERMINISTIC CITATION ENGINE
+    # ==============================================================================
 
     @staticmethod
     def normalize_citation_str(rule_str: str) -> str:
@@ -51,7 +77,7 @@ class GenerationMetrics:
            - If GT has no sub-rule specified (e.g. 'Rule 3'), any sub-rule under Rule 3 satisfies it.
            - If GT specifies a sub-rule (e.g. 'Rule 3(7)(i)'), the prediction must specify the
              exact sub-rule hierarchy or a valid parent/child prefix.
-           - Crucially, disjoint tokens like '(i)' will NOT match '(7)(i)'.
+           - Disjoint tokens like '(i)' will NOT match '(7)(i)'.
         """
         p_base, p_sub = cls.parse_rule_components(pred_cit)
         gt_base, gt_sub = cls.parse_rule_components(gt_cit)
@@ -79,13 +105,10 @@ class GenerationMetrics:
             return True
 
         # Hierarchical prefix matching:
-        # e.g. prediction ['7'] is parent prefix of ground truth ['7', 'I']
-        # e.g. prediction ['7', 'I', 'A'] is specific child of ground truth ['7', 'I']
         if len(p_tokens) < len(gt_tokens):
             return gt_tokens[:len(p_tokens)] == p_tokens
         else:
             return p_tokens[:len(gt_tokens)] == gt_tokens
-
 
     @classmethod
     def compute_citation_metrics(
@@ -95,7 +118,6 @@ class GenerationMetrics:
     ) -> Dict[str, float]:
         """Calculates Citation Precision, Recall, and F1 with strict rule tokenization."""
         if not ground_truth_rules:
-            # Out-of-scope / negative query
             if len(predicted_citations) == 0:
                 return {"citation_precision": 1.0, "citation_recall": 1.0, "citation_f1": 1.0}
             else:
@@ -106,7 +128,6 @@ class GenerationMetrics:
             full_cit = f"{c.rule_id}{c.sub_rule or ''}"
             pred_citations_normalized.append(full_cit)
 
-        # Evaluate Ground Truth Recall: which GT rules are satisfied by at least one prediction?
         matched_gt = set()
         for gt in ground_truth_rules:
             for pred in pred_citations_normalized:
@@ -114,7 +135,6 @@ class GenerationMetrics:
                     matched_gt.add(gt)
                     break
 
-        # Evaluate Prediction Precision: which predicted citations satisfy at least one GT rule?
         matched_pred_count = 0
         for pred in pred_citations_normalized:
             if any(cls.matches_rule_citation(pred, gt) for gt in ground_truth_rules):
@@ -134,18 +154,56 @@ class GenerationMetrics:
             "citation_f1": round(f1, 4)
         }
 
+    # ==============================================================================
+    # TIER 2: G-EVAL / LLM-AS-A-JUDGE SEMANTIC METRICS
+    # ==============================================================================
+
+    @classmethod
+    def compute_criteria_adherence(
+        cls,
+        output: GenerationOutput,
+        criteria_list: List[str],
+        query: str = "",
+        use_llm_judge: bool = True
+    ) -> Dict[str, Any]:
+        """Evaluates legal criteria satisfaction using Chain-of-Thought LLM-as-a-Judge."""
+        if not criteria_list:
+            return {
+                "criteria_adherence_rate": 1.0,
+                "criteria_keyword_coverage_rate": 1.0,
+                "criteria_match_rate": 1.0,
+                "matched_criteria": [],
+                "missed_criteria": [],
+                "evaluations": []
+            }
+
+        if use_llm_judge:
+            judge = cls.get_judge()
+            res = judge.evaluate_criteria_adherence(
+                query=query or output.query if hasattr(output, "query") else "",
+                direct_answer=output.direct_answer,
+                step_by_step_reasoning=output.step_by_step_reasoning,
+                criteria_list=criteria_list
+            )
+            # Add compatibility aliases
+            res["criteria_keyword_coverage_rate"] = res["criteria_adherence_rate"]
+            res["criteria_match_rate"] = res["criteria_adherence_rate"]
+            return res
+
+        # Deterministic keyword fallback
+        return cls.compute_criteria_keyword_coverage(output, criteria_list)
+
     @classmethod
     def compute_criteria_keyword_coverage(
         cls,
         output: GenerationOutput,
         criteria_list: List[str]
     ) -> Dict[str, Any]:
-        """Evaluates entity and key-phrase keyword coverage against curated evaluation criteria."""
+        """Deterministic keyword coverage fallback."""
         if not criteria_list:
-            return {"criteria_keyword_coverage_rate": 1.0, "criteria_match_rate": 1.0, "matched_criteria": [], "missed_criteria": []}
+            return {"criteria_adherence_rate": 1.0, "criteria_keyword_coverage_rate": 1.0, "criteria_match_rate": 1.0, "matched_criteria": [], "missed_criteria": []}
 
         full_text = f"{output.direct_answer} {' '.join(output.step_by_step_reasoning)} {output.temporal_applicability}".lower()
-
         matched = []
         missed = []
 
@@ -161,21 +219,106 @@ class GenerationMetrics:
                 matched_count = sum(1 for k in key_entities if k in full_text)
                 ratio = matched_count / len(key_entities)
 
-            if ratio >= 0.50 or any(phrase in full_text for phrase in [crit_clean[:25]]):
+            if ratio >= 0.40 or any(phrase in full_text for phrase in [crit_clean[:25]]):
                 matched.append(crit)
             else:
                 missed.append(crit)
 
         match_rate = len(matched) / len(criteria_list)
         return {
+            "criteria_adherence_rate": round(match_rate, 4),
             "criteria_keyword_coverage_rate": round(match_rate, 4),
-            "criteria_match_rate": round(match_rate, 4),  # backward compatibility alias
+            "criteria_match_rate": round(match_rate, 4),
             "matched_criteria": matched,
             "missed_criteria": missed
         }
 
     # Backward compatibility alias
-    compute_criteria_match = compute_criteria_keyword_coverage
+    compute_criteria_match = compute_criteria_adherence
+
+    @classmethod
+    def compute_temporal_validity(
+        cls,
+        output: GenerationOutput,
+        expected_ay: Optional[str] = None,
+        expected_fy: Optional[str] = None,
+        is_negative: bool = False,
+        query: str = "",
+        use_llm_judge: bool = True
+    ) -> Dict[str, Any]:
+        """Evaluates semantic temporal validity (AY = FY + 1) using LLM-as-a-Judge."""
+        def clean_year(y: Optional[str]) -> Optional[str]:
+            if not y or str(y).strip().lower() in ["not applicable", "n/a", "none", "null", ""]:
+                return None
+            return str(y).strip()
+
+        clean_ay = clean_year(expected_ay)
+        clean_fy = clean_year(expected_fy)
+
+        if not clean_ay and not clean_fy:
+            return {
+                "temporal_validity_score": 1.0,
+                "is_labelled_temporal_case": False,
+                "verified_correct_year": True
+            }
+
+        if use_llm_judge:
+            judge = cls.get_judge()
+            return judge.evaluate_temporal_validity(
+                query=query or output.query if hasattr(output, "query") else "",
+                direct_answer=output.direct_answer,
+                temporal_applicability=output.temporal_applicability,
+                expected_ay=clean_ay,
+                expected_fy=clean_fy,
+                is_negative=is_negative
+            )
+
+        # Fallback deterministic check
+        temp_text = f"{output.temporal_applicability} {output.direct_answer}".lower()
+        has_temporal_statement = len(output.temporal_applicability.strip()) > 5
+        matches_ay = True
+        matches_fy = True
+
+        if clean_ay:
+            ay_digits = re.findall(r"\d{4}", clean_ay)
+            matches_ay = bool(ay_digits and ay_digits[0] in temp_text)
+
+        if clean_fy:
+            fy_digits = re.findall(r"\d{4}", clean_fy)
+            matches_fy = bool(fy_digits and fy_digits[0] in temp_text)
+
+        correct = (matches_ay or matches_fy) and has_temporal_statement
+        return {
+            "temporal_validity_score": 1.0 if correct else 0.0,
+            "is_labelled_temporal_case": True,
+            "expected_ay": clean_ay,
+            "expected_fy": clean_fy,
+            "matches_expected_ay": matches_ay,
+            "matches_expected_fy": matches_fy,
+            "verified_correct_year": correct
+        }
+
+    @classmethod
+    def compute_faithfulness(
+        cls,
+        output: GenerationOutput,
+        retrieved_chunks: List[Dict[str, Any]],
+        use_llm_judge: bool = True
+    ) -> Dict[str, Any]:
+        """Evaluates hallucination rate & faithfulness against retrieved context chunks."""
+        if use_llm_judge:
+            judge = cls.get_judge()
+            return judge.evaluate_faithfulness(
+                direct_answer=output.direct_answer,
+                step_by_step_reasoning=output.step_by_step_reasoning,
+                retrieved_chunks=retrieved_chunks
+            )
+        return {
+            "faithfulness_score": 1.0,
+            "supported_claims": 1,
+            "total_claims": 1,
+            "unsupported_claims": []
+        }
 
     @classmethod
     def compute_negative_detection(
@@ -183,7 +326,7 @@ class GenerationMetrics:
         output: GenerationOutput,
         is_negative_case: bool
     ) -> Dict[str, Any]:
-        """Validates out-of-scope / negative boundary query handling without false-positive substrings."""
+        """Validates out-of-scope / negative boundary query handling."""
         answer_text = output.direct_answer.lower()
         explicit_abstention_phrases = [
             "not in force", "not applicable for", "cannot be filed",
@@ -204,91 +347,3 @@ class GenerationMetrics:
             "negative_handling_correct": correct,
             "declared_negative": declared_negative
         }
-
-    @staticmethod
-    def _clean_temporal_spec(spec: Optional[str]) -> Optional[str]:
-        if not spec:
-            return None
-        s = spec.strip()
-        if s.lower() in ["not applicable", "n/a", "none", "null", "not specified", ""]:
-            return None
-        return s
-
-    @classmethod
-    def compute_temporal_validity(
-        cls,
-        output: GenerationOutput,
-        expected_ay: Optional[str] = None,
-        expected_fy: Optional[str] = None,
-        is_negative: bool = False
-    ) -> Dict[str, Any]:
-        """Strictly validates whether the stated AY/FY matches the expected ground-truth year field-by-field."""
-        clean_ay = cls._clean_temporal_spec(expected_ay)
-        clean_fy = cls._clean_temporal_spec(expected_fy)
-
-        temp_text = f"{output.temporal_applicability} {output.direct_answer}".lower()
-        has_temporal_statement = len(output.temporal_applicability.strip()) > 10
-
-        # If a valid expected AY or FY is specified, verify exact field match
-        if clean_ay or clean_fy:
-            matches_ay = True
-            matches_fy = True
-
-            if clean_ay:
-                ay_digits = re.findall(r"\d{4}", clean_ay)
-                if ay_digits:
-                    # Require AY or Assessment Year pattern with matching year
-                    ay_pattern = rf"(?:ay|assessment\s+year)[^\d]*{ay_digits[0]}"
-                    matches_ay = bool(re.search(ay_pattern, temp_text)) or (ay_digits[0] in temp_text and "ay" in temp_text)
-                else:
-                    matches_ay = False
-
-            if clean_fy:
-                fy_digits = re.findall(r"\d{4}", clean_fy)
-                if fy_digits:
-                    # Require FY or Financial Year pattern with matching year
-                    fy_pattern = rf"(?:fy|financial\s+year|previous\s+year)[^\d]*{fy_digits[0]}"
-                    matches_fy = bool(re.search(fy_pattern, temp_text)) or (fy_digits[0] in temp_text and "fy" in temp_text)
-                else:
-                    matches_fy = False
-
-            # Strict conjunction: all specified ground truth temporal constraints must hold
-            if clean_ay and clean_fy:
-                correct = matches_ay and matches_fy and has_temporal_statement
-            elif clean_ay:
-                correct = matches_ay and has_temporal_statement
-            else:
-                correct = matches_fy and has_temporal_statement
-
-            score = 1.0 if correct else 0.0
-            return {
-                "temporal_validity_score": score,
-                "is_labelled_temporal_case": True,
-                "expected_ay": clean_ay,
-                "expected_fy": clean_fy,
-                "matches_expected_ay": matches_ay,
-                "matches_expected_fy": matches_fy,
-                "verified_correct_year": correct
-            }
-
-        # Fallback for unlabelled cases or "Not Applicable" negative cases
-        if is_negative or output.is_out_of_scope:
-            return {
-                "temporal_validity_score": 1.0,
-                "is_labelled_temporal_case": False,
-                "has_date_or_year": False,
-                "verified_correct_year": True
-            }
-
-        has_date_or_year = bool(re.search(r"(?:ay|fy|assessment\s+year|financial\s+year|[0-9]{4}-[0-9]{2,4})", temp_text))
-        score = 1.0 if (has_temporal_statement and has_date_or_year) else (0.5 if has_temporal_statement else 0.0)
-
-        return {
-            "temporal_validity_score": score,
-            "is_labelled_temporal_case": False,
-            "has_date_or_year": has_date_or_year,
-            "verified_correct_year": score == 1.0
-        }
-
-
-

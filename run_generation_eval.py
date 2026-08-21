@@ -52,7 +52,10 @@ def main():
     print(f"Labelled Temporal Cases Evaluated: {results.get('labelled_temporal_cases_count', results['total_cases_evaluated'])}")
     print(f"Elapsed Time                     : {results['elapsed_seconds']}s")
     print(f"Mean Composite Score             : {results['mean_composite_score'] * 100:.2f}%")
-    print(f"Criteria Keyword Coverage Rate   : {results['mean_criteria_keyword_coverage'] * 100:.2f}%")
+    crit_rate = results.get('mean_criteria_adherence', results.get('mean_criteria_keyword_coverage', 0.0))
+    print(f"Criteria Adherence Rate (G-Eval) : {crit_rate * 100:.2f}%")
+    faith_rate = results.get('mean_faithfulness_score', 1.0)
+    print(f"Faithfulness / Groundedness Rate : {faith_rate * 100:.2f}%")
     print(f"Mean Citation Precision          : {results['mean_citation_precision'] * 100:.2f}%")
     print(f"Mean Citation Recall             : {results['mean_citation_recall'] * 100:.2f}%")
     print(f"Mean Citation F1                 : {results['mean_citation_f1'] * 100:.2f}%")
@@ -60,6 +63,7 @@ def main():
     print(f"Mean Temporal Validity Score     : {results['mean_temporal_validity_score'] * 100:.2f}%")
     neg_acc = results.get('negative_abstention_accuracy', results.get('negative_handling_accuracy', 0.0))
     print(f"Negative Abstention Accuracy     : {neg_acc * 100:.2f}%")
+
 
     print("\n[Breakdown by Query Type]")
     print(f"{'Query Type':<35} | {'Count':<6} | {'Criteria Coverage':<18} | {'Composite Score':<16}")

@@ -1,10 +1,19 @@
 import pytest
 from src.evaluation.metrics import IRMetrics
 from src.evaluation.generation_metrics import GenerationMetrics
+from src.evaluation.llm_judge import LLMJudge
+from src.generation.llm_client import DeterministicMockProvider
 from src.generation.models import StatutoryCitation, GenerationOutput
 
 
+@pytest.fixture(autouse=True)
+def setup_mock_judge():
+    """Sets a deterministic mock judge for all evaluation unit tests."""
+    GenerationMetrics.set_judge(LLMJudge(llm_provider=DeterministicMockProvider()))
+
+
 def test_ir_metrics_essential_and_graded_ndcg():
+
     retrieved = ['chunk_A', 'chunk_B', 'chunk_C', 'chunk_D', 'chunk_E']
     essential = ['chunk_B']
     supporting = ['chunk_C', 'chunk_Z']
@@ -210,4 +219,34 @@ def test_criteria_keyword_coverage_metrics():
     assert res["criteria_keyword_coverage_rate"] == round(2 / 3, 4)
     assert len(res["matched_criteria"]) == 2
     assert len(res["missed_criteria"]) == 1
+
+
+def test_llm_judge_faithfulness_and_temporal():
+    from src.evaluation.llm_judge import LLMJudge
+    from src.generation.llm_client import DeterministicMockProvider
+    judge = LLMJudge(llm_provider=DeterministicMockProvider())
+
+
+    # 1. Faithfulness evaluation with mock chunks
+    chunks = [
+        {"metadata": {"statutory_path": "Rule 3(1)"}, "content": "Accommodation perquisite is 10% of salary."}
+    ]
+    f_res = judge.evaluate_faithfulness(
+        direct_answer="The perquisite value is 10% of salary under Rule 3(1).",
+        step_by_step_reasoning=["Checked Rule 3(1) rate table."],
+        retrieved_chunks=chunks
+    )
+    assert f_res["faithfulness_score"] >= 0.8
+
+    # 2. Semantic temporal evaluation
+    t_res = judge.evaluate_temporal_validity(
+        query="What is the rule for FY 2023-24?",
+        direct_answer="Applicable for Assessment Year 2024-25 (Financial Year 2023-24).",
+        temporal_applicability="Assessment Year 2024-25.",
+        expected_ay="AY 2024-25",
+        expected_fy="FY 2023-24"
+    )
+    assert t_res["temporal_validity_score"] == 1.0
+    assert t_res["verified_correct_year"] is True
+
 

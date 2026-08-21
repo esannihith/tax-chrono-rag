@@ -95,39 +95,52 @@ class GenerationEvaluationEngine:
                     top_k=top_k
                 )
 
-                # 1. Citation Metrics
+                # 1. Citation Metrics (Tier 1 Deterministic)
                 cit_metrics = GenerationMetrics.compute_citation_metrics(
                     predicted_citations=output.statutory_citations,
                     ground_truth_rules=case.relevant_rules
                 )
 
-                # 2. Criteria Keyword Coverage Metrics
-                crit_metrics = GenerationMetrics.compute_criteria_keyword_coverage(
+                # 2. Criteria Adherence Metrics (Tier 2 G-Eval LLM Judge)
+                crit_metrics = GenerationMetrics.compute_criteria_adherence(
                     output=output,
-                    criteria_list=case.evaluation_criteria
+                    criteria_list=case.evaluation_criteria,
+                    query=case.query,
+                    use_llm_judge=True
                 )
 
-                # 3. Strict Temporal Validity
+                # 3. Semantic Temporal Validity (Tier 2 G-Eval LLM Judge)
                 temp_metrics = GenerationMetrics.compute_temporal_validity(
                     output=output,
                     expected_ay=case.expected_ay,
                     expected_fy=case.expected_fy,
-                    is_negative=case.is_negative
+                    is_negative=case.is_negative,
+                    query=case.query,
+                    use_llm_judge=True
                 )
 
+                # 4. Faithfulness / Groundedness (Tier 2 G-Eval LLM Judge)
+                retrieved_chunks = getattr(output, "retrieved_chunks", [])
+                faith_metrics = GenerationMetrics.compute_faithfulness(
+                    output=output,
+                    retrieved_chunks=retrieved_chunks,
+                    use_llm_judge=True
+                )
 
-                # 4. Negative / Out-of-scope Handling
+                # 5. Negative / Out-of-scope Handling
                 neg_metrics = GenerationMetrics.compute_negative_detection(
                     output=output,
                     is_negative_case=case.is_negative
                 )
 
                 # Composite score per case
+                crit_score = crit_metrics.get("criteria_adherence_rate", crit_metrics.get("criteria_keyword_coverage_rate", 0.0))
+                temp_score = temp_metrics.get("temporal_validity_score", 0.0)
                 case_score = (
-                    0.35 * crit_metrics["criteria_keyword_coverage_rate"] +
+                    0.35 * crit_score +
                     0.30 * cit_metrics["citation_recall"] +
                     0.20 * cit_metrics["citation_precision"] +
-                    0.15 * temp_metrics["temporal_validity_score"]
+                    0.15 * temp_score
                 )
 
                 per_case_results.append({
@@ -145,13 +158,15 @@ class GenerationEvaluationEngine:
                     "citation_precision": cit_metrics["citation_precision"],
                     "citation_recall": cit_metrics["citation_recall"],
                     "citation_f1": cit_metrics["citation_f1"],
-                    "criteria_keyword_coverage_rate": crit_metrics["criteria_keyword_coverage_rate"],
-                    "criteria_match_rate": crit_metrics["criteria_keyword_coverage_rate"],
-                    "matched_criteria": crit_metrics["matched_criteria"],
-                    "missed_criteria": crit_metrics["missed_criteria"],
-                    "temporal_validity_score": temp_metrics["temporal_validity_score"],
+                    "criteria_adherence_rate": crit_score,
+                    "criteria_keyword_coverage_rate": crit_score,
+                    "criteria_match_rate": crit_score,
+                    "matched_criteria": crit_metrics.get("matched_criteria", []),
+                    "missed_criteria": crit_metrics.get("missed_criteria", []),
+                    "temporal_validity_score": temp_score,
                     "is_labelled_temporal_case": temp_metrics.get("is_labelled_temporal_case", False),
                     "verified_correct_year": temp_metrics.get("verified_correct_year", False),
+                    "faithfulness_score": faith_metrics.get("faithfulness_score", 1.0),
                     "negative_handling_correct": neg_metrics["negative_handling_correct"],
                     "is_out_of_scope": output.is_out_of_scope,
                     "composite_score": round(case_score, 4)
@@ -170,9 +185,11 @@ class GenerationEvaluationEngine:
                     "citation_precision": 0.0,
                     "citation_recall": 0.0,
                     "citation_f1": 0.0,
+                    "criteria_adherence_rate": 0.0,
                     "criteria_keyword_coverage_rate": 0.0,
                     "criteria_match_rate": 0.0,
                     "temporal_validity_score": 0.0,
+                    "faithfulness_score": 0.0,
                     "is_labelled_temporal_case": False,
                     "verified_correct_year": False,
                     "negative_handling_correct": False
@@ -187,8 +204,9 @@ class GenerationEvaluationEngine:
         mean_cit_prec = float(np.mean([r.get("citation_precision", 0) for r in per_case_results]))
         mean_cit_rec = float(np.mean([r.get("citation_recall", 0) for r in per_case_results]))
         mean_cit_f1 = float(np.mean([r.get("citation_f1", 0) for r in per_case_results]))
-        mean_crit_cov = float(np.mean([r.get("criteria_keyword_coverage_rate", 0) for r in per_case_results]))
+        mean_crit_cov = float(np.mean([r.get("criteria_adherence_rate", 0) for r in per_case_results]))
         mean_temp_val = float(np.mean([r.get("temporal_validity_score", 0) for r in per_case_results]))
+        mean_faith = float(np.mean([r.get("faithfulness_score", 1.0) for r in per_case_results]))
         mean_composite = float(np.mean([r.get("composite_score", 0) for r in per_case_results]))
         
         # Strict temporal validation subset
@@ -200,6 +218,7 @@ class GenerationEvaluationEngine:
         # Negative / Abstention accuracy
         neg_cases = [r for r in per_case_results if r.get("is_negative", False)]
         neg_accuracy = (sum(1 for r in neg_cases if r.get("negative_handling_correct", False)) / len(neg_cases)) if neg_cases else 1.0
+
 
         # Breakdown by Query Type
         query_type_breakdown = {}
@@ -252,7 +271,9 @@ class GenerationEvaluationEngine:
             "negative_cases_count": len(neg_cases),
             "elapsed_seconds": round(elapsed, 2),
             "mean_composite_score": round(mean_composite, 4),
+            "mean_criteria_adherence": round(mean_crit_cov, 4),
             "mean_criteria_keyword_coverage": round(mean_crit_cov, 4),
+            "mean_faithfulness_score": round(mean_faith, 4),
             "mean_citation_precision": round(mean_cit_prec, 4),
             "mean_citation_recall": round(mean_cit_rec, 4),
             "mean_citation_f1": round(mean_cit_f1, 4),
