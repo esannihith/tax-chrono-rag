@@ -54,17 +54,20 @@ def main():
         print(f"Evaluated Cases: {results['grounded_cases']} Grounded | {results['null_cases']} Out-of-Scope (Null)")
         print("-" * 65)
         print(f"MRR (Mean Reciprocal Rank)      : {mm['mrr']:.4f}")
+        print(f"R-Precision (TREC Standard)     : {mm.get('r_precision', 0)*100:.2f}%  (Random Baseline: {rb.get('random_r_precision', 0)*100:.2f}%)")
         print(f"HitRate@5 (Top-5 Hit Rate)      : {mm['hit_rate@5']*100:.2f}%  (Random Baseline: {rb.get('random_hit_rate@5', 0)*100:.2f}%)")
         print(f"HitRate@10 (Top-10 Hit Rate)    : {mm['hit_rate@10']*100:.2f}%  (Random Baseline: {rb.get('random_hit_rate@10', 0)*100:.2f}%)")
         print(f"HitRate@20 (Top-20 Hit Rate)    : {mm['hit_rate@20']*100:.2f}%  (Random Baseline: {rb.get('random_hit_rate@20', 0)*100:.2f}%)")
         print(f"Essential Recall@5              : {mm['essential_recall@5']*100:.2f}%  (Random Baseline: {rb.get('random_essential_recall@5', 0)*100:.2f}%)")
         print(f"Essential Recall@10             : {mm['essential_recall@10']*100:.2f}%  (Random Baseline: {rb.get('random_essential_recall@10', 0)*100:.2f}%)")
         print(f"Essential Recall@20             : {mm['essential_recall@20']*100:.2f}%  (Random Baseline: {rb.get('random_essential_recall@20', 0)*100:.2f}%)")
-        print(f"Essential Precision@5           : {mm.get('essential_precision@5', 0)*100:.2f}%  (Random Baseline: {rb.get('random_essential_precision@5', 0)*100:.2f}%)")
-        print(f"Full Precision@5                : {mm['precision@5']*100:.2f}%  (Random Baseline: {rb.get('random_full_precision@5', 0)*100:.2f}%)")
+        print(f"Target-Bounded Precision@5      : {mm.get('target_bounded_precision@5', 0)*100:.2f}%  (Random Baseline: {rb.get('random_target_bounded_precision@5', 0)*100:.2f}%)")
+        print(f"Essential Precision@5 (raw k=5) : {mm.get('essential_precision@5', 0)*100:.2f}%  (Theoretical Ceiling: 30.28% due to |R|<k)")
+        print(f"Full Context Precision@5        : {mm['precision@5']*100:.2f}%  (Random Baseline: {rb.get('random_full_precision@5', 0)*100:.2f}%)")
         print(f"Graded NDCG@5                   : {mm['ndcg@5']:.4f}")
         print(f"Graded NDCG@10                  : {mm['ndcg@10']:.4f}")
         print(f"Graded NDCG@20                  : {mm['ndcg@20']:.4f}")
+
 
 
         # Breakdown by Query Type

@@ -3,7 +3,7 @@ from typing import List, Set, Dict, Any, Optional
 
 
 class IRMetrics:
-    """Information Retrieval metrics calculator: Essential Recall@k, HitRate@k, Graded NDCG@k, Precision@k, MRR."""
+    """Information Retrieval metrics calculator: Essential Recall@k, HitRate@k, Graded NDCG@k, Precision@k, R-Precision, MRR."""
 
     @staticmethod
     def precision_at_k(retrieved: List[str], relevant: List[str], k: int) -> float:
@@ -13,6 +13,28 @@ class IRMetrics:
         rel_set = set(relevant)
         hits = sum(1 for doc_id in ret_k if doc_id in rel_set)
         return hits / float(k)
+
+    @staticmethod
+    def r_precision(retrieved: List[str], relevant: List[str]) -> float:
+        """Computes R-Precision (Precision at rank R = |relevant|), removing the fixed-K mathematical ceiling."""
+        if not relevant:
+            return 0.0
+        r = len(relevant)
+        ret_r = retrieved[:r]
+        rel_set = set(relevant)
+        hits = sum(1 for doc_id in ret_r if doc_id in rel_set)
+        return hits / float(r)
+
+    @staticmethod
+    def target_bounded_precision_at_k(retrieved: List[str], relevant: List[str], k: int) -> float:
+        """Computes Target-Bounded Normalized Precision = hits / min(k, |relevant|), bounding the metric to [0.0, 1.0]."""
+        if not relevant or k <= 0:
+            return 0.0
+        max_possible = min(k, len(relevant))
+        ret_k = retrieved[:k]
+        rel_set = set(relevant)
+        hits = sum(1 for doc_id in ret_k if doc_id in rel_set)
+        return hits / float(max_possible)
 
     @staticmethod
     def recall_at_k(retrieved: List[str], relevant: List[str], k: int) -> float:
@@ -94,6 +116,8 @@ class IRMetrics:
             res[f"random_essential_recall@{k}"] = round(min(1.0, k_f / N), 4)
             res[f"random_essential_precision@{k}"] = round(avg_essential_count / N, 4)
             res[f"random_full_precision@{k}"] = round(avg_relevant_count / N, 4)
+            res[f"random_target_bounded_precision@{k}"] = round(min(1.0, k_f / N), 4)
+        res["random_r_precision"] = round(avg_essential_count / N, 4)
         return res
 
     @classmethod
@@ -108,7 +132,9 @@ class IRMetrics:
         all_relevant = list(set(essential_chunks + supporting_chunks))
 
         res = {
-            "mrr": cls.reciprocal_rank(retrieved, essential_chunks if essential_chunks else all_relevant, max_k=max(k_list))
+            "mrr": cls.reciprocal_rank(retrieved, essential_chunks if essential_chunks else all_relevant, max_k=max(k_list)),
+            "r_precision": cls.r_precision(retrieved, essential_chunks if essential_chunks else all_relevant),
+            "full_r_precision": cls.r_precision(retrieved, all_relevant)
         }
         for k in k_list:
             res[f"hit_rate@{k}"] = cls.hit_rate_at_k(retrieved, essential_chunks if essential_chunks else all_relevant, k)
@@ -116,9 +142,8 @@ class IRMetrics:
             res[f"recall@{k}"] = cls.recall_at_k(retrieved, essential_chunks if essential_chunks else all_relevant, k)
             res[f"full_recall@{k}"] = cls.recall_at_k(retrieved, all_relevant, k)
             res[f"essential_precision@{k}"] = cls.precision_at_k(retrieved, essential_chunks if essential_chunks else all_relevant, k)
+            res[f"target_bounded_precision@{k}"] = cls.target_bounded_precision_at_k(retrieved, essential_chunks if essential_chunks else all_relevant, k)
             res[f"precision@{k}"] = cls.precision_at_k(retrieved, all_relevant, k)
             res[f"full_precision@{k}"] = cls.precision_at_k(retrieved, all_relevant, k)
             res[f"ndcg@{k}"] = cls.graded_ndcg_at_k(retrieved, essential_chunks, supporting_chunks, k)
         return res
-
-

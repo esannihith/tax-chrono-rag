@@ -128,15 +128,19 @@ class BenchmarkEngine:
         num_q = len(per_query_results)
         if num_q > 0:
             mean_metrics["mrr"] = sum(r["metrics"]["mrr"] for r in per_query_results) / num_q
+            mean_metrics["r_precision"] = sum(r["metrics"].get("r_precision", 0) for r in per_query_results) / num_q
+            mean_metrics["full_r_precision"] = sum(r["metrics"].get("full_r_precision", 0) for r in per_query_results) / num_q
             for k in k_list:
                 mean_metrics[f"hit_rate@{k}"] = sum(r["metrics"][f"hit_rate@{k}"] for r in per_query_results) / num_q
                 mean_metrics[f"essential_recall@{k}"] = sum(r["metrics"][f"essential_recall@{k}"] for r in per_query_results) / num_q
                 mean_metrics[f"recall@{k}"] = sum(r["metrics"][f"recall@{k}"] for r in per_query_results) / num_q
                 mean_metrics[f"full_recall@{k}"] = sum(r["metrics"][f"full_recall@{k}"] for r in per_query_results) / num_q
                 mean_metrics[f"essential_precision@{k}"] = sum(r["metrics"][f"essential_precision@{k}"] for r in per_query_results) / num_q
+                mean_metrics[f"target_bounded_precision@{k}"] = sum(r["metrics"].get(f"target_bounded_precision@{k}", 0) for r in per_query_results) / num_q
                 mean_metrics[f"precision@{k}"] = sum(r["metrics"][f"precision@{k}"] for r in per_query_results) / num_q
                 mean_metrics[f"full_precision@{k}"] = sum(r["metrics"][f"full_precision@{k}"] for r in per_query_results) / num_q
                 mean_metrics[f"ndcg@{k}"] = sum(r["metrics"][f"ndcg@{k}"] for r in per_query_results) / num_q
+
 
         # Random Retriever Baseline calculation
         corpus_size = len(self.store.payloads) if self.store.payloads else 183

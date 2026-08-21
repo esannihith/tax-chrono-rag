@@ -13,7 +13,6 @@ def setup_mock_judge():
 
 
 def test_ir_metrics_essential_and_graded_ndcg():
-
     retrieved = ['chunk_A', 'chunk_B', 'chunk_C', 'chunk_D', 'chunk_E']
     essential = ['chunk_B']
     supporting = ['chunk_C', 'chunk_Z']
@@ -34,6 +33,26 @@ def test_ir_metrics_essential_and_graded_ndcg():
     assert round(metrics['full_recall@5'], 4) == 0.6667
     # Graded NDCG should be positive and bounded by 1.0
     assert 0.0 < metrics['ndcg@5'] <= 1.0
+    # Raw essential precision@5 is 1/5 = 0.2
+    assert metrics['essential_precision@5'] == 0.2
+    # Target bounded precision@5 = 1/min(5, 1) = 1.0
+    assert metrics['target_bounded_precision@5'] == 1.0
+    # R-Precision: R = 1, retrieved[:1] is chunk_A (miss) -> 0.0
+    assert metrics['r_precision'] == 0.0
+
+
+def test_r_precision_and_target_bounded_precision():
+    # If target chunk is at rank 1, R-Precision must be 1.0
+    retrieved = ['chunk_B', 'chunk_A', 'chunk_C']
+    essential = ['chunk_B']
+    assert IRMetrics.r_precision(retrieved, essential) == 1.0
+    assert IRMetrics.target_bounded_precision_at_k(retrieved, essential, k=5) == 1.0
+
+    # If 2 essential chunks are at ranks 1 and 2, R-Precision must be 1.0
+    essential_2 = ['chunk_B', 'chunk_A']
+    assert IRMetrics.r_precision(retrieved, essential_2) == 1.0
+    assert IRMetrics.target_bounded_precision_at_k(retrieved, essential_2, k=5) == 1.0
+
 
 
 def test_generation_temporal_validity_strict_checking():
